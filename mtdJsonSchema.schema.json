@@ -3,16 +3,29 @@
         "docker_image_name": {
             "docker_image_id": "int",
             "docker_image_description": "string",
-            "docker_file_path": "string"
+            "tests": {
+                "type": "array",
+                "items": {
+                    "type": "test_name"
+                }
+            }
         }
     },
-    "test": {
+    "tests": {
         "test_name": {
-            "docker_image_name": "object",
-            "test_blocks": [
-                {
-                    "test_block_type": {
-                        "type": "string",
+            "test_id": "int",
+            "type": "object",
+            "description": "string",
+            "test_blocks": {
+                "type": "array",
+                "test_block_items": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "string"
+                    },
+                    {
                         "enum": [
                             "RUN",
                             "ENV",
@@ -20,18 +33,15 @@
                             "BKG_T"
                         ]
                     },
-                    "test_block_command": {
-                        "type": "string",
-                        "command_output_type": "string",
+                    {
                         "enum": [
                             "NO_VERIFY",
                             "VERIFY_EMPTY",
                             "VERIFY_REGEX"
-                        ],
-                        "regex_check": "string"
+                        ]
                     }
-                }
-            ]
+                ]
+            }
         }
     }
 }
