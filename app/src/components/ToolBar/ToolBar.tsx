@@ -1,7 +1,11 @@
 import './ToolBar.scss';
 
 function ToolBar() {
-  return <></>
+  return (
+    <div className="ToolBar">
+      Toolbar
+    </div>
+  );
 }
 
 export default ToolBar;

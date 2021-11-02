@@ -9,8 +9,8 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <PageBar />
       <Toolbar />
+      <PageBar />
 
       <Switch>
         <Route path="/package-mapper">
