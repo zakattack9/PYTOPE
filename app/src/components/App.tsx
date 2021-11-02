@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import './App.scss';
 
 function App() {
