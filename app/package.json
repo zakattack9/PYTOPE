@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass src/components:src/css --watch --no-source-map"
+    "sass": "sass src/components:src/css/components src/pages:src/css/pages --watch --no-source-map"
   },
   "eslintConfig": {
     "extends": [
