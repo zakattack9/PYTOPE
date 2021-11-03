@@ -5,7 +5,7 @@ html, body {
   font-size: 12pt;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.1pt;
+  letter-spacing: 0.05pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

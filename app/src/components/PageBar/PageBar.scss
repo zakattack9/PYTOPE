@@ -1,5 +1,9 @@
 @use '../../utils/fonts';
 
 .PageBar {
-  @include fonts.roboto-mono;
+  @include fonts.roboto-medium(11pt);
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }

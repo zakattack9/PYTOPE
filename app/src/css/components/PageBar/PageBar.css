@@ -1,7 +1,11 @@
 .PageBar {
-  font-family: "Roboto Mono", monospace;
-  font-size: 12pt;
+  font-family: "Roboto", sans-serif;
+  font-size: 11pt;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0pt;
+  letter-spacing: 0.05pt;
+  font-weight: 500;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }

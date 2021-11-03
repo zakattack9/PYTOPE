@@ -2,23 +2,23 @@ import ToolBarItem from './ToolBarItem';
 import './ToolBar.scss';
 
 interface ToolBarItems {
-  [key: string]: Array<string>
+  [name: string]: Array<string>
 }
 
 const TOOL_BAR_ITEMS: ToolBarItems = {
-  "Import": [
-    "Package Mapping Config",
-    "Test Environment Config",
+  'Import': [
+    'Package Mapping Config',
+    'Test Environment Config',
   ],
-  "Export": [
-    "Test Environment Config",
-    "Tests to Python unittests",
+  'Export': [
+    'Test Environment Config',
+    'Tests to Python unittests',
   ],
-  "Manage": [
-    "Uploaded Docker Images",
-    "Uploaded Package Mappings",
+  'Manage': [
+    'Uploaded Docker Images',
+    'Uploaded Package Mappings',
   ],
-  "Help": [
+  'Help': [
 
   ],
 }
@@ -29,7 +29,7 @@ function ToolBar() {
   ));
 
   return (
-    <nav className="ToolBar">
+    <nav className='ToolBar'>
       {toolBarItems}
     </nav>
   );

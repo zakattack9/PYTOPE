@@ -8,26 +8,26 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Toolbar />
       <PageBar />
 
       <Switch>
-        <Route path="/package-mapper">
+        <Route path='/package-mapper'>
           <PackageMapper />
         </Route>
 
-        <Route path="/test-designer">
+        <Route path='/test-designer'>
           <TestDesigner />
         </Route>
 
-        <Route path="/test-runner">
+        <Route path='/test-runner'>
           <TestRunner />
         </Route>
 
         {/* Default base path and all unrecognized paths to package mapper interface */}
-        <Route path="/">
-          <Redirect to="/package-mapper" />
+        <Route path='/'>
+          <Redirect to='/package-mapper' />
         </Route>
       </Switch>
     </div>
