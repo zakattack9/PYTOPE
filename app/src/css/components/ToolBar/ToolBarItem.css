@@ -1,0 +1,36 @@
+.ToolBarItem {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 2px;
+  transition: 0.15s;
+}
+.ToolBarItem:hover {
+  background-color: gray;
+}
+.ToolBarItem:hover .ToolBarItem__options {
+  opacity: 1;
+  pointer-events: all;
+}
+.ToolBarItem__name {
+  padding: 6px 10px;
+}
+.ToolBarItem__options {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: max-content;
+  border-radius: inherit;
+  background-color: whitesmoke;
+  z-index: 100;
+  transition: inherit;
+}
+.ToolBarItem__option {
+  padding: 9px 16px;
+  border-radius: inherit;
+  transition: inherit;
+}
+.ToolBarItem__option:hover {
+  background-color: #ebebeb;
+}
