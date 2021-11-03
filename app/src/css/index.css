@@ -1,10 +1,33 @@
 html, body {
   margin: 0;
   height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  outline-style: none;
+}
+
+#root {
+  height: 100%;
 }

@@ -1,11 +1,27 @@
+@use 'utils/fonts';
+
 html, body {
   margin: 0;
   height: 100%;
+  @include fonts.roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  @include fonts.roboto-mono;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  outline-style: none;
+}
+
+#root{
+  height: 100%;
 }

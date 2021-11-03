@@ -1,0 +1,5 @@
+@use '../../utils/fonts';
+
+.PageBar {
+  @include fonts.roboto-mono;
+}
