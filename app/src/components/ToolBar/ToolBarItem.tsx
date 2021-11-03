@@ -7,7 +7,7 @@ interface Props {
 
 function ToolBarItem(props: Props) {
   let toolBarOptions = props.options.map(option => (
-    <div className='ToolBarItem__option'>
+    <div className='ToolBarItem__option' key={option}>
       {option}
     </div> 
   ));

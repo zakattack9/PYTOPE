@@ -7,7 +7,7 @@
   transition: 0.15s;
 }
 .ToolBarItem:hover {
-  background-color: gray;
+  background-color: #d2d2d2;
 }
 .ToolBarItem:hover .ToolBarItem__options {
   opacity: 1;
@@ -32,5 +32,5 @@
   transition: inherit;
 }
 .ToolBarItem__option:hover {
-  background-color: #ebebeb;
+  background-color: #eaeaea;
 }

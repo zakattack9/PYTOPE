@@ -1,0 +1,15 @@
+@use 'sass:color';
+@use '../utils/variables';
+
+@function lighten($color, $amount) {
+  // a negative $amount will darken $color
+  @return color.scale($color, $lightness: $amount);
+}
+
+@function primary-color($amount) {
+  @return lighten(variables.$primary-color, $amount);
+}
+
+@function primary-text-color($amount) {
+  @return lighten(variables.$primary-text-color, $amount);  
+}

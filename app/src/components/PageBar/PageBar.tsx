@@ -13,7 +13,7 @@ const PAGE_BAR_ITEMS: PageBarItems = {
 
 function PageBar() {
   let pageBarItems = Object.entries(PAGE_BAR_ITEMS).map(([name, link]) => (
-    <PageBarItem name={name} link={link} />
+    <PageBarItem name={name} link={link} key={name} />
   ));
 
   return (

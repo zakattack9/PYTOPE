@@ -25,7 +25,7 @@ const TOOL_BAR_ITEMS: ToolBarItems = {
 
 function ToolBar() {
   let toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => (
-    <ToolBarItem name={name} options={options} />
+    <ToolBarItem name={name} options={options} key={name} />
   ));
 
   return (

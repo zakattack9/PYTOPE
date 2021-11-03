@@ -6,6 +6,7 @@ html, body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.05pt;
+  color: #353535;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

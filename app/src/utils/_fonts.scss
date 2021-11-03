@@ -1,3 +1,5 @@
+@use '../utils/variables';
+
 // ROBOTO //
 @mixin roboto(
   $size: 12pt,
@@ -8,6 +10,7 @@
   font-style: $style;
   font-weight: 400;
   letter-spacing: 0.05pt;
+  color: variables.$primary-text-color;
 }
 
 @mixin roboto-medium(

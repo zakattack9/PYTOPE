@@ -17,7 +17,7 @@ Contains React components that are the highest level views/pages routed to by re
 
 ### SASS
 - `--load-paths` specified with the `sass` command will be ignored by CRA webpack's sass-loader config; this means that all cases of `@use` in scss files will require using relative paths
-  - React will throw an error during build if a path that does not use relative paths is used
+  - React will throw an error if a relative path is not used
 
 ### Google Fonts
 https://fonts.google.com/share?selection.family=Roboto%20Mono:wght@400;700%7CRoboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700

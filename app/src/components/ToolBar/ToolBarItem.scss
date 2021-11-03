@@ -1,3 +1,5 @@
+@use '../../utils/functions' as f;
+
 .ToolBarItem {
   display: inline-block;
   box-sizing: border-box;
@@ -7,7 +9,7 @@
   transition: 0.15s;
 
   &:hover {
-    background-color: gray;
+    background-color: f.primary-color(35%);
   }
 
   &:hover &__options {
@@ -26,7 +28,7 @@
     position: absolute;
     width: max-content;
     border-radius: inherit;
-    background-color: whitesmoke;
+    background-color: f.primary-color(85%);
     z-index: 100;
     transition: inherit;
   }
@@ -37,7 +39,7 @@
     transition: inherit;
 
     &:hover {
-      background-color: rgb(235, 235, 235);
+      background-color: f.primary-color(70%);
     }
   }
 }
