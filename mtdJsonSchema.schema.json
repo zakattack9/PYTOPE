@@ -1,61 +1,81 @@
 {
-    "docker_images": {
-        "docker_image_name": {
-            "docker_image_id": "int",
-            "docker_image_description": "string",
-            "tests": {
-                "type": "array",
-                "items": {
-                    "type": "test_name"
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "string",
+    "description": "string",
+    "type": "object",
+    "patternProperties": {
+        "docker_images_*": {
+            "type": "object",
+            "properties": {
+                "docker_image_name": {
+                    "type": "object",
+                    "properties": {
+                        "docker_image_id": "int",
+                        "docker_image_description": "string",
+                        "tests": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/tests/test_name"
+                            }
+                        }
+                    }
                 }
             }
         }
     },
-    "tests": {
-        "test_name": {
+    "additionalProperties": {
+        "$ref": "#/patternProperties/docker_images"
+    },
+    "$def": {
+        "test": {
             "type": "object",
-            "test_id": "int",
-            "description": "string",
-            "test_blocks": {
-                "type": "array",
-                "test_block_items": [
-                    {
-                        "test_block_type": {
-                            "type": "string",
-                            "enum": [
-                                "RUN",
-                                "ENV",
-                                "BKG_S",
-                                "BKG_T"
-                            ]
-                        }
-                    },
-                    {
-                        "command": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "verify_output_type": {
-                            "type": "string",
-                            "enum": [
-                                "NO_VERIFY",
-                                "VERIFY_EMPTY",
-                                "VERIFY_REGEX"
-                            ]
-                        }
-                    },
-                    {
-                        "verify_output": {
-                            "type": "string",
-                            "enum": [
-                                "null",
-                                "string"
-                            ]
+            "patternProperties": {
+                "test_name_*": {
+                    "type": "object",
+                    "properties": {
+                        "test_id": "int",
+                        "description": "string",
+                        "test_blocks": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/test_block_items"
+                            }
                         }
                     }
-                ]
+                }
+            },
+            "additionalProperties": {
+                "$ref": "#/tests/test_name"
             }
+        },
+        "test_block_items": {
+            "type": "array",
+            "prefixItems": [
+                {
+                    "enum": [
+                        "RUN",
+                        "ENV",
+                        "BKG_S",
+                        "BKG_T"
+                    ]
+                },
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "NO_VERIFY",
+                        "VERIFY_EMPTY",
+                        "VERIFY_REGEX"
+                    ]
+                },
+                {
+                    "enum": [
+                        "null",
+                        "string"
+                    ]
+                }
+            ]
         }
     }
 }
