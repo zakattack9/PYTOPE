@@ -1,4 +1,4 @@
-@use '../utils/variables';
+@use '../utils/variables' as vars;
 
 // ROBOTO //
 @mixin roboto(
@@ -10,7 +10,7 @@
   font-style: $style;
   font-weight: 400;
   letter-spacing: 0.05pt;
-  color: variables.$primary-text-color;
+  color: vars.$primary-text-color;
 }
 
 @mixin roboto-medium(
