@@ -1,81 +1,86 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "string",
-    "description": "string",
+    "description": "This is a schema validates the modular test designer",
     "type": "object",
-    "patternProperties": {
-        "docker_images_*": {
-            "type": "object",
-            "properties": {
-                "docker_image_name": {
-                    "type": "object",
-                    "properties": {
-                        "docker_image_id": "int",
-                        "docker_image_description": "string",
-                        "tests": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/tests/test_name"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "additionalProperties": {
-        "$ref": "#/patternProperties/docker_images"
-    },
-    "$def": {
-        "test": {
+    "properties": {
+        "docker_images": {
             "type": "object",
             "patternProperties": {
-                "test_name_*": {
-                    "type": "object",
-                    "properties": {
-                        "test_id": "int",
-                        "description": "string",
-                        "test_blocks": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/test_block_items"
-                            }
-                        }
-                    }
+                "*": {
+                    "$ref": "#/$def/docker_image_name"
                 }
             },
             "additionalProperties": {
-                "$ref": "#/tests/test_name"
+                "$ref": "#/$def/docker_image_name"
             }
         },
+        "tests": {
+            "type": "object",
+            "patternProperties": {
+                "*": {
+                    "$ref": "#/$def/test_name"
+                }
+            },
+            "additionalProperties": {
+                "$ref": "#/$def/test_name"
+            }
+        }
+    },
+    "$def": {
+        "docker_image_name": {
+            "type": "object",
+            "properties": {
+                "docker_image_id": "int",
+                "docker_image_description": "string",
+                "tests": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["docker_image_id","docker_image_description","test"]
+        },
+        "test_name": {
+            "type": "object",
+            "properties": {
+                "test_id": "int",
+                "test_blocks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$def/test_block_items"
+                    }
+                }
+            },
+            "required": ["test_id","test_blocks"]
+        },
         "test_block_items": {
-            "type": "array",
-            "prefixItems": [
-                {
+            "type": "object",
+            "properties": {
+                "block_type": {
                     "enum": [
                         "RUN",
                         "ENV",
                         "BKG_S",
-                        "BKG_T"
+                        "BKG_T"     
                     ]
                 },
-                {
+                "command": {
                     "type": "string"
                 },
-                {
+                "command_output_assertion": {
                     "enum": [
                         "NO_VERIFY",
                         "VERIFY_EMPTY",
                         "VERIFY_REGEX"
                     ]
                 },
-                {
-                    "enum": [
-                        "null",
-                        "string"
-                    ]
+                "regex": {
+                    "type": "string"
                 }
-            ]
+            },
+            "required":["block_type","command","command_output_assertion"]    
         }
     }
 }
