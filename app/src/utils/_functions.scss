@@ -3,6 +3,7 @@
 
 @function lighten($color, $amount) {
   // a negative $amount will darken $color
+  // $amount should be a percentage
   @return color.scale($color, $lightness: $amount);
 }
 
