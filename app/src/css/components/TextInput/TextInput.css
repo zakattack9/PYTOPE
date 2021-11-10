@@ -1,0 +1,15 @@
+.TextInput {
+  --placeholder: "";
+  display: block;
+  background-color: white;
+  padding: 10px;
+  outline: none;
+}
+.TextInput__wrapper {
+  display: inline-block;
+  border-radius: inherit;
+}
+.TextInput:empty::before {
+  content: var(--placeholder);
+  color: #9c9c9c;
+}

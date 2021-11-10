@@ -4,17 +4,18 @@
 .Chip {
   $default-bkg-color: f.primary-color(5%);
   $font-size: 10.5pt;
-  $vert-padding: 10px;
-  $horiz-padding: 15px;
-  $input-vert-padding: 5px;
-  $input-horiz-padding: 10px;
-  $border-thickness: 2px;
+  $vert-pad: 10px;
+  $horiz-pad: 15px;
+  $arg-border: 4px; // chip spacing around argument input
+  $input-vert-pad: calc($vert-pad - $arg-border);
+  $input-horiz-pad: calc($horiz-pad - $arg-border);
+  $border-thick: 2px;
 
   @include fonts.roboto-mono-bold($font-size);
   width: max-content;
   height: max-content;
   background-color: $default-bkg-color;
-  padding: $vert-padding $horiz-padding;
+  padding: $vert-pad $horiz-pad;
   margin: 0 5px;
   border-radius: 25px;
   box-sizing: border-box;
@@ -26,34 +27,24 @@
 
   &--arg {
     @extend .Chip;
-    $arg-vert-padding: calc($vert-padding - $input-vert-padding);
-    $arg-horiz-padding: calc($horiz-padding - $input-horiz-padding);
-    padding: $arg-vert-padding $arg-horiz-padding $arg-horiz-padding $vert-padding
-  }
-
-  &--value {
-
+    $arg-vert-pad: calc($vert-pad - $input-vert-pad);
+    $arg-horiz-pad: calc($horiz-pad - $input-horiz-pad);
+    padding: $arg-vert-pad $arg-horiz-pad $arg-horiz-pad $vert-pad
   }
 
   &__argument {
     @include fonts.roboto-mono-bold($font-size);
-    outline: none;
-    border: none;
     background-color: f.primary-color(80%);
-    max-width: 90px;
-    text-align: center;
-    padding: $input-vert-padding $input-horiz-padding;
+    border: none;
+    padding: $input-vert-pad $input-horiz-pad;
     margin-left: 8px;
     border-radius: inherit;
   }
 
   &__value {
     @extend .Chip;
-    outline: none;
     background-color: f.primary-color(80%);
-    max-width: 110px;
-    text-align: center;
-    border: $border-thickness solid $default-bkg-color;
-    padding: calc($vert-padding - $border-thickness) $horiz-padding;
+    border: $border-thick solid $default-bkg-color;
+    padding: calc($vert-pad - $border-thick) calc($horiz-pad - $border-thick);
   }
 }
