@@ -1,0 +1,61 @@
+@use '../utils/variables' as vars;
+
+// ROBOTO //
+@mixin roboto(
+  $size: 12pt,
+  $style: normal
+) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-style: $style;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: vars.$primary-text-color;
+}
+
+@mixin roboto-medium(
+  $size: 12pt
+) {
+  @include roboto($size);
+  font-weight: 500;
+}
+
+@mixin roboto-bold(
+  $size: 12pt
+) {
+  @include roboto($size);
+  font-weight: 700;
+}
+
+@mixin roboto-medium-italic(
+  $size: 12pt
+) {
+  @include roboto($size, italic);
+  font-weight: 500;
+}
+
+@mixin roboto-bold-italic(
+  $size: 12pt
+) {
+  @include roboto($size, italic);
+  font-weight: 700;
+}
+
+// ROBOTO MONO //
+@mixin roboto-mono(
+  $size: 12pt,
+  $style: normal
+) {
+  font-family: 'Roboto Mono', monospace;
+  font-size: $size;
+  font-style: $style;
+  font-weight: 400;
+  letter-spacing: 0pt;
+}
+
+@mixin roboto-mono-bold(
+  $size: 12pt
+) {
+  @include roboto-mono($size);
+  font-weight: 700;
+}
