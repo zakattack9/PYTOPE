@@ -2,7 +2,7 @@
     "docker_images": {
         "docker_image1": {
             "docker_image_id": 1,
-            "docker_image_description": "test1",
+            "docker_image_description": "Base git Docker image",
             "tests": [
                 "test1",
                 "test2"
@@ -10,10 +10,8 @@
         },
         "docker_image2": {
             "docker_image_id": 2,
-            "docker_image_description": "test2",
+            "docker_image_description": "Base git Docker image with cloned repository",
             "tests": [
-                "test1",
-                "test2",
                 "test3"
             ]
         }
@@ -24,7 +22,7 @@
             "test_blocks": [
                 {
                     "block_type": "RUN",
-                    "command": "git commit \"initial commit",
+                    "command": "git commit -m 'initial commit'",
                     "command_output_assertion": "NO_VERIFY"
                 }
             ]
@@ -35,8 +33,7 @@
                 {
                     "block_type": "RUN",
                     "command": "git add .",
-                    "command_output_assertion": "VERIFY_EMPTY",
-                    "regex": ""
+                    "command_output_assertion": "VERIFY_EMPTY"
                 }
             ]
         },
@@ -45,9 +42,14 @@
             "test_blocks": [
                 {
                     "block_type": "RUN",
+                    "command": "git commit -am 'new commit'",
+                    "command_output_assertion": "NO_VERIFY"
+                },
+                {
+                    "block_type": "RUN",
                     "command": "git push",
                     "command_output_assertion": "VERIFY_REGEX",
-                    "regex": "1234"
+                    "regex": "/some_regex/g"
                 }
             ]
         }
