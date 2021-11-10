@@ -1,0 +1,47 @@
+.Chip, .Chip__value, .Chip--arg, .Chip--base {
+  font-family: "Roboto Mono", monospace;
+  font-size: 10.5pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: #353535;
+  font-weight: 700;
+  width: max-content;
+  height: max-content;
+  background-color: #bdbdbd;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+.Chip--base {
+  background-color: #949494;
+}
+.Chip--arg {
+  padding: 5px 5px 5px 10px;
+}
+.Chip__argument {
+  font-family: "Roboto Mono", monospace;
+  font-size: 10.5pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: #353535;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: #f1f1f1;
+  max-width: 90px;
+  text-align: center;
+  padding: 5px 10px;
+  margin-left: 8px;
+  border-radius: inherit;
+}
+.Chip__value {
+  outline: none;
+  background-color: #f1f1f1;
+  max-width: 110px;
+  text-align: center;
+  border: 2px solid #bdbdbd;
+  padding: 8px 15px;
+}

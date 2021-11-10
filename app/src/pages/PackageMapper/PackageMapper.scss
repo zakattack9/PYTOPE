@@ -1,0 +1,46 @@
+@use '../../utils/functions' as f;
+
+.PackageMapper {
+  height: 100%;
+  padding: 7px;
+  $border-radius: 8px;
+  $side-padding: 17px;
+
+  &__bar {
+    height: 150px;
+    background-color: f.primary-color(85%);
+    border-radius: $border-radius;
+    
+    display: grid;
+    grid-template-rows: 45% 55%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      "upperLeft upperRight"
+      "bottom bottom";
+  }
+
+  &__barUpperLeft, &__barUpperRight, &__barLower {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  &__barUpperLeft {
+    grid-area: upperLeft;
+    column-gap: 10px;
+    padding-left: $side-padding;
+  }
+  
+  &__barUpperRight {
+    grid-area: upperRight;
+    justify-content: end;
+    padding-right: $side-padding;
+  }
+
+  &__barLower {
+    grid-area: bottom;
+    background-color: f.primary-color(60%);
+    justify-content: center;
+    border-radius: $border-radius;
+  }
+}

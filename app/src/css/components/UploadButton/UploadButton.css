@@ -1,0 +1,23 @@
+.UploadButton {
+  font-family: "Roboto", sans-serif;
+  font-size: 10.5pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: #353535;
+  font-weight: 500;
+  width: max-content;
+  height: max-content;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border: 2px solid #bdbdbd;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+.UploadButton:hover {
+  background-color: #eaeaea;
+}
+.UploadButton__label {
+  display: inline-block;
+  padding: 8px 25px;
+}

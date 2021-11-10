@@ -1,0 +1,20 @@
+.Button {
+  font-family: "Roboto", sans-serif;
+  font-size: 10.5pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: #353535;
+  font-weight: 500;
+  width: max-content;
+  height: max-content;
+  padding: 10px 30px;
+  background-color: #5d5d5d;
+  color: #fcfcfc;
+  border-radius: 5px;
+  cursor: default;
+  transition: 0.2s;
+}
+.Button:hover {
+  background-color: #4e4e4e;
+}

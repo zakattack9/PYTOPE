@@ -1,0 +1,24 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.UploadButton {
+  $border-thickness: 2px;
+
+  @include fonts.roboto-medium(10.5pt);
+  width: max-content;
+  height: max-content;
+  background-color: f.primary-color(90%);
+  border-radius: 5px;
+  border: $border-thickness solid f.primary-color(5%);
+  box-sizing: border-box;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: f.primary-color(70%);
+  }
+  
+  &__label {
+    display: inline-block;
+    padding: calc(10px - $border-thickness) 25px;
+  }
+}

@@ -1,1 +1,34 @@
-
+.PackageMapper {
+  height: 100%;
+  padding: 7px;
+}
+.PackageMapper__bar {
+  height: 150px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 45% 55%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "upperLeft upperRight" "bottom bottom";
+}
+.PackageMapper__barUpperLeft, .PackageMapper__barUpperRight, .PackageMapper__barLower {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.PackageMapper__barUpperLeft {
+  grid-area: upperLeft;
+  column-gap: 10px;
+  padding-left: 17px;
+}
+.PackageMapper__barUpperRight {
+  grid-area: upperRight;
+  justify-content: end;
+  padding-right: 17px;
+}
+.PackageMapper__barLower {
+  grid-area: bottom;
+  background-color: #e3e3e3;
+  justify-content: center;
+  border-radius: 8px;
+}
