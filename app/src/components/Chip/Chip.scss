@@ -29,9 +29,12 @@
     @extend .Chip;
     $arg-vert-pad: calc($vert-pad - $input-vert-pad);
     $arg-horiz-pad: calc($horiz-pad - $input-horiz-pad);
-    padding: $arg-vert-pad $arg-horiz-pad $arg-horiz-pad $vert-pad
+    padding: $arg-vert-pad $arg-horiz-pad $arg-horiz-pad $vert-pad;
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
   }
-
+  
   &__argument {
     @include fonts.roboto-mono-bold($font-size);
     background-color: f.primary-color(80%);

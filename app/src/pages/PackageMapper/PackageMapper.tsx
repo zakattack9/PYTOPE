@@ -16,11 +16,21 @@ function PackageMapper() {
           <Button className="PackageMapper__createBtn" name="Create Test" />
         </div>
         <div className="PackageMapper__barLower">
-          <Chip name="git" type={ChipType.BASE} />
-          <Chip name="submodule" />
-          <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-          <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+          <div className="PackageMapper__chipWrapper">
+            <Chip name="git" type={ChipType.BASE} />
+            <Chip name="submodule" />
+            <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+            <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+          </div>
         </div>
+      </div>
+
+      <div className="PackageMapper__subcommands">
+        
+      </div>
+
+      <div className="PackageMapper__arguments">
+        
       </div>
     </div>
   );

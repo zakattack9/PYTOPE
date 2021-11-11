@@ -1,13 +1,20 @@
 @use '../../utils/functions' as f;
 
 .PackageMapper {
-  height: 100%;
-  padding: 7px;
   $border-radius: 8px;
   $side-padding: 17px;
 
+  height: 100%;
+  padding: 7px;
+  display: grid;
+  grid-template-rows: 140px auto; // modify first px value to change bar height
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+    "bar bar"
+    "subcommands arguments";
+
   &__bar {
-    height: 150px;
+    grid-area: bar;
     background-color: f.primary-color(85%);
     border-radius: $border-radius;
     
@@ -40,7 +47,22 @@
   &__barLower {
     grid-area: bottom;
     background-color: f.primary-color(60%);
-    justify-content: center;
     border-radius: $border-radius;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+
+  &__chipWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+  }
+
+  &__subcommands {
+
+  }
+
+  &__arguments {
+    
   }
 }

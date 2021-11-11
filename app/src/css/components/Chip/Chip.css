@@ -19,6 +19,9 @@
 }
 .Chip--arg {
   padding: 4px 4px 4px 10px;
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
 }
 .Chip__argument {
   font-family: "Roboto Mono", monospace;

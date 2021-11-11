@@ -30,7 +30,6 @@ function TextInput(props: Props) {
     if (!selection?.rangeCount) return;
     selection.deleteFromDocument();
     selection.getRangeAt(0).insertNode(document.createTextNode(text));
-
     e.preventDefault();
   };
 

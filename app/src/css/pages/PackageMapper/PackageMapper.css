@@ -1,9 +1,13 @@
 .PackageMapper {
   height: 100%;
   padding: 7px;
+  display: grid;
+  grid-template-rows: 140px auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "bar bar" "subcommands arguments";
 }
 .PackageMapper__bar {
-  height: 150px;
+  grid-area: bar;
   background-color: whitesmoke;
   border-radius: 8px;
   display: grid;
@@ -29,6 +33,12 @@
 .PackageMapper__barLower {
   grid-area: bottom;
   background-color: #e3e3e3;
-  justify-content: center;
   border-radius: 8px;
+  overflow-x: auto;
+  padding: 0 10px;
+}
+.PackageMapper__chipWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
 }
