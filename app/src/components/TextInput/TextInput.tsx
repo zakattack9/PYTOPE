@@ -1,4 +1,4 @@
-import { KeyboardEvent, CSSProperties } from 'react';
+import { KeyboardEvent, ClipboardEvent, CSSProperties } from 'react';
 import './TextInput.scss';
 
 /*
@@ -22,12 +22,25 @@ function TextInput(props: Props) {
     if (e.key === "Enter") e.preventDefault();
   };
 
+  // prevents pasting HTML content; pastes only text
+  const handlePaste = (e: ClipboardEvent) => {
+    const text = e.clipboardData.getData('text/plain');
+    const selection = window.getSelection();
+
+    if (!selection?.rangeCount) return;
+    selection.deleteFromDocument();
+    selection.getRangeAt(0).insertNode(document.createTextNode(text));
+
+    e.preventDefault();
+  };
+
   return (
     <span className="TextInput__wrapper">
       <span
         className={`TextInput ${props.className || ''}`} 
         style={styles}
         onKeyPress={handleKeyPress} 
+        onPaste={handlePaste}
         contentEditable 
       ></span>
     </span>
