@@ -1,0 +1,21 @@
+.ChipSelector {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.ChipSelector__title {
+  font-family: "Roboto Mono", monospace;
+  font-size: 13pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: #353535;
+}
+.ChipSelector__type {
+  font-family: "Roboto", sans-serif;
+  font-size: 13pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: #353535;
+  font-weight: 700;
+}

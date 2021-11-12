@@ -1,0 +1,12 @@
+.FilterInput {
+  
+  &__searchIcon {
+    width: 50px;
+    stroke: green;
+  }
+
+  &__cancelIcon {
+    width: 50px;
+    stroke: rgb(60, 75, 60);
+  }
+}

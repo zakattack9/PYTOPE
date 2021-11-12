@@ -6,11 +6,11 @@
   letter-spacing: 0pt;
   color: #353535;
   font-weight: 700;
-  width: max-content;
-  height: max-content;
   background-color: #bdbdbd;
   padding: 10px 15px;
   margin: 0 5px;
+  width: max-content;
+  height: max-content;
   border-radius: 25px;
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@
   background-color: #949494;
 }
 .Chip--arg {
-  padding: 4px 4px 4px 10px;
+  padding: 3px 3px 3px 10px;
   display: flex;
   flex-direction: row nowrap;
   align-items: center;
@@ -32,13 +32,13 @@
   color: #353535;
   font-weight: 700;
   background-color: #f1f1f1;
+  padding: 7px 12px;
   border: none;
-  padding: 6px 11px;
   margin-left: 8px;
   border-radius: inherit;
 }
 .Chip__value {
   background-color: #f1f1f1;
-  border: 2px solid #bdbdbd;
-  padding: 8px 13px;
+  padding: 7px 12px;
+  border: 3px solid #bdbdbd;
 }

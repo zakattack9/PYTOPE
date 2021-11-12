@@ -1,6 +1,8 @@
 import UploadButton from '../../components/UploadButton/UploadButton';
 import Button from '../../components/Button/Button';
+import ChipSelector from '../../components/ChipSelector/ChipSelector';
 import Chip from '../../components/Chip/Chip';
+import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import './PackageMapper.scss';
 
@@ -26,7 +28,7 @@ function PackageMapper() {
       </div>
 
       <div className="PackageMapper__subcommands">
-        
+        <ChipSelector title="git" type={ChipSelectorType.SUBCOMMANDS} chips={["fetch", "init", "commit", "push", "pull"]} />
       </div>
 
       <div className="PackageMapper__arguments">

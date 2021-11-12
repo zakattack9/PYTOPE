@@ -1,0 +1,14 @@
+@use '../../utils/fonts';
+
+.ChipSelector {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__title {
+    @include fonts.roboto-mono(13pt);
+  }
+  
+  &__type {
+    @include fonts.roboto-bold(13pt);
+  }
+}
