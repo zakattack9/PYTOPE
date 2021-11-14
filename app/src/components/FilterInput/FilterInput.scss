@@ -1,12 +1,45 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
 .FilterInput {
-  
-  &__searchIcon {
-    width: 50px;
-    stroke: green;
+  $pad: 5px;
+
+  background-color: f.primary-color(70%);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+
+  &__cancelIconWrapper {
+    display: inline-flex;
   }
 
-  &__cancelIcon {
-    width: 50px;
-    stroke: rgb(60, 75, 60);
+  &__searchIcon, &__cancelIcon {
+    width: 18px;
+    stroke: f.primary-text-color(30%);
+    padding: $pad;
+    display: inline-block;
+    transition: 0.15s;
+
+    &:hover {
+      stroke-width: 2px;
+    }
+
+    &--hide {
+      @extend .FilterInput__cancelIcon;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &__textInput {
+    @include fonts.roboto;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: $pad 3px $pad;
+    flex-grow: 2;
+    width: 0;
   }
 }

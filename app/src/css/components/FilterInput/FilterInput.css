@@ -1,8 +1,39 @@
-.FilterInput__searchIcon {
-  width: 50px;
-  stroke: green;
+.FilterInput {
+  background-color: #eaeaea;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
 }
-.FilterInput__cancelIcon {
-  width: 50px;
-  stroke: #3c4b3c;
+.FilterInput__cancelIconWrapper {
+  display: inline-flex;
+}
+.FilterInput__searchIcon, .FilterInput__cancelIcon, .FilterInput__searchIcon--hide, .FilterInput__cancelIcon--hide {
+  width: 18px;
+  stroke: #727272;
+  padding: 5px;
+  display: inline-block;
+  transition: 0.15s;
+}
+.FilterInput__searchIcon:hover, .FilterInput__cancelIcon:hover, .FilterInput__searchIcon--hide:hover, .FilterInput__cancelIcon--hide:hover {
+  stroke-width: 2px;
+}
+.FilterInput__searchIcon--hide, .FilterInput__cancelIcon--hide {
+  pointer-events: none;
+  opacity: 0;
+}
+.FilterInput__textInput {
+  font-family: "Roboto", sans-serif;
+  font-size: 11pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: #353535;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  padding: 5px 3px 5px;
+  flex-grow: 2;
+  width: 0;
 }

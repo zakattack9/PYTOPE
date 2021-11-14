@@ -1,6 +1,6 @@
 .PackageMapper {
   height: 100%;
-  padding: 7px;
+  padding: 7px 7px 0;
   display: grid;
   grid-template-rows: 140px auto;
   grid-template-columns: 50% 50%;
@@ -41,4 +41,10 @@
   display: flex;
   flex-flow: row nowrap;
   margin: 0 auto;
+}
+.PackageMapper__subcommands {
+  padding: 10px 0 0 10px;
+}
+.PackageMapper__arguments {
+  padding: 10px 0 0 10px;
 }

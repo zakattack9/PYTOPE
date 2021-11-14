@@ -2,10 +2,12 @@
 
 .PackageMapper {
   $border-radius: 8px;
-  $side-padding: 17px;
+  $pad: 7px; // for .PackageMapper
+  $side-pad: 17px; // for .barUpperLeft and .barUpperRight
+  $top-pad: 10px; // for .subcommands and .arguments
 
   height: 100%;
-  padding: 7px;
+  padding: $pad $pad 0;
   display: grid;
   grid-template-rows: 140px auto; // modify first px value to change bar height
   grid-template-columns: 50% 50%;
@@ -35,13 +37,13 @@
   &__barUpperLeft {
     grid-area: upperLeft;
     column-gap: 10px;
-    padding-left: $side-padding;
+    padding-left: $side-pad;
   }
   
   &__barUpperRight {
     grid-area: upperRight;
     justify-content: end;
-    padding-right: $side-padding;
+    padding-right: $side-pad;
   }
 
   &__barLower {
@@ -59,10 +61,10 @@
   }
 
   &__subcommands {
-
+    padding: $top-pad 0 0 $top-pad;
   }
 
   &__arguments {
-    
+    padding: $top-pad 0 0 $top-pad;
   }
 }

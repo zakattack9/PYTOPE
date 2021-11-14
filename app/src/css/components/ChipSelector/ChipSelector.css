@@ -1,10 +1,12 @@
 .ChipSelector {
   display: flex;
   flex-flow: column nowrap;
+  height: 100%;
+  max-width: max-content;
 }
 .ChipSelector__title {
   font-family: "Roboto Mono", monospace;
-  font-size: 13pt;
+  font-size: 14pt;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
@@ -12,10 +14,24 @@
 }
 .ChipSelector__type {
   font-family: "Roboto", sans-serif;
-  font-size: 13pt;
+  font-size: 14pt;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.05pt;
   color: #353535;
   font-weight: 700;
+}
+.ChipSelector__filterInput {
+  margin: 5px 0;
+  width: calc(100% + 15px);
+}
+.ChipSelector__chipWrapper {
+  flex-grow: 2;
+  height: 0;
+  overflow-y: auto;
+  width: calc(100% + 15px);
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 7px;
+  padding: 10px 0;
 }

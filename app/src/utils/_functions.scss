@@ -7,10 +7,10 @@
   @return color.scale($color, $lightness: $amount);
 }
 
-@function primary-color($amount) {
+@function primary-color($amount: 0%) {
   @return lighten(vars.$primary-color, $amount);
 }
 
-@function primary-text-color($amount) {
+@function primary-text-color($amount: 0%) {
   @return lighten(vars.$primary-text-color, $amount);  
 }
