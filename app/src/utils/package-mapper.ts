@@ -65,7 +65,7 @@ function addPath(mapping: PackageMapping, path = []) {
     Object.entries(mapping.subcommands).forEach(([key, value]) => {
       const PATH = [...path, "subcommands", key];
       value.path = PATH.join("/")
-      addPath(value, PATH)
+      // addPath(value, PATH)
     })
   }
 }
