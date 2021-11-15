@@ -15,19 +15,23 @@
     display: inline-flex;
   }
 
-  &__searchIcon, &__cancelIcon {
+  %icon {
     width: 18px;
     stroke: f.primary-text-color(30%);
     padding: $pad;
     display: inline-block;
     transition: 0.15s;
+  }
+
+  &__searchIcon, &__cancelIcon {
+    @extend %icon;
 
     &:hover {
       stroke-width: 2px;
     }
 
     &--hide {
-      @extend .FilterInput__cancelIcon;
+      @extend %icon;
       pointer-events: none;
       opacity: 0;
     }
