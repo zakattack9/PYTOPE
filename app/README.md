@@ -22,6 +22,14 @@ Contains utility files with JavaScript logic or SCSS @rules that are commonly re
 #### slices
 Contains Redux (RTK) slices with importable reducers and actions
 
+### Practices Followed
+- [BEM](http://getbem.com/naming/) CSS methodology
+- Create a TypeScript `interface` for each component's props
+- Build only functional components that use React hooks to leverage lifecycle methods
+- [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) for layout positioning and [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for inline element layout
+  - Use `position` sparingly
+- SASS [parent](https://sass-lang.com/documentation/style-rules/parent-selector) and [placeholder](https://sass-lang.com/documentation/style-rules/placeholder-selectors) selectors
+
 ### SASS
 - `--load-paths` specified with the `sass` command will be ignored by CRA webpack's sass-loader config; this means that all cases of `@use` in scss files will require using relative paths
   - React will throw an error if a relative path is not used
