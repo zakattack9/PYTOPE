@@ -10,9 +10,11 @@ multiline content is not allowed
 interface Props {
   placeholder?: string,
   className?: string,
+  isEditable?: boolean,
 }
 
 function TextInput(props: Props) {
+  const { isEditable = true } = props
   const styles = {
     "--placeholder": `'${props.placeholder}'`,
   } as CSSProperties;
@@ -40,7 +42,7 @@ function TextInput(props: Props) {
         style={styles}
         onKeyPress={handleKeyPress} 
         onPaste={handlePaste}
-        contentEditable 
+        contentEditable={isEditable}
       ></span>
     </span>
   );

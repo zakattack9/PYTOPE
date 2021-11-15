@@ -29,9 +29,9 @@
   flex-grow: 2;
   height: 0;
   overflow-y: auto;
-  width: calc(100% + 15px);
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   row-gap: 7px;
-  padding: 10px 0;
+  padding: 10px 15px 10px 0;
 }

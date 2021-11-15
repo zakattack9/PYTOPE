@@ -7,9 +7,11 @@ interface Props {
   type?: ChipType,
   className?: string,
   placeholder?: string,
+  isEditable?: boolean,
 }
 
 function Chip(props: Props) {
+  const { isEditable = true } = props;
   const className = `Chip${props.type ? `--${props.type}` : ''} ${props.className || ''}`;
 
   let chipContents;
@@ -17,13 +19,13 @@ function Chip(props: Props) {
     chipContents = (
       <>
         {props.name}
-        <TextInput className="Chip__argument" placeholder={props.placeholder} />
+        <TextInput className="Chip__argument" placeholder={props.placeholder} isEditable={isEditable} />
       </>
     );
   } else if (props.type === ChipType.VALUE) {
     chipContents = (
       <>
-        <TextInput className="Chip__value" placeholder={props.placeholder} />
+        <TextInput className="Chip__value" placeholder={props.placeholder} isEditable={isEditable} />
       </>
     );
   } else {

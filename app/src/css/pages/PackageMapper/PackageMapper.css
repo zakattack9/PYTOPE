@@ -40,6 +40,7 @@
 .PackageMapper__chipWrapper {
   display: flex;
   flex-flow: row nowrap;
+  column-gap: 5px;
   margin: 0 auto;
 }
 .PackageMapper__subcommands {
