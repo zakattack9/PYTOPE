@@ -6,7 +6,15 @@ import TestDesigner from '../../pages/TestDesigner/TestDesigner';
 import TestRunner from '../../pages/TestRunner/TestRunner';
 import './App.scss';
 
+// used only for testing redux store interactions w/package mapper
+import { mapping } from '../../utils/package-mapper';
+import { useAppDispatch } from '../../hooks/react-redux';
+import { loadPackage } from '../../slices/packageMapperSlice';
+
 function App() {
+  const dispatch = useAppDispatch();
+  dispatch(loadPackage(mapping))
+
   return (
     <div className='App'>
       <Toolbar />

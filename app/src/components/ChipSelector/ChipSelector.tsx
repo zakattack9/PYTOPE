@@ -30,23 +30,25 @@ function ChipSelector(props: Props) {
       <div className="ChipSelector__title">{props.title}</div>
       <div className="ChipSelector__type">{props.type}</div>
       <FilterInput className="ChipSelector__filterInput" onChange={handleChange} />
-      <div className="ChipSelector__chipWrapper">
-        <Chip name="git" type={ChipType.BASE} />
-        <Chip name="submodule" />
-        <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-        <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
-        <Chip name="git" type={ChipType.BASE} />
-        <Chip name="submodule" />
-        <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-        <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
-        <Chip name="git" type={ChipType.BASE} />
-        <Chip name="submodule" />
-        <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-        <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
-        <Chip name="git" type={ChipType.BASE} />
-        <Chip name="submodule" />
-        <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-        <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+      <div className="ChipSelector__chips">
+        <div className="ChipSelector__chipWrapper">
+          <Chip name="git" type={ChipType.BASE} />
+          <Chip name="submodule" />
+          <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+          <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+          <Chip name="git" type={ChipType.BASE} />
+          <Chip name="submodule" />
+          <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+          <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+          <Chip name="git" type={ChipType.BASE} />
+          <Chip name="submodule" />
+          <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+          <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+          <Chip name="git" type={ChipType.BASE} />
+          <Chip name="submodule" />
+          <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+          <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+        </div>
       </div>
     </div>
   );

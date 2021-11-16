@@ -18,17 +18,19 @@
   
   &__filterInput {
     margin: 5px 0;
-    width: calc(100% + $scrollbar-width);
+  }
+
+  &__chips {
+    flex: 2 0 1px;
+    overflow-y: auto; 
+    padding-right: $scrollbar-width;
   }
   
   &__chipWrapper {
-    flex-grow: 2;
-    height: 0;
-    overflow-y: auto; 
-    width: calc(100%);
+    max-width: 100%;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 7px;
-    padding: 10px $scrollbar-width 10px 0;
+    padding: 10px 10px 10px 0;
   }
 }

@@ -1,27 +1,46 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { PackageMapping, addPath } from '../utils/package-mapper';
+
+interface PackageMapperState {
+  command: PackageMapping | null,
+  currPackage: PackageMapping | null,
+}
+
+const initialState: PackageMapperState = {
+  command: null,
+  currPackage: null,
+}
 
 export const packageMapperSlice = createSlice({
   name: 'packageMapper',
-  initialState: {
-    command: [null],
-    currPackage: null,
-  },
+  initialState,
   reducers: {
-    addBaseKeyword: (state, action) => {
-      state.command[0] = action.payload;
+    commandAdd: (state, action: PayloadAction) => {
+      // state.command[0] = action.payload;
     },
-    addSubcommand: (state, action) => {
+    commandRemove: (state, action: PayloadAction) => {
 
     },
-    loadPackage: (state, action) => {
+    commandReset: (state) => {
 
+    },
+    loadPackage: (state, action: PayloadAction<PackageMapping>) => {
+      const pkgMappingClone = JSON.parse(JSON.stringify(action.payload));
+      const { baseKeyword, value } = pkgMappingClone;
+      addPath(pkgMappingClone);
+      state.currPackage = pkgMappingClone;
+      state.command = {
+        baseKeyword,
+        value,
+      }
     }
   },
 });
 
 export const { 
-  addBaseKeyword, 
-  addSubcommand,
+  commandAdd, 
+  commandRemove,
+  commandReset,
   loadPackage,
 } = packageMapperSlice.actions;
 

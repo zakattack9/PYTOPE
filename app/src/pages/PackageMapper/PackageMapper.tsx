@@ -4,9 +4,24 @@ import ChipSelector from '../../components/ChipSelector/ChipSelector';
 import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
+import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
 import './PackageMapper.scss';
 
 function PackageMapper() {
+  const pkgMapperState = useAppSelector(state => state.packageMapper);
+  const dispatch = useAppDispatch();
+  console.log(pkgMapperState);
+
+  const SelectedChips = pkgMapperState;
+
+  const BaseChip = pkgMapperState.command ? (
+    <Chip name={pkgMapperState.command.baseKeyword} type={ChipType.BASE} />
+  ) : null;
+
+  const ValueChip = pkgMapperState.command ? (
+    <Chip name="value" placeholder={pkgMapperState.command.value} type={ChipType.VALUE} />
+  ) : null;
+
   return (
     <div className='PackageMapper'>
       <div className="PackageMapper__bar">
@@ -19,10 +34,10 @@ function PackageMapper() {
         </div>
         <div className="PackageMapper__barLower">
           <div className="PackageMapper__chipWrapper">
-            <Chip name="git" type={ChipType.BASE} />
+            {BaseChip}
             <Chip name="submodule" />
             <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
-            <Chip name="./a_branch" placeholder="<folder>" type={ChipType.VALUE} />
+            {ValueChip}
           </div>
         </div>
       </div>
@@ -32,7 +47,7 @@ function PackageMapper() {
       </div>
 
       <div className="PackageMapper__arguments">
-        
+        <ChipSelector title="git" type={ChipSelectorType.ARGUMENTS} chips={["fetch", "init", "commit", "push", "pull"]} />
       </div>
     </div>
   );

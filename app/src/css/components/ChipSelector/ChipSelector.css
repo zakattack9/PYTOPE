@@ -23,15 +23,16 @@
 }
 .ChipSelector__filterInput {
   margin: 5px 0;
-  width: calc(100% + 15px);
+}
+.ChipSelector__chips {
+  flex: 2 0 1px;
+  overflow-y: auto;
+  padding-right: 15px;
 }
 .ChipSelector__chipWrapper {
-  flex-grow: 2;
-  height: 0;
-  overflow-y: auto;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-flow: column nowrap;
   row-gap: 7px;
-  padding: 10px 15px 10px 0;
+  padding: 10px 10px 10px 0;
 }

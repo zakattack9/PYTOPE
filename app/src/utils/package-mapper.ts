@@ -1,4 +1,4 @@
-export const mapping = {
+export const mapping: PackageMapping = {
   "baseKeyword": "git",
   "subcommands": {
     "submodule": {
@@ -23,7 +23,8 @@ export const mapping = {
         "-a": {
           "value": ""
         }
-      }
+      },
+      "value": "<path>"
     }
   },
   "arguments": {
@@ -31,11 +32,12 @@ export const mapping = {
       "value": ""
     }
   },
-  "value": "<path>"
+  "value": "<pathspec>"
 }
 
 interface Argument {
   value: string,
+  path?: string,
 }
 
 interface Arguments {
@@ -43,9 +45,9 @@ interface Arguments {
 }
 
 interface Subcommand {
-  arguments: Arguments,
-  subcommands: Subcommands,
   value: string,
+  arguments?: Arguments,
+  subcommands?: Subcommands,
   path?: string,
 }
 
@@ -55,17 +57,29 @@ interface Subcommands {
 
 export interface PackageMapping {
   baseKeyword: string,
-  subcommands: Subcommands,
-  arguments: Arguments,
   value: string,
+  subcommands?: Subcommands,
+  arguments?: Arguments,
 }
 
-function addPath(mapping: PackageMapping, path = []) {
+// ignore baseKeyword property
+interface Mapping extends Omit<PackageMapping, 'baseKeyword'> {}
+
+// recursive function to add paths to all subcommands and arguments
+// paths make finding a specific subcommand or argument faster
+export function addPath(mapping: Mapping, path: string[] = []) {
+  // add path to subcommand
   if (mapping.subcommands) {
-    Object.entries(mapping.subcommands).forEach(([key, value]) => {
-      const PATH = [...path, "subcommands", key];
-      value.path = PATH.join("/")
-      // addPath(value, PATH)
+    Object.entries(mapping.subcommands).forEach(([subcommand, obj]) => {
+      const PATH = [...path, "subcommands", subcommand];
+      obj.path = PATH.join("/");
+      addPath(obj, PATH);
+    })
+  }
+  // add path to argument
+  if (mapping.arguments) {
+    Object.entries(mapping.arguments).forEach(([argument, obj]) => {
+      obj.path = [...path, "arguments", argument].join("/");
     })
   }
 }
