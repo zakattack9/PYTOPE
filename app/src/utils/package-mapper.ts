@@ -94,3 +94,18 @@ export function addPath(mapping: Mapping, path: string[] = []) {
     })
   }
 }
+
+function getObject(mapping: PackageMapping, path: string) {
+  interface ReducedPackageMapping extends Omit<PackageMapping, 'baseKeyword' | 'value'> {};
+  type ObjTypes = ReducedPackageMapping | Subcommands | Arguments | Omit<Subcommand, 'value' | 'path'> | Omit<Argument, 'value'>;
+  type KeyTypes = keyof ReducedPackageMapping | string;
+
+  const pathArr = path.split('/');
+  const targetObj = pathArr.reduce((obj: ObjTypes, key: KeyTypes): ObjTypes => {
+    console.log(obj)
+    console.log(key as keyof ObjTypes)
+    console.log(obj[key as keyof ObjTypes])
+    return obj[key as keyof ObjTypes];
+  }, mapping);
+  return targetObj;
+}
