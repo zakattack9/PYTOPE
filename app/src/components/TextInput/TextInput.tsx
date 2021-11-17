@@ -40,7 +40,7 @@ function TextInput(props: Props) {
   return (
     <span className="TextInput__wrapper">
       <span
-        className={`TextInput ${props.className || ''}`} 
+        className={`TextInput${!isEditable ? '--disabled' : ''} ${props.className || ''}`} 
         style={styles}
         onKeyPress={handleKeyPress} 
         onPaste={handlePaste}

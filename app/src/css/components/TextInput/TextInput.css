@@ -1,15 +1,18 @@
-.TextInput {
+.TextInput, .TextInput--disabled {
   --placeholder: "";
   display: block;
   background-color: white;
   padding: 10px;
   outline: none;
 }
+.TextInput--disabled {
+  cursor: default;
+}
 .TextInput__wrapper {
   display: inline-block;
   border-radius: inherit;
 }
-.TextInput:empty::before {
+.TextInput:empty::before, .TextInput--disabled:empty::before {
   content: var(--placeholder);
   color: #9c9c9c;
 }

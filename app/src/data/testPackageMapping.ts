@@ -14,6 +14,14 @@ export const mapping: PackageMapping = {
         "set-url" : {
           "arguments": {},
           "value": "<newurl>"
+        },
+        "set-branch" : {
+          "arguments": {
+            "--depth": {
+              "value": "<depth>"
+            }
+          },
+          "value": "<branch>"
         }
       }
     },

@@ -5,7 +5,7 @@ import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import { useAppSelector } from '../../hooks/react-redux';
-import { getObject, getName } from '../../utils/package-mapper';
+import { getObject, getPathName } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
@@ -21,11 +21,11 @@ function PackageMapper() {
   let SelectedChips = null;
   if (currPackage) {
     const subcommandChips = command?.paths.subcommands.map(path => {
-      const name = getName(path);
+      const name = getPathName(path);
       return <Chip name={name} key={path} />;
     }) || [];
     const argumentChips = command?.paths.arguments.map(path => {
-      const name = getName(path);
+      const name = getPathName(path);
       const arg = getObject(currPackage, path);
       return <Chip name={name} placeholder={arg.value} type={ChipType.ARG} key={path} />;
     }) || [];
@@ -52,7 +52,7 @@ function PackageMapper() {
   let Subcommands = null;
   if (currPackage)
     Subcommands = command?.paths.subcommands.map(path => {
-      const name = getName(path);
+      const name = getPathName(path);
       const subcommand = getObject(currPackage, path);
       if (subcommand.subcommands) 
         return (
@@ -75,7 +75,7 @@ function PackageMapper() {
     />
   ) : null;
   if (currPackage && nestedSubcommandPath) {
-    const name = getName(nestedSubcommandPath);
+    const name = getPathName(nestedSubcommandPath);
     const subcommand = getObject(currPackage, nestedSubcommandPath);
     if (subcommand.arguments)
       Arguments = (

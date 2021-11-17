@@ -56,8 +56,13 @@ export function getPathType(path: string): PathType {
   return pathArr[pathArr.length - 2] as PathType;
 }
 
-export function getName(path: string) {
+export function getPathName(path: string) {
   return path.split('/').pop() || '';
+}
+
+export function getPathPrefix(path: string) {
+  const pathArr = path.split('/');
+  return pathArr.slice(0, -1).join('/') || '';
 }
 
 export function getObject(mapping: PackageMapping, path: string) {

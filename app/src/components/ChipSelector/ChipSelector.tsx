@@ -7,7 +7,7 @@ import { Arguments, Subcommands } from '../../utils/package-mapper';
 import { Props as ChipProps } from '../Chip/Chip';
 import { commandAdd, commandRemove } from '../../slices/packageMapperSlice';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
-import { getPathType } from '../../utils/package-mapper';
+import { getPathType, getPathPrefix } from '../../utils/package-mapper';
 import './ChipSelector.scss';
 
 interface Props {
@@ -22,29 +22,27 @@ function ChipSelector(props: Props) {
   const dispatch = useAppDispatch();
   const { isSingleSelect = true } = props;
   const [filter, setFilter] = useState('');
-  const [currPath, setCurrPath] = useState(''); // used for single select
 
   const handleChange = (input: string) => setFilter(input);
 
   const singleSelect = (path: string) => {
     if (!path) return; // ignore chips that don't have a path
+    const pathType = getPathType(path);
+    const pathPrefix = getPathPrefix(path);
+    // relies on paths being sorted (alternative is to track based off # of "/")
+    const currPath = command?.paths[pathType].find(path => path.startsWith(pathPrefix)); 
     if (currPath) dispatch(commandRemove(currPath));
-    if (currPath === path) {
-      setCurrPath('')
-    } else {
+    if (!command?.paths[pathType].includes(path))
       dispatch(commandAdd(path));
-      setCurrPath(path)
-    }
   }
 
   const multiSelect = (path: string) => {
     if (!path) return; // ignore chips that don't have a path
     const pathType = getPathType(path);
-    if (command?.paths[pathType].includes(path)) {
+    if (command?.paths[pathType].includes(path))
       dispatch(commandRemove(path));
-    } else {
+    else
       dispatch(commandAdd(path));
-    }
   }
 
   const handleChipClick = (path: string) => {
