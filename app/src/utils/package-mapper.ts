@@ -1,54 +1,12 @@
-export const mapping: PackageMapping = {
-  "baseKeyword": "git",
-  "subcommands": {
-    "submodule": {
-      "arguments": {
-        "--quiet": {
-          "value": ""
-        }
-      },
-      "value": "<branch-name>",
-      "subcommands": {
-        "set-url" : {
-          "arguments": {},
-          "value": "<newurl>"
-        }
-      }
-    },
-    "commit": {
-      "arguments": {
-        "-m": {
-          "value": "<message>"
-        },
-        "-a": {
-          "value": ""
-        }
-      },
-      "value": "<path>"
-    },
-    "add": {
-      "arguments": {},
-      "value": "<path>"
-    },
-    "push": {
-      "arguments": {},
-      "value": "<path>"
-    }
-  },
-  "arguments": {
-    "--version": {
-      "value": ""
-    },
-    "-C": {
-      "value": "<path>"
-    }
-  },
-  "value": "<pathspec>"
+export interface PackageMapping {
+  baseKeyword: string,
+  value: string,
+  subcommands?: Subcommands,
+  arguments?: Arguments,
 }
 
-export interface Argument {
-  value: string,
-  path?: string,
+export interface Subcommands {
+  [subcommand: string]: Subcommand,
 }
 
 export interface Arguments {
@@ -62,15 +20,9 @@ export interface Subcommand {
   path?: string,
 }
 
-export interface Subcommands {
-  [subcommand: string]: Subcommand,
-}
-
-export interface PackageMapping {
-  baseKeyword: string,
+export interface Argument {
   value: string,
-  subcommands?: Subcommands,
-  arguments?: Arguments,
+  path?: string,
 }
 
 // ignore baseKeyword property
@@ -104,15 +56,19 @@ export function getPathType(path: string): PathType {
   return pathArr[pathArr.length - 2] as PathType;
 }
 
+export function getName(path: string) {
+  return path.split('/').pop() || '';
+}
+
 export function getObject(mapping: PackageMapping, path: string) {
   interface ReducedPackageMapping extends Omit<PackageMapping, 'baseKeyword' | 'value'> {};
-  type ObjTypes = ReducedPackageMapping | Subcommands | Arguments | Omit<Subcommand, 'value' | 'path'> | Omit<Argument, 'value'>;
-  type KeyTypes = keyof ReducedPackageMapping | string;
-  type ReturnTypes = Subcommand & Argument;
+  type ObjType = ReducedPackageMapping | Subcommands | Arguments | Omit<Subcommand, 'value' | 'path'> | Omit<Argument, 'value'>;
+  type KeyType = keyof ReducedPackageMapping | string;
+  type ReturnType = Subcommand & Argument;
 
   const pathArr = path.split('/');
-  const targetObj = pathArr.reduce((obj: ObjTypes, key: KeyTypes): ObjTypes => {
-    return obj[key as keyof ObjTypes];
+  const targetObj = pathArr.reduce((obj: ObjType, key: KeyType): ObjType => {
+    return obj[key as keyof ObjType];
   }, mapping);
-  return targetObj as ReturnTypes;
+  return targetObj as ReturnType;
 }

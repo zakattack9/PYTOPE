@@ -30,12 +30,14 @@ export const packageMapperSlice = createSlice({
       const pathType = getPathType(path);
       state.command.paths[pathType].push(path);
       state.command.paths[pathType] = state.command.paths[pathType].sort();
+      // ensure only arguments for the current, deepest subcommand are added
       if (pathType === 'subcommands')
         state.command.paths.arguments = [];
     },
     commandRemove: (state, action: PayloadAction<string>) => {
       const path = action.payload;
-      const pathTypes: Array<PathType> = ['subcommands', 'arguments']
+      const pathTypes: Array<PathType> = ['subcommands', 'arguments'];
+      // remove all dependent/nested subcommands and arguments if a higher level subcommand is removed
       pathTypes.forEach((pathType) => {
         if (!state.command) return;
         state.command.paths[pathType] = state.command.paths[pathType].filter(currPath => !currPath.startsWith(path));
@@ -59,7 +61,7 @@ export const packageMapperSlice = createSlice({
         value,
         paths: {
           subcommands: [],
-          arguments: []
+          arguments: [],
         },
       }
     }

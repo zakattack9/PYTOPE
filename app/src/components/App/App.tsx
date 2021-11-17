@@ -7,11 +7,12 @@ import TestRunner from '../../pages/TestRunner/TestRunner';
 import './App.scss';
 
 // used only for testing redux store interactions w/package mapper
-import { mapping } from '../../utils/package-mapper';
+import { mapping } from '../../data/testPackageMapping';
 import { useAppDispatch } from '../../hooks/react-redux';
 import { loadPackage } from '../../slices/packageMapperSlice';
 
 function App() {
+  // this logic should go into the package select component
   const dispatch = useAppDispatch();
   dispatch(loadPackage(mapping))
 

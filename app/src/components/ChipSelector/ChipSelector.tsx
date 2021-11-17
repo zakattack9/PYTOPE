@@ -62,7 +62,7 @@ function ChipSelector(props: Props) {
         type: ChipType.ARG,
         placeholder: obj.value,
         isEditable: false,
-      })
+      }),
     };
     return name.includes(filter) ? (
       <Chip {...chipProps} key={obj.path} />

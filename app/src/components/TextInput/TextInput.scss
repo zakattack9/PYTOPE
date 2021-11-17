@@ -5,7 +5,7 @@
   padding: 10px;
   outline: none;
 
-  // needed to prevent a stuck cursor bug
+  // needed to prevent a stuck caret bug
   &__wrapper {
     display: inline-block;
     border-radius: inherit;
