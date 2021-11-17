@@ -4,15 +4,14 @@ import ChipSelector from '../../components/ChipSelector/ChipSelector';
 import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
-import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { useAppSelector } from '../../hooks/react-redux';
 import { getObject } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
   const { currPackage, command } = pkgMapperState;
-  const dispatch = useAppDispatch();
-  console.log(pkgMapperState);
+  // console.log(pkgMapperState);
 
   let SelectedChips = null;
   if (currPackage) {
