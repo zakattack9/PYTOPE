@@ -1,4 +1,4 @@
-import { KeyboardEvent, ClipboardEvent, CSSProperties } from 'react';
+import { useState, KeyboardEvent, ClipboardEvent, CSSProperties } from 'react';
 import './TextInput.scss';
 
 /*
@@ -14,6 +14,7 @@ interface Props {
 }
 
 function TextInput(props: Props) {
+  const [text, setText] = useState('');
   const { isEditable = true } = props
   const styles = {
     "--placeholder": `'${props.placeholder}'`,
@@ -22,6 +23,7 @@ function TextInput(props: Props) {
   // ignore new lines
   const handleKeyPress = (e: KeyboardEvent) => {
     if (e.key === "Enter") e.preventDefault();
+    else setText(e.currentTarget.textContent || '');
   };
 
   // prevents pasting HTML content; pastes only text

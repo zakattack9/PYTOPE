@@ -25,33 +25,44 @@ export const mapping: PackageMapping = {
         }
       },
       "value": "<path>"
+    },
+    "add": {
+      "arguments": {},
+      "value": "<path>"
+    },
+    "push": {
+      "arguments": {},
+      "value": "<path>"
     }
   },
   "arguments": {
     "--version": {
       "value": ""
+    },
+    "-C": {
+      "value": "<path>"
     }
   },
   "value": "<pathspec>"
 }
 
-interface Argument {
+export interface Argument {
   value: string,
   path?: string,
 }
 
-interface Arguments {
+export interface Arguments {
   [argument: string]: Argument,
 }
 
-interface Subcommand {
+export interface Subcommand {
   value: string,
   arguments?: Arguments,
   subcommands?: Subcommands,
   path?: string,
 }
 
-interface Subcommands {
+export interface Subcommands {
   [subcommand: string]: Subcommand,
 }
 
@@ -63,7 +74,7 @@ export interface PackageMapping {
 }
 
 // ignore baseKeyword property
-interface Mapping extends Omit<PackageMapping, 'baseKeyword'> {}
+export interface Mapping extends Omit<PackageMapping, 'baseKeyword'> {}
 
 // recursive function to add paths to all subcommands and arguments
 // paths make finding a specific subcommand or argument faster
@@ -71,15 +82,15 @@ export function addPath(mapping: Mapping, path: string[] = []) {
   // add path to subcommand
   if (mapping.subcommands) {
     Object.entries(mapping.subcommands).forEach(([subcommand, obj]) => {
-      const PATH = [...path, "subcommands", subcommand];
-      obj.path = PATH.join("/");
+      const PATH = [...path, 'subcommands', subcommand];
+      obj.path = PATH.join('/');
       addPath(obj, PATH);
     })
   }
   // add path to argument
   if (mapping.arguments) {
     Object.entries(mapping.arguments).forEach(([argument, obj]) => {
-      obj.path = [...path, "arguments", argument].join("/");
+      obj.path = [...path, 'arguments', argument].join('/');
     })
   }
 }

@@ -6,24 +6,30 @@
   letter-spacing: 0pt;
   color: #353535;
   font-weight: 700;
-  background-color: #bdbdbd;
+  background-color: #c4c4c4;
   padding: 10px 15px;
   width: max-content;
   height: max-content;
   border-radius: 25px;
   box-sizing: border-box;
+  cursor: default;
+  user-select: none;
 }
 .Chip--base {
   background-color: #949494;
 }
 .Chip--arg {
-  padding: 3px 3px 3px 10px;
+  padding: 3px 3px 3px 15px;
   display: flex;
   flex-direction: row nowrap;
   align-items: center;
 }
 .Chip--value {
   width: max-content;
+}
+.Chip__argument, .Chip__value {
+  cursor: text;
+  background-color: #f1f1f1;
 }
 .Chip__argument {
   font-family: "Roboto Mono", monospace;
@@ -33,14 +39,17 @@
   letter-spacing: 0pt;
   color: #353535;
   font-weight: 700;
-  background-color: #f1f1f1;
   padding: 7px 12px;
   border: none;
   margin-left: 8px;
   border-radius: inherit;
 }
 .Chip__value {
-  background-color: #f1f1f1;
   padding: 7px 12px;
-  border: 3px solid #bdbdbd;
+  border: 3px solid #c4c4c4;
+}
+
+.SelectedChip {
+  background-color: #828282;
+  color: white;
 }

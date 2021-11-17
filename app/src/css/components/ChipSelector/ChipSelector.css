@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
+  min-width: 150px;
   max-width: max-content;
 }
 .ChipSelector__title {

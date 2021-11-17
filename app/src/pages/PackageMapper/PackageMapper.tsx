@@ -9,17 +9,34 @@ import './PackageMapper.scss';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
+  const { command, currPackage } = pkgMapperState;
   const dispatch = useAppDispatch();
   console.log(pkgMapperState);
 
   const SelectedChips = pkgMapperState;
 
-  const BaseChip = pkgMapperState.command ? (
-    <Chip name={pkgMapperState.command.baseKeyword} type={ChipType.BASE} />
+  const BaseChip = command ? (
+    <Chip name={command.baseKeyword} type={ChipType.BASE} />
   ) : null;
 
-  const ValueChip = pkgMapperState.command ? (
-    <Chip name="value" placeholder={pkgMapperState.command.value} type={ChipType.VALUE} />
+  const ValueChip = command ? (
+    <Chip name="value" placeholder={command.value} type={ChipType.VALUE} />
+  ) : null;
+
+  const BaseSubcommands = currPackage?.subcommands ? (
+    <ChipSelector 
+      title={currPackage.baseKeyword} 
+      type={ChipSelectorType.SUBCOMMANDS} 
+      chipData={currPackage.subcommands} 
+    />
+  ) : null;
+
+  const BaseArguments = currPackage?.arguments ? (
+    <ChipSelector 
+      title={currPackage.baseKeyword} 
+      type={ChipSelectorType.ARGUMENTS} 
+      chipData={currPackage.arguments} 
+    />
   ) : null;
 
   return (
@@ -43,11 +60,11 @@ function PackageMapper() {
       </div>
 
       <div className="PackageMapper__subcommands">
-        <ChipSelector title="git" type={ChipSelectorType.SUBCOMMANDS} chips={["fetch", "init", "commit", "push", "pull"]} />
+        {BaseSubcommands}
       </div>
 
       <div className="PackageMapper__arguments">
-        <ChipSelector title="git" type={ChipSelectorType.ARGUMENTS} chips={["fetch", "init", "commit", "push", "pull"]} />
+        {BaseArguments}
       </div>
     </div>
   );
