@@ -30,6 +30,10 @@ Contains Redux (RTK) slices with importable reducers and actions
   - Use `position` sparingly
 - SASS [parent](https://sass-lang.com/documentation/style-rules/parent-selector) and [placeholder](https://sass-lang.com/documentation/style-rules/placeholder-selectors) selectors
 
+### Things To Keep In Mind
+- Because Package Mapper, Test Designer, and Test Runner are all mutually exclusive components, meaning only one can be mounted at a time, switching to any other interface will result in the current interface being unmounted; this consequently results in any components within the unmounted interface losing their state for any specified hooks (useState, useRef).
+  - If a component must maintain its state after its encompassing interface is unmounted, consider using the Redux store to save any necessary values
+
 ### SASS
 - `--load-paths` specified with the `sass` command will be ignored by CRA webpack's sass-loader config; this means that all cases of `@use` in scss files will require using relative paths
   - React will throw an error if a relative path is not used
