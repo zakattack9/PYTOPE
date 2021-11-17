@@ -13,7 +13,7 @@ export interface Props {
   type?: ChipType,
   isEditable?: boolean,
   // isSelected?: boolean,
-  handleClick?: (name: string, path: string) => void,
+  handleClick?: (path: string) => void,
 }
 
 function Chip(props: Props) {
@@ -30,9 +30,8 @@ function Chip(props: Props) {
 
   const handleClick = (e: MouseEvent) => {
     if (props.handleClick) {
-      const name = props.name;
       const path = props.path || '';
-      props.handleClick(name, path);
+      props.handleClick(path);
     }
   }
 

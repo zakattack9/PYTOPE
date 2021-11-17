@@ -6,7 +6,8 @@ import { ChipType } from '../../utils/enums';
 import { Arguments, Subcommands } from '../../utils/package-mapper';
 import { Props as ChipProps } from '../Chip/Chip';
 import { commandAdd, commandRemove } from '../../slices/packageMapperSlice';
-import { useAppDispatch } from '../../hooks/react-redux';
+import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { getPathType } from '../../utils/package-mapper';
 import './ChipSelector.scss';
 
 interface Props {
@@ -16,48 +17,39 @@ interface Props {
   isSingleSelect?: boolean,
 }
 
-interface SelectedChipsState {
-  [name: string]: string,
-}
-
 function ChipSelector(props: Props) {
+  const command = useAppSelector(state => state.packageMapper.command);
   const dispatch = useAppDispatch();
   const { isSingleSelect = true } = props;
   const [filter, setFilter] = useState('');
-  // used for single select
-  const [selectedChip, setSelectedChip] = useState({ name: '', path: '' });
-  // used for multi select
-  const [selectedChips, setSelectedChips] = useState({} as SelectedChipsState);
+  const [currPath, setCurrPath] = useState(''); // used for single select
 
   const handleChange = (input: string) => setFilter(input);
 
-  const singleSelect = (name: string, path: string) => {
-    const { name: currName, path: currPath } = selectedChip;
+  const singleSelect = (path: string) => {
     if (!path) return; // ignore chips that don't have a path
     if (currPath) dispatch(commandRemove(currPath));
-    if (name === currName) {
-      setSelectedChip({ name: '', path: '' });
+    if (currPath === path) {
+      setCurrPath('')
     } else {
       dispatch(commandAdd(path));
-      setSelectedChip({ name , path });
+      setCurrPath(path)
     }
   }
 
-  const multiSelect = (name: string, path: string) => {
+  const multiSelect = (path: string) => {
     if (!path) return; // ignore chips that don't have a path
-    if (selectedChips[name]) {
-      dispatch(commandRemove(selectedChips[name]));
-      const { [name]: chip, ...otherChips } = selectedChips;
-      setSelectedChips(otherChips);
+    const pathType = getPathType(path);
+    if (command?.paths[pathType].includes(path)) {
+      dispatch(commandRemove(path));
     } else {
       dispatch(commandAdd(path));
-      setSelectedChips({...selectedChips, [name]: path })
     }
   }
 
-  const handleChipClick = (name: string, path: string) => {
-    if (isSingleSelect) singleSelect(name, path);
-    else multiSelect(name, path);
+  const handleChipClick = (path: string) => {
+    if (isSingleSelect) singleSelect(path);
+    else multiSelect(path);
   }
 
   const Chips = Object.entries(props.chipData).map(([name, obj]) => {
