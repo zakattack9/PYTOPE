@@ -62,9 +62,6 @@ function ChipSelector(props: Props) {
 
   const Chips = Object.entries(props.chipData).map(([name, obj]) => {
     const isArgument = props.type === ChipSelectorType.ARGUMENTS;
-    const isSelected = isSingleSelect 
-      ? name === selectedChip.name 
-      : selectedChips.hasOwnProperty(name);
     const chipProps: ChipProps = {
       name,
       path: obj.path,
@@ -73,10 +70,7 @@ function ChipSelector(props: Props) {
         type: ChipType.ARG,
         placeholder: obj.value,
         isEditable: false,
-      }),
-      ...(isSelected && { 
-        isSelected
-      }),
+      })
     };
     return name.includes(filter) ? (
       <Chip {...chipProps} key={obj.path} />
