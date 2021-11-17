@@ -63,6 +63,9 @@
 
   &__subcommands {
     padding: $top-pad 0 0 $top-pad;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 25px;
   }
 
   &__arguments {

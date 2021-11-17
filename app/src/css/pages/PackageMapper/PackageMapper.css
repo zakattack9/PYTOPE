@@ -45,6 +45,9 @@
 }
 .PackageMapper__subcommands {
   padding: 10px 0 0 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 25px;
 }
 .PackageMapper__arguments {
   padding: 10px 10px 0 0;

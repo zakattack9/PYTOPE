@@ -1,6 +1,7 @@
 import { MouseEvent } from 'react';
 import { ChipType } from '../../utils/enums';
 import TextInput from '../TextInput/TextInput';
+import { useAppSelector } from '../../hooks/react-redux';
 import './Chip.scss';
 
 export interface Props {
@@ -16,8 +17,16 @@ export interface Props {
 
 function Chip(props: Props) {
   const { isEditable = true } = props;
-  const selectedClassName = props.isSelected ? 'SelectedChip' : '';
-  const className = `Chip${props.type ? `--${props.type}` : ''} ${props.className || ''} ${selectedClassName}`;
+  
+  const command = useAppSelector(state => state.packageMapper.command);
+  let selectedClassName = props.isSelected ? 'SelectedChip' : '';
+  if (command && props.path) {
+    const allPaths = [...command.paths.subcommands, ...command.paths.arguments];
+    selectedClassName = allPaths.includes(props.path) ? 'SelectedChip' : '';
+  }
+  // default ARG types with no placeholder (flag) to regular chip
+  const hasModifier = props.type !== ChipType.ARG || props.placeholder; 
+  const className = `Chip${props.type && hasModifier ? `--${props.type}` : ''} ${props.className || ''} ${selectedClassName}`;
 
   const handleClick = (e: MouseEvent) => {
     if (props.handleClick) {
@@ -28,7 +37,7 @@ function Chip(props: Props) {
   }
 
   let chipContents;
-  if (props.type === ChipType.ARG) {
+  if (props.type === ChipType.ARG && props.placeholder) {
     chipContents = (
       <>
         {props.name}

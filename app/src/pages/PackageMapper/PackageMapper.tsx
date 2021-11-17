@@ -5,15 +5,28 @@ import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { getObject } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
-  const { command, currPackage } = pkgMapperState;
+  const { currPackage, command } = pkgMapperState;
   const dispatch = useAppDispatch();
   console.log(pkgMapperState);
 
-  const SelectedChips = pkgMapperState;
+  let SelectedChips = null;
+  if (currPackage) {
+    const subcommandChips = command?.paths.subcommands.map(path => {
+      const name = path.split('/').pop() || '';
+      return <Chip name={name} key={path} />;
+    }) || [];
+    const argumentChips = command?.paths.arguments.map(path => {
+      const name = path.split('/').pop() || '';
+      const arg = getObject(currPackage, path);
+      return <Chip name={name} placeholder={arg.value} type={ChipType.ARG} key={path} />;
+    }) || [];
+    SelectedChips = [...subcommandChips, ...argumentChips];
+  }
 
   const BaseChip = command ? (
     <Chip name={command.baseKeyword} type={ChipType.BASE} />
@@ -31,13 +44,46 @@ function PackageMapper() {
     />
   ) : null;
 
-  const BaseArguments = currPackage?.arguments ? (
+  let Subcommands = null;
+  if (currPackage) {
+    Subcommands = command?.paths.subcommands.map(path => {
+      const name = path.split('/').pop() || '';
+      const subcommand = getObject(currPackage, path);
+      if (subcommand.subcommands) 
+        return (
+          <ChipSelector 
+            title={name} 
+            type={ChipSelectorType.SUBCOMMANDS} 
+            chipData={subcommand.subcommands} 
+            key={path}
+          />);
+      else 
+        return null;
+    }) || null;
+  }
+
+  let Arguments = currPackage?.arguments ? (
     <ChipSelector 
       title={currPackage.baseKeyword} 
       type={ChipSelectorType.ARGUMENTS} 
       chipData={currPackage.arguments} 
+      isSingleSelect={false}
     />
   ) : null;
+  if (currPackage && command?.paths.subcommands.length) {
+    const selectedSubcommands = command.paths.subcommands;
+    const deepestSubcommandPath = selectedSubcommands[selectedSubcommands?.length - 1];
+    const name = deepestSubcommandPath.split('/').pop() || '';
+    const subcommand = getObject(currPackage, deepestSubcommandPath);
+    if (subcommand.arguments)
+      Arguments = (
+        <ChipSelector 
+          title={name} 
+          type={ChipSelectorType.ARGUMENTS} 
+          chipData={subcommand.arguments} 
+          isSingleSelect={false}
+        />);
+  }
 
   return (
     <div className='PackageMapper'>
@@ -52,8 +98,7 @@ function PackageMapper() {
         <div className="PackageMapper__barLower">
           <div className="PackageMapper__chipWrapper">
             {BaseChip}
-            <Chip name="submodule" />
-            <Chip name="--branch" placeholder="<branch>" type={ChipType.ARG} />
+            {SelectedChips}
             {ValueChip}
           </div>
         </div>
@@ -61,10 +106,11 @@ function PackageMapper() {
 
       <div className="PackageMapper__subcommands">
         {BaseSubcommands}
+        {Subcommands}
       </div>
 
       <div className="PackageMapper__arguments">
-        {BaseArguments}
+        {Arguments}
       </div>
     </div>
   );

@@ -1,8 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PackageMapping, addPath, Subcommands, Arguments, Subcommand, Argument } from '../utils/package-mapper';
+import { PackageMapping, addPath, getPathType, PathType } from '../utils/package-mapper';
+
+interface Command {
+  baseKeyword: string,
+  value: string,
+  paths: {
+    subcommands: Array<string>,
+    arguments: Array<string>
+  }
+}
 
 interface PackageMapperState {
-  command: PackageMapping | null,
+  command: Command | null,
   currPackage: PackageMapping | null,
 }
 
@@ -17,29 +26,28 @@ export const packageMapperSlice = createSlice({
   reducers: {
     commandAdd: (state, action: PayloadAction<string>) => {
       if (!state.command) return;
-      const pathArr = action.payload.split('/');
-
-      let newCommand: {[ key: string]: object } = {};
-      pathArr.reduce((obj, key, i) => {
-        const newObj = {};
-        obj[key] = newObj;
-        return newObj;
-      }, newCommand);
-      state.command = { ...state.command, ...newCommand }
+      const path = action.payload;
+      const pathType = getPathType(path);
+      state.command.paths[pathType].push(path);
+      state.command.paths[pathType] = state.command.paths[pathType].sort();
+      if (pathType === 'subcommands')
+        state.command.paths.arguments = [];
     },
     commandRemove: (state, action: PayloadAction<string>) => {
-      if (!state.command) return;
-      const pathArr = action.payload.split('/');
-
-      console.log(state.command[pathArr[0] as keyof PackageMapping]);
-      // pathArr.reduce((obj, key, i) => {
-      //   const newObj = {};
-      //   obj[key] = newObj;
-      //   return newObj;
-      // }, state.command);
+      const path = action.payload;
+      const pathTypes: Array<PathType> = ['subcommands', 'arguments']
+      pathTypes.forEach((pathType) => {
+        if (!state.command) return;
+        state.command.paths[pathType] = state.command.paths[pathType].filter(currPath => !currPath.startsWith(path));
+        state.command.paths[pathType] = state.command.paths[pathType].sort();
+      })
     },
     commandReset: (state) => {
-
+      if (!state.command) return;
+      state.command.paths = {
+        subcommands: [],
+        arguments: []
+      };
     },
     loadPackage: (state, action: PayloadAction<PackageMapping>) => {
       const pkgMappingClone = JSON.parse(JSON.stringify(action.payload));
@@ -49,6 +57,10 @@ export const packageMapperSlice = createSlice({
       state.command = {
         baseKeyword,
         value,
+        paths: {
+          subcommands: [],
+          arguments: []
+        },
       }
     }
   },
