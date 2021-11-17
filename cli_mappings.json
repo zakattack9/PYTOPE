@@ -1,103 +1,38 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "CLI Package Mapping",
     "description": "JSON schema to define how a CLI package's command paths, arguments, and argument types will be mapped out",
     "type": "object",
     "properties": {
-      "loaded_package":{
-        "type":"object",
-        "required": true,
-        "properties": {
-          "command": {
-            "type":"object",
-            "required": true,
-            "properties":{
-              "sub_commands":{
-                "items": {
-                  "type": "object"
-                },
-                "required": false,
-                "properties":{
-                  "arguments":{
-                    "items": {
-                      "type": "string"
-                    },
-                    "required": false,
-                    "properties":{
-                      "sub_arguments": {
-                        "items": {
-                          "type": "string"
-                        },
-                        "required": false
-                      }
-                    }
-                  }
-                }
-              }
-            }
+          "sub_command": {
+                "$ref": "#/$def/sub_sub_command"
           }
+        },
+    "$def":{
+        "sub_sub_command":{
+            "type":"object",
+            "properties":{
+                "command":{
+                    "type":"string"
+                },
+                "command_arguments":{
+                    "type":"object",
+                    "properties":{
+                        "$ref": "#/$def/arguments"
+                    }
+                }
+            }
+        },
+        "arguments":{
+            "type":"object",
+            "properties":{
+                "arguments_content":{
+                    "type":"string"
+                },
+                "sub_arguments":{
+                    "$ref": "#/$def/arguments"
+                }
+            }
         }
-      }
     }
 }
-
-
-
-
-
-
-
-  //     "init": {
-  //       "description": "Create a new local repository",
-  //       "type": "string"
-    
-  //     },
-  //     "add": {
-  //       "description": "Add files",
-  //       "type": "string",
-  //       "arguments": ["<filename>"]
-  //     },
-  //     "commit": {
-  //       "description": "Commit changes",
-  //       "type": "string",
-  //       "arguments": ["-m", "-a"]
-  //     },
-  //     "push origin master": {
-  //       "description": "push changes",
-  //       "type": "string",
-  //       "arguments": ["<server>"]
-  //     },    
-  //     "status": {
-  //       "description": "push changes",
-  //       "type": "string"
-  //     },
-  //     "remote add origin ": {
-  //       "description": "connect to a remote repository",
-  //       "type": "string",
-  //       "arguments": ["<server>"]
-  //     },
-  //     "checkout -b": {
-  //       "description": "checkout other branch",
-  //       "type": "string"
-  //     },
-  //     "pull": {
-  //       "description": "update from remote repository",
-  //       "type": "string"
-  //     },
-  //     "merge": {
-  //       "description": "merge to different branch",
-  //       "type": "string",
-  //       "arguments": ["<branchname>"]
-  //     },
-  //     "diff": {
-  //       "description": "view merge conflicts",
-  //       "type": "string",
-  //       "arguments": ["<filename>", "<sourcebranch>", "<targetbranch>"]
-  //     },
-  //     "grep": {
-  //       "description": "search working directory",
-  //       "type": "string"
-  //     }
-  //   }
-  // }
