@@ -10,10 +10,9 @@
   padding: $pad $pad 0;
   display: grid;
   grid-template-rows: 135px auto; // modify first px value to change bar height
-  grid-template-columns: 50% 50%;
   grid-template-areas: 
-    "bar bar"
-    "subcommands arguments";
+    "bar"
+    "chipSelectorWrapper";
 
   &__bar {
     grid-area: bar;
@@ -61,17 +60,15 @@
     margin: 0 auto;
   }
 
-  &__subcommands {
-    padding: $top-pad 0 0 $top-pad;
+  &__chipSelectorWrapper {
+    grid-area: chipSelectorWrapper;
+    padding: $top-pad $top-pad 0 ;
     display: flex;
     flex-flow: row nowrap;
     column-gap: 25px;
   }
 
-  &__arguments {
-    padding: $top-pad $top-pad 0 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
+  &__uploadText {
+    margin-right: 5px;
   }
 }

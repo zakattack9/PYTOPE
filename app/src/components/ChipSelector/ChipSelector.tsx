@@ -50,7 +50,9 @@ function ChipSelector(props: Props) {
     else multiSelect(path);
   }
 
-  const Chips = Object.entries(props.chipData).map(([name, obj]) => {
+  const sortedChips = Object.entries(props.chipData).sort(
+    (a, b) => a[0].localeCompare(b[0]));
+  const Chips = sortedChips.map(([name, obj]) => {
     const isArgument = props.type === ChipSelectorType.ARGUMENTS;
     const chipProps: ChipProps = {
       name,
@@ -61,6 +63,7 @@ function ChipSelector(props: Props) {
         placeholder: obj.value,
         isEditable: false,
       }),
+      className:'Chip--hover'
     };
     return name.includes(filter) ? (
       <Chip {...chipProps} key={obj.path} />

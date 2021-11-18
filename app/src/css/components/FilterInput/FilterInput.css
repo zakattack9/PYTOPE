@@ -5,6 +5,10 @@
   flex-flow: row nowrap;
   align-items: center;
   width: 100%;
+  transition: 0.1s;
+}
+.FilterInput:hover {
+  background-color: #e3e3e3;
 }
 .FilterInput__cancelIconWrapper {
   display: inline-flex;

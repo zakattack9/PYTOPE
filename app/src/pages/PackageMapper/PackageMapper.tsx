@@ -5,7 +5,7 @@ import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import { useAppSelector } from '../../hooks/react-redux';
-import { getObject, getPathName } from '../../utils/package-mapper';
+import { getObject, getName } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
@@ -21,11 +21,11 @@ function PackageMapper() {
   let SelectedChips = null;
   if (currPackage) {
     const subcommandChips = command?.paths.subcommands.map(path => {
-      const name = getPathName(path);
+      const name = getName(path);
       return <Chip name={name} key={path} />;
     }) || [];
     const argumentChips = command?.paths.arguments.map(path => {
-      const name = getPathName(path);
+      const name = getName(path);
       const arg = getObject(currPackage, path);
       return <Chip name={name} placeholder={arg.value} type={ChipType.ARG} key={path} />;
     }) || [];
@@ -52,14 +52,14 @@ function PackageMapper() {
   let Subcommands = null;
   if (currPackage)
     Subcommands = command?.paths.subcommands.map(path => {
-      const name = getPathName(path);
-      const subcommand = getObject(currPackage, path);
-      if (subcommand.subcommands) 
+      const name = getName(path);
+      const { subcommands } = getObject(currPackage, path);
+      if (subcommands && Object.keys(subcommands).length) 
         return (
           <ChipSelector 
             title={name} 
             type={ChipSelectorType.SUBCOMMANDS} 
-            chipData={subcommand.subcommands} 
+            chipData={subcommands} 
             key={path}
           />);
       else 
@@ -75,23 +75,23 @@ function PackageMapper() {
     />
   ) : null;
   if (currPackage && nestedSubcommandPath) {
-    const name = getPathName(nestedSubcommandPath);
-    const subcommand = getObject(currPackage, nestedSubcommandPath);
-    if (subcommand.arguments)
-      Arguments = (
-        <ChipSelector 
-          title={name} 
-          type={ChipSelectorType.ARGUMENTS} 
-          chipData={subcommand.arguments} 
-          isSingleSelect={false}
-        />);
+    const name = getName(nestedSubcommandPath);
+    const { arguments: subArgs } = getObject(currPackage, nestedSubcommandPath);
+    Arguments = subArgs && Object.keys(subArgs).length ? (
+      <ChipSelector 
+        title={name} 
+        type={ChipSelectorType.ARGUMENTS} 
+        chipData={subArgs} 
+        isSingleSelect={false}
+      />
+    ) : null;
   }
 
   return (
     <div className='PackageMapper'>
       <div className="PackageMapper__bar">
         <div className="PackageMapper__barUpperLeft">
-          <div className="PackageMapper__uploadText">Current Package Loaded:</div>
+          <div className="PackageMapper__uploadText">Current Package Loaded: <strong>Git</strong></div>
           <UploadButton className="PackageMapper__uploadBtn" />
         </div>
         <div className="PackageMapper__barUpperRight">
@@ -106,12 +106,9 @@ function PackageMapper() {
         </div>
       </div>
 
-      <div className="PackageMapper__subcommands">
+      <div className="PackageMapper__chipSelectorWrapper">
         {BaseSubcommands}
         {Subcommands}
-      </div>
-
-      <div className="PackageMapper__arguments">
         {Arguments}
       </div>
     </div>

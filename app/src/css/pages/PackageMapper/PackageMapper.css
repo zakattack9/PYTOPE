@@ -3,8 +3,7 @@
   padding: 7px 7px 0;
   display: grid;
   grid-template-rows: 135px auto;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "bar bar" "subcommands arguments";
+  grid-template-areas: "bar" "chipSelectorWrapper";
 }
 .PackageMapper__bar {
   grid-area: bar;
@@ -43,15 +42,13 @@
   column-gap: 5px;
   margin: 0 auto;
 }
-.PackageMapper__subcommands {
-  padding: 10px 0 0 10px;
+.PackageMapper__chipSelectorWrapper {
+  grid-area: chipSelectorWrapper;
+  padding: 10px 10px 0;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 25px;
 }
-.PackageMapper__arguments {
-  padding: 10px 10px 0 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
+.PackageMapper__uploadText {
+  margin-right: 5px;
 }

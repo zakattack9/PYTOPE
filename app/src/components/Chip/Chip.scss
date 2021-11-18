@@ -19,10 +19,18 @@
   box-sizing: border-box;
   cursor: default;
   user-select: none;
+  
+  &--hover {
+    transition: 0.1s;
+    transition-timing-function: ease-out;
+    &:hover {
+      background-color: f.primary-color(-10%);
+    }
+  }
 
   &--base {
     @extend .Chip;
-    background-color: f.primary-color(-20%);
+    background-color: f.primary-color(-10%);
   }
 
   &--arg {

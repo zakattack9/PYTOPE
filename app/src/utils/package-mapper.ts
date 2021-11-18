@@ -56,7 +56,7 @@ export function getPathType(path: string): PathType {
   return pathArr[pathArr.length - 2] as PathType;
 }
 
-export function getPathName(path: string) {
+export function getName(path: string) {
   return path.split('/').pop() || '';
 }
 

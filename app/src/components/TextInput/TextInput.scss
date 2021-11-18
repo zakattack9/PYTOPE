@@ -7,7 +7,7 @@
 
   &--disabled {
     @extend .TextInput;
-    cursor: default;
+    cursor: default !important;
   }
 
   // needed to prevent a stuck caret bug

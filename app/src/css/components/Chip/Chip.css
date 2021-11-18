@@ -15,8 +15,15 @@
   cursor: default;
   user-select: none;
 }
+.Chip--hover {
+  transition: 0.1s;
+  transition-timing-function: ease-out;
+}
+.Chip--hover:hover {
+  background-color: #a7a7a7;
+}
 .Chip--base {
-  background-color: #949494;
+  background-color: #a7a7a7;
 }
 .Chip--arg {
   padding: 3px 3px 3px 15px;

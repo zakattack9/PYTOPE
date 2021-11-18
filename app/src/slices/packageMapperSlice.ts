@@ -30,7 +30,7 @@ export const packageMapperSlice = createSlice({
       const pathType = getPathType(path);
       state.command.paths[pathType].push(path);
       state.command.paths[pathType] = state.command.paths[pathType].sort();
-      // ensure only arguments for the current, deepest subcommand are added
+      // ensure only arguments for the last clicked, deepest subcommand are added
       if (pathType === 'subcommands')
         state.command.paths.arguments = [];
     },

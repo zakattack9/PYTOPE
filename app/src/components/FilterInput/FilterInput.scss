@@ -10,6 +10,11 @@
   flex-flow: row nowrap;
   align-items: center;
   width: 100%;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: f.primary-color(60%);
+  }
 
   &__cancelIconWrapper {
     display: inline-flex;
