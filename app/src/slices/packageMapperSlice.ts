@@ -7,7 +7,7 @@ interface Command {
   paths: {
     subcommands: Array<string>,
     arguments: Array<string>
-  }
+  },
 }
 
 interface PackageMapperState {

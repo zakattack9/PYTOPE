@@ -1,8 +1,6 @@
-import { MouseEvent } from 'react';
+import { useState, MouseEvent } from 'react';
 import { ChipType } from '../../utils/enums';
 import TextInput from '../TextInput/TextInput';
-import { useAppSelector } from '../../hooks/react-redux';
-import { getPathType } from '../../utils/package-mapper';
 import './Chip.scss';
 
 export interface Props {
@@ -12,27 +10,31 @@ export interface Props {
   path?: string,
   type?: ChipType,
   isEditable?: boolean,
-  // isSelected?: boolean,
-  handleClick?: (path: string) => void,
+  isSelected?: boolean,
+  onClick?: (path: string) => void,
 }
 
+// uses localStorage to store chip values
 function Chip(props: Props) {
   const { isEditable = true } = props;
-  const command = useAppSelector(state => state.packageMapper.command);
-  let selectedClassName = '';
-  if (command && props.path) {
-    const pathType = getPathType(props.path);
-    selectedClassName = command.paths[pathType].includes(props.path) ? 'SelectedChip' : '';
-  }
+  const VALUE_PATH = props.path ? `${props.path}/value` : '';
+  const defaultValue = isEditable ? localStorage.getItem(VALUE_PATH) || '' : '';
+  const [value, setValue] = useState(defaultValue);
   // default ARG types with no placeholder (flag) to regular chip
   const hasModifier = props.type !== ChipType.ARG || props.placeholder; 
+  const selectedClassName = props.isSelected ? 'SelectedChip' : '';
   const className = `Chip${props.type && hasModifier ? `--${props.type}` : ''} ${props.className || ''} ${selectedClassName}`;
 
-  const handleClick = (e: MouseEvent) => {
-    if (props.handleClick) {
-      const path = props.path || '';
-      props.handleClick(path);
+  const onClick = (e: MouseEvent) => {
+    if (props.onClick) {
+      props.onClick(props.path || '');
+      if (props.isSelected) localStorage.removeItem(VALUE_PATH);
     }
+  }
+
+  const handleChange = (value: string) => {
+    setValue(value);
+    if (VALUE_PATH) localStorage.setItem(VALUE_PATH, value);
   }
 
   let chipContents;
@@ -40,13 +42,25 @@ function Chip(props: Props) {
     chipContents = (
       <>
         {props.name}
-        <TextInput className="Chip__argument" placeholder={props.placeholder} isEditable={isEditable} />
+        <TextInput 
+          className="Chip__argument" 
+          placeholder={props.placeholder} 
+          isEditable={isEditable} 
+          defaultValue={value} 
+          onChange={handleChange} 
+        />
       </>
     );
   } else if (props.type === ChipType.VALUE) {
     chipContents = (
       <>
-        <TextInput className="Chip__value" placeholder={props.placeholder} isEditable={isEditable} />
+        <TextInput 
+          className="Chip__value" 
+          placeholder={props.placeholder} 
+          isEditable={isEditable} 
+          defaultValue={value} 
+          onChange={handleChange} 
+        />
       </>
     );
   } else {
@@ -54,7 +68,7 @@ function Chip(props: Props) {
   }
 
   return (
-    <div className={className} onClick={handleClick}>
+    <div className={className} onClick={onClick}>
       {chipContents}
     </div>
   );

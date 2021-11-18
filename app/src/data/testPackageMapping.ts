@@ -36,8 +36,8 @@ export const mapping: PackageMapping = {
         "--ignore-errors": {
           "value": "",
         },
-        "--pathspec-from-file": {
-          "value": "=<file>",
+        "--pathspec-from-file=": {
+          "value": "<file>",
         },
       },
       "subcommands": {},

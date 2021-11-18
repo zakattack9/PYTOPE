@@ -16,6 +16,10 @@ function App() {
   const dispatch = useAppDispatch();
   dispatch(loadPackage(mapping))
 
+  window.onbeforeunload = (e) => {
+    localStorage.clear(); // clear localStorage on reload
+  };
+
   return (
     <div className='App'>
       <Toolbar />

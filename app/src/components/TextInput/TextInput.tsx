@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent, ClipboardEvent, CSSProperties } from 'react';
+import { useRef, KeyboardEvent, ClipboardEvent, CSSProperties, FormEvent } from 'react';
 import './TextInput.scss';
 
 /*
@@ -8,13 +8,16 @@ multiline content is not allowed
 */
 
 interface Props {
+  defaultValue: string,
+  onChange: (value: string) => void,
   placeholder?: string,
   className?: string,
   isEditable?: boolean,
 }
 
 function TextInput(props: Props) {
-  const [text, setText] = useState('');
+  // useRef instead of useState to prevent re-renders onInput; caret position is lost on render for contenteditable
+  const defaultValue = useRef(props.defaultValue || '');
   const { isEditable = true } = props
   const styles = {
     "--placeholder": `'${props.placeholder}'`,
@@ -23,8 +26,11 @@ function TextInput(props: Props) {
   // ignore new lines
   const handleKeyPress = (e: KeyboardEvent) => {
     if (e.key === "Enter") e.preventDefault();
-    else setText(e.currentTarget.textContent || '');
   };
+  
+  const handleInput = (e: FormEvent) => {
+    props.onChange(e.currentTarget.textContent || '');
+  }
 
   // prevents pasting HTML content; pastes only text
   const handlePaste = (e: ClipboardEvent) => {
@@ -43,8 +49,10 @@ function TextInput(props: Props) {
         className={`TextInput${!isEditable ? '--disabled' : ''} ${props.className || ''}`} 
         style={styles}
         onKeyPress={handleKeyPress} 
+        onInput={handleInput}
         onPaste={handlePaste}
         contentEditable={isEditable}
+        dangerouslySetInnerHTML={{ __html: defaultValue.current }} // potential XSS (need to sanitize input)
       ></span>
     </span>
   );

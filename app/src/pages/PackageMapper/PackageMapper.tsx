@@ -27,18 +27,18 @@ function PackageMapper() {
     const argumentChips = command?.paths.arguments.map(path => {
       const name = getName(path);
       const arg = getObject(currPackage, path);
-      return <Chip name={name} placeholder={arg.value} type={ChipType.ARG} key={path} />;
+      return <Chip name={name} placeholder={arg.value} type={ChipType.ARG} path={path} key={path} />;
     }) || [];
     SelectedChips = [...subcommandChips, ...argumentChips];
   }
 
   let ValueChip = command ? (
-    <Chip name="value" placeholder={command.value} type={ChipType.VALUE} />
+    <Chip name="value" placeholder={command.value} path={command.baseKeyword} type={ChipType.VALUE} />
   ) : null;
   if (currPackage && nestedSubcommandPath) {
     const subcommand = getObject(currPackage, nestedSubcommandPath);
-    if (subcommand.value)
-      ValueChip = <Chip name="value" placeholder={subcommand.value} type={ChipType.VALUE} />;
+    if (command && subcommand.value)
+      ValueChip = <Chip name="value" placeholder={subcommand.value} path={command.baseKeyword} type={ChipType.VALUE} />;
   }
 
   const BaseSubcommands = currPackage?.subcommands ? (

@@ -54,16 +54,18 @@ function ChipSelector(props: Props) {
     (a, b) => a[0].localeCompare(b[0]));
   const Chips = sortedChips.map(([name, obj]) => {
     const isArgument = props.type === ChipSelectorType.ARGUMENTS;
+    const isSelected = obj.path && command?.paths[getPathType(obj.path)].includes(obj.path);
     const chipProps: ChipProps = {
       name,
       path: obj.path,
-      handleClick: handleChipClick,
+      onClick: handleChipClick,
       ...(isArgument && { 
         type: ChipType.ARG,
         placeholder: obj.value,
         isEditable: false,
       }),
-      className:'Chip--hover'
+      className:'Chip--hover',
+      isSelected: isSelected || false,
     };
     return name.includes(filter) ? (
       <Chip {...chipProps} key={obj.path} />
