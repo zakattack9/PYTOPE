@@ -4,7 +4,6 @@
   $border-radius: 8px;
   $pad: 7px; // for .PackageMapper
   $side-pad: 17px; // for .barUpperLeft and .barUpperRight
-  $top-pad: 10px; // for .subcommands and .arguments
 
   height: 100%;
   padding: $pad $pad 0;
@@ -18,10 +17,11 @@
     grid-area: bar;
     background-color: f.primary-color(85%);
     border-radius: $border-radius;
+    min-width: 0; // allows horizontal scrolling
     
     display: grid;
     grid-template-rows: 45% 55%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
     grid-template-areas: 
       "upperLeft upperRight"
       "bottom bottom";
@@ -52,7 +52,7 @@
     overflow-x: auto;
     padding: 0 10px;
   }
-
+  
   &__chipWrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -60,9 +60,15 @@
     margin: 0 auto;
   }
 
-  &__chipSelectorWrapper {
+  &__chipSelectors {
     grid-area: chipSelectorWrapper;
-    padding: $top-pad $top-pad 0 ;
+    overflow-x: auto;
+    padding: 10px 10px 0;
+  }
+  
+  &__chipSelectorWrapper {
+    height: 100%;
+    width: max-content;
     display: flex;
     flex-flow: row nowrap;
     column-gap: 25px;

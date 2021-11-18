@@ -106,10 +106,12 @@ function PackageMapper() {
         </div>
       </div>
 
-      <div className="PackageMapper__chipSelectorWrapper">
-        {BaseSubcommands}
-        {Subcommands}
-        {Arguments}
+      <div className="PackageMapper__chipSelectors">
+        <div className="PackageMapper__chipSelectorWrapper">
+          {BaseSubcommands}
+          {Subcommands}
+          {Arguments}
+        </div>
       </div>
     </div>
   );

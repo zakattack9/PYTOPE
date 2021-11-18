@@ -3,6 +3,7 @@
 .ChipSelector {
   $scrollbar-width: 15px;
 
+  flex: 1 0 auto;
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
@@ -32,6 +33,6 @@
     display: flex;
     flex-flow: column nowrap;
     row-gap: 7px;
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 20px 0;
   }
 }

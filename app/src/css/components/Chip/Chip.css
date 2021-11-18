@@ -14,6 +14,7 @@
   box-sizing: border-box;
   cursor: default;
   user-select: none;
+  white-space: nowrap;
 }
 .Chip--hover {
   transition: 0.1s;

@@ -19,6 +19,7 @@
   box-sizing: border-box;
   cursor: default;
   user-select: none;
+  white-space: nowrap; // keeps chip text on one line
   
   &--hover {
     transition: 0.1s;

@@ -9,9 +9,10 @@
   grid-area: bar;
   background-color: whitesmoke;
   border-radius: 8px;
+  min-width: 0;
   display: grid;
   grid-template-rows: 45% 55%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto auto;
   grid-template-areas: "upperLeft upperRight" "bottom bottom";
 }
 .PackageMapper__barUpperLeft, .PackageMapper__barUpperRight, .PackageMapper__barLower {
@@ -42,9 +43,14 @@
   column-gap: 5px;
   margin: 0 auto;
 }
-.PackageMapper__chipSelectorWrapper {
+.PackageMapper__chipSelectors {
   grid-area: chipSelectorWrapper;
+  overflow-x: auto;
   padding: 10px 10px 0;
+}
+.PackageMapper__chipSelectorWrapper {
+  height: 100%;
+  width: max-content;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 25px;
