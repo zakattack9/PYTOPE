@@ -92,7 +92,6 @@ export function getCommand(state: PackageMapperState) {
 
   const baseKeyword = command.baseKeyword;
   const value = localStorage.getItem(getValuePath(baseKeyword));
-
   const subcmds = command.paths.subcommands.map(path => getName(path)).join(' ');
   const args = command.paths.arguments.map(path => {
     const argName = getName(path);
