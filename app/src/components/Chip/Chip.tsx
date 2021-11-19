@@ -29,7 +29,8 @@ function Chip(props: Props) {
   const onClick = (e: MouseEvent) => {
     if (props.onClick) {
       props.onClick(props.path || '');
-      if (props.isSelected) localStorage.removeItem(VALUE_PATH);
+      if (props.isSelected && VALUE_PATH) 
+        localStorage.removeItem(VALUE_PATH);
     }
   }
 
