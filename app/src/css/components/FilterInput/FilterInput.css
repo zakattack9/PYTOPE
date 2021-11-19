@@ -10,6 +10,9 @@
 .FilterInput:hover {
   background-color: #e3e3e3;
 }
+.FilterInput .FilterInput__searchIcon:hover, .FilterInput .FilterInput__cancelIcon:hover, .FilterInput:hover .FilterInput__searchIcon {
+  stroke-width: 1.4px;
+}
 .FilterInput__cancelIconWrapper {
   display: inline-flex;
 }
@@ -19,9 +22,6 @@
   padding: 5px;
   display: inline-block;
   transition: 0.15s;
-}
-.FilterInput__searchIcon:hover, .FilterInput__cancelIcon:hover {
-  stroke-width: 2px;
 }
 .FilterInput__searchIcon--hide, .FilterInput__cancelIcon--hide {
   pointer-events: none;

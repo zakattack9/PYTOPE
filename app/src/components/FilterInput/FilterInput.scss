@@ -16,6 +16,14 @@
     background-color: f.primary-color(60%);
   }
 
+  %stroke-width-hover {
+    stroke-width: 1.4px;
+  }
+
+  &:hover &__searchIcon {
+    @extend %stroke-width-hover;
+  }
+
   &__cancelIconWrapper {
     display: inline-flex;
   }
@@ -32,7 +40,7 @@
     @extend %icon;
 
     &:hover {
-      stroke-width: 2px;
+      @extend %stroke-width-hover;
     }
 
     &--hide {
