@@ -96,7 +96,8 @@ export function getCommand(state: PackageMapperState) {
   const args = command.paths.arguments.map(path => {
     const argName = getName(path);
     const argValue = localStorage.getItem(getValuePath(path));
-    return argValue ? `${argName} ${argValue}` : argName;
+    const hasSpace = argName.slice(-1) !== '=';
+    return argValue ? `${argName}${hasSpace ? ' ' : ''}${argValue}` : argName;
   }).join(' ');
 
   let fullCommand = baseKeyword;

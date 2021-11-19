@@ -199,8 +199,8 @@ export const mapping: PackageMapping = {
     "-C": {
       "value": "<path>",
     },
-    "--exec-path": {
-      "value": "=<path>",
+    "--exec-path=": {
+      "value": "<path>",
     },
     "--html-path": {
       "value": "",
