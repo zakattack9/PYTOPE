@@ -5,7 +5,7 @@ import Chip from '../../components/Chip/Chip';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import { useAppSelector } from '../../hooks/react-redux';
-import { getObject, getName } from '../../utils/package-mapper';
+import { getObject, getName, getCommand } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
@@ -13,6 +13,11 @@ function PackageMapper() {
   const { currPackage, command } = pkgMapperState;
   const nestedSubcommandPath = command?.paths.subcommands.slice(-1)[0] || null;
   // console.log(pkgMapperState);
+
+  const handleCreateTest = () => {
+    const textCommand = getCommand(pkgMapperState);
+    console.log(textCommand);
+  }
 
   const BaseChip = command ? (
     <Chip name={command.baseKeyword} type={ChipType.BASE} />
@@ -95,7 +100,7 @@ function PackageMapper() {
           <UploadButton className="PackageMapper__uploadBtn" />
         </div>
         <div className="PackageMapper__barUpperRight">
-          <Button className="PackageMapper__createBtn" name="Create Test" />
+          <Button className="PackageMapper__createBtn" name="Create Test" onClick={handleCreateTest} />
         </div>
         <div className="PackageMapper__barLower">
           <div className="PackageMapper__chipWrapper">

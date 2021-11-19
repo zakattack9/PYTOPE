@@ -10,7 +10,7 @@ interface Command {
   },
 }
 
-interface PackageMapperState {
+export interface PackageMapperState {
   command: Command | null,
   currPackage: PackageMapping | null,
 }

@@ -1,6 +1,7 @@
 import { useState, MouseEvent } from 'react';
 import { ChipType } from '../../utils/enums';
 import TextInput from '../TextInput/TextInput';
+import { getValuePath } from '../../utils/package-mapper';
 import './Chip.scss';
 
 export interface Props {
@@ -17,7 +18,7 @@ export interface Props {
 // uses localStorage to store chip values
 function Chip(props: Props) {
   const { isEditable = true } = props;
-  const VALUE_PATH = props.path ? `${props.path}/value` : '';
+  const VALUE_PATH = getValuePath(props.path);
   const defaultValue = isEditable ? localStorage.getItem(VALUE_PATH) || '' : '';
   const [value, setValue] = useState(defaultValue);
   // default ARG types with no placeholder (flag) to regular chip

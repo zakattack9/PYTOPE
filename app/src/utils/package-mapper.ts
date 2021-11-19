@@ -1,3 +1,5 @@
+import { PackageMapperState } from "../slices/packageMapperSlice";
+
 export interface PackageMapping {
   baseKeyword: string,
   value: string,
@@ -65,6 +67,12 @@ export function getPathPrefix(path: string) {
   return pathArr.slice(0, -1).join('/') || '';
 }
 
+export function getValuePath(path: string | null | undefined) {
+  if (!path) return '';
+  const VALUE_KEYWORD = 'value';
+  return `${path}/${VALUE_KEYWORD}`;
+}
+
 export function getObject(mapping: PackageMapping, path: string) {
   interface ReducedPackageMapping extends Omit<PackageMapping, 'baseKeyword' | 'value'> {};
   type ObjType = ReducedPackageMapping | Subcommands | Arguments | Omit<Subcommand, 'value' | 'path'> | Omit<Argument, 'value'>;
@@ -76,4 +84,25 @@ export function getObject(mapping: PackageMapping, path: string) {
     return obj[key as keyof ObjType];
   }, mapping);
   return targetObj as ReturnType;
+}
+
+export function getCommand(state: PackageMapperState) {
+  const { currPackage, command } = state;
+  if (!currPackage || !command) return;
+
+  const baseKeyword = command.baseKeyword;
+  const value = localStorage.getItem(getValuePath(baseKeyword));
+
+  const subcmds = command.paths.subcommands.map(path => getName(path)).join(' ');
+  const args = command.paths.arguments.map(path => {
+    const argName = getName(path);
+    const argValue = localStorage.getItem(getValuePath(path));
+    return argValue ? `${argName} ${argValue}` : argName;
+  }).join(' ');
+
+  let fullCommand = baseKeyword;
+  if (subcmds) fullCommand += ` ${subcmds}`;
+  if (args) fullCommand += ` ${args}`;
+  if (value) fullCommand += ` ${value}`;
+  return fullCommand;
 }
