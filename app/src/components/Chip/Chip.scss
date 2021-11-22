@@ -1,3 +1,4 @@
+@use '../../utils/variables' as vars;
 @use '../../utils/functions' as f;
 @use '../../utils/fonts';
 
@@ -10,7 +11,7 @@
   $input-vert-pad: calc($vert-pad - $border-width);
   $input-horiz-pad: calc($horiz-pad - $border-width);
 
-  @include fonts.roboto-mono-bold($font-size);
+  @include fonts.roboto-mono-bold($font-size, vars.$secondary-text-color);
   background-color: $default-bkg-color;
   padding: $vert-pad $horiz-pad;
   width: max-content;
@@ -46,10 +47,11 @@
   &--value {
     width: max-content; 
   }
-
+  
   &__argument, &__value {
     cursor: text;
-    background-color: f.primary-color(80%);
+    background-color: f.secondary-color(80%);
+    color: vars.$primary-text-color;
   }
   
   &__argument {
@@ -69,5 +71,5 @@
 
 .SelectedChip {
   background-color: f.primary-color(-30%);
-  color: white;
+  color: vars.$secondary-text-color;
 }

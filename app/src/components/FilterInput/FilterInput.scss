@@ -4,7 +4,7 @@
 .FilterInput {
   $pad: 5px;
 
-  background-color: f.primary-color(70%);
+  background-color: f.secondary-color(70%);
   border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
@@ -13,7 +13,7 @@
   transition: 0.1s;
 
   &:hover {
-    background-color: f.primary-color(60%);
+    background-color: f.secondary-color(60%);
   }
 
   %stroke-width-hover {

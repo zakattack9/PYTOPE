@@ -11,6 +11,14 @@
   @return lighten(vars.$primary-color, $amount);
 }
 
+@function secondary-color($amount: 0%) {
+  @return lighten(vars.$secondary-color, $amount);
+}
+
 @function primary-text-color($amount: 0%) {
   @return lighten(vars.$primary-text-color, $amount);  
+}
+
+@function secondary-text-color($amount: 0%) {
+  @return lighten(vars.$secondary-text-color, $amount);  
 }

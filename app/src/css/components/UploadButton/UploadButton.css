@@ -16,6 +16,7 @@
 }
 .UploadButton:hover {
   background-color: #eaeaea;
+  border-radius: 10px;
 }
 .UploadButton__label {
   display: inline-block;

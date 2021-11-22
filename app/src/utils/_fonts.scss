@@ -46,19 +46,20 @@ $default-size: 11pt;
 // ROBOTO MONO //
 @mixin roboto-mono(
   $size: $default-size,
-  $style: normal
+  $color: vars.$primary-text-color
 ) {
   font-family: 'Roboto Mono', monospace;
   font-size: $size;
-  font-style: $style;
+  font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
-  color: vars.$primary-text-color;
+  color: $color;
 }
 
 @mixin roboto-mono-bold(
-  $size: $default-size
+  $size: $default-size,
+  $color: vars.$primary-text-color
 ) {
-  @include roboto-mono($size);
+  @include roboto-mono($size, $color);
   font-weight: 700;
 }
