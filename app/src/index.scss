@@ -3,7 +3,7 @@
 @use 'utils/mixins' as m;
 
 :root {
-  // b&w
+  // b&w (default)
   @include m.hsl-var(primary, 0, 0%, 73%);
   @include m.hsl-var(secondary, 0, 0%, 73%);
   @include m.hsl-var(primary-text, 0, 0%, 21%);
