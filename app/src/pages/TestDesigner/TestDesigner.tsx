@@ -1,9 +1,16 @@
+import ImageBlock from '../../components/ImageBlock/ImageBlock';
 import './TestDesigner.scss';
 
 function TestDesigner() {
   return (
     <div className='TestDesigner'>
-      TEST DESIGNER INTERFACE
+      <div className='TestDesigner__ImageBlock1'>
+        <ImageBlock/>
+        
+      </div>
+      <div className='TestDesigner__ImageBlock2'>
+        <ImageBlock/>
+        </div>
     </div>
   );
 }

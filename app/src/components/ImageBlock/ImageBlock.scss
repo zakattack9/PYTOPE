@@ -1,0 +1,8 @@
+.ImageBlock{
+    display: grid;
+    //justify-content: center;
+    padding:4em;
+    grid-template-rows: 100px auto; // modify first px value to change bar height
+    background-color: gray;
+    border-radius: 10%;
+}
