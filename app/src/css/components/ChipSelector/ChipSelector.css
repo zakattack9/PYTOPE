@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
-  color: #2f3b46;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
 }
 .ChipSelector__type {
   font-family: "Roboto", sans-serif;
@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.05pt;
-  color: #2f3b46;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
   font-weight: 700;
 }
 .ChipSelector__filterInput {

@@ -7,7 +7,7 @@
 }
 .PackageMapper__bar {
   grid-area: bar;
-  background-color: hsl(var(--secondary-color_hs), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.85));
+  background-color: hsl(var(--secondary-color_h), var(--secondary-color_s), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.85));
   border-radius: 8px;
   min-width: 0;
   display: grid;
@@ -32,7 +32,7 @@
 }
 .PackageMapper__barLower {
   grid-area: bottom;
-  background-color: hsl(var(--secondary-color_hs), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.6));
+  background-color: hsl(var(--secondary-color_h), var(--secondary-color_s), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.6));
   border-radius: 8px;
   overflow-x: auto;
   padding: 0 10px;

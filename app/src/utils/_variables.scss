@@ -1,37 +1,23 @@
+$primary-color: hsl(
+  var(--primary-color_h), 
+  var(--primary-color_s), 
+  var(--primary-color_l)
+);
+$secondary-color: hsl(
+  var(--secondary-color_h), 
+  var(--secondary-color_s), 
+  var(--secondary-color_l)
+);
+$primary-text-color: hsl(
+  var(--primary-text-color_h), 
+  var(--primary-text-color_s), 
+  var(--primary-text-color_l)
+);
+$secondary-text-color: hsl(
+  var(--secondary-text-color_h), 
+  var(--secondary-text-color_s), 
+  var(--secondary-text-color_l)
+);
+
 $button-color: #6E6E6E;
 $shadow-color: #a9a9a9;
-
-$primary-color: hsl(var(--primary-color_hs), var(--primary-color_l));
-$secondary-color: hsl(var(--secondary-color_hs), var(--secondary-color_l));
-$primary-text-color: hsl(var(--primary-text-color_hs), var(--primary-text-color_l));
-$secondary-text-color: hsl(var(--secondary-text-color_hs), var(--secondary-text-color_l));
-
-// THEME 0
-$primary-color: #b9b9b9;
-$secondary-color: #b9b9b9;
-$primary-text-color: #353535;
-$secondary-text-color: #353535;
-
-// THEME 1
-$primary-color: #424b54;
-$secondary-color: #91a1a3;
-$primary-text-color: #2f3b46;
-$secondary-text-color: #eff5f8;
-
-// THEME 2
-// $primary-color: #5E574D;
-// $secondary-color: #7D6D61;
-// $primary-text-color: #3a3f27;
-// $secondary-text-color: #e9dc94;
-
-// THEME 3
-// $primary-color: #3A4F41;
-// $secondary-color: #9abea0;
-// $primary-text-color: #46352e;
-// $secondary-text-color: #faf2eb;
-
-// THEME 4
-// $primary-color: #FF7F11;
-// $secondary-color: #ffa011;
-// $primary-text-color: #2d434d;
-// $secondary-text-color: #fbffc3;
