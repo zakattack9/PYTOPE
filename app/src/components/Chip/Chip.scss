@@ -31,7 +31,7 @@
 
   &--base {
     @extend .Chip;
-    background-color: f.primary-color(-10%);
+    background-color: f.primary-color(-7%);
   }
 
   &--arg {
@@ -71,5 +71,5 @@
 
 .SelectedChip {
   background-color: f.primary-color(-30%);
-  color: vars.$secondary-text-color;
+  color: f.bright-text-color();
 }

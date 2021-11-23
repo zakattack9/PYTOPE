@@ -1,0 +1,9 @@
+@mixin hsl-var(
+  $name,  
+  $hue,
+  $saturation,
+  $lightness
+) {
+  --#{$name}-color_hs: #{$hue}, #{$saturation};
+  --#{$name}-color_l: #{$lightness};
+}

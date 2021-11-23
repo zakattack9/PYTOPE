@@ -7,18 +7,51 @@
   @return color.scale($color, $lightness: $amount);
 }
 
+@function scale_lightness($lightness, $amount) {
+  $dec_a: $amount / 100%;
+  @if $amount < 0 {
+    @return calc($lightness + $lightness * $dec_a);
+  } @else {
+    @return calc($lightness + (100% - $lightness) * $dec_a);
+  }
+}
+
 @function primary-color($amount: 0%) {
-  @return lighten(vars.$primary-color, $amount);
+  $hs: var(--primary-color_hs);
+  $l: var(--primary-color_l);
+  $new_l: scale_lightness($l, $amount);
+  @return hsl($hs, $new_l);
+  // @return lighten(vars.$primary-color, $amount);
 }
 
 @function secondary-color($amount: 0%) {
-  @return lighten(vars.$secondary-color, $amount);
+  $hs: var(--secondary-color_hs);
+  $l: var(--secondary-color_l);
+  $new_l: scale_lightness($l, $amount);
+  @return hsl($hs, $new_l);
+  // @return lighten(vars.$secondary-color, $amount);
 }
 
 @function primary-text-color($amount: 0%) {
-  @return lighten(vars.$primary-text-color, $amount);  
+  $hs: var(--primary-text-color_hs);
+  $l: var(--primary-text-color_l);
+  $new_l: scale_lightness($l, $amount);
+  @return hsl($hs, $new_l);
+  // @return lighten(vars.$primary-text-color, $amount);  
 }
 
 @function secondary-text-color($amount: 0%) {
-  @return lighten(vars.$secondary-text-color, $amount);  
+  $hs: var(--secondary-text-color_hs);
+  $l: var(--secondary-text-color_l);
+  $new_l: scale_lightness($l, $amount);
+  @return hsl($hs, $new_l);
+  // @return lighten(vars.$secondary-text-color, $amount);  
+}
+
+@function bright-text-color() {
+  @if vars.$primary-text-color == vars.$secondary-text-color {
+    @return primary-text-color(90%);
+  } @else {
+    @return vars.$secondary-text-color;
+  }
 }

@@ -1,9 +1,38 @@
 @use 'utils/fonts';
+@use 'utils/functions' as f;
+@use 'utils/mixins' as m;
+
+:root {
+  @include m.hsl-var(primary, 0, 0%, 73%);
+  @include m.hsl-var(secondary, 0, 0%, 73%);
+  @include m.hsl-var(primary-text, 0, 0%, 21%);
+  @include m.hsl-var(secondary-text, 0, 0%, 21%);
+  --primary-color: hsl(0, 0%, 73%);
+  --secondary-color: hsl(0, 0%, 73%);
+  --primary-text-color: hsl(0, 0%, 21%);
+  --secondary-text-color: hsl(0, 0%, 21%);
+  --t: hsl(210, 12%, 29%); //primary
+  --t2: hsl(210, 12%, 40%); //primary + 15% (chip)
+  --t3: hsl(210, 12%, 20%); //primary - 30% (selected chip)
+  --t4: hsl(210, 12%, 27%); //primary - 7% (base chip)
+  // 40 = 29 + 15 * x (x=0.733) || (100 - 29) * .15
+  // 20 = 29 - 30 * x (x=0.3)
+  // 27 = 29 - 7 * x (x=0.28)
+  
+  // t2: (100% - 29%) * 15% = 11
+  // t3: 29% * 30% = 9
+
+  @include m.hsl-var(primary, 210, 12%, 29%);
+  @include m.hsl-var(secondary, 187, 9%, 60%);
+  @include m.hsl-var(primary-text, 209, 20%, 23%);
+  @include m.hsl-var(secondary-text, 200, 39%, 95%);
+}
 
 html, body {
   margin: 0;
   height: 100%;
   @include fonts.roboto;
+  background-color: f.primary-color(97%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

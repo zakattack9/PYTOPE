@@ -1,5 +1,5 @@
 .FilterInput {
-  background-color: #eaeaea;
+  background-color: hsl(var(--secondary-color_hs), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.7));
   border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
@@ -8,7 +8,7 @@
   transition: 0.1s;
 }
 .FilterInput:hover {
-  background-color: #e3e3e3;
+  background-color: hsl(var(--secondary-color_hs), calc(var(--secondary-color_l) + (100% - var(--secondary-color_l)) * 0.6));
 }
 .FilterInput .FilterInput__searchIcon:hover, .FilterInput .FilterInput__cancelIcon:hover, .FilterInput:hover .FilterInput__searchIcon {
   stroke-width: 1.4px;
@@ -18,7 +18,7 @@
 }
 .FilterInput .FilterInput__searchIcon--hide, .FilterInput .FilterInput__cancelIcon--hide, .FilterInput .FilterInput__searchIcon, .FilterInput .FilterInput__cancelIcon {
   width: 18px;
-  stroke: #727272;
+  stroke: hsl(var(--primary-text-color_hs), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.3));
   padding: 5px;
   display: inline-block;
   transition: 0.15s;
@@ -33,7 +33,7 @@
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.05pt;
-  color: #353535;
+  color: #2f3b46;
   border: none;
   outline: none;
   background-color: inherit;

@@ -6,13 +6,13 @@
   width: max-content;
   height: max-content;
   padding: 10px 30px;
-  background-color: f.primary-color(-20%);
+  background-color: f.primary-color(-25%);
   color: f.primary-color(95%);
   border-radius: 5px;
   cursor: default;
   transition: 0.2s;
 
   &:hover {
-    background-color: f.primary-color(-58%);
+    background-color: f.primary-color(-40%);
   }
 }

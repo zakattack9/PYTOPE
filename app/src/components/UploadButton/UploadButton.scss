@@ -15,7 +15,8 @@
 
   &:hover {
     background-color: f.primary-color(70%);
-    border-radius: 10px;
+    color: f.primary-text-color(10%);
+    border-color: f.primary-text-color(10%);
   }
   
   &__label {
