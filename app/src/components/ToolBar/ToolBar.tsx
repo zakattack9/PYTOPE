@@ -1,4 +1,5 @@
 import ToolBarItem from './ToolBarItem';
+import ToolBarTheme from '../ToolBarTheme/ToolBarTheme';
 import './ToolBar.scss';
 
 interface ToolBarItems {
@@ -24,13 +25,18 @@ const TOOL_BAR_ITEMS: ToolBarItems = {
 }
 
 function ToolBar() {
-  let toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => (
-    <ToolBarItem name={name} options={options} key={name} />
+  const handleClick = (option: string) => {
+    console.log(option);
+  }
+
+  const toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => (
+    <ToolBarItem name={name} options={options} onClick={handleClick} key={name} />
   ));
 
   return (
     <nav className='ToolBar'>
       {toolBarItems}
+      <ToolBarTheme />
     </nav>
   );
 }

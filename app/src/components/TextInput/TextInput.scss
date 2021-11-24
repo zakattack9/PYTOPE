@@ -1,0 +1,25 @@
+@use '../../utils/functions' as f;
+
+.TextInput {
+  --placeholder: '';
+  display: block;
+  background-color: white;
+  padding: 10px;
+  outline: none;
+
+  &--disabled {
+    @extend .TextInput;
+    cursor: default !important;
+  }
+
+  // needed to prevent a stuck caret bug
+  &__wrapper {
+    display: inline-block;
+    border-radius: inherit;
+  }
+
+  &:empty::before {
+    content: var(--placeholder);
+    color: f.primary-text-color(50%);
+  }
+}

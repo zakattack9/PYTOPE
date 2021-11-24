@@ -1,7 +1,7 @@
 @use '../../utils/fonts';
 
 .PageBar {
-  @include fonts.roboto-medium(11pt);
+  @include fonts.roboto-medium(11.5pt);
 
   display: flex;
   flex-flow: row nowrap;
