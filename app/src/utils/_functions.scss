@@ -1,15 +1,70 @@
 @use 'sass:color';
 @use '../utils/variables' as vars;
 
+// old method of lightening colors
+// this version is static and does not work off CSS vars
+// therefore the colors can't be changed at runtime
 @function lighten($color, $amount) {
   // a negative $amount will darken $color
+  // $amount should be a percentage
   @return color.scale($color, $lightness: $amount);
 }
 
-@function primary-color($amount) {
-  @return lighten(vars.$primary-color, $amount);
+// $lightness and $amount are both percentages
+// same as SASS color.scale()
+@function scale_lightness($lightness, $amount) {
+  $dec_a: $amount / 100%;
+  @if $amount < 0 {
+    @return calc($lightness + $lightness * $dec_a);
+  } @else {
+    @return calc($lightness + (100% - $lightness) * $dec_a);
+  }
 }
 
-@function primary-text-color($amount) {
-  @return lighten(vars.$primary-text-color, $amount);  
+@function lighten_hsl($name, $amount) {
+  $h_var: --#{$name}-color_h;
+  $s_var: --#{$name}-color_s;
+  $l_var: --#{$name}-color_l;
+  $h: var($h_var);
+  $s: var($s_var);
+  $l: var($l_var);
+  $new_l: scale_lightness($l, $amount);
+  @return hsl($h, $s, $new_l);
+}
+
+@function primary-color($amount: 0%) {
+  @return lighten_hsl(primary, $amount);
+}
+
+@function secondary-color($amount: 0%) {
+  @return lighten_hsl(secondary, $amount);
+}
+
+@function primary-text-color($amount: 0%) {
+  @return lighten_hsl(primary-text, $amount);
+}
+
+@function secondary-text-color($amount: 0%) {
+  @return lighten_hsl(secondary-text, $amount);
+}
+
+// @function primary-color($amount: 0%) {
+//   @return lighten(vars.$primary-color, $amount);
+// }
+
+// @function secondary-color($amount: 0%) {
+//   @return lighten(vars.$secondary-color, $amount);
+// }
+
+// @function primary-text-color($amount: 0%) {
+//   @return lighten(vars.$primary-text-color, $amount);  
+// }
+
+// @function secondary-text-color($amount: 0%) {
+//   @return lighten(vars.$secondary-text-color, $amount);  
+// }
+
+@function bright-text-color() {
+  @return lighten_hsl(secondary-text, 95%);
+  // @return lighten_hsl(secondary, 50%);
 }

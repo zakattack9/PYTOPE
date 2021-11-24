@@ -1,22 +1,39 @@
+:root {
+  --primary-color_h: 0;
+  --primary-color_s: 0%;
+  --primary-color_l: 73%;
+  --secondary-color_h: 0;
+  --secondary-color_s: 0%;
+  --secondary-color_l: 73%;
+  --primary-text-color_h: 0;
+  --primary-text-color_s: 0%;
+  --primary-text-color_l: 21%;
+  --secondary-text-color_h: 0;
+  --secondary-text-color_s: 0%;
+  --secondary-text-color_l: 21%;
+}
+
 html, body {
   margin: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 12pt;
+  font-size: 11pt;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.05pt;
-  color: #353535;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.96));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: "Roboto Mono", monospace;
-  font-size: 12pt;
+  font-size: 11pt;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
 }
 
 a {

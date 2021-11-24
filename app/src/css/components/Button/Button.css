@@ -1,0 +1,20 @@
+.Button {
+  font-family: "Roboto", sans-serif;
+  font-size: 10.5pt;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05pt;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  width: max-content;
+  height: max-content;
+  padding: 10px 30px;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.25));
+  color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.95));
+  border-radius: 5px;
+  cursor: default;
+  transition: 0.2s;
+}
+.Button:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.4));
+}

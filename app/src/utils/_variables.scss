@@ -1,8 +1,28 @@
-$primary-text-color: #353535;
-$secondary-text-color: #696969;
-
-$primary-color: #b9b9b9;
-$secondary-color: #E2E2E2;
+$primary-color: hsl(
+  var(--primary-color_h), 
+  var(--primary-color_s), 
+  var(--primary-color_l)
+);
+$secondary-color: hsl(
+  var(--secondary-color_h), 
+  var(--secondary-color_s), 
+  var(--secondary-color_l)
+);
+$primary-text-color: hsl(
+  var(--primary-text-color_h), 
+  var(--primary-text-color_s), 
+  var(--primary-text-color_l)
+);
+$secondary-text-color: hsl(
+  var(--secondary-text-color_h), 
+  var(--secondary-text-color_s), 
+  var(--secondary-text-color_l)
+);
 
 $button-color: #6E6E6E;
 $shadow-color: #a9a9a9;
+
+// $primary-color: ;
+// $secondary-color: ;
+// $primary-text-color: ;
+// $secondary-text-color: ;
