@@ -61,3 +61,6 @@
   background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.3));
   color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.95));
 }
+.SelectedChip:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.37));
+}

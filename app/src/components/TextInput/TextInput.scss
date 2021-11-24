@@ -20,6 +20,6 @@
 
   &:empty::before {
     content: var(--placeholder);
-    color: f.primary-text-color(55%);
+    color: f.primary-text-color(50%);
   }
 }

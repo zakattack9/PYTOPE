@@ -66,4 +66,5 @@
 
 @function bright-text-color() {
   @return lighten_hsl(secondary-text, 95%);
+  // @return lighten_hsl(secondary, 50%);
 }

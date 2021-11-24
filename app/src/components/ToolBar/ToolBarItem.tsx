@@ -1,13 +1,14 @@
-import './ToolBarItem.scss'
+import './ToolBarItem.scss';
 
 interface Props {
   name: string;
   options: Array<string>;
+  onClick: (option: string) => void,
 }
 
 function ToolBarItem(props: Props) {
   let toolBarOptions = props.options.map(option => (
-    <div className='ToolBarItem__option' key={option}>
+    <div className='ToolBarItem__option' key={option} onClick={(() => props.onClick(option))}>
       {option}
     </div> 
   ));

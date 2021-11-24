@@ -14,7 +14,7 @@
   pointer-events: all;
 }
 .ToolBarItem:hover .ToolBarItem__name {
-  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.2));
+  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.1));
 }
 .ToolBarItem__name {
   padding: 6px 10px;

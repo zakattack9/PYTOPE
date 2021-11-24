@@ -8,60 +8,6 @@
   @include m.hsl-var(secondary, 0, 0%, 73%);
   @include m.hsl-var(primary-text, 0, 0%, 21%);
   @include m.hsl-var(secondary-text, 0, 0%, 21%);
-
-  // slate
-  @include m.hsl-var(primary, 210, 12%, 29%);
-  @include m.hsl-var(secondary, 187, 9%, 60%);
-  @include m.hsl-var(primary-text, 209, 20%, 23%);
-  @include m.hsl-var(secondary-text, 200, 39%, 95%);
-
-  // creamsicle
-  // @include m.hsl-var(primary, 28, 100%, 53%);
-  // @include m.hsl-var(secondary, 36, 100%, 53%);
-  // @include m.hsl-var(primary-text, 199, 26%, 24%);
-  // @include m.hsl-var(secondary-text, 64, 100%, 88%);
-
-  // forest
-  // @include m.hsl-var(primary, 140, 15%, 27%);
-  // @include m.hsl-var(secondary, 130, 22%, 67%);
-  // @include m.hsl-var(primary-text, 18, 21%, 23%);
-  // @include m.hsl-var(secondary-text, 28, 60%, 95%);
-
-  // banana
-  // @include m.hsl-var(primary, 35, 10%, 34%);
-  // @include m.hsl-var(secondary, 26, 13%, 44%);
-  // @include m.hsl-var(primary-text, 73, 24%, 20%);
-  // @include m.hsl-var(secondary-text, 51, 66%, 75%);
-
-  // mint
-  // @include m.hsl-var(primary, 162, 43%, 37%);
-  // @include m.hsl-var(secondary, 167, 33%, 52%);
-  // @include m.hsl-var(primary-text, 16, 42%, 32%);
-  // @include m.hsl-var(secondary-text, 154, 100%, 96%);
-
-  // wood
-  // @include m.hsl-var(primary, 32, 31%, 38%);
-  // @include m.hsl-var(secondary, 39, 33%, 31%);
-  // @include m.hsl-var(primary-text, 34, 50%, 25%);
-  // @include m.hsl-var(secondary-text, 36, 100%, 89%);
-
-  // pebble
-  // @include m.hsl-var(primary, 209, 15%, 59%);
-  // @include m.hsl-var(secondary, 191, 18%, 59%);
-  // @include m.hsl-var(primary-text, 209, 20%, 23%);
-  // @include m.hsl-var(secondary-text, 203, 16%, 15%);
-
-  // rose
-  // @include m.hsl-var(primary, 354, 50%, 37%);
-  // @include m.hsl-var(secondary, 353, 51%, 46%);
-  // @include m.hsl-var(primary-text, 344, 59%, 17%);
-  // @include m.hsl-var(secondary-text, 19, 95%, 80%);
-
-  // clay
-  // @include m.hsl-var(primary, 14, 50%, 44%);
-  // @include m.hsl-var(secondary, 19, 57%, 54%);
-  // @include m.hsl-var(primary-text, 19, 74%, 20%);
-  // @include m.hsl-var(secondary-text, 39, 91%, 91%);
 }
 
 html, body {
