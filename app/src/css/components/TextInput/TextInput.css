@@ -14,5 +14,5 @@
 }
 .TextInput:empty::before, .TextInput--disabled:empty::before {
   content: var(--placeholder);
-  color: #9c9c9c;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.5));
 }

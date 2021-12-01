@@ -3,35 +3,11 @@
 @use 'utils/mixins' as m;
 
 :root {
-  // b&w
+  // b&w (default)
   @include m.hsl-var(primary, 0, 0%, 73%);
   @include m.hsl-var(secondary, 0, 0%, 73%);
   @include m.hsl-var(primary-text, 0, 0%, 21%);
   @include m.hsl-var(secondary-text, 0, 0%, 21%);
-
-  // slate
-  @include m.hsl-var(primary, 210, 12%, 29%);
-  @include m.hsl-var(secondary, 187, 9%, 60%);
-  @include m.hsl-var(primary-text, 209, 20%, 23%);
-  @include m.hsl-var(secondary-text, 200, 39%, 95%);
-
-  // creamsicle
-  // @include m.hsl-var(primary, 28, 100%, 53%);
-  // @include m.hsl-var(secondary, 36, 100%, 53%);
-  // @include m.hsl-var(primary-text, 199, 26%, 24%);
-  // @include m.hsl-var(secondary-text, 64, 100%, 88%);
-
-  // forest
-  // @include m.hsl-var(primary, 140, 15%, 27%);
-  // @include m.hsl-var(secondary, 130, 22%, 67%);
-  // @include m.hsl-var(primary-text, 18, 21%, 23%);
-  // @include m.hsl-var(secondary-text, 28, 60%, 95%);
-
-  // banana
-  // @include m.hsl-var(primary, 35, 10%, 34%);
-  // @include m.hsl-var(secondary, 26, 13%, 44%);
-  // @include m.hsl-var(primary-text, 73, 24%, 20%);
-  // @include m.hsl-var(secondary-text, 51, 66%, 75%);
 }
 
 html, body {

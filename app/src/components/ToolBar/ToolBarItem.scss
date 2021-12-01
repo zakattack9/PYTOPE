@@ -18,6 +18,10 @@
     pointer-events: all;
   } 
 
+  &:hover &__name {
+    color: f.secondary-text-color(10%);
+  }
+
   &__name {
     padding: 6px 10px;
   }

@@ -72,4 +72,8 @@
 .SelectedChip {
   background-color: f.primary-color(-30%);
   color: f.bright-text-color();
+  // box-shadow: 0 0 0 3px f.primary-color(15%) inset;
+  &:hover {
+    background-color: f.primary-color(-37%);
+  }
 }
