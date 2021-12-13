@@ -4,6 +4,7 @@ import Toolbar from '../ToolBar/ToolBar';
 import PackageMapper from '../../pages/PackageMapper/PackageMapper';
 import TestDesigner from '../../pages/TestDesigner/TestDesigner';
 import TestRunner from '../../pages/TestRunner/TestRunner';
+import Overlay from '../Overlay/Overlay';
 import './App.scss';
 
 // used only for testing redux store interactions w/package mapper
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Overlay />
       <Toolbar />
       <PageBar />
 

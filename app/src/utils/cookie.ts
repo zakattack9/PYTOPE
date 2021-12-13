@@ -5,7 +5,7 @@ export function setCookie(name: string, value: string) {
 export function getCookie(name: string) {
   const cookie = document.cookie.split(';').find(cookie => {
     return cookie.includes(name);
-  })
+  });
   return cookie?.split('=')[1] || null;
 }
 
