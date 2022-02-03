@@ -3,8 +3,6 @@
 #   - pane for react app (npm start)
 #   - pane for flask server (flask run)
 #   - pane for sass: dev only (npm run sass)
-export PYTOPE_DIR=/root/pytope
-
 add_exitp() {
   tmux send -t pytope 'alias exitp="tmux kill-session -t pytope" && clear' Enter
 }

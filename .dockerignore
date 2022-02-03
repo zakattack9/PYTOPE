@@ -2,3 +2,6 @@ node_modules
 build
 .dockerignore
 Dockerfile
+venv
+__pycache__
+README.md

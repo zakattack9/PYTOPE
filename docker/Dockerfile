@@ -1,3 +1,6 @@
+# this is an all purpose docker image that can be used to build both dev and prod environments
+# to slim down the docker image, separate Dockerfiles were made for each environment
+
 # global args with defaults; must redeclare for each build stage
 ARG PYTOPE_ENV=dev
 ARG DIR=/root/pytope
@@ -15,6 +18,11 @@ RUN apk add --no-cache --update \
 FROM base AS base-dev
 ARG DIR
 ARG PYTOPE_ENV
+# RUN mkdir -p mkdir $DIR/app && \
+#     mkdir $DIR/server
+# COPY app/package.json $DIR/app
+# COPY app/package-lock.json $DIR/app
+# COPY server/requirements.txt $DIR/server
 COPY . $DIR
 RUN cd $DIR/app && \ 
     npm install && \
