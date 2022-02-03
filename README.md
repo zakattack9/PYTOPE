@@ -25,3 +25,4 @@ The following build commands should be run in the root project folder where the 
 
 #### Development Run
 `docker run --rm -it -v "`pwd`:/root/pytope" -p 127.0.0.1:3000:3000 pytope`
+`docker run --rm -it -v "`pwd`:/root/pytope" -v "/app/node_modules" -p 127.0.0.1:3000:3000 pytope`

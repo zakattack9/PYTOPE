@@ -11,22 +11,22 @@ add_exitp() {
 
 # create new tmux session and detach from client
 tmux new -d -c "$PYTOPE_DIR/server" -s pytope
-# start Flask WebSocket server (pane 0)
 add_exitp
+# start Flask WebSocket server (pane 0)
 tmux send -t pytope "flask run" Enter
 
 # split window into two horizontal panes
 tmux splitw -h -c "$PYTOPE_DIR/app"
-# start react app (pane 1)
 add_exitp
+# start react app (pane 1)
 tmux send -t pytope "npm start" Enter
 
 # $PYTOPE_ENV set in Dockerfile
 if [ $PYTOPE_ENV = "dev" ]; then
   # split pane on the right into to vertical panes
   tmux splitw -v -c "$PYTOPE_DIR/app"
-  # start sass compiler (pane 2)
   add_exitp
+  # start sass compiler (pane 2)
   tmux send -t pytope "npm run sass" Enter
 fi;
 

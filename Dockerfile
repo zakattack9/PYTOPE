@@ -15,6 +15,11 @@ RUN apk add --no-cache --update \
 FROM base AS base-dev
 ARG DIR
 ARG PYTOPE_ENV
+COPY . $DIR
+RUN cd $DIR/app && \ 
+    npm install && \
+    cd .. && cd server && \
+    pip3 install -r requirements.txt
 VOLUME ${DIR}
 
 # build instructions specific for prod environment
