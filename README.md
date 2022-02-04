@@ -6,16 +6,17 @@ There are various ways to run PYTOPE locally on your machine. The preferred meth
 ### Docker Method
 The following steps assume you have Docker Desktop installed on your machine with the Docker daemon already running in the background. Because we are bind mounting local volumes from your machine to the container, **Windows** systems must make sure that their C drive is selected under *Resources > File Sharing* in the Docker Desktop settings; Mac and Linux systems does not require this step.
 
-##### Docker Environment Types
+##### Docker environment types
 - In the **dev** environment, the entire project from your local machine is bind mounted to the container; simply put, changes made locally on your machine are automatically reflected within the container. Bind mounting is done so that hot reloading is still functional, allowing you to make changes to both the front and back-end code on your local machine while having those changes implemented immediately without any restarting or refreshing needed within the container.
 - In the **test** environment, no bind mounting is performed. Rather the code is pulled directly from the `main` branch of the python-test-environment repository on GitLab using an access token hard coded into `Dockerfile.test`. This environment is helpful for testing the latest code on `main` without needing to manually pull down the code or switch branches.
 
 Both Docker images use tmux to run and display all running PYTOPE processes/servers. After the container starts successfully (wait for the top right tmux pane to show that the React development server has started successfully), head over to `localhost:3000` to interact with the PYTOPE GUI. The Flask server should be running in the left tmux pane. In the dev environment, the bottom right tmux pane is the SASS live compiler that automatically transforms SCSS to CSS when changes are detected. Again, once the Flask and React servers are running, they should automatically update/refresh upon saving code changes.
 
-##### Exiting the Container
+##### Exiting the container
 To exit the PYTOPE dev/test container, select any one of the three or two panes and hit `Ctrl+c` to kill the server/process. The alias `exitp` has been sourced into each pane. Entering `exitp` will end the tmux session and subsequently kill the container.
 
-**Important Note:** if the dependencies in `app/package.json` or `server/requirements.txt` are modified, the *development* Docker image must be rebuilt. Failure to do so will result in missing dependencies once the container is booted. If the code in `main` is updated/modified, the *test* Docker image must be rebuilt so that it contains the latest code.
+##### When to build/rebuild the images
+The dev or test environment needs to have its Docker image built at least once before a container can be spun up. If the dependencies in `app/package.json` or `server/requirements.txt` are modified, the *development* Docker image must be rebuilt. Failure to do so will result in missing dependencies once the container is booted. If the code in `main` is updated/modified, the *test* Docker image must be rebuilt so that it contains the latest code.
 
 #### Automated Docker Setup (Recommended)
 A `pytope.py` script has been created to simplify the process of building and starting up the PYTOPE container environment; this eliminates the need to manually run the Docker commands as provided in the [Manual Docker Setup](https://gitlab.com/haydenlhannappel/python-test-environment/-/tree/83-zak#manual-docker-setup) section. To successfully use this script, you must be in the root project folder. For information on the command arguments use `python3 pytope.py -h`.
@@ -66,21 +67,21 @@ $ docker run --rm -it -p 127.0.0.1:3000:3000 pytope:test
 ### Manual Method
 The following sections can be used to run the PYTOPE application without Docker. Each section, React, Sass, Flask, assumes a new terminal session or process will be used to execute the set of commands.
 
-##### Start React Frontend:
+##### Start React front-end:
 ```bash
 $ cd app
 $ npm i
 $ npm start
 ```
 
-##### Start Sass Compiler:
+##### Start Sass compiler:
 ```bash
 $ cd app
 # npm i should have already been run
 $ npm run sass
 ```
 
-##### Start Flask Server (Windows):
+##### Start Flask server (Windows):
 ```powershell
 $ cd server
 # `pip3 install venv` if venv is not already installed
@@ -94,7 +95,7 @@ $ flask run
 $ deactivate
 ```
 
-##### Start Flask Server (Linux/MacOS):
+##### Start Flask server (Linux/MacOS):
 ```bash
 $ cd server
 # `pip3 install venv` if venv is not already installed
