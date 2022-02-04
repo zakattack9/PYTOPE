@@ -9,7 +9,7 @@ The following steps assume you have Docker Desktop installed on your machine wit
 #### Automated Docker Setup (Recommended)
 A `pytope.py` script has been created to simplify the process of starting up the PYTOPE container environment; this eliminates the need to manually run the Docker commands as provided in the *Manual Docker Setup* section. To successfully use this script, you must be in the root project folder. For information on the command arguments use `python3 pytope.py -h`.
 
-There are two type of Docker environments: dev and test. 
+There are two types of Docker environments: **dev** and **test**. 
 - In the dev environment, the entire project from your local machine is bind mounted to the container; simply put, changes made locally on your machine are automatically reflected within the container. Bind mounting is done so that hot reloading is still functional, allowing you to make changes to both the front and back-end code on your local machine while having those changes implemented immediately without any restarting or refreshing needed within the container.
 - In the test environment, no bind mounting is performed. Rather the code is pulled directly from the `main` branch of the python-test-environment repository on GitLab using an access token hard coded into `Dockerfile.test`. This environment is helpful for testing the latest code on `main` without needing to pull down the code or switch branches.
 
