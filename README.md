@@ -81,16 +81,16 @@ $ npm run sass
 
 ##### Start Flask Server (Windows):
 ```powershell
-> cd server
+$ cd server
 # `pip3 install venv` if venv is not already installed
-> python3 -m venv venv
-> .\venv\Scripts\activate
-> pip3 install -r requirements.txt
-> $env:FLASK_APP = "server.py"
-> flask run
+$ python3 -m venv venv
+$ .\venv\Scripts\activate
+$ pip3 install -r requirements.txt
+$ $env:FLASK_APP = "server.py"
+$ flask run
 
 # use to deactivate the virtual env
-> deactivate
+$ deactivate
 ```
 
 ##### Start Flask Server (Linux/MacOS):
