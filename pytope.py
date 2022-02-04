@@ -7,6 +7,8 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
   'env',
   choices=['dev', 'test'],
+  nargs='?',
+  default='dev',
   help='Specifies what Docker environment to build and run'
 )
 parser.add_argument(
