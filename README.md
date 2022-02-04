@@ -1,7 +1,7 @@
 # Python Test Operator's Environment (PYTOPE)
 
 ## Running PYTOPE
-There are various ways to run PYTOPE locally on your machine. The preferred method is to run the entire application, front and back-end, within a Docker container. However, if a less memory intensive method is preferred, the [Manual Method](https://gitlab.com/haydenlhannappel/python-test-environment/-/tree/83-zak#manual-method) section will suffice.
+There are various ways to run PYTOPE locally on your machine. The preferred method is to run the entire application, front and back-end, within a Docker container; however, if a less memory intensive method is preferred, the [Manual Method](https://gitlab.com/haydenlhannappel/python-test-environment/-/tree/83-zak#manual-method) section will suffice.
 
 ### Docker Method
 The following steps assume you have Docker Desktop installed on your machine with the Docker daemon already running in the background. Because we are bind mounting local volumes from your machine to the container, **Windows** systems must make sure that their C drive is selected under *Resources > File Sharing* in the Docker Desktop settings; Mac and Linux systems does not require this step.
@@ -16,7 +16,7 @@ Both Docker images use tmux to run and display all running PYTOPE processes/serv
 To exit the PYTOPE dev/test container, select any one of the three or two panes and hit `Ctrl+c` to kill the server/process. The alias `exitp` has been sourced into each pane. Entering `exitp` will end the tmux session and subsequently kill the container.
 
 ##### When to build/rebuild the images
-The dev or test environment needs to have its Docker image built at least once before a container can be spun up. If the dependencies in `app/package.json` or `server/requirements.txt` are modified, the *development* Docker image must be rebuilt. Failure to do so will result in missing dependencies once the container is booted. If the code in `main` is updated/modified, the *test* Docker image must be rebuilt so that it contains the latest code.
+The dev or test environment needs to have its Docker image built at least once before a container can be spun up. If the dependencies in `app/package.json` or `server/requirements.txt` are modified, the *development* Docker image must be rebuilt; failure to do so will result in missing dependencies once the container is booted. If the code in `main` is updated/modified, the *test* Docker image must be rebuilt so that it contains the latest code.
 
 #### Automated Docker Setup (Recommended)
 A `pytope.py` script has been created to simplify the process of building and starting up the PYTOPE container environment; this eliminates the need to manually run the Docker commands as provided in the [Manual Docker Setup](https://gitlab.com/haydenlhannappel/python-test-environment/-/tree/83-zak#manual-docker-setup) section. To successfully use this script, you must be in the root project folder. For information on the command arguments use `python3 pytope.py -h`.
