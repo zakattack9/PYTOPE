@@ -96,7 +96,7 @@ function PackageMapper() {
     <div className='PackageMapper'>
       <div className="PackageMapper__bar">
         <div className="PackageMapper__barUpperLeft">
-          <div className="PackageMapper__uploadText">Current Package Loaded: <strong>Git</strong></div>
+          <div className="PackageMapper__uploadText">Package Mapping: <strong>Git</strong></div>
           <UploadButton className="PackageMapper__uploadBtn" />
         </div>
         <div className="PackageMapper__barUpperRight">
