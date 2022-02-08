@@ -1,5 +1,5 @@
 export function setCookie(name: string, value: string) {
-  document.cookie = `${name}=${value}; SameSite=strict; Secure`;
+  document.cookie = `${name}=${value}; SameSite=strict; Path=/; Secure`;
 }
 
 export function getCookie(name: string) {
