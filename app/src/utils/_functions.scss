@@ -13,7 +13,7 @@
 // $lightness and $amount are both percentages
 // same as SASS color.scale()
 @function scale_lightness($lightness, $amount) {
-  $dec_a: $amount / 100%;
+  $dec_a: calc($amount / 100%);
   @if $amount < 0 {
     @return calc($lightness + $lightness * $dec_a);
   } @else {
