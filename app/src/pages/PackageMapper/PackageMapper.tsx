@@ -12,7 +12,6 @@ function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
   const { currPackage, command } = pkgMapperState;
   const nestedSubcommandPath = command?.paths.subcommands.slice(-1)[0] || null;
-  // console.log(pkgMapperState);
 
   const handleCreateTest = () => {
     const textCommand = getCommand(pkgMapperState);

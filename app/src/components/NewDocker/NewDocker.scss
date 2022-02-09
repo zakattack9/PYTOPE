@@ -1,0 +1,47 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.NewDocker {
+  font-size: 11.5pt;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 40px 4em 4em 6em auto 7em;
+  grid-template-areas: 
+    "cancel cancel cancel"
+    "titleLeft title titleRight" // Docker image title
+    "fileLeft file fileRight" // file
+    "descLeft desc descRight" // description
+    "testsLeft tests testsRight" // tests
+    "btnsLeft btns btnsRight"; // buttons
+  
+  &__cancel {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  &__titleInput {
+    grid-area: title;
+    align-self: end;
+  }
+
+  &__descLabel {
+    @include fonts.roboto-medium(1.05em);
+    grid-area: descLeft;
+    justify-self: right;
+    margin: 0.5em 1em;
+  }
+
+  &__desc {
+    @include fonts.roboto;
+    grid-area: desc;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: f.primary-color(70%);
+    border-radius: 10px;
+    padding: 1em;
+  }
+}

@@ -19,7 +19,6 @@
   font-size: 14pt;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.05pt;
   color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
   font-weight: 700;
 }

@@ -1,0 +1,20 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.TitleInput {
+  @include fonts.roboto-bold(1.4em);
+  outline: none;
+  border: none;
+  width: 100%;
+
+  &[type="text"] {
+    // same as background-color in index.scss: html,body
+    background-color: f.primary-color(96%);
+  }
+
+  &::placeholder {
+    // color: f.primary-text-color();
+    // opacity: 1;
+  }
+
+}

@@ -34,6 +34,7 @@ function App() {
         <Route path={`${BASE_PATH}`}>
           <ToolBar />
           <PageBar />
+          
           {/* nested switch used to prevent ToolBar and PageBar from rerendering upon switching pages */}
           <Switch>
             <Route path={`${BASE_PATH}/mapper`}>
