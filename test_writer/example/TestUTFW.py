@@ -28,7 +28,7 @@ def test(utfw: UnittestFileWriter, test_designs_json: dict):
 	utfw.add_all(test_designs_json)
 	utfw.write_all()
 	for tf in utfw.test_files:
-		print(f'{tf.dockerfile_path} : {len(tf)} lines')
+		print(f'{repr(str(tf.test_file_path))} : {len(tf)} lines')
 
 
 def main():
