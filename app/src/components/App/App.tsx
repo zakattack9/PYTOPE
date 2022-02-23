@@ -4,9 +4,9 @@ import ToolBar from '../ToolBar/ToolBar';
 import PackageMapper from '../../pages/PackageMapper/PackageMapper';
 import TestDesigner from '../../pages/TestDesigner/TestDesigner';
 import TestRunner from '../../pages/TestRunner/TestRunner';
-import NewDocker from '../NewDocker/NewDocker';
-import NewTest from '../NewTest/NewTest';
-import NewCommand from '../NewCommand/NewCommand';
+import NewDocker from '../../pages/NewDocker/NewDocker';
+import NewTest from '../../pages/NewTest/NewTest';
+import NewCommand from '../../pages/NewCommand/NewCommand';
 import Overlay from '../Overlay/Overlay';
 import './App.scss';
 
@@ -34,7 +34,7 @@ function App() {
         <Route path={`${BASE_PATH}`}>
           <ToolBar />
           <PageBar />
-          
+
           {/* nested switch used to prevent ToolBar and PageBar from rerendering upon switching pages */}
           <Switch>
             <Route path={`${BASE_PATH}/mapper`}>

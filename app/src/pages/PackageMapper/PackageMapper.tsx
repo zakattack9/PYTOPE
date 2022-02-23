@@ -92,7 +92,7 @@ function PackageMapper() {
   }
 
   return (
-    <div className='PackageMapper'>
+    <div className="PackageMapper">
       <div className="PackageMapper__bar">
         <div className="PackageMapper__barUpperLeft">
           <div className="PackageMapper__uploadText">Package Mapping: <strong>Git</strong></div>

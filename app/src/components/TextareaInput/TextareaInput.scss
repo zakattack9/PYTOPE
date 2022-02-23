@@ -2,12 +2,12 @@
 @use '../../utils/functions' as f;
 
 .TextareaInput {
-  @include fonts.roboto;
+  @include fonts.roboto(1em);
   grid-area: desc;
   resize: none;
   outline: none;
   border: none;
   background-color: f.primary-color(70%);
   border-radius: 10px;
-  padding: 1em;
+  padding: 0.8em;
 }

@@ -7,7 +7,7 @@
 
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 40px 4em 4em 6em auto 7em;
+  grid-template-rows: 40px 4em 3em 6em auto 7em;
   grid-template-areas: 
     "cancel cancel cancel"
     "titleLeft title titleRight" // Docker image title
@@ -15,7 +15,20 @@
     "descLeft desc descRight" // description
     "testsLeft tests testsRight" // tests
     "btnsLeft btns btnsRight"; // buttons
+  row-gap: 15px;
   
+  %label {
+    @include fonts.roboto-medium(1.05em);
+    justify-self: right;
+    margin: 0.8em 1.4em;
+  }
+
+  %input {
+    background-color: f.primary-color(70%);
+    border-radius: 10px;
+    padding: 0.8em;
+  }
+
   &__cancel {
     position: relative;
     top: 0;
@@ -24,24 +37,38 @@
 
   &__titleInput {
     grid-area: title;
-    align-self: end;
+    align-self: center;
+  }
+
+  &__fileLabel {
+    @extend %label;
+    grid-area: fileLeft;
+    align-self: center;
+  }
+
+  &__file {
+    @extend %input;
+    grid-area: file;
+    width: 70%;
   }
 
   &__descLabel {
-    @include fonts.roboto-medium(1.05em);
+    @extend %label;
     grid-area: descLeft;
-    justify-self: right;
-    margin: 0.5em 1em;
   }
 
   &__desc {
-    @include fonts.roboto;
+    @extend %input;
     grid-area: desc;
-    resize: none;
-    outline: none;
-    border: none;
-    background-color: f.primary-color(70%);
-    border-radius: 10px;
-    padding: 1em;
+  }
+
+  &__testsLabel {
+    @extend %label;
+    grid-area: testsLeft;
+  }
+
+  &__tests {
+    @extend %input;
+    grid-area: tests;
   }
 }
