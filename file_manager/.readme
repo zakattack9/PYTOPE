@@ -1,0 +1,10 @@
+- Download both file_manager.py and array.py in same directory
+- To run file, type python file_manager.py <name_of_new_file>
+
+Naming conventions to differentiate between files:
+unit tests - <name>.py
+dockerfile - Dockerfile
+file path config - fp_<name>.cfg
+test results - <name>.txt
+package mapping config- pm_<name>.cfg
+test designs config - td_<name>.cfg
