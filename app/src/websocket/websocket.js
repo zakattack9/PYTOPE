@@ -1,10 +1,23 @@
 import React, { useState, useContext, useCallback, useEffect } from "react";
 import { SocketContext } from "../context/socket";
 
-export function FileUpload() {
-    const socket = useContext(SocketContext);
-    const [test, setTest] = useState(0);
+export function FileUpload(socket, selectedFile) {
+    /*
+    useEffect(() => {
+        const socket = useContext(function upload(SocketContext) {
+            if (selectedFile == null) {
+                return;
+            }
+        });
+        const [test, setTest] = useState(0);
+        console.log("File uploaded")
+        console.log(selectedFile)
+        console.log(selectedFile.name)
+        socket.emit("send_backend", selectedFile.name, selectedFile)
+    });
+    */
     //change to onClick somewhere
+    /*
     useEffect(() => {
         console.log("upload button active")
         const input = document.querySelector('input[type="file"]');
@@ -19,7 +32,7 @@ export function FileUpload() {
             socket.emit("send_backend", fileToBackend.name, fileToBackend)
         });
     }, [socket]);
-
+    */
     return () => {
       // before the component is destroyed
       // unbind all event handlers used in this component

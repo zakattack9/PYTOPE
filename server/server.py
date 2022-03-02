@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 from flask_socketio import SocketIO, emit
 
@@ -46,11 +48,15 @@ def socketFrontendUploadFile(filename, data):
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
-    data = b''
-    with open(filename, 'rb') as f:
-        data = f.read()
-    f.close()
-    emit('frontend_download', data)
+    file_exists = os.path.exists(filename)
+    if file_exists:
+        with open(filename, 'rb') as f:
+            data = f.read()
+            f.close()
+        emit('frontend_download', data)
+        return
+    else:
+        emit('file_dne', filename)
 
 
 if __name__ == "__main__":
