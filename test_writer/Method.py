@@ -32,7 +32,7 @@ class Method(LineSequence, ABC):
 		return f"({self.parameters}):"
 
 	def get_header(self) -> str:
-		return self.name + self.get_parameter_str()
+		return 'def ' + self.name + self.get_parameter_str()
 
 	def get_lines(self) -> Iterable[str]:
 		return chain(self.decoration_lines, self.deco_header_sep, (self.get_header(),), self.header_body_sep, indent(self.get_body_lines()))
