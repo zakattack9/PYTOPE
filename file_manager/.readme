@@ -1,10 +1,13 @@
-- Download both file_manager.py and array.py in same directory
-- To run file, type python file_manager.py <name_of_new_file>
+- Download the file_manager_module directory 
+- you can add any of the example test files into the file_manager_module(root directory)
+- To run file, type python app.py
+- The progam will automatically move the test files in the root directory to the appropriate directory in the hierarchy 
+- If you want to create a zip file, run python app.py zip
 
 Naming conventions to differentiate between files:
 unit tests - <name>.py
 dockerfile - Dockerfile
 file path config - fp_<name>.cfg
-test results - <name>.txt
+test results - <name>.py_output
 package mapping config- pm_<name>.cfg
 test designs config - td_<name>.cfg
