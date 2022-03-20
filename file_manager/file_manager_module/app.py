@@ -6,23 +6,23 @@ import sys
 
 
 def zip_folder():
-    shutil.make_archive("output", 'zip', source + "/file_manager")
+    shutil.make_archive("output", 'zip', source + "/hierarchy")
 
 
 main_file="app.py"
 #directories
 source = os.getcwd()
 #Configs
-file_path_config = os.getcwd() + "/file_manager/configs/file_path_config" 
-package_mapping_config = os.getcwd() + "/file_manager/configs/package_mapping_config" 
-test_designs_config = os.getcwd() + "/file_manager/configs/test_designs_config" 
+file_path_config = os.getcwd() + "/hierarchy/configs/file_path_config" 
+package_mapping_config = os.getcwd() + "/hierarchy/configs/package_mapping_config" 
+test_designs_config = os.getcwd() + "/hierarchy/configs/test_designs_config" 
 
 #Tests
-python_unittests = os.getcwd() + "/file_manager/tests/python_unittests" 
-test_resuls = os.getcwd() + "/file_manager/tests/test_results" 
+python_unittests = os.getcwd() + "/hierarchy/tests/python_unittests" 
+test_resuls = os.getcwd() + "/hierarchy/tests/test_results" 
 
 #Dockerfiles
-Dockerfiles = os.getcwd() + "/file_manager/Dockerfiles" 
+Dockerfiles = os.getcwd() + "/hierarchy/Dockerfiles" 
 
 files = os.listdir(source)
 
