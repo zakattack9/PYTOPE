@@ -1,0 +1,7 @@
+test_boolean (test_Example1.Testing) ... ok
+test_string (test_Example1.Testing) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
