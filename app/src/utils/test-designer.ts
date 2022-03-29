@@ -3,6 +3,7 @@
 
 
 export interface TestDesigns {
+    test_designs: String[],
     docker_images: DockerImages,
     tests: Tests
 }

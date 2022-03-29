@@ -3,8 +3,11 @@ import { DragDropContext, Droppable, Draggable, DraggingStyle, NotDraggingStyle,
 import ReactDOM from "react-dom";
 import { useRef } from 'react';
 import TestBlock from '../TestBlock/TestBlock';
-import { designer } from "../../data/testTestDesigner";
+import { designs } from "../../data/testTestDesigner";
 import './ImageBlock.scss';
+import { DockerImages, TestDesigns, Tests } from '../../utils/test-designer';
+import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+
 
 export interface IImageBlockItem {
     docker_Image_id: number;
@@ -52,36 +55,8 @@ const imageBlockListItems: imageBlockArr = [
             }
         ]
     }
-    // {
-    //     docker_Image_id: 3,
-    //     docker_Image_description: "Test git push",
-    //     tests: [
-    //         {
-    //             test_id: 30,
-    //             test_contents: "test 3 content"
-    //         },
-    //         {
-    //             test_id: 31,
-    //             test_contents: "test 33 content"
-    //         }
-    //     ]
-    // }
 
 ]
-
-// const grid =20;
-// const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
-// // some basic styles to make the items look a bit nicer
-// userSelect: "none",
-// padding: grid * 2,
-// margin: `0 0 ${grid}px 0`,
-
-// // change background colour if dragging
-// background: isDragging ? "lightgreen" : "grey",
-
-// // styles we need to apply on draggables
-// ...draggableStyle
-// })
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
     padding: 10,
@@ -101,14 +76,21 @@ const getListStyle = (isDraggingOver: boolean) => ({
     width: 500
   });
 
-function ImageBlock() {
+
+interface Props{
+    dockerImage: DockerImages,
+    Tests:Tests
+}
+
+function ImageBlock(props: Props) {
     const [imageBlockItems, setImageBlockItems] = useState(imageBlockListItems);
     var initialValue = 0;
+    const dispatch = useAppDispatch();
     const onDragEnd = (result: DropResult) => {
         console.log(result);
         // const { source, destination } = result;
+        //loop city test
         if (!result.destination) return;
-
         const sourceIndex = result.source.index;
         const destinationIndex = result.destination?.index;
 
@@ -118,6 +100,8 @@ function ImageBlock() {
             items.splice(destinationIndex, 0, newOrder)
             var newlyOrderedItems = items
             setImageBlockItems(newlyOrderedItems);
+            //dispatch(reorderedSubItems);
+            
         }
 
         else if (result.type === "testBlockItem") {
@@ -151,6 +135,7 @@ function ImageBlock() {
                     return item;
                 });
                 setImageBlockItems(newItems);
+                // dispatch for changing the store
             }
             else {
                 let newSourceSubItems = [...sourceSubItems];

@@ -11,11 +11,15 @@ import { mapping } from '../../data/testPackageMapping';
 import { useAppDispatch } from '../../hooks/react-redux';
 import { loadPackage } from '../../slices/packageMapperSlice';
 
+import { designs } from '../../data/testTestDesigner';
+import { loadDesigns } from '../../slices/testDesignerSlice';
+
 function App() {
   // this logic should go into the package select component
   const dispatch = useAppDispatch();
-  dispatch(loadPackage(mapping))
-
+  dispatch(loadPackage(mapping));
+  dispatch(loadDesigns(designs));
+  
   window.onbeforeunload = (e) => {
     localStorage.clear(); // clear localStorage on reload
   };

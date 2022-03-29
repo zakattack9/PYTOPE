@@ -1,6 +1,10 @@
 import { BlockType, CommandOutputAssertionType, TestDesigns } from "../utils/test-designer"
 
-export const designer : TestDesigns = {
+export const designs : TestDesigns = {
+    "test_designs":[
+      "docker_image1",
+      "docker_image2"
+    ],
     "docker_images": {
         "docker_image1": {
             "docker_image_id": 1,
