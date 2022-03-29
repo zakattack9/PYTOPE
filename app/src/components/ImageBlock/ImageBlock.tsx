@@ -101,14 +101,14 @@ function ImageBlock(props: Props) {
         <TestBlock
             testName = {testName}
             testIndex = {index}
-            type = {dockerImageName}
+            parentImage = {dockerImageName}
         />
     ): null
     return (
-        <Droppable droppableId="imageBlock" type="imageBlockItem">
+        <Droppable droppableId= {dockerImageName} type="imageBlockItem">
             {(provided, snapshot) => (
                 <div className="testBlock" {...provided.droppableProps} ref={provided.innerRef}>
-                    <Draggable key={dockerImage.docker_image_id} draggableId={dockerImage.docker_image_id.toString()} index={dockerImageIndex}>
+                    <Draggable key={dockerImage.docker_image_id} draggableId={`draggable_${dockerImageName}`} index={dockerImageIndex}>
                         {(provided, snapshot) => (
                             <div ref={provided.innerRef}
                                 {...provided.draggableProps}
@@ -120,6 +120,7 @@ function ImageBlock(props: Props) {
                             </div>
                         )}
                     </Draggable>
+                    {provided.placeholder}
                 </div>
             )}
         </Droppable>

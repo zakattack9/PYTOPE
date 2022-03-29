@@ -22,6 +22,10 @@ export interface ReorderTestFormat {
     newIndex: number
 }
 
+export interface ReorderRunFormat{
+
+}
+
 
 
 export const testDesignerSlice = createSlice({
@@ -29,9 +33,7 @@ export const testDesignerSlice = createSlice({
     initialState,
     reducers: {
         addBlocks: (state, action) => {
-            const newBlock = {
-                
-            }
+
         },
         reorderImageBlocks: (state, action: PayloadAction<ReorderImageFormat>) => {
             if (!state.currBlocks) return;
@@ -42,15 +44,12 @@ export const testDesignerSlice = createSlice({
         reorderTestBlocks: (state, action: PayloadAction<ReorderTestFormat>) => {
             if (!state.currBlocks) return;
             const {oldDockerImageName, newDockerImageName,oldIndex,newIndex} = action.payload;
-            if(oldDockerImageName === newDockerImageName){
-                const [testName] = state.currBlocks.docker_images[newDockerImageName].tests.splice(oldIndex,1);
-                state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
-            }
-            else{
-                const [testName] = state.currBlocks.docker_images[oldDockerImageName].tests.splice(oldIndex,1);
-                state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
-            }
-
+            const sourceDockerImageName = oldDockerImageName === newDockerImageName ? newDockerImageName:oldDockerImageName;
+            
+            const [testName] = state.currBlocks.docker_images[sourceDockerImageName].tests.splice(oldIndex,1);
+            state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
+            
+            
         },
         removeBlocks: (state, action: PayloadAction<string>) => {
             

@@ -28,7 +28,7 @@ const getListStyle = (isDraggingOver: any) => ({
 export interface Props {
     testName: string,
     testIndex: number,
-    type: string
+    parentImage: string
 }
 
 // style={getItemStyle(
@@ -37,16 +37,16 @@ export interface Props {
 //   )}
 function TestBlock(props: Props) {
 
-    const {testName, testIndex, type} = props
+    const {testName, testIndex, parentImage} = props
     const testDesignerState = useAppSelector(state => state.testDesigner);
     const {currBlocks} = testDesignerState;
     const testBlock = currBlocks?.tests[testName];
 
     return testBlock ?  (
-        <Droppable droppableId={type} type={`testBlockItem`}>
+        <Droppable droppableId={`${parentImage}/${testName}`} type={`testBlockItem`}>
             {(provided, snapshot) => (
                 <div className="testItem" {...provided.droppableProps} ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
-                    <Draggable key={testBlock.test_id} draggableId={testBlock.test_id.toString()} index={testIndex}>
+                    <Draggable key={testBlock.test_id} draggableId={`draggable_${testName}`} index={testIndex}>
                         {(provided, snapshot) => (
                             <div ref={provided.innerRef}
                                 {...provided.draggableProps}
@@ -54,7 +54,7 @@ function TestBlock(props: Props) {
                                 style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
                             >
                                 {testName}
-                                <span
+                                {/* <span
                                             {...provided.dragHandleProps}
                                             style={{
                                                 display: "block",
@@ -63,12 +63,12 @@ function TestBlock(props: Props) {
                                             }}
                                         >
                                             Drag
-                                        </span>
+                                        </span> */}
                                 {/* <RunBlock /> */}
                             </div>
                         )}
                     </Draggable>
-
+                    {provided.placeholder}
                 </div>
             )}
         </Droppable>

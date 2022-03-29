@@ -28,8 +28,8 @@ function TestDesigner() {
     else if (result.type === "testBlockItem") {
         console.log(result);
         const reorderTestFormat = {
-          oldDockerImageName:sourceDroppableId,
-          newDockerImageName:destinationDroppableId,
+          oldDockerImageName:sourceDroppableId.split("/")[0],
+          newDockerImageName:destinationDroppableId.split("/")[0],
           oldIndex:sourceIndex, 
           newIndex:destinationIndex
         };
