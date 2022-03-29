@@ -16,9 +16,8 @@ export interface ReorderImageFormat {
 }
 
 export interface ReorderTestFormat {
-    // oldDockerImageName: string,
-    // newDockerImageName: string,
-    dockerImageName: string,
+    oldDockerImageName: string,
+    newDockerImageName: string,
     oldIndex: number,
     newIndex: number
 }
@@ -35,16 +34,23 @@ export const testDesignerSlice = createSlice({
             }
         },
         reorderImageBlocks: (state, action: PayloadAction<ReorderImageFormat>) => {
-            const {oldIndex,newIndex} = action.payload;
             if (!state.currBlocks) return;
+            const {oldIndex,newIndex} = action.payload;
             const [dockerImageName] = state.currBlocks.test_designs.splice(oldIndex,1);
             state.currBlocks.test_designs.splice(newIndex,0,dockerImageName);
         },
         reorderTestBlocks: (state, action: PayloadAction<ReorderTestFormat>) => {
-            const {dockerImageName,oldIndex,newIndex} = action.payload;
             if (!state.currBlocks) return;
-            const [testName] = state.currBlocks.docker_images[dockerImageName].tests.splice(oldIndex,1);
-            state.currBlocks.docker_images[dockerImageName].tests.splice(newIndex,0,testName);
+            const {oldDockerImageName, newDockerImageName,oldIndex,newIndex} = action.payload;
+            if(oldDockerImageName === newDockerImageName){
+                const [testName] = state.currBlocks.docker_images[newDockerImageName].tests.splice(oldIndex,1);
+                state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
+            }
+            else{
+                const [testName] = state.currBlocks.docker_images[oldDockerImageName].tests.splice(oldIndex,1);
+                state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
+            }
+
         },
         removeBlocks: (state, action: PayloadAction<string>) => {
             
@@ -59,6 +65,7 @@ export const testDesignerSlice = createSlice({
 export const{
     addBlocks,
     reorderImageBlocks,
+    reorderTestBlocks,
     removeBlocks,
     loadDesigns
 }  = testDesignerSlice.actions;

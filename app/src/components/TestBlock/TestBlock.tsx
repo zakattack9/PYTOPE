@@ -4,6 +4,7 @@ import { DragDropContext, Droppable, Draggable, DraggingStyle, NotDraggingStyle,
 import './TestBlock.scss';
 import { imageBlockArr } from '../ImageBlock/ImageBlock';
 import { testBlockArr } from '../ImageBlock/ImageBlock';
+import { useAppSelector } from '../../hooks/react-redux';
 
 const grid = 20;
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
@@ -22,12 +23,12 @@ const getListStyle = (isDraggingOver: any) => ({
     background: isDraggingOver ? "lightblue" : "lightgrey",
     //padding: grid,
     //width: 1200
-  });
+});
 
 export interface Props {
-    tests: testBlockArr,
-    type: number
-    
+    testName: string,
+    testIndex: number,
+    type: string
 }
 
 // style={getItemStyle(
@@ -35,22 +36,25 @@ export interface Props {
 //     provided.draggableProps.style
 //   )}
 function TestBlock(props: Props) {
-    return (
-        <Droppable droppableId={props.type.toString()} type={`testBlockItem`}>
-            {(provided,snapshot) => (
-                <div className="testItem" {...provided.droppableProps} ref={provided.innerRef} style = {getListStyle(snapshot.isDraggingOver)}>
-                    {props.tests.map((testBlockItem, index) => {
-                        return (
-                            <Draggable key={testBlockItem.test_id} draggableId={testBlockItem.test_id.toString()} index={index}>
-                                {/* {testBlockItems[index].test_blocks.map({block_type,command,command_output_assertion})} */}
-                                {(provided, snapshot) => (
-                                    <div ref={provided.innerRef}
-                                        {...provided.draggableProps}
-                                        {...provided.dragHandleProps}
-                                        style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
-                                    >
-                                        {testBlockItem.test_contents}
-                                        {/* <span
+
+    const {testName, testIndex, type} = props
+    const testDesignerState = useAppSelector(state => state.testDesigner);
+    const {currBlocks} = testDesignerState;
+    const testBlock = currBlocks?.tests[testName];
+
+    return testBlock ?  (
+        <Droppable droppableId={type} type={`testBlockItem`}>
+            {(provided, snapshot) => (
+                <div className="testItem" {...provided.droppableProps} ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
+                    <Draggable key={testBlock.test_id} draggableId={testBlock.test_id.toString()} index={testIndex}>
+                        {(provided, snapshot) => (
+                            <div ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                                style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
+                            >
+                                {testName}
+                                <span
                                             {...provided.dragHandleProps}
                                             style={{
                                                 display: "block",
@@ -59,18 +63,17 @@ function TestBlock(props: Props) {
                                             }}
                                         >
                                             Drag
-                                        </span> */}
-                                        <RunBlock/>
-                                    </div>
-                                )}
-                            </Draggable>
-                        )
-                    })}
+                                        </span>
+                                {/* <RunBlock /> */}
+                            </div>
+                        )}
+                    </Draggable>
+
                 </div>
             )}
         </Droppable>
 
-    );
+    ) : null;
 }
 
 export default TestBlock;

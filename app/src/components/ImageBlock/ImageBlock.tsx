@@ -78,23 +78,32 @@ const getListStyle = (isDraggingOver: boolean) => ({
 
 
 interface Props {
-    dockerImageName: String,
+    dockerImageName: string,
     dockerImage: DockerImage,
     dockerImageIndex: number
 }
+// const imageBlocks = currBlocks?.docker_images;
+// const testDesigns = currBlocks?.test_designs;
+// const dockerImageBlock = imageBlocks && testDesigns ? testDesigns.map((imageName,index) => 
+//   <ImageBlock 
+//     dockerImageName = {imageName} 
+//     dockerImage={imageBlocks[imageName]} 
+//     dockerImageIndex = {index}
+//   />
+// ) : null
 
 function ImageBlock(props: Props) {
 
     const { dockerImageName, dockerImage, dockerImageIndex } = props;
-    const [imageBlockItems, setImageBlockItems] = useState(imageBlockListItems);
-    var initialValue = 0;
-    const dispatch = useAppDispatch();
 
-    //style = {getListStyle(snapshot.isDraggingOver)}
-
-    // style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
-
-
+    const tests = dockerImage.tests;
+    const testBlocks = tests ? tests.map((testName, index) =>
+        <TestBlock
+            testName = {testName}
+            testIndex = {index}
+            type = {dockerImageName}
+        />
+    ): null
     return (
         <Droppable droppableId="imageBlock" type="imageBlockItem">
             {(provided, snapshot) => (
@@ -107,9 +116,7 @@ function ImageBlock(props: Props) {
                                 style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
                             >
                                 {dockerImage.docker_image_description}
-                                {/* <TestBlock tests={imageBlockItem.tests}
-                                        type={imageBlockItem.docker_Image_id}
-                                    /> */}
+                                {testBlocks}
                             </div>
                         )}
                     </Draggable>
