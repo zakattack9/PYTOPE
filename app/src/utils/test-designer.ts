@@ -3,7 +3,7 @@
 
 
 export interface TestDesigns {
-    test_designs: String[],
+    test_designs: string[],
     docker_images: DockerImages,
     tests: Tests
 }
@@ -13,7 +13,7 @@ export interface DockerImages {
 export interface DockerImage {
     docker_image_id: number,
     docker_image_description: string,
-    tests: String[]
+    tests: string[]
 }
 export interface Tests {
     [test: string]: Test
@@ -24,9 +24,9 @@ export interface Test {
 }
 export interface TestBlock {
     block_type: BlockType,
-    command: String,
+    command: string,
     command_output_assertion: CommandOutputAssertionType,
-    regex?: String
+    regex?: string
 }
 export enum BlockType {
     RUN = "RUN",
