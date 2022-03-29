@@ -6,11 +6,7 @@ function TestDesigner() {
     <div className='TestDesigner'>
       <div className='TestDesigner__ImageBlock1'>
         <ImageBlock/>
-        
       </div>
-      <div className='TestDesigner__ImageBlock2'>
-        <ImageBlock/>
-        </div>
     </div>
   );
 }

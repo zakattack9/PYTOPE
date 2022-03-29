@@ -2,7 +2,24 @@
     display: grid;
     //justify-content: center;
     padding:4em;
-    grid-template-rows: 100px auto; // modify first px value to change bar height
-    background-color: gray;
+    grid-template-rows: auto; // modify first px value to change bar height
+    background-color: rgb(131, 124, 124);
     border-radius: 10%;
 }
+
+.testItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em
+    //grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 20px;
+}
+
+// h1 {
+//     background-color: white;
+//     color: #222222;
+//     font-size: 16px;
+//     font-weight: 800;
+//     padding: 10px;
+//     cursor: move;
+//   }
