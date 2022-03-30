@@ -26,37 +26,6 @@ export type imageBlockArr = IImageBlockItem[];
 
 export type testBlockArr = ITestBlockItem[];
 
-const imageBlockListItems: imageBlockArr = [
-    {
-        docker_Image_id: 1,
-        docker_Image_description: "Git Docker Image",
-        tests: [
-            {
-                test_id: 10,
-                test_contents: "Test git submodule"
-            },
-            {
-                test_id: 11,
-                test_contents: "Test git push"
-            }
-        ]
-    },
-    {
-        docker_Image_id: 2,
-        docker_Image_description: "Git Docker Image with repository",
-        tests: [
-            {
-                test_id: 20,
-                test_contents: "Test git init fail"
-            },
-            {
-                test_id: 21,
-                test_contents: "Test git commit"
-            }
-        ]
-    }
-
-]
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
     padding: 10,

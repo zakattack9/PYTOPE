@@ -31,10 +31,6 @@ export interface Props {
     parentImage: string
 }
 
-// style={getItemStyle(
-//     snapshot.isDragging,
-//     provided.draggableProps.style
-//   )}
 function TestBlock(props: Props) {
 
     const {testName, testIndex, parentImage} = props
@@ -42,11 +38,24 @@ function TestBlock(props: Props) {
     const {currBlocks} = testDesignerState;
     const testBlock = currBlocks?.tests[testName];
 
+    const runBlock = testBlock?.test_blocks;
+    console.log(testDesignerState);
+    const runBlocks = runBlock && testBlock ? runBlock.map((test_block,index) =>
+        <RunBlock
+            parentTest = {testName}
+            runBlockIndex = {index}
+            blockType = {test_block.block_type}
+            command = {test_block.command}
+            commandOutputAssertion = {test_block.command_output_assertion}
+            regex = {test_block.regex}
+        />
+    ): null
+
     return testBlock ?  (
         <Droppable droppableId={`${parentImage}/${testName}`} type={`testBlockItem`}>
             {(provided, snapshot) => (
                 <div className="testItem" {...provided.droppableProps} ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
-                    <Draggable key={testBlock.test_id} draggableId={`draggable_${testName}`} index={testIndex}>
+                    <Draggable key={`${parentImage}/${testName}`} draggableId={`draggable_${testName}`} index={testIndex}>
                         {(provided, snapshot) => (
                             <div ref={provided.innerRef}
                                 {...provided.draggableProps}
@@ -54,17 +63,7 @@ function TestBlock(props: Props) {
                                 style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
                             >
                                 {testName}
-                                {/* <span
-                                            {...provided.dragHandleProps}
-                                            style={{
-                                                display: "block",
-                                                margin: "0 10px",
-                                                border: "1px solid #000"
-                                            }}
-                                        >
-                                            Drag
-                                        </span> */}
-                                {/* <RunBlock /> */}
+                                {runBlocks}
                             </div>
                         )}
                     </Draggable>

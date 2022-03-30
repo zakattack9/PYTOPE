@@ -58,7 +58,7 @@ export const designs : TestDesigns = {
                     "regex": "/some_regex/g"
                 }
             ]
-        }
+        },
     }
 }
 

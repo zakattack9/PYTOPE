@@ -23,7 +23,10 @@ export interface ReorderTestFormat {
 }
 
 export interface ReorderRunFormat{
-
+    oldTestName: string,
+    newTestName: string,
+    oldIndex: number,
+    newIndex: number
 }
 
 
@@ -34,6 +37,9 @@ export const testDesignerSlice = createSlice({
     reducers: {
         addBlocks: (state, action) => {
 
+        },
+        removeBlocks: (state, action: PayloadAction<string>) => {
+            
         },
         reorderImageBlocks: (state, action: PayloadAction<ReorderImageFormat>) => {
             if (!state.currBlocks) return;
@@ -48,11 +54,15 @@ export const testDesignerSlice = createSlice({
             
             const [testName] = state.currBlocks.docker_images[sourceDockerImageName].tests.splice(oldIndex,1);
             state.currBlocks.docker_images[newDockerImageName].tests.splice(newIndex,0,testName);
-            
-            
         },
-        removeBlocks: (state, action: PayloadAction<string>) => {
+        reorderRunBlocks: (state, action: PayloadAction<ReorderRunFormat>) => {
+            if (!state.currBlocks) return;
+            const {oldTestName, newTestName, oldIndex, newIndex} = action.payload;
+            const sourceTestName = oldTestName === newTestName ? newTestName:oldTestName;
             
+            const [runBlockIndex] = state.currBlocks.tests[sourceTestName].test_blocks.splice(oldIndex,1);
+            state.currBlocks.tests[newTestName].test_blocks.splice(newIndex,0,runBlockIndex);
+            console.log(oldTestName,newTestName);
         },
         loadDesigns: (state, action: PayloadAction<TestDesigns>) => {
             const testDesignsClone = JSON.parse(JSON.stringify(action.payload));
@@ -63,9 +73,10 @@ export const testDesignerSlice = createSlice({
 
 export const{
     addBlocks,
+    removeBlocks,
     reorderImageBlocks,
     reorderTestBlocks,
-    removeBlocks,
+    reorderRunBlocks,
     loadDesigns
 }  = testDesignerSlice.actions;
 
