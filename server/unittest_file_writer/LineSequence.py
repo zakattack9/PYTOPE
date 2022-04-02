@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, Iterator, Sequence
 
-from test_writer.Util import it_get
+from server.unittest_file_writer.Util import it_get
 
 
 class LineSequence(Sequence, ABC):
@@ -11,7 +11,7 @@ class LineSequence(Sequence, ABC):
 
 	def write_lines(self, target) -> None:
 		for line in self.get_lines():
-			target.write(line + '\n')
+			target.write(line.rstrip() + '\n')
 
 	def __iter__(self) -> Iterator[str]:
 		return iter(self.get_lines())

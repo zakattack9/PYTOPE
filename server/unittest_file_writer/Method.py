@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 from itertools import chain
 from typing import Iterable, Sequence
 
-from test_writer.LineSequence import LineSequence
-from test_writer.Util import indent
+from server.unittest_file_writer.LineSequence import LineSequence
+from server.unittest_file_writer.Util import indent
 
 
 class Method(LineSequence, ABC):

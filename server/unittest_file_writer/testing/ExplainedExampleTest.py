@@ -12,12 +12,12 @@ from pathlib import Path
 
 class ExplainedExampleTest(TestCase):
 	"""
-	This class is an example of a generated test class.
+	This class is an testing of a generated test class.
 	This serves as a demonstration of the template.
 	This class is not actually used.
 
 	The type hints are not necessary, and do not need to be included in the generated test files;
-	they are simply here to help explain this example.
+	they are simply here to help explain this testing.
 	"""
 	# Class Attributes
 	client:	DockerClient

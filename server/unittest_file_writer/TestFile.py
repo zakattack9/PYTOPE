@@ -2,11 +2,11 @@ from itertools import chain
 from pathlib import Path
 from typing import MutableSequence, Optional, Sequence
 
-from test_writer.LineSequence import LineSequence
-from test_writer.Method import Method
-from test_writer.NonTestMethods import SetUpClassMethod, SetUpMethod, TearDownClassMethod, TearDownMethod
-from test_writer.OutputTestMethod import OutputTestMethod, OutputType
-from test_writer.Util import indent
+from server.unittest_file_writer.LineSequence import LineSequence
+from server.unittest_file_writer.Method import Method
+from server.unittest_file_writer.NonTestMethods import SetUpClassMethod, SetUpMethod, TearDownClassMethod, TearDownMethod
+from server.unittest_file_writer.OutputTestMethod import OutputTestMethod, OutputType
+from server.unittest_file_writer.Util import indent
 
 _IMPORT_LINES	= ('from docker import from_env', 'from unittest import TestCase')
 _SUPER_CLASSES	= ('TestCase',)
@@ -37,16 +37,16 @@ class TestFile(LineSequence):
 			self.add_non_test_methods()
 
 	def add_test(self, test_name: str, test_json: dict):
-		i = 1
+		test_number = 1
 		block: dict
 		for block in test_json['test_blocks']:
 			if block['block_type'] == 'RUN':
-				name = f'{test_name}_{i}'
+				name = self.format_test_method_name(test_name, test_number)
 				cmd = block['command']
 				output_type = OutputType[block['command_output_assertion']]
 				output_regex = block['regex'] if output_type == OutputType.VERIFY_REGEX else None
 				self.methods.append(OutputTestMethod(name=name, cmd=cmd, output_type=output_type, output_regex=output_regex))
-				i += 1
+				test_number += 1
 
 	def add_non_test_methods(self):
 		# This should usually be automatically called by the constructor.
@@ -55,11 +55,33 @@ class TestFile(LineSequence):
 		self._add_setup_method()
 		self._add_tear_down_method()
 
-	def get_method(self, name: str):
+	def format_test_method_name(self, test_name: str, test_number: int):
+		return f'{test_name}_{test_number}'
+
+	def find_method(self, name: str):
+		index = 0
 		for method in self.methods:
 			if method.name == name:
-				return method
+				return method, index
+			index += 1
 		raise KeyError(f"Method with name {repr(name)} not found.")
+
+	def find_test(self, test_name: str, test_number: int):
+		return self.find_method(self.format_test_method_name(test_name, test_number))
+
+	def get_method(self, name: str):
+		return self.find_method(name)[0]
+
+	def get_test(self, test_name: str, test_number: int):
+		return self.get_method(self.format_test_method_name(test_name, test_number))
+
+	def remove_method(self, name: str):
+		method, index = self.find_method(name)
+		del self.methods[index]
+		return method
+
+	def remove_test(self, test_name: str, test_number: int):
+		return self.remove_method(self.format_test_method_name(test_name, test_number))
 
 	def get_header(self):
 		return f"class {self.class_name}({', '.join(self.super_classes)}):"

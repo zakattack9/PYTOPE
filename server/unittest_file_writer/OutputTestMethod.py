@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Iterable, List, Optional, Union
 
-from test_writer.Method import Method
+from server.unittest_file_writer.Method import Method
 
 _SET_VARS			= 'exit_code, output = '
 _RUN				= 'self.container.exec_run('
