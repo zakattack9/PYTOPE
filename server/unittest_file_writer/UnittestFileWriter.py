@@ -35,7 +35,7 @@ def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_f
 
 
 class TestDesigns:
-	# TODO : dummy class, delete after integrating test-designs-class branch
+	# TODO : dummy class, delete after merging test-designs-class branch
 	def __init__(self, test_json_path: Path):
 		with test_json_path.open() as f:
 			self.test_json = load(f)
