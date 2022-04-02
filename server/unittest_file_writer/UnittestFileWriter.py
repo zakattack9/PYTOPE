@@ -1,11 +1,9 @@
-from json import JSONDecodeError, load
+from json import load
 from pathlib import Path
 from typing import Any, Dict, MutableSequence, Optional
 
 from server.unittest_file_writer.FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
-from server.unittest_file_writer.JSONDecodeErrorWrapper import JSONDecodeErrorWrapper
 from server.unittest_file_writer.TestFile import TestFile
-
 
 """
 UnittestFileWriter is the main interface for the module.
@@ -36,6 +34,16 @@ def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_f
 	return test_writer
 
 
+class testDesigns:
+	# TODO : dummy class, delete after integrating test-designs-class branch
+	def __init__(self, testJSONLocation: Path):
+		with testJSONLocation.open() as f:
+			self.testJSON = load(f)
+
+	def validate(self):
+		...
+
+
 class UnittestFileWriter:
 	dockerfiles_wrapper:	FileFinderWrapper
 	test_files_wrapper:		FileFinderWrapper
@@ -53,12 +61,9 @@ class UnittestFileWriter:
 				if file.suffix.lower() == '.json':
 					self.parse_json_files(file)
 		else:
-			with test_design_json_file.open('rt') as f:
-				# TODO : use TestDesigns class to validate json
-				try:
-					self.parse_json(load(f))
-				except JSONDecodeError as err:
-					raise JSONDecodeErrorWrapper(err, test_design_json_file)
+			validator = testDesigns(test_design_json_file)
+			validator.validate()
+			self.parse_json(validator.testJSON)
 
 	def parse_json(self, test_design_json: Dict[str, Dict[str, Any]]):
 		tests = test_design_json['tests']
