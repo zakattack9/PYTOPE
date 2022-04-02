@@ -34,14 +34,14 @@ def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_f
 	return test_writer
 
 
-class testDesigns:
+class TestDesigns:
 	# TODO : dummy class, delete after integrating test-designs-class branch
-	def __init__(self, testJSONLocation: Path):
-		with testJSONLocation.open() as f:
-			self.testJSON = load(f)
+	def __init__(self, test_json_path: Path):
+		with test_json_path.open() as f:
+			self.test_json = load(f)
 
 	def validate(self):
-		...
+		pass
 
 
 class UnittestFileWriter:
@@ -61,9 +61,9 @@ class UnittestFileWriter:
 				if file.suffix.lower() == '.json':
 					self.parse_json_files(file)
 		else:
-			validator = testDesigns(test_design_json_file)
+			validator = TestDesigns(test_design_json_file)
 			validator.validate()
-			self.parse_json(validator.testJSON)
+			self.parse_json(validator.test_json)
 
 	def parse_json(self, test_design_json: Dict[str, Dict[str, Any]]):
 		tests = test_design_json['tests']
