@@ -1,0 +1,27 @@
+test_boolean (test_Example2.Testing) ... FAIL
+test_string (test_Example2.Testing) ... FAIL
+
+======================================================================
+FAIL: test_boolean (test_Example2.Testing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Poppycop\gitprojects\python-test-environment\server\testrunner\sample_tests\test_Example2.py", line 13, in test_boolean
+    self.assertEqual(a, b)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_string (test_Example2.Testing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Poppycop\gitprojects\python-test-environment\server\testrunner\sample_tests\test_Example2.py", line 8, in test_string
+    self.assertEqual(a, b)
+AssertionError: 'some' != 'somes'
+- some
++ somes
+?     +
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)
