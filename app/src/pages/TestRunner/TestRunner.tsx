@@ -9,6 +9,7 @@ function TestRunner() {
 
   return (
     <div className="TestRunner">
+      {/* needs mapping here */}
       <TestRunnerBlock testBlockName="example1" tests={exampleArray} />
     </div>
   );

@@ -8,6 +8,7 @@ export interface Props {
 const TestRunnerBlock = (props: Props) => {
   return (
     <div className="TestRunnerBlock">
+      {/* needs mapping here */}
       {testBlock(
         props.tests[0].testName,
         props.tests[0].testStatus,
