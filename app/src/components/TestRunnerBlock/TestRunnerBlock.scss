@@ -1,0 +1,14 @@
+@use "../../utils/functions" as f;
+
+.TestRunnerBlock {
+  display: flex;
+  flex-direction: column;
+
+  &__testBlock {
+    background-color: f.secondary-color(60%);
+  }
+
+  &__testOutput {
+    background-color: f.secondary-color(85%);
+  }
+}
