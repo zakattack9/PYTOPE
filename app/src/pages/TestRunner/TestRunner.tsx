@@ -1,16 +1,14 @@
 import "./TestRunner.scss";
-import TestRunnerBlock, {
-  TestInfo,
-} from "../../components/TestRunnerBlock/TestRunnerBlock";
+import TestGroup, { TestInfo } from "../../components/TestGroup/TestGroup";
 
 function TestRunner() {
-  var temp = new TestInfo("Test git submodule", "completed", "> ERROR");
+  var temp = new TestInfo("Test git submodule", "error", "> ERROR");
   var exampleArray: TestInfo[] = [temp];
 
   return (
     <div className="TestRunner">
       {/* needs mapping here */}
-      <TestRunnerBlock testBlockName="example1" tests={exampleArray} />
+      <TestGroup testGroupName="example1" tests={exampleArray} />
     </div>
   );
 }

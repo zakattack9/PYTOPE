@@ -1,0 +1,38 @@
+@use "../../utils/functions" as f;
+
+.TestGroup {
+  display: flex;
+  flex-direction: column;
+
+  &__testBlock {
+    background-color: f.secondary-color(60%);
+  }
+
+  &__testOutput {
+    background-color: f.secondary-color(85%);
+  }
+
+  &__RedCircle {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: #f97a72;
+  }
+  &__YellowCircle {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: #e0df4a;
+  }
+  &__GreenCircle {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: #73e04a;
+  }
+
+  &__TestGroupTopBar {
+    display: flex;
+    flex-direction: row;
+  }
+}
