@@ -33,7 +33,7 @@ class SchemaValidator:
 		try:
 			instance_json = self._load_json(instance)
 		except JSONDecodeError as err:
-			raise JSONLoadingError(err, instance)
+			raise JSONLoadError(err, instance)
 		try:
 			validate(instance=instance_json, schema=self.schema_json)
 		except ValidationError as err:
@@ -56,14 +56,14 @@ class JSONErrorWrapper(Exception):
 		self.inst_src = inst_src
 
 
-class JSONLoadingError(JSONErrorWrapper):
+class JSONLoadError(JSONErrorWrapper):
 	err: JSONDecodeError
 
 	def __init__(self, err: JSONDecodeError, inst_src: PathOrJSON):
 		super().__init__(err, inst_src)
 
 	def __str__(self):
-		return f"Could not load JSON from {repr(str(self.inst_src))}"
+		return f"Could not load JSON\n\tfrom source: {repr(str(self.inst_src))}\n\tat line {self.err.lineno} column {self.err.colno} (pos {self.err.pos})\n\twith reason: {self.err.msg}"
 
 
 class JSONValidationError(JSONErrorWrapper):
