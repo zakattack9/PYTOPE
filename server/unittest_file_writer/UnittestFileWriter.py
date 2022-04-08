@@ -1,5 +1,5 @@
-from pathlib import Path
-from typing import Any, Dict, MutableSequence
+from pathlib import Path, PurePath
+from typing import Any, Dict, MutableSequence, Union
 
 from schemas.schema_validation.SchemaValidator import PathOrJSON, SchemaValidator
 from server.unittest_file_writer.FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
@@ -21,7 +21,7 @@ A FileFinder can be:
 
 
 # Primary Method
-def parse_and_write_tests(dockerfiles: FileFinder, test_files_out: FileFinder, test_schema: PathOrJSON, test_json_files: Path):
+def parse_and_write_tests(dockerfiles: FileFinder, test_files_out: FileFinder, test_schema: PathOrJSON, test_json_files: Union[PurePath, str]):
 	"""
 	Parses the given JSON file(s) and writes the generated tests to the test_files_dir.
 	:param dockerfiles:	The directory containing the dockerfiles (or a function that finds a dockerfile (path), given the name of the dockerfile).
@@ -31,7 +31,7 @@ def parse_and_write_tests(dockerfiles: FileFinder, test_files_out: FileFinder, t
 	:return:	The UnittestFileWriter (for information about what tests were written) (this can be ignored).
 	"""
 	test_writer = UnittestFileWriter(dockerfiles, test_files_out, test_schema)
-	test_writer.parse_json_files(test_json_files)
+	test_writer.parse_json_files(Path(test_json_files))
 	test_writer.write_all()
 	return test_writer
 
