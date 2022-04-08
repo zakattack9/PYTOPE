@@ -6,7 +6,7 @@ from jsonschema.exceptions import ValidationError
 
 
 """ A union of types, representing JSON data or a Path to a JSON file. """
-PathOrJSON	=	Union[dict, PurePath, str]
+PathOrJSON = Union[dict, PurePath, str]
 
 
 class JSONErrorWrapper(Exception):
