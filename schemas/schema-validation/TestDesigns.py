@@ -1,37 +1,42 @@
-import json
-import jsonschema
-import os.path
+from json import JSONDecodeError, load
+from pathlib import Path
+
 from jsonschema import validate
+from jsonschema.exceptions import ValidationError
 
-class testDesigns:
-    def __init__(self, testJSONLocation):
-        with open(os.path.dirname(__file__) + testJSONLocation) as file:
-            self.testJSON = json.load(file)
+from TestDeisgnsUtil import JSONLoadingError, JSONValidationError, PathOrJSON
 
-    def initiateSchema(self):
-        with open(os.path.dirname(__file__) + '/../TestDesigns.schema.json', 'r') as file:
-            schema = json.load(file)
-        return schema
 
-    def validate(self):
-        schema = self.initiateSchema()
-        try:
-            validate(instance=self.testJSON, schema=schema)
-        except jsonschema.exceptions.ValidationError as err:
-            print(err)
-            #err = "Given JSON data is InValid"
-            #print(err)
-            return False, 
-        return True, "Given JSON data is Valid"
+class TestDesigns:
+	SCHEMA_PATH = Path(__file__).parent.parent / 'TestDesigns.schema.json'
 
-    def export(self):
-        #declare unittestfilewriter
-        #for each test
-            # add dockerfile
-            # add test
-        #unittestfilewriter.write_all()
-        return
+	schema_src:		PathOrJSON
+	schema_json:	dict
 
-# code for testing validation working
-# test = testDesigns("/../TestDesignsExample.json")
-# test.validate()
+	def __init__(self, schema: PathOrJSON = SCHEMA_PATH):
+		self.schema_src = schema
+		self.schema_json = self._load_json(schema)
+
+	def validate(self, test: PathOrJSON):
+		"""
+		Loads the JSON data (if necessary), then validates it with the schema.
+		:param test: The path (Path | str) to the JSON file, or the JSON data itself.
+		:return: The validated JSON data.
+		:raises JSONLoadingError:		If the JSON could not be loaded.
+		:raises JSONValidationError:	If the JSON validation failed.
+		"""
+		try:
+			test_json = self._load_json(test)
+		except JSONDecodeError as err:
+			raise JSONLoadingError(err, test)
+		try:
+			validate(instance=test_json, schema=self.schema_json)
+		except ValidationError as err:
+			raise JSONValidationError(err, test, test_json, self.schema_src, self.schema_json)
+		return test_json
+
+	def _load_json(self, to_load: PathOrJSON) -> dict:
+		if not isinstance(to_load, dict):
+			with open(to_load, 'r') as f:
+				to_load = load(f)
+		return to_load
