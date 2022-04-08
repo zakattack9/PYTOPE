@@ -4,16 +4,16 @@
   padding: 11px 0;
   margin: 7px;
   border-radius: 5px;
-  background-color: #e7e7e7;
-  color: #909090;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.5));
+  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.45));
   transition: 0.15s;
 }
 .PageBarItem:hover, .PageBarItem--active:hover {
-  background-color: gainsboro;
-  color: #868686;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.35));
+  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.4));
 }
 .PageBarItem--active {
-  background-color: #b9b9b9;
-  color: #353535;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0));
+  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0));
   pointer-events: none;
 }

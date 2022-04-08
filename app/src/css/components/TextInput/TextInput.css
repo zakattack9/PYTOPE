@@ -1,0 +1,18 @@
+.TextInput, .TextInput--disabled {
+  --placeholder: "";
+  display: block;
+  background-color: white;
+  padding: 10px;
+  outline: none;
+}
+.TextInput--disabled {
+  cursor: default !important;
+}
+.TextInput__wrapper {
+  display: inline-block;
+  border-radius: inherit;
+}
+.TextInput:empty::before, .TextInput--disabled:empty::before {
+  content: var(--placeholder);
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.5));
+}

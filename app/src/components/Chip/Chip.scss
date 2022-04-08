@@ -1,0 +1,79 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.Chip {
+  $default-bkg-color: f.primary-color(15%);
+  $font-size: 10.5pt;
+  $vert-pad: 10px;
+  $horiz-pad: 15px;
+  $border-width: 3px;
+  $input-vert-pad: calc($vert-pad - $border-width);
+  $input-horiz-pad: calc($horiz-pad - $border-width);
+
+  @include fonts.roboto-mono-bold($font-size, vars.$secondary-text-color);
+  background-color: $default-bkg-color;
+  padding: $vert-pad $horiz-pad;
+  width: max-content;
+  height: max-content;
+  border-radius: 25px;
+  box-sizing: border-box;
+  cursor: default;
+  white-space: nowrap; // keeps chip text on one line
+  
+  &--hover {
+    transition: 0.1s;
+    transition-timing-function: ease-out;
+    &:hover {
+      background-color: f.primary-color(-10%);
+    }
+  }
+
+  &--base {
+    @extend .Chip;
+    background-color: f.primary-color(-7%);
+  }
+
+  &--arg {
+    @extend .Chip;
+    $arg-vert-pad: calc($vert-pad - $input-vert-pad);
+    $arg-horiz-pad: calc($horiz-pad - $input-horiz-pad);
+    padding: $arg-vert-pad $arg-horiz-pad $arg-vert-pad $horiz-pad;
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+  }
+  
+  &--value {
+    width: max-content; 
+  }
+  
+  &__argument, &__value {
+    cursor: text;
+    background-color: f.secondary-color(80%);
+    color: vars.$primary-text-color;
+  }
+  
+  &__argument {
+    @include fonts.roboto-mono-bold($font-size);
+    padding: $input-vert-pad $input-horiz-pad;
+    border: none;
+    margin-left: 8px;
+    border-radius: inherit;
+  }
+
+  &__value {
+    @extend .Chip;
+    padding: calc($vert-pad - $border-width) calc($horiz-pad - $border-width);
+    border: $border-width solid $default-bkg-color;
+  }
+}
+
+.SelectedChip {
+  background-color: f.primary-color(-30%);
+  color: f.bright-text-color();
+  // box-shadow: 0 0 0 3px f.primary-color(15%) inset;
+  &:hover {
+    background-color: f.primary-color(-37%);
+  }
+}
