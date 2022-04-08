@@ -79,4 +79,4 @@ class JSONValidationError(JSONErrorWrapper):
 		self.schema_json = schema_json
 
 	def __str__(self):
-		return f"Validation Error on JSON {repr(self.inst_json)} from source {repr(str(self.inst_src))}"
+		return f"Validation Error on JSON {repr(self.inst_json)}\n\tfrom source {repr(str(self.inst_src))}"
