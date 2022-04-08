@@ -1,9 +1,10 @@
-from json import load
 from pathlib import Path
 from typing import Any, Dict, MutableSequence, Optional
 
+from schemas.schema_validation.SchemaValidator import PathOrJSON, SchemaValidator
 from server.unittest_file_writer.FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
 from server.unittest_file_writer.TestFile import TestFile
+
 
 """
 UnittestFileWriter is the main interface for the module.
@@ -34,24 +35,18 @@ def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_f
 	return test_writer
 
 
-class TestDesigns:
-	# TODO : dummy class, delete after merging test-designs-class branch
-	def __init__(self, test_json_path: Path):
-		with test_json_path.open() as f:
-			self.test_json = load(f)
-
-	def validate(self):
-		pass
-
-
 class UnittestFileWriter:
+	TEST_SCHEMA_PATH = Path(__file__).parent.parent.parent / 'schemas' / 'schema_validation' / 'TestDesigns.schema.json'
+
 	dockerfiles_wrapper:	FileFinderWrapper
 	test_files_wrapper:		FileFinderWrapper
+	test_validator:			SchemaValidator
 	test_files:				MutableSequence[TestFile]
 
-	def __init__(self, dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_files: Optional[MutableSequence[TestFile]] = None):
+	def __init__(self, dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_schema: PathOrJSON = TEST_SCHEMA_PATH, test_files: Optional[MutableSequence[TestFile]] = None):
 		self.dockerfiles_wrapper = new_file_finder_wrapper(dockerfiles_ff)
 		self.test_files_wrapper = new_file_finder_wrapper(test_files_ff)
+		self.test_validator = SchemaValidator(test_schema)
 		self.test_files = test_files if test_files is not None else []
 
 	def parse_json_files(self, test_design_json_file: Path):
@@ -61,9 +56,10 @@ class UnittestFileWriter:
 				if file.suffix.lower() == '.json':
 					self.parse_json_files(file)
 		else:
-			validator = TestDesigns(test_design_json_file)
-			validator.validate()
-			self.parse_json(validator.test_json)
+			try:
+				self.parse_json(self.test_validator.validate(test_design_json_file))
+			except Exception as err:
+				print(err)
 
 	def parse_json(self, test_design_json: Dict[str, Dict[str, Any]]):
 		tests = test_design_json['tests']
