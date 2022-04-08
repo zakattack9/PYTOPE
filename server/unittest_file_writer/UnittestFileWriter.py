@@ -21,29 +21,28 @@ A FileFinder can be:
 
 
 # Primary Method
-def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_files: FileFinder):
+def parse_and_write_tests(dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_schema: PathOrJSON, test_json_files: Path):
 	"""
 	Parses the given JSON file(s) and writes the generated tests to the test_files_dir.
+	:param dockerfiles_ff:	The directory containing the dockerfiles (or a function that finds a dockerfile (path), given the name of the dockerfile).
+	:param test_files_ff:	The directory to write the generated test files to (or a function that outputs a file path, given the name of the test file).
+	:param test_schema:		The	schema for the test JSON files.  (A path to the schema file (or JSON data that has already been loaded))
 	:param test_json_files:	The JSON file that will be parsed to create tests.  (If a directory is given, it will recursively parse all '.json' files in it)
-	:param dockerfiles:		The directory containing the dockerfiles (or a function that finds a dockerfile (path), given the name of the dockerfile).
-	:param test_files:		The directory to write the generated test files to (or a function that outputs a file path, given the name of the test file).
 	:return:	The UnittestFileWriter (for information about what tests were written) (this can be ignored).
 	"""
-	test_writer = UnittestFileWriter(dockerfiles, test_files)
+	test_writer = UnittestFileWriter(dockerfiles_ff, test_files_ff, test_schema)
 	test_writer.parse_json_files(test_json_files)
 	test_writer.write_all()
 	return test_writer
 
 
 class UnittestFileWriter:
-	TEST_SCHEMA_PATH = Path(__file__).parent.parent.parent / 'schemas' / 'schema_validation' / 'TestDesigns.schema.json'
-
 	dockerfiles_wrapper:	FileFinderWrapper
 	test_files_wrapper:		FileFinderWrapper
 	test_validator:			SchemaValidator
 	test_files:				MutableSequence[TestFile]
 
-	def __init__(self, dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_schema: PathOrJSON = TEST_SCHEMA_PATH, test_files: Optional[MutableSequence[TestFile]] = None):
+	def __init__(self, dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_schema: PathOrJSON, test_files: Optional[MutableSequence[TestFile]] = None):
 		self.dockerfiles_wrapper = new_file_finder_wrapper(dockerfiles_ff)
 		self.test_files_wrapper = new_file_finder_wrapper(test_files_ff)
 		self.test_validator = SchemaValidator(test_schema)
