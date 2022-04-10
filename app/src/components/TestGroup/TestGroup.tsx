@@ -1,5 +1,6 @@
 import "./TestGroup.scss";
 import { useState } from "react";
+import TestDesigner from "../../pages/TestDesigner/TestDesigner";
 
 export interface Props {
   testGroupName: string;
@@ -10,13 +11,15 @@ export interface Props {
 const TestGroup = (props: Props) => {
   return (
     <div className="TestGroup">
-      {/* needs mapping here */}
-      {TestBlock(
-        props.tests[0].testName,
-        props.tests[0].testStatus,
-        props.tests[0].testContent
-      )}
-      <></>
+      {props.testGroupName}
+      {props.tests.map((arrElement, arrIndex) => {
+        return TestBlock(
+          arrElement.testName,
+          arrElement.testStatus,
+          arrElement.testContent,
+          arrIndex
+        );
+      })}
     </div>
   );
 };
@@ -24,7 +27,8 @@ const TestGroup = (props: Props) => {
 const TestBlock = (
   testName: string,
   testStatus: string,
-  testContent: string
+  testContent: string,
+  index: number
 ) => {
   const [testStatusHook, setTestStatusHook] = useState(testStatus);
 
@@ -39,7 +43,7 @@ const TestBlock = (
   };
 
   return (
-    <div className="TestGroup__testBlock">
+    <div key={testName + index} className="TestGroup__testBlock">
       <div className="TestGroup__testBlockTopBar">
         {StatusLight()}
         {testName}
