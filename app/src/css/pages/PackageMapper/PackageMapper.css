@@ -55,6 +55,6 @@
   flex-flow: row nowrap;
   column-gap: 25px;
 }
-.PackageMapper__uploadText {
+.PackageMapper__DownloadText {
   margin-right: 5px;
 }

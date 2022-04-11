@@ -1,4 +1,6 @@
-from flask import Flask
+import os
+
+from flask import Flask, request
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
@@ -8,7 +10,7 @@ socketio = SocketIO(app, cors_allowed_origins="*", binary=True)
 def members():
     return {"members": ["Member1", "Member2"]}
 
-@socketio.on('connect')
+#@socketio.on('connect')
 def file_transfers():
     handle_backend_file_request()
     handle_frontend_file_send()
@@ -25,12 +27,12 @@ def handle_backend_file_receive(data):
 
 # send a file to the frontend
 def handle_frontend_file_send():
-    file = open('test.txt', 'w+')
-    file.write('member_3member_4member_5')
-    file.close()
-    with open('test.txt', 'rb') as file:
-        file_data = file.read()
-    emit('frontend_receive_file', file_data)
+    #file = open('test.txt', 'w+')
+    #file.write('member_3member_4member_5')
+    #file.close()
+    #with open('test.txt', 'rb') as file:
+    #    file_data = file.read()
+    emit('frontend_receive_file', 'lol')
 
 # print the data that was sent to the frontend
 @socketio.on('frontend_received_file')
@@ -38,5 +40,26 @@ def handle_frontend_file_acknowledge(file):
     print('Sent from backend to frontend:')
     print(file)
 
+@socketio.on('send_backend')
+def socketFrontendUploadFile(filename, data):
+    with open(filename, 'wb') as f:
+        f.write(data)
+    f.close()
+
+@socketio.on('download_frontend')
+def socketFrontendDownloadFile(filename):
+    file_exists = os.path.exists(filename)
+    if file_exists:
+        with open(filename, 'rb') as f:
+            data = f.read()
+            f.close()
+        emit('frontend_download', data)
+        return
+    else:
+        emit('file_dne', filename)
+
+
 if __name__ == "__main__":
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
     socketio.run(app)

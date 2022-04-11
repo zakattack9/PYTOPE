@@ -1,4 +1,5 @@
 import UploadButton from '../../components/UploadButton/UploadButton';
+import DownloadButton from '../../components/DownloadButton/DownloadButton';
 import Button from '../../components/Button/Button';
 import ChipSelector from '../../components/ChipSelector/ChipSelector';
 import Chip from '../../components/Chip/Chip';
@@ -98,6 +99,7 @@ function PackageMapper() {
         <div className="PackageMapper__barUpperLeft">
           <div className="PackageMapper__uploadText">Current Package Loaded: <strong>Git</strong></div>
           <UploadButton className="PackageMapper__uploadBtn" />
+          <DownloadButton className="PackageMapper__downloadBtn" />
         </div>
         <div className="PackageMapper__barUpperRight">
           <Button className="PackageMapper__createBtn" name="Create Test" onClick={handleCreateTest} />
