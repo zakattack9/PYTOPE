@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleInput from '../../components/TitleInput/TitleInput';
 import TextareaInput from '../../components/TextareaInput/TextareaInput';
 import SelectInput from '../../components/SelectInput/SelectInput';
+import Button from '../../components/Button/Button';
 import './NewDocker.scss';
 
 interface NewDockerState {
@@ -26,6 +27,14 @@ function NewDocker() {
     setState({ ...state, description });
   }
 
+  const handleSave = (e: FormEvent) => {
+
+  }
+
+  const handleDelete = (e: FormEvent) => {
+
+  }
+
   useEffect(() => {
     console.log(state);
   }, [state]);
@@ -43,6 +52,11 @@ function NewDocker() {
 
       <div className="NewDocker__testsLabel">Tests</div>
       <div className="NewDocker__tests"></div>
+
+      <div className="NewDocker__btnWrapper">
+        <Button className="NewDocker__saveBtn" name="Save" onClick={handleSave} />
+        <Button className="NewDocker__deleteBtn" name="Delete" onClick={handleDelete} inverse />
+      </div>
     </div>
   );
 }

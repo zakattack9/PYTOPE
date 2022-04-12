@@ -71,4 +71,19 @@
     @extend %input;
     grid-area: tests;
   }
+
+  &__btnWrapper {
+    grid-area: btns;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+  }
+
+  &__saveBtn {
+    padding: 0.8em 2.5em;
+  }
+
+  // &__deleteBtn {
+
+  // }
 }

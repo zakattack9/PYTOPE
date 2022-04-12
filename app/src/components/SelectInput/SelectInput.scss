@@ -2,20 +2,28 @@
 @use '../../utils/functions' as f;
 
 .SelectInput {
-  @include fonts.roboto(1em);
-  appearance: none;
   background-color: f.primary-color(70%);
+  padding: unset !important; /* prevent padding from conflicting with select el */
   border-radius: 10px;
-  padding: 0.8em;
-  border: none;
-  outline: none;
+  position: relative;
   display: grid;
+  
+  select {
+    @include fonts.roboto(1em);
+    background-color: inherit;
+    padding: 0.8em;
+    border-radius: inherit;
+    appearance: none;
+    border: none;
+    outline: none;
+  }
 
   &::after {
-    content: "";
-    width: 0.8em;
-    height: 0.5em;
-    background-color: var(--select-arrow);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    content: "\142F";
+    color: f.primary-text-color(10%);
+    position: absolute;
+    right: 1.1em;
+    top: 50%;
+    transform: scale(170%, 70%) translateY(-70%);
   }
 }
