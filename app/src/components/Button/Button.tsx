@@ -4,13 +4,13 @@ import './Button.scss';
 interface Props {
   name: string,
   className?: string,
-  inverse?: boolean,
+  invert?: boolean,
   onClick: (e: FormEvent) => void,
 }
 
 function Button(props: Props) {
-  const { inverse } = props;
-  const className = `Button${inverse ? '--inverse' : ''} ${props.className || ''}`;
+  const { invert } = props;
+  const className = `Button${invert ? '--invert' : ''} ${props.className || ''}`;
 
   return (
     <div className={className} onClick={props.onClick}>

@@ -7,7 +7,7 @@
 
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 40px 4em 3em 6em auto 7em;
+  grid-template-rows: 40px 4em 3em 6em auto 7.5em;
   grid-template-areas: 
     "cancel cancel cancel"
     "titleLeft title titleRight" // Docker image title
@@ -46,10 +46,22 @@
     align-self: center;
   }
 
+  &__fileWrapper {
+    grid-area: file;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
   &__file {
     @extend %input;
-    grid-area: file;
     width: 70%;
+  }
+
+  &__uploadBtn {
+    padding: 0.2em;
   }
 
   &__descLabel {
@@ -70,6 +82,14 @@
   &__tests {
     @extend %input;
     grid-area: tests;
+    overflow: auto;
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 10px;
+  }
+
+  &__newTestBtn {
+    margin-left: 15px;
   }
 
   &__btnWrapper {
