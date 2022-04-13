@@ -31,10 +31,9 @@ def members():
 @socketio.on('connect')
 def file_transfers():
 	print('\tClient Connected')
-
-
-# handle_backend_file_request()
-# handle_frontend_file_send()
+	# handle_backend_file_request()
+	# handle_frontend_file_send()
+	...
 
 
 @socketio.on('send_backend')
