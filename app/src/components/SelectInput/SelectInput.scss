@@ -1,0 +1,37 @@
+@use '../../utils/functions' as f;
+@use '../../utils/mixins' as m;
+@use '../../utils/fonts';
+
+// inconsistent height when being center aligned with grid or flexbox
+.SelectInput {
+  @include m.input;
+  padding: unset !important; // prevent padding from conflicting with select el
+  position: relative;
+  display: grid;
+  min-width: 6em;
+  
+  &--disabled {
+    @extend .SelectInput;
+    opacity: 0.4;
+  }
+
+  select {
+    @include fonts.roboto(1em);
+    background-color: inherit;
+    padding: 0.8em;
+    border-radius: inherit;
+    appearance: none;
+    border: none;
+    outline: none;
+  }
+
+  &::after {
+    content: "\142F";
+    color: f.primary-text-color(10%);
+    position: absolute;
+    right: 1.1em;
+    top: 50%;
+    transform: scale(170%, 70%) translateY(-70%);
+    pointer-events: none; // allows user to directly click select element
+  }
+}

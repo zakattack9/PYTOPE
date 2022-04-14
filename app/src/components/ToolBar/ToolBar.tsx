@@ -8,7 +8,6 @@ interface ToolBarItems {
 
 const TOOL_BAR_ITEMS: ToolBarItems = {
   'Import': [
-    'Package Mapping Config',
     'Test Environment Config',
   ],
   'Export': [
@@ -19,9 +18,8 @@ const TOOL_BAR_ITEMS: ToolBarItems = {
     'Uploaded Docker Images',
     'Uploaded Package Mappings',
   ],
-  'Help': [
-
-  ],
+  'Theme': [],
+  'Help': [],
 }
 
 function ToolBar() {
@@ -29,14 +27,16 @@ function ToolBar() {
     console.log(option);
   }
 
-  const toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => (
-    <ToolBarItem name={name} options={options} onClick={handleClick} key={name} />
-  ));
+  const toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => {
+    if (name === 'Theme')
+      return <ToolBarTheme key={name} />;
+    else 
+      return <ToolBarItem name={name} options={options} onClick={handleClick} key={name} />;
+  });
 
   return (
     <nav className='ToolBar'>
       {toolBarItems}
-      <ToolBarTheme />
     </nav>
   );
 }
