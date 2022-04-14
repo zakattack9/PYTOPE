@@ -10,7 +10,7 @@
   cursor: default;
   transition: 0.2s;
   background-color: f.primary-color(-30%);
-  color: f.primary-text-color(95%);
+  color: f.secondary-text-color(95%);
 
   &:hover {
     background-color: f.primary-color(-50%);
