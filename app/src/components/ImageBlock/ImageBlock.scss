@@ -1,0 +1,34 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.ImageBlock{
+    $default-bkg-color: f.primary-color(70%);
+    $font-size: 10.5pt;
+
+    padding:1.5em;
+    // grid-template-rows: auto; // modify first px value to change bar height
+    background-color: $default-bkg-color;
+    border-radius: 25px;
+    @include fonts.roboto-mono-bold($font-size, vars.$primary-text-color);
+    // &__name{
+       
+    // }
+}
+
+// .testItem{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     padding: 2em
+//     //grid-template-columns: repeat(2, 1fr);
+//     // grid-gap: 20px;
+// }
+
+// h1 {
+//     background-color: white;
+//     color: #222222;
+//     font-size: 16px;
+//     font-weight: 800;
+//     padding: 10px;
+//     cursor: move;
+//   }

@@ -1,0 +1,15 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.TestBlock{
+    display: grid;
+    grid-gap: 40px;
+    $default-bkg-color: f.primary-color(30%);
+    padding: 1em 1em;
+    // padding-top: 1.5em;
+    // padding-bottom: 1.5em;
+    // border: 1px 
+    background-color: $default-bkg-color;
+    border-radius: 25px;
+}
