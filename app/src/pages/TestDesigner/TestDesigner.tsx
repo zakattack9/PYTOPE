@@ -11,7 +11,6 @@ function TestDesigner() {
   console.log(testDesignerState);
 
   const onDragEnd = (result: DropResult) => {
-    // console.log(result);
     if (!result.destination) return;
     const sourceIndex = result.source.index;
     const destinationIndex = result.destination?.index;

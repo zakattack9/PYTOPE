@@ -28,7 +28,12 @@ export const designs : TestDesigns = {
             "test_blocks": [
                 {
                     "block_type": BlockType.RUN,
-                    "command": "git commit -m 'initial commit'",
+                    "command": "git commit -m 'initial commit' ",
+                    "command_output_assertion": CommandOutputAssertionType.NO_VERIFY
+                },
+                {
+                    "block_type": BlockType.RUN,
+                    "command": "git pull origin main ",
                     "command_output_assertion": CommandOutputAssertionType.NO_VERIFY
                 }
             ]
@@ -38,7 +43,17 @@ export const designs : TestDesigns = {
             "test_blocks": [
                 {
                     "block_type": BlockType.RUN,
-                    "command": "git add .",
+                    "command": "git add . ",
+                    "command_output_assertion": CommandOutputAssertionType.VERIFY_EMPTY
+                },
+                {
+                    "block_type": BlockType.RUN,
+                    "command": "git commit -m 'finished styling' ",
+                    "command_output_assertion": CommandOutputAssertionType.VERIFY_EMPTY
+                },
+                {
+                    "block_type": BlockType.RUN,
+                    "command": "git pull ",
                     "command_output_assertion": CommandOutputAssertionType.VERIFY_EMPTY
                 }
             ]
@@ -48,12 +63,12 @@ export const designs : TestDesigns = {
             "test_blocks": [
                 {
                     "block_type": BlockType.RUN,
-                    "command": "git commit -am 'new commit'",
+                    "command": "git commit -am 'new commit' ",
                     "command_output_assertion": CommandOutputAssertionType.NO_VERIFY
                 },
                 {
                     "block_type": BlockType.RUN,
-                    "command": "git push",
+                    "command": "git push ",
                     "command_output_assertion": CommandOutputAssertionType.VERIFY_REGEX,
                     "regex": "/some_regex/g"
                 }

@@ -28,21 +28,30 @@ export type testBlockArr = ITestBlockItem[];
 
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
-    padding: 10,
-    margin: `0 50px 15px 50px`,
-    background: isDragging ? "grey" : "grey",
-    color: isDragging ? "white" : "black",
-    border: `1px solid black`,
-    fontSize: `20px`,
-    borderRadius: `25px`,
+    // padding: 10,
+    // margin: `0 50px 15px 50px`,
+    // background: isDragging ? "grey" : "grey",
+    // color: isDragging ? "white" : "black",
+    // border: `1px solid black`,
+    // fontSize: `20px`,
+    // borderRadius: `25px`,
 
+    // ...draggableStyle
+    userSelect: "none",
+    padding: grid * 2,
+    margin: `0 0 ${grid}px 0`,
+  
+    // change background colour if dragging
+    background: isDragging ? "lightgreen" : "grey",
+  
+    // styles we need to apply on draggables
     ...draggableStyle
 })
-const grid = 8;
+const grid = 20;
 const getListStyle = (isDraggingOver: boolean) => ({
     background: isDraggingOver ? "lightblue" : "lightgrey",
     padding: grid,
-    width: 500
+    width: 200
 });
 
 
@@ -51,15 +60,6 @@ interface Props {
     dockerImage: DockerImage,
     dockerImageIndex: number
 }
-// const imageBlocks = currBlocks?.docker_images;
-// const testDesigns = currBlocks?.test_designs;
-// const dockerImageBlock = imageBlocks && testDesigns ? testDesigns.map((imageName,index) => 
-//   <ImageBlock 
-//     dockerImageName = {imageName} 
-//     dockerImage={imageBlocks[imageName]} 
-//     dockerImageIndex = {index}
-//   />
-// ) : null
 
 function ImageBlock(props: Props) {
 
@@ -68,24 +68,27 @@ function ImageBlock(props: Props) {
     const tests = dockerImage.tests;
     const testBlocks = tests ? tests.map((testName, index) =>
         <TestBlock
-            testName = {testName}
-            testIndex = {index}
-            parentImage = {dockerImageName}
+            testName={testName}
+            testIndex={index}
+            parentImage={dockerImageName}
         />
-    ): null
+    ) : null
     return (
-        <Droppable droppableId= {dockerImageName} type="imageBlockItem">
+        <Droppable droppableId={dockerImageName} type="imageBlockItem">
             {(provided, snapshot) => (
-                <div className="testBlock" {...provided.droppableProps} ref={provided.innerRef}>
+                <div {...provided.droppableProps} ref={provided.innerRef}>  
                     <Draggable key={dockerImage.docker_image_id} draggableId={`draggable_${dockerImageName}`} index={dockerImageIndex}>
                         {(provided, snapshot) => (
-                            <div ref={provided.innerRef}
-                                {...provided.draggableProps}
-                                {...provided.dragHandleProps}
-                                style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
-                            >
-                                {dockerImage.docker_image_description}
-                                {testBlocks}
+                            <div className="ImageBlock">
+                                <div ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                    // style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
+                                >
+                                    {dockerImage.docker_image_description}
+                                    {testBlocks}
+                                    
+                                </div>
                             </div>
                         )}
                     </Draggable>

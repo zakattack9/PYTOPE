@@ -29,7 +29,7 @@ export interface Props {
     commandOutputAssertion: string,
     regex?: string
 }
-
+// style={getListStyle(snapshot.isDraggingOver)}
 function RunBlock(props: Props) {
 
     const { parentTest, runBlockIndex, blockType, command, commandOutputAssertion, regex } = props;
@@ -40,14 +40,14 @@ function RunBlock(props: Props) {
     return (
             <Droppable droppableId={`${parentTest}/${runBlockIndex}`} type = {`runBlockItem`}>
                 {(provided, snapshot) => (
-                    <div className="runItem" {...provided.droppableProps} ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
+                    <div className="RunBlock" {...provided.droppableProps} ref={provided.innerRef} >
                         <Draggable key={`${parentTest}/${runBlockIndex}`} draggableId={`draggable_${parentTest}/${runBlockIndex}`} index={runBlockIndex}>
                             {(provided, snapshot) => (
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
-                                    style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
+                                    // style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
                                 >
                                 {blockType}
                                 {command}
