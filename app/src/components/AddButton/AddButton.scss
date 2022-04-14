@@ -1,0 +1,8 @@
+@use '../../utils/functions' as f;
+@use '../../utils/mixins' as m;
+
+.AddButton {
+  font-size: 12pt;
+  padding: 0.6em 0.94em;
+  @include m.outlinedButton;
+}

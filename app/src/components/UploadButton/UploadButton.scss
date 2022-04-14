@@ -1,6 +1,7 @@
 @use '../../utils/functions' as f;
 @use '../../utils/fonts';
 
+// styling based off outlinedButton (see _mixin.scss)
 .UploadButton {
   $border-width: 2px;
 
