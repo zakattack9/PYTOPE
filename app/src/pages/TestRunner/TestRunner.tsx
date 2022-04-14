@@ -9,6 +9,7 @@ function TestRunner() {
     <div className="TestRunner">
       {/* needs mapping here */}
       <TestGroup testGroupName="example1" tests={exampleArray} />
+      <TestGroup testGroupName="example2" tests={exampleArray} />
     </div>
   );
 }

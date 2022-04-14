@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import Iterable
 
-from server.unittest_file_writer.Method import Method
-from server.unittest_file_writer.StoredMethod import StoredMethod
+from .Method import Method
+from .StoredMethod import StoredMethod
 
 
 _CLASS_METHOD_DECORATION_LINES = ('@classmethod',)

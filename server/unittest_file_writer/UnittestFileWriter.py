@@ -2,8 +2,8 @@ from json import load
 from pathlib import Path
 from typing import Any, Dict, MutableSequence, Optional
 
-from server.unittest_file_writer.FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
-from server.unittest_file_writer.TestFile import TestFile
+from .FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
+from .TestFile import TestFile
 
 """
 UnittestFileWriter is the main interface for the module.

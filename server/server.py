@@ -1,8 +1,18 @@
+import importlib
+from inspect import isfunction, getmembers, isclass, ismethod
+import logging
+import unittest
+from pathlib import Path
+
 from flask import Flask
 from flask_socketio import SocketIO, emit
 
+from unittest_file_writer import UnittestFileWriter
+
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*", binary=True)
+
+logger = logging.getLogger()
 
 @app.route("/")
 def members():
@@ -10,8 +20,31 @@ def members():
 
 @socketio.on('connect')
 def file_transfers():
-    handle_backend_file_request()
-    handle_frontend_file_send()
+    test_runner()
+
+def test_runner():
+    p1 = Path('../schemas')   #test_json
+    p2 = Path('../docker')   #dockerfiles
+    p3 = Path('../schemas')          #test_files
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+    for file in test.test_files:
+        logging.basicConfig(level=logging.DEBUG)
+
+        importlib.invalidate_caches()
+        module = importlib.import_module(file.class_name)
+        #test_class = getmembers(module, isclass)
+        #functions = getmembers(test_class, isfunction)
+        #print(test_class)
+        #functions = []
+        #for obj in inspect.getmembers(module):
+        #    print()
+        #    if inspect.ismethod(obj):
+        #        functions.add(obj)
+
+        test_suite = unittest.TestLoader().loadTestsFromModule(module)
+        result = unittest.TextTestRunner(verbosity=2).run(test_suite)
+        logger.debug(result)
+        #emit('test_result')
 
 # request a file from the frontend
 def handle_backend_file_request():
@@ -38,5 +71,15 @@ def handle_frontend_file_acknowledge(file):
     print('Sent from backend to frontend:')
     print(file)
 
+# Package Mapper: Create Test
+#
+@socketio.on('create_test')
+def create_test():
+    pass
+
+@socketio.on('run_tests')
+def run_tests():
+    test_runner()
+    pass
 if __name__ == "__main__":
     socketio.run(app)
