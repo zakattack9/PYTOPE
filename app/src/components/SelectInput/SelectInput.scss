@@ -2,12 +2,19 @@
 @use '../../utils/mixins' as m;
 @use '../../utils/fonts';
 
+// inconsistent height when being center aligned with grid or flexbox
 .SelectInput {
   @include m.input;
-  padding: unset !important; /* prevent padding from conflicting with select el */
+  padding: unset !important; // prevent padding from conflicting with select el
   position: relative;
   display: grid;
+  min-width: 6em;
   
+  &--disabled {
+    @extend .SelectInput;
+    opacity: 0.4;
+  }
+
   select {
     @include fonts.roboto(1em);
     background-color: inherit;

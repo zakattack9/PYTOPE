@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleInput from '../../components/TitleInput/TitleInput';
 import SelectInput from '../../components/SelectInput/SelectInput';
@@ -12,21 +13,34 @@ interface NewTestState {
 }
 
 function NewTest() {
+  const history = useHistory();
   const [state, setState] = useState<NewTestState>({
     title: '',
     dockerImage: '',
   });
 
+  const OPTIONS = ['docker image 1', 'docker image 2', 'docker image 3'];
+
   const handleTitleChange = (title: string) => {
     setState({ ...state, title });
   }
 
-  const handleNewImage = (e: FormEvent) => {
+  const handleImageSelect = (dockerImage: string) => {
+    setState({ ...state, dockerImage });
+  }
 
+  const handleNewImage = (e: FormEvent) => {
+    const location = {
+      pathname: '/new/docker',
+    }
+    history.push(location);
   }
 
   const handleNewBlock = (e: FormEvent) => {
-
+    const location = {
+      pathname: '/new/command',
+    }
+    history.push(location);
   }
 
   const handleSave = (e: FormEvent) => {
@@ -44,7 +58,7 @@ function NewTest() {
 
       <div className="NewTest__imageLabel">Docker Image</div>
       <div className="NewTest__imageWrapper">
-        <SelectInput className="NewTest__image" />
+        <SelectInput className="NewTest__image" options={OPTIONS} onChange={handleImageSelect} />
         <Button className="NewTest__newImageBtn" name="New" onClick={handleNewImage} />
       </div>
 

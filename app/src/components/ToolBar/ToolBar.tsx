@@ -29,7 +29,7 @@ function ToolBar() {
 
   const toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => {
     if (name === 'Theme')
-      return <ToolBarTheme />;
+      return <ToolBarTheme key={name} />;
     else 
       return <ToolBarItem name={name} options={options} onClick={handleClick} key={name} />;
   });

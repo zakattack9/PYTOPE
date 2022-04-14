@@ -1,4 +1,5 @@
-import { useState, useEffect, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleInput from '../../components/TitleInput/TitleInput';
 import TextareaInput from '../../components/TextareaInput/TextareaInput';
@@ -16,18 +17,32 @@ interface NewDockerState {
 }
 
 function NewDocker() {
+  const history = useHistory();
   const [state, setState] = useState<NewDockerState>({
     title: '',
     filename: '',
     description: '',
   });
 
+  const OPTIONS = ['test', 'test1', 'test2', 'test3'];
+
   const handleTitleChange = (title: string) => {
     setState({ ...state, title });
   }
 
+  const handleFileSelect = (filename: string) => {
+    setState({ ...state, filename });
+  }
+
   const handleDescChange = (description: string) => {
     setState({ ...state, description });
+  }
+
+  const handleNewTest = (e: FormEvent) => {
+    const location = {
+      pathname: '/new/test',
+    }
+    history.push(location);
   }
 
   const handleSave = (e: FormEvent) => {
@@ -38,22 +53,14 @@ function NewDocker() {
 
   }
 
-  const handleNewTest = (e: FormEvent) => {
-
-  }
-
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
-
   return (
     <div className="NewDocker">
       <BackButton className="NewDocker__cancel" text="Cancel" />
       <TitleInput className="NewDocker__titleInput" onChange={handleTitleChange} placeholder="Enter Docker Image Name" />
 
-      <div className="NewDocker__fileLabel">File</div>
+      <div className="NewDocker__fileLabel">Dockerfile</div>
       <div className="NewDocker__fileWrapper">
-        <SelectInput className="NewDocker__file" />
+        <SelectInput className="NewDocker__file" options={OPTIONS} onChange={handleFileSelect} />
         <UploadButton className="NewDocker__uploadBtn" />
       </div>
 

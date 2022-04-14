@@ -5,17 +5,29 @@
 .NewCommand {
   height: 100%;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 30% 40% 30%;
   grid-template-rows: 4em 3em 3em 3em 7.5em;
   grid-template-areas: 
-    "titleLeft title titleRight" // test title
+    "titleLeft title titleRight" // command title
+    "testLeft test testRight" // test
     "commandLeft command commandRight" // command
     "assertionLeft assertion assertionRight" // output assertion
-    "regexLeft regex regexRight" // regex
     "btnsLeft btns btnsRight"; // buttons
   row-gap: 15px;
   align-content: center;
   position: relative;
+
+  &--regex {
+    @extend .NewCommand;
+    grid-template-rows: 4em 3em 3em 3em 3em 7.5em;
+    grid-template-areas: 
+      "titleLeft title titleRight" // test title
+      "testLeft test testRight" // test
+      "commandLeft command commandRight" // command
+      "assertionLeft assertion assertionRight" // output assertion
+      "regexLeft regex regexRight" // regex
+      "btnsLeft btns btnsRight"; // buttons
+  }
 
   &__cancel {
     position: absolute;
@@ -28,20 +40,46 @@
     align-self: center;
   }
 
-  &__commandLabel {
+  &__testLabel {
     @include m.label;
-    grid-area: commandLeft;
+    grid-area: testLeft;
     align-self: center;
   }
 
+  &__testWrapper {
+    grid-area: test;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__test {
+    width: 70%;
+  }
+
+  &__newTestBtn {
+    @include m.outlinedButton;
+  }
+
+  &__commandLabel {
+    @include m.label;
+    grid-area: commandLeft;
+  }
+
   &__command {
+    @include fonts.roboto-mono;
     grid-area: command;
+    align-self: stretch;
   }
 
   &__pkgMapperBtn {
     @include m.outlinedButton;
     grid-area: commandRight;
+    align-self: center;
     margin-left: 15px;
+    padding: 0.945em 2.3em;
   }
 
   &__assertionLabel {
@@ -51,7 +89,8 @@
 
   &__assertion {
     grid-area: assertion;
-    width: 10em;
+    align-self: center;
+    width: 11em;
   }
 
   &__regexLabel {
@@ -60,6 +99,7 @@
   }
 
   &__regex {
+    @include fonts.roboto-mono;
     grid-area: regex;
   }
 
