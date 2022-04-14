@@ -1,0 +1,23 @@
+@use '../../utils/fonts';
+@use '../../utils/functions' as f;
+
+.TestDetails {
+  background-color: f.primary-color(30%);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  
+  &__name {
+    @include fonts.roboto-medium(0.9em);
+    color: f.secondary-text-color(0%);
+  }
+
+  &__blocks {
+    @include fonts.roboto(0.9em, italic);
+    color: f.secondary-text-color(0%);
+  }
+}

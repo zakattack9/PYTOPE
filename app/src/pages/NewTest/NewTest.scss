@@ -1,0 +1,83 @@
+@use '../../utils/functions' as f;
+@use '../../utils/mixins' as m;
+@use '../../utils/fonts';
+
+.NewTest {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 40px 4em 3em auto 7.5em;
+  grid-template-areas: 
+    "cancel cancel cancel"
+    "titleLeft title titleRight" // test title
+    "imageLeft image imageRight" // image
+    "blocksLeft blocks blocksRight" // test blocks
+    "btnsLeft btns btnsRight"; // buttons
+  row-gap: 15px;
+
+  &__cancel {
+    grid-area: cancel;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  &__titleInput {
+    grid-area: title;
+    align-self: center;
+  }
+
+  &__imageLabel {
+    @include m.label;
+    grid-area: imageLeft;
+    align-self: center;
+  }
+
+  &__imageWrapper {
+    grid-area: image;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__image {
+    @include m.input;
+    width: 70%;
+  }
+
+  &__newImageBtn {
+    @include m.outlinedButton;
+  }
+
+  &__blocksLabel {
+    @include m.label;
+    grid-area: blocksLeft;
+  }
+
+  &__blocks {
+    @include m.input;
+    grid-area: blocks;
+    overflow: auto;
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 10px;
+  }
+
+  &__newBlockBtn {
+    grid-area: blocksRight;
+    margin-left: 15px;
+  }
+
+  &__btnWrapper {
+    grid-area: btns;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+  }
+
+  &__saveBtn {
+    padding: 0.8em 2.7em;
+  }
+}

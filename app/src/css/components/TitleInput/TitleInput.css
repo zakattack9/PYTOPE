@@ -1,0 +1,14 @@
+.TitleInput {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 700;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.TitleInput[type=text] {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.96));
+}
