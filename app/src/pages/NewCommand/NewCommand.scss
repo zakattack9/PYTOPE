@@ -1,0 +1,76 @@
+@use '../../utils/functions' as f;
+@use '../../utils/mixins' as m;
+@use '../../utils/fonts';
+
+.NewCommand {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 4em 3em 3em 3em 7.5em;
+  grid-template-areas: 
+    "titleLeft title titleRight" // test title
+    "commandLeft command commandRight" // command
+    "assertionLeft assertion assertionRight" // output assertion
+    "regexLeft regex regexRight" // regex
+    "btnsLeft btns btnsRight"; // buttons
+  row-gap: 15px;
+  align-content: center;
+  position: relative;
+
+  &__cancel {
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+
+  &__titleInput {
+    grid-area: title;
+    align-self: center;
+  }
+
+  &__commandLabel {
+    @include m.label;
+    grid-area: commandLeft;
+    align-self: center;
+  }
+
+  &__command {
+    grid-area: command;
+  }
+
+  &__pkgMapperBtn {
+    @include m.outlinedButton;
+    grid-area: commandRight;
+    margin-left: 15px;
+  }
+
+  &__assertionLabel {
+    @include m.label;
+    grid-area: assertionLeft;
+  }
+
+  &__assertion {
+    grid-area: assertion;
+    width: 10em;
+  }
+
+  &__regexLabel {
+    @include m.label;
+    grid-area: regexLeft;
+  }
+
+  &__regex {
+    grid-area: regex;
+  }
+
+  &__btnWrapper {
+    grid-area: btns;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 15px;
+  }
+
+  &__saveBtn {
+    padding: 0.8em 2.7em;
+  }
+}

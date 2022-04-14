@@ -4,7 +4,6 @@
 
 .NewTest {
   height: 100%;
-
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: 40px 4em 3em auto 7.5em;
@@ -15,18 +14,6 @@
     "blocksLeft blocks blocksRight" // test blocks
     "btnsLeft btns btnsRight"; // buttons
   row-gap: 15px;
-
-  %label {
-    @include fonts.roboto-medium(1.05em);
-    justify-self: right;
-    margin: 0.8em 1.4em;
-  }
-
-  %input {
-    background-color: f.primary-color(70%);
-    border-radius: 10px;
-    padding: 0.8em;
-  }
 
   &__cancel {
     grid-area: cancel;
@@ -41,7 +28,7 @@
   }
 
   &__imageLabel {
-    @extend %label;
+    @include m.label;
     grid-area: imageLeft;
     align-self: center;
   }
@@ -56,7 +43,7 @@
   }
 
   &__image {
-    @extend %input;
+    @include m.input;
     width: 70%;
   }
 
@@ -65,12 +52,12 @@
   }
 
   &__blocksLabel {
-    @extend %label;
+    @include m.label;
     grid-area: blocksLeft;
   }
 
   &__blocks {
-    @extend %input;
+    @include m.input;
     grid-area: blocks;
     overflow: auto;
     display: flex;

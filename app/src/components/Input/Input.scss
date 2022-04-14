@@ -1,0 +1,10 @@
+@use '../../utils/functions' as f;
+@use '../../utils/mixins' as m;
+@use '../../utils/fonts';
+
+.Input {
+  @include fonts.roboto;
+  @include m.input;
+  border: none;
+  outline: none;
+}

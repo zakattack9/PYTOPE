@@ -1,11 +1,28 @@
+import { useState, FormEvent } from 'react';
 import './Input.scss';
 
-function Input() {
+interface Props {
+  className?: string,
+  placeholder?: string,
+  onChange: (input: string) => void,
+}
+
+function Input(props: Props) {
+  const [value, setValue] = useState('');
+  
+  const handleChange = (e: FormEvent<HTMLInputElement>) => {
+    const input = e.currentTarget.value;
+    setValue(input);
+    props.onChange(input);
+  }
+
   return (
     <input 
-      className="Input"
+      className={`Input ${props.className || ''}`}
       type="text"
-      
+      placeholder={props.placeholder || ''}
+      onChange={handleChange}
+      value={value}
     />
   );
 }

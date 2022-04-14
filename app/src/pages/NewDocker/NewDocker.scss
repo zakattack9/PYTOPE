@@ -4,7 +4,6 @@
 
 .NewDocker {
   height: 100%;
-
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: 40px 4em 3em 6em auto 7.5em;
@@ -16,18 +15,6 @@
     "testsLeft tests testsRight" // tests
     "btnsLeft btns btnsRight"; // buttons
   row-gap: 15px;
-  
-  %label {
-    @include fonts.roboto-medium(1.05em);
-    justify-self: right;
-    margin: 0.8em 1.4em;
-  }
-
-  %input {
-    background-color: f.primary-color(70%);
-    border-radius: 10px;
-    padding: 0.8em;
-  }
 
   &__cancel {
     grid-area: cancel;
@@ -42,7 +29,7 @@
   }
 
   &__fileLabel {
-    @extend %label;
+    @include m.label;
     grid-area: fileLeft;
     align-self: center;
   }
@@ -57,7 +44,7 @@
   }
 
   &__file {
-    @extend %input;
+    @include m.input;
     width: 70%;
   }
 
@@ -66,22 +53,22 @@
   }
 
   &__descLabel {
-    @extend %label;
+    @include m.label;
     grid-area: descLeft;
   }
 
   &__desc {
-    @extend %input;
+    @include m.input;
     grid-area: desc;
   }
 
   &__testsLabel {
-    @extend %label;
+    @include m.label;
     grid-area: testsLeft;
   }
 
   &__tests {
-    @extend %input;
+    @include m.input;
     grid-area: tests;
     overflow: auto;
     display: flex;

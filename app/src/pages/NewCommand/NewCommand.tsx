@@ -19,14 +19,47 @@ function NewCommand() {
     assertion: '',
   });
 
-  const handleTitleChange = (command: string) => {
+  const handleTitleChange = (command: string) => {} // never called since title is readonly
+
+  const handleCommandChange = (command: string) => {
     setState({ ...state, command });
+  }
+
+  const handleRegexChange = (regex: string) => {
+    setState({ ...state, regex });
+  }
+
+  const handlePackageMapper = (e: FormEvent) => {
+
+  }
+
+  const handleSave = (e: FormEvent) => {
+
+  }
+
+  const handleDelete = (e: FormEvent) => {
+
   }
 
   return (
     <div className="NewCommand">
-      <BackButton className="NewTest__cancel" text="Cancel" />
-      <TitleInput className="NewTest__titleInput" onChange={handleTitleChange} placeholder="New Run Command" readOnly/>
+      <BackButton className="NewCommand__cancel" text="Cancel" />
+      <TitleInput className="NewCommand__titleInput" onChange={handleTitleChange} placeholder="New Run Command" readOnly/>
+      
+      <div className="NewCommand__commandLabel">Command</div>
+      <Input className="NewCommand__command" onChange={handleCommandChange} />
+      <Button className="NewCommand__pkgMapperBtn" name="Package Mapper" onClick={handlePackageMapper} />
+
+      <div className="NewCommand__assertionLabel">Output Assertion</div>
+      <SelectInput className="NewCommand__assertion" />
+
+      <div className="NewCommand__regexLabel">Regex</div>
+      <Input className="NewCommand__regex" onChange={handleRegexChange} />
+
+      <div className="NewCommand__btnWrapper">
+        <Button className="NewCommand__saveBtn" name="Save" onClick={handleSave} />
+        <Button className="NewCommand__deleteBtn" name="Delete" onClick={handleDelete} invert />
+      </div>
     </div>
   );
 }
