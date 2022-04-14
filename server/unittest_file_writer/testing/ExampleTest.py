@@ -1,7 +1,6 @@
 from docker import from_env
 from unittest import TestCase
 
-
 class ExampleTest(TestCase):
 	@classmethod
 	def setUpClass(cls):

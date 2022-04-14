@@ -30,4 +30,4 @@ ENV PYTOPE_ENV=dev
 ENV PYTOPE_DIR=$DIR
 EXPOSE 3000
 
-CMD ["sh", "-c", "$PYTOPE_DIR/boot.sh"]
+ENTRYPOINT ["sh", "-c", "$PYTOPE_DIR/boot.sh"]

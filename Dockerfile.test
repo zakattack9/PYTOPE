@@ -27,4 +27,4 @@ COPY boot.sh /tmp/
 RUN chmod +x /tmp/boot.sh && \
     echo set -g mouse on > ~/.tmux.conf
 
-CMD ["sh", "-c", "$PYTOPE_DIR/boot.sh"]
+ENTRYPOINT ["sh", "-c", "$PYTOPE_DIR/boot.sh"]
