@@ -32,5 +32,6 @@
     right: 1.1em;
     top: 50%;
     transform: scale(170%, 70%) translateY(-70%);
+    pointer-events: none; // allows user to directly click select element
   }
 }
