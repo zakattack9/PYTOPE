@@ -1,26 +1,7 @@
 import React, { Component, useState } from 'react';
 import { DragDropContext, Droppable, Draggable, DraggingStyle, NotDraggingStyle, DropResult } from 'react-beautiful-dnd';
+import { useAppSelector } from '../../hooks/react-redux';
 import './RunBlock.scss';
-
-const runBlocklistItems = [
-    {
-        id: "1",
-        name: "git submodule set-branch --quiet --branch a_br"
-        // assetOutput: "Assert output is Null"
-    },
-    {
-        id: "2",
-        name: "Run git add ."
-    },
-    {
-        id: "3",
-        name: "git commit -m \"test commit\""
-    },
-    {
-        id: "4",
-        name: "git add index.html"
-    }
-]
 
 const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
     padding: 10,
@@ -34,46 +15,51 @@ const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
     ...draggableStyle
 })
 
-function RunBlock() {
-    const [runBlockItems, setRunBlockItems] = useState(runBlocklistItems);
-    const onDragEnd = (result: DropResult) => {
-        const { source, destination } = result
-        if (!destination) return
+const getListStyle = (isDraggingOver: any) => ({
+    background: isDraggingOver ? "lightblue" : "lightgrey",
+    //padding: grid,
+    //width: 1200
+});
 
-        const items = Array.from(runBlockItems)
-        const [newOrder] = items.splice(source.index, 1)
-        items.splice(destination.index, 0, newOrder)
+export interface Props {
+    parentTest: string,
+    runBlockIndex: number,
+    blockType: string,
+    command: string,
+    commandOutputAssertion: string,
+    regex?: string
+}
+// style={getListStyle(snapshot.isDraggingOver)}
+function RunBlock(props: Props) {
 
-        setRunBlockItems(items)
-    }
+    const { parentTest, runBlockIndex, blockType, command, commandOutputAssertion, regex } = props;
+    const testDesignerState = useAppSelector(state => state.testDesigner);
+    const { currBlocks } = testDesignerState;
+    const runBlock = currBlocks?.tests[parentTest].test_blocks[runBlockIndex];
+    console.log(parentTest,runBlockIndex, command,testDesignerState);
     return (
-        <div className='RunBlock'>
-            <DragDropContext onDragEnd={onDragEnd}>
-                <Droppable droppableId="runItem">
-                    {(provided) => (
-                        <div className="runItem" {...provided.droppableProps} ref={provided.innerRef}>
-                            {runBlockItems.map(({ id, name }, index) => {
-                                return (
-                                    <Draggable key={id} draggableId={id} index={index}>
-                                        {(provided, snapshot) => (
-                                            <div
-                                                ref={provided.innerRef}
-                                                {...provided.draggableProps}
-                                                {...provided.dragHandleProps}
-                                                style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
-                                            >
-                                                {name}
-                                            </div>
-                                        )}
-                                    </Draggable>
-                                )
-                            })}
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
-            </DragDropContext>
-        </div>
+            <Droppable droppableId={`${parentTest}/${runBlockIndex}`} type = {`runBlockItem`}>
+                {(provided, snapshot) => (
+                    <div className="RunBlock" {...provided.droppableProps} ref={provided.innerRef} >
+                        <Draggable key={`${parentTest}/${runBlockIndex}`} draggableId={`draggable_${parentTest}/${runBlockIndex}`} index={runBlockIndex}>
+                            {(provided, snapshot) => (
+                                <div
+                                    ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                    // style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
+                                >
+                                {blockType}
+                                {command}
+                                {commandOutputAssertion}
+                                {regex}
+                                </div>
+                            )}
+                        </Draggable>
+                        {provided.placeholder}
+                    </div>
+                )}
+            </Droppable>
     );
 }
 
