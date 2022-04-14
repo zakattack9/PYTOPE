@@ -5,7 +5,7 @@
 .UploadButton {
   $border-width: 2px;
 
-  @include fonts.roboto-medium(10.5pt);
+  @include fonts.roboto-medium(0.95em);
   width: max-content;
   height: max-content;
   background-color: f.primary-color(90%);

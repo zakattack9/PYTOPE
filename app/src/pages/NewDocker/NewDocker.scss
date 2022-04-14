@@ -3,7 +3,6 @@
 @use '../../utils/fonts';
 
 .NewDocker {
-  font-size: 11.5pt;
   height: 100%;
 
   display: grid;
@@ -63,7 +62,7 @@
   }
 
   &__uploadBtn {
-    padding: 0.2em;
+    padding: 0.06em;
   }
 
   &__descLabel {

@@ -8,13 +8,11 @@
   width: 100%;
 
   &[type="text"] {
-    // same as background-color in index.scss: html,body
-    background-color: f.primary-color(96%);
+    background-color: rgba(0, 0, 0, 0);
   }
 
   &::placeholder {
     // color: f.primary-text-color();
     // opacity: 1;
   }
-
 }

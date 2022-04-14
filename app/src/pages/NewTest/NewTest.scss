@@ -3,7 +3,6 @@
 @use '../../utils/fonts';
 
 .NewTest {
-  font-size: 11.5pt;
   height: 100%;
 
   display: grid;
@@ -62,7 +61,6 @@
   }
 
   &__newImageBtn {
-    padding: 0.9em 2.3em;
     @include m.outlinedButton;
   }
 

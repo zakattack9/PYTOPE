@@ -2,7 +2,7 @@
 @use '../../utils/fonts';
 
 .Button {
-  @include fonts.roboto-medium(10.5pt);
+  @include fonts.roboto-medium(0.95em);
   width: max-content;
   height: max-content;
   padding: 0.8em 2.3em;
