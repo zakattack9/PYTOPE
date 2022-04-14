@@ -1,26 +1,24 @@
 @use '../../utils/functions' as f;
 @use '../../utils/fonts';
 
+// styling based off outlinedButton (see _mixin.scss)
 .UploadButton {
-  $border-width: 2px;
-
-  @include fonts.roboto-medium(10.5pt);
+  @include fonts.roboto-medium(0.95em);
   width: max-content;
   height: max-content;
   background-color: f.primary-color(90%);
   border-radius: 5px;
-  border: $border-width solid f.primary-color(5%);
+  box-shadow: inset 0px 0px 0px 2px f.primary-color(5%);
   box-sizing: border-box;
   transition: 0.2s;
 
   &:hover {
-    background-color: f.primary-color(70%);
-    color: f.primary-text-color(10%);
+    background-color: f.primary-color(80%);
     border-color: f.primary-text-color(10%);
   }
   
   &__label {
     display: inline-block;
-    padding: calc(10px - $border-width) 25px;
+    padding: 0.8em 2.3em;
   }
 }

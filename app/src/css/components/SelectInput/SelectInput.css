@@ -1,0 +1,21 @@
+.SelectInput {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  appearance: none;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.7));
+  border-radius: 10px;
+  padding: 0.8em;
+  border: none;
+  outline: none;
+  display: grid;
+}
+.SelectInput::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
