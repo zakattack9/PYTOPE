@@ -40,10 +40,10 @@ function RunBlock(props: Props) {
     return (
             <Droppable droppableId={`${parentTest}/${runBlockIndex}`} type = {`runBlockItem`}>
                 {(provided, snapshot) => (
-                    <div className="RunBlock" {...provided.droppableProps} ref={provided.innerRef} >
+                    <div {...provided.droppableProps} ref={provided.innerRef} >
                         <Draggable key={`${parentTest}/${runBlockIndex}`} draggableId={`draggable_${parentTest}/${runBlockIndex}`} index={runBlockIndex}>
                             {(provided, snapshot) => (
-                                <div
+                                <div className="RunBlock"
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}

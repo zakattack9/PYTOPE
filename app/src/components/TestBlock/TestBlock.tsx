@@ -108,10 +108,10 @@ function TestBlock(props: Props) {
 
         <Droppable droppableId={`${parentImage}/${testName}`} type={`testBlockItem`}>
             {(provided, snapshot) => (
-                <div className="TestBlock" {...provided.droppableProps} ref={provided.innerRef} >   
+                <div  {...provided.droppableProps} ref={provided.innerRef} >   
                     <Draggable key={`${parentImage}/${testName}`} draggableId={`draggable_${testName}`} index={testIndex}>
                         {(provided, snapshot) => (
-                            <div ref={provided.innerRef}
+                            <div className="TestBlock" ref={provided.innerRef}
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                                 //  style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
@@ -121,13 +121,20 @@ function TestBlock(props: Props) {
                                 
                             </div>
                         )}
-                        
                     </Draggable>
                     {provided.placeholder}
                 </div>
             )}
         </Droppable>
 
+    ) : props.testName === 'default' ? (
+        <Droppable droppableId={`${parentImage}/${testName}`} type={`testBlockItem`}>
+            {(provided, snapshot) => (
+                <div  {...provided.droppableProps} ref={provided.innerRef} >   
+                    {provided.placeholder}
+                </div>
+            )}
+        </Droppable>
     ) : null;
 }
 

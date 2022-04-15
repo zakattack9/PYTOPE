@@ -1,4 +1,4 @@
-.NewDocker {
+.NewImage {
   font-size: 11.5pt;
   height: 100%;
   display: grid;
@@ -7,7 +7,7 @@
   grid-template-areas: "cancel cancel cancel" "titleLeft title titleRight" "fileLeft file fileRight" "descLeft desc descRight" "testsLeft tests testsRight" "btnsLeft btns btnsRight";
   row-gap: 15px;
 }
-.NewDocker .NewDocker__testsLabel, .NewDocker .NewDocker__descLabel, .NewDocker .NewDocker__fileLabel {
+.NewImage .NewImage__testsLabel, .NewImage .NewImage__descLabel, .NewImage .NewImage__fileLabel {
   font-family: "Roboto", sans-serif;
   font-size: 1.05em;
   font-style: normal;
@@ -17,37 +17,37 @@
   justify-self: right;
   margin: 0.8em 1.4em;
 }
-.NewDocker .NewDocker__tests, .NewDocker .NewDocker__desc, .NewDocker .NewDocker__file {
+.NewImage .NewImage__tests, .NewImage .NewImage__desc, .NewImage .NewImage__file {
   background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.7));
   border-radius: 10px;
   padding: 0.8em;
 }
-.NewDocker__cancel {
+.NewImage__cancel {
   position: relative;
   top: 0;
   left: 0;
 }
-.NewDocker__titleInput {
+.NewImage__titleInput {
   grid-area: title;
   align-self: center;
 }
-.NewDocker__fileLabel {
+.NewImage__fileLabel {
   grid-area: fileLeft;
   align-self: center;
 }
-.NewDocker__file {
+.NewImage__file {
   grid-area: file;
   width: 70%;
 }
-.NewDocker__descLabel {
+.NewImage__descLabel {
   grid-area: descLeft;
 }
-.NewDocker__desc {
+.NewImage__desc {
   grid-area: desc;
 }
-.NewDocker__testsLabel {
+.NewImage__testsLabel {
   grid-area: testsLeft;
 }
-.NewDocker__tests {
+.NewImage__tests {
   grid-area: tests;
 }

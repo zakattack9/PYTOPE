@@ -4,7 +4,7 @@ import ToolBar from '../ToolBar/ToolBar';
 import PackageMapper from '../../pages/PackageMapper/PackageMapper';
 import TestDesigner from '../../pages/TestDesigner/TestDesigner';
 import TestRunner from '../../pages/TestRunner/TestRunner';
-import NewDocker from '../../pages/NewDocker/NewDocker';
+import NewImage from '../../pages/NewImage/NewImage';
 import NewTest from '../../pages/NewTest/NewTest';
 import NewCommand from '../../pages/NewCommand/NewCommand';
 import Overlay from '../Overlay/Overlay';
@@ -61,8 +61,8 @@ function App() {
         </Route>
 
         {/* paths for creating new test designer blocks; does not render ToolBar and PageBar */}
-        <Route path='/new/docker'>
-          <NewDocker />
+        <Route path='/new/image'>
+          <NewImage />
         </Route>
 
         <Route path='/new/test'>

@@ -14,7 +14,7 @@
 
   &:hover {
     background-color: f.primary-color(80%);
-    border-color: f.primary-text-color(10%);
+    box-shadow: inset 0px 0px 0px 2px f.primary-text-color(10%);
   }
   
   &__label {

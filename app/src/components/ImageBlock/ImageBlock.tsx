@@ -66,21 +66,28 @@ function ImageBlock(props: Props) {
     const { dockerImageName, dockerImage, dockerImageIndex } = props;
 
     const tests = dockerImage.tests;
-    const testBlocks = tests ? tests.map((testName, index) =>
+    const testBlocks = tests.length > 0 ? tests.map((testName, index) =>
         <TestBlock
             testName={testName}
             testIndex={index}
             parentImage={dockerImageName}
         />
-    ) : null
+    ) : (
+        <TestBlock
+            testName={'default'}
+            testIndex={0}
+            parentImage={dockerImageName}
+        />
+    );
+
     return (
         <Droppable droppableId={dockerImageName} type="imageBlockItem">
             {(provided, snapshot) => (
                 <div {...provided.droppableProps} ref={provided.innerRef}>  
                     <Draggable key={dockerImage.docker_image_id} draggableId={`draggable_${dockerImageName}`} index={dockerImageIndex}>
                         {(provided, snapshot) => (
-                            <div className="ImageBlock">
-                                <div ref={provided.innerRef}
+                            // <div className="ImageBlock">
+                                <div className="ImageBlock" ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                     // style={getItemStyle(snapshot.isDragging, provided.draggableProps.style)}
@@ -89,7 +96,7 @@ function ImageBlock(props: Props) {
                                     {testBlocks}
                                     
                                 </div>
-                            </div>
+                            /* </div> */
                         )}
                     </Draggable>
                     {provided.placeholder}

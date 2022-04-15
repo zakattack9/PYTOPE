@@ -9,7 +9,7 @@
   @include m.hsl-var(primary-text, 0, 0%, 21%);
   @include m.hsl-var(secondary-text, 0, 0%, 21%);
   // changing this will affect the global font size of everything
-  font-size: 10.5pt;
+  font-size: 11pt;
 }
 
 html, body {

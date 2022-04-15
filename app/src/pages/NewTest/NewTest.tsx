@@ -31,7 +31,7 @@ function NewTest() {
 
   const handleNewImage = (e: FormEvent) => {
     const location = {
-      pathname: '/new/docker',
+      pathname: '/new/image',
     }
     history.push(location);
   }
@@ -69,8 +69,8 @@ function NewTest() {
       <AddButton className="NewTest__newBlockBtn" onClick={handleNewBlock} />
 
       <div className="NewTest__btnWrapper">
-        <Button className="NewDocker__saveBtn" name="Save" onClick={handleSave} />
-        <Button className="NewDocker__deleteBtn" name="Delete" onClick={handleDelete} invert />
+        <Button className="NewTest__saveBtn" name="Save" onClick={handleSave} />
+        <Button className="NewTest__deleteBtn" name="Delete" onClick={handleDelete} invert />
       </div>
     </div>
   );
