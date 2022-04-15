@@ -8,7 +8,6 @@ function TestDesigner() {
   const dispatch = useAppDispatch();
   const testDesignerState = useAppSelector(state => state.testDesigner);
   const { currBlocks } = testDesignerState;
-  console.log(testDesignerState);
 
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
