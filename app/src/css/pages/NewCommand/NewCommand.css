@@ -1,1 +1,134 @@
-
+.NewCommand, .NewCommand--regex {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 4em 3em 3em 3em 7.5em;
+  grid-template-areas: "titleLeft title titleRight" "testLeft test testRight" "commandLeft command commandRight" "assertionLeft assertion assertionRight" "btnsLeft btns btnsRight";
+  row-gap: 15px;
+  align-content: center;
+  position: relative;
+}
+.NewCommand--regex {
+  grid-template-rows: 4em 3em 3em 3em 3em 7.5em;
+  grid-template-areas: "titleLeft title titleRight" "testLeft test testRight" "commandLeft command commandRight" "assertionLeft assertion assertionRight" "regexLeft regex regexRight" "btnsLeft btns btnsRight";
+}
+.NewCommand__cancel {
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.NewCommand__titleInput {
+  grid-area: title;
+  align-self: center;
+}
+.NewCommand__testLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: testLeft;
+  align-self: center;
+}
+.NewCommand__testWrapper {
+  grid-area: test;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+.NewCommand__test {
+  width: 70%;
+}
+.NewCommand__newTestBtn {
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.05));
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0));
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.9));
+}
+.NewCommand__newTestBtn:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.8));
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+}
+.NewCommand__commandLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: commandLeft;
+}
+.NewCommand__command {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  grid-area: command;
+  align-self: stretch;
+}
+.NewCommand__pkgMapperBtn {
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.05));
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0));
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.9));
+  grid-area: commandRight;
+  align-self: center;
+  margin-left: 15px;
+  padding: 0.945em 2.3em;
+}
+.NewCommand__pkgMapperBtn:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.8));
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+}
+.NewCommand__assertionLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: assertionLeft;
+}
+.NewCommand__assertion {
+  grid-area: assertion;
+  align-self: center;
+  width: 11em;
+}
+.NewCommand__regexLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: regexLeft;
+}
+.NewCommand__regex {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  grid-area: regex;
+}
+.NewCommand__btnWrapper {
+  grid-area: btns;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 15px;
+}
+.NewCommand__saveBtn {
+  padding: 0.8em 2.7em;
+}

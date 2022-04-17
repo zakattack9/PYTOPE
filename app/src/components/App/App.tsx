@@ -61,11 +61,11 @@ function App() {
         </Route>
 
         {/* paths for creating new test designer blocks; does not render ToolBar and PageBar */}
-        <Route path='/new/image'>
+        <Route path='/new/image/:imageName?'>
           <NewImage />
         </Route>
 
-        <Route path='/new/test'>
+        <Route path='/new/test/:testName?'>
           <NewTest />
         </Route>
 

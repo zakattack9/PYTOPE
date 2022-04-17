@@ -8,7 +8,7 @@
 }
 .ChipSelector__title {
   font-family: "Roboto Mono", monospace;
-  font-size: 14pt;
+  font-size: 1.25em;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
@@ -16,7 +16,7 @@
 }
 .ChipSelector__type {
   font-family: "Roboto", sans-serif;
-  font-size: 14pt;
+  font-size: 1.25em;
   font-style: normal;
   font-weight: 400;
   color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));

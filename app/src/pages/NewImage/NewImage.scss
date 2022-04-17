@@ -15,11 +15,23 @@
     "testsLeft tests testsRight" // tests
     "btnsLeft btns btnsRight"; // buttons
   row-gap: 15px;
+  position: relative;
+
+  &--new {
+    @extend .NewImage;
+    grid-template-rows: 4em 3em 6em 7.5em;
+    grid-template-areas: 
+      "titleLeft title titleRight" // Docker image title
+      "fileLeft file fileRight" // file
+      "descLeft desc descRight" // description
+      "btnsLeft btns btnsRight"; // buttons
+    align-content: center;
+  }
 
   &__cancel {
-    grid-area: cancel;
-    position: relative;
-    top: 0;
+    // grid-area: cancel;
+    position: absolute;
+    top: 6px;
     left: 0;
   }
 

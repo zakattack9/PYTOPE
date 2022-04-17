@@ -1,5 +1,6 @@
 @use '../../utils/functions' as f;
 @use '../../utils/mixins' as m;
+@use '../../utils/variables' as vars;
 @use '../../utils/fonts';
 
 // inconsistent height when being center aligned with grid or flexbox
@@ -33,5 +34,17 @@
     top: 50%;
     transform: scale(170%, 70%) translateY(-70%);
     pointer-events: none; // allows user to directly click select element
+  }
+
+  &--error {
+    @extend .SelectInput;
+    select {
+      background-color: vars.$error-color;
+    }
+  }
+
+  &--disabledError {
+    @extend .SelectInput--disabled;
+    @extend .SelectInput--error;
   }
 }

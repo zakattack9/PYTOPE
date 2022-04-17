@@ -1,4 +1,5 @@
 @use '../../utils/functions' as f;
+@use '../../utils/variables' as vars;
 @use '../../utils/mixins' as m;
 @use '../../utils/fonts';
 
@@ -8,4 +9,9 @@
   border: none;
   outline: none;
   height: 1.4em;
+
+  &--error {
+    @extend .Input;
+    background-color: vars.$error-color;
+  }
 }

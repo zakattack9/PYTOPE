@@ -1,4 +1,4 @@
-.TitleInput {
+.TitleInput, .TitleInput--error {
   font-family: "Roboto", sans-serif;
   font-size: 1.4em;
   font-style: normal;
@@ -9,6 +9,9 @@
   border: none;
   width: 100%;
 }
-.TitleInput[type=text] {
-  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.96));
+.TitleInput--error::placeholder {
+  color: #fa1a0a;
+}
+.TitleInput[type=text], [type=text].TitleInput--error {
+  background-color: rgba(0, 0, 0, 0);
 }

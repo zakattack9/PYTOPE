@@ -1,5 +1,5 @@
-import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import ImageBlock from '../../components/ImageBlock/ImageBlock';
+import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
 import { reorderImageBlocks, reorderRunBlocks, reorderTestBlocks } from '../../slices/testDesignerSlice';
 import './TestDesigner.scss';
@@ -24,7 +24,6 @@ function TestDesigner() {
       dispatch(reorderImageBlocks(reorderImageFormat));
     }
     else if (result.type === "testBlockItem") {
-      console.log(result);
       const reorderTestFormat = {
         oldDockerImageName: sourceDroppableId.split("/")[0],
         newDockerImageName: destinationDroppableId.split("/")[0],
@@ -34,7 +33,6 @@ function TestDesigner() {
       dispatch(reorderTestBlocks(reorderTestFormat));
     }
     else if(result.type === "runBlockItem"){
-      console.log(result);
       const reorderRunFormat = {
         oldTestName: sourceDroppableId.split("/")[0],
         newTestName: destinationDroppableId.split("/")[0],
@@ -53,8 +51,7 @@ function TestDesigner() {
       dockerImage={imageBlocks[imageName]}
       dockerImageIndex={index}
     />
-  ) : null
-
+  ) : null;
 
   return (
     <div className='TestDesigner'>

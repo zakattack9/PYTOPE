@@ -11,13 +11,14 @@
   --secondary-text-color_h: 0;
   --secondary-text-color_s: 0%;
   --secondary-text-color_l: 21%;
+  font-size: 11pt;
 }
 
 html, body {
   margin: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 11pt;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
@@ -28,7 +29,7 @@ html, body {
 
 code {
   font-family: "Roboto Mono", monospace;
-  font-size: 11pt;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;

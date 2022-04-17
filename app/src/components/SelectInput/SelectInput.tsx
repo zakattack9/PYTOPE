@@ -1,24 +1,32 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import './SelectInput.scss';
 
 interface Props {
   options: string[], 
   className?: string,
+  hasError?: boolean,
   onChange: (option: string) => void;
 }
 
 function SelectInput(props: Props) {
-  const { options } = props;
+  const { options, hasError } = props;
   const [value, setValue] = useState(options[0] || '');
   const isDisabled = !options.length;
-  console.log(isDisabled);
-  const className = `SelectInput${isDisabled ? '--disabled' : ''} ${props.className || ''}`;
+  let modifier = '';
+  if (isDisabled && hasError) modifier = '--disabledError';
+  else if (isDisabled) modifier = '--disabled';
+  else if (hasError) modifier = '--error';
+  const className = `SelectInput${modifier} ${props.className || ''}`;
   
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const option = e.target.value;
     setValue(option); 
     props.onChange(option);
   }
+
+  useEffect(() => {
+    props.onChange(value); // sends parent component initial value on mount
+  }, []);
 
   const Options = options.length > 0 ? options.map(option => (
     <option value={option} key={option}>{option}</option>

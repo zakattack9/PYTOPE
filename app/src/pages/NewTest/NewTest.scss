@@ -14,11 +14,22 @@
     "blocksLeft blocks blocksRight" // test blocks
     "btnsLeft btns btnsRight"; // buttons
   row-gap: 15px;
+  position: relative;
+
+  &--new {
+    @extend .NewTest;
+    grid-template-rows: 4em 3em 7.5em;
+    grid-template-areas: 
+      "titleLeft title titleRight" // test title
+      "imageLeft image imageRight" // image
+      "btnsLeft btns btnsRight"; // buttons
+    align-content: center;
+  }
 
   &__cancel {
-    grid-area: cancel;
-    position: relative;
-    top: 0;
+    // grid-area: cancel;
+    position: absolute;
+    top: 6px;
     left: 0;
   }
 
@@ -44,7 +55,7 @@
 
   &__image {
     @include m.input;
-    width: 70%;
+    width: 80%;
   }
 
   &__newImageBtn {

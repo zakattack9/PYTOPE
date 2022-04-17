@@ -1,1 +1,92 @@
-
+.NewTest, .NewTest--new {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 40px 4em 3em auto 7.5em;
+  grid-template-areas: "cancel cancel cancel" "titleLeft title titleRight" "imageLeft image imageRight" "blocksLeft blocks blocksRight" "btnsLeft btns btnsRight";
+  row-gap: 15px;
+  position: relative;
+}
+.NewTest--new {
+  grid-template-rows: 4em 3em 7.5em;
+  grid-template-areas: "titleLeft title titleRight" "imageLeft image imageRight" "btnsLeft btns btnsRight";
+  align-content: center;
+}
+.NewTest__cancel {
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.NewTest__titleInput {
+  grid-area: title;
+  align-self: center;
+}
+.NewTest__imageLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: imageLeft;
+  align-self: center;
+}
+.NewTest__imageWrapper {
+  grid-area: image;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+.NewTest__image {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.7));
+  border-radius: 10px;
+  padding: 0.8em;
+  width: 80%;
+}
+.NewTest__newImageBtn {
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.05));
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0));
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.9));
+}
+.NewTest__newImageBtn:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.8));
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+}
+.NewTest__blocksLabel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  justify-self: right;
+  margin: 0.8em 1.4em;
+  grid-area: blocksLeft;
+}
+.NewTest__blocks {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.7));
+  border-radius: 10px;
+  padding: 0.8em;
+  grid-area: blocks;
+  overflow: auto;
+  display: flex;
+  flex-flow: nowrap column;
+  row-gap: 10px;
+}
+.NewTest__newBlockBtn {
+  grid-area: blocksRight;
+  margin-left: 15px;
+}
+.NewTest__btnWrapper {
+  grid-area: btns;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 15px;
+}
+.NewTest__saveBtn {
+  padding: 0.8em 2.7em;
+}

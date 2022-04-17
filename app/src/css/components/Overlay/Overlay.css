@@ -14,7 +14,7 @@
 }
 .Overlay__cancel {
   font-family: "Roboto", sans-serif;
-  font-size: 11pt;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));

@@ -1,28 +1,45 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { BlockType, CommandOutputAssertionType, TestBlock } from "../utils/test-designer";
 import { DockerImages, TestDesigns } from "../utils/test-designer";
 
-
 export interface TestDesignerState {
-  currBlocks: TestDesigns | null
+  currBlocks: TestDesigns | null,
 }
 
 const initialState: TestDesignerState = {
-  currBlocks: null
+  currBlocks: null,
 }
 
-export interface ReorderImageFormat {
+interface NewImagePayload {
+  imageName: string,
+  description: string,
+}
+
+interface NewTestPayload {
+  imageName: string,
+  testName: string,
+}
+
+interface NewRunPayload {
+  testName: string,
+  command: string,
+  assertion: CommandOutputAssertionType,
+  regex: string,
+}
+
+interface ReorderImageFormat {
   oldIndex: number,
   newIndex: number
 }
 
-export interface ReorderTestFormat {
+interface ReorderTestFormat {
   oldDockerImageName: string,
   newDockerImageName: string,
   oldIndex: number,
   newIndex: number
 }
 
-export interface ReorderRunFormat {
+interface ReorderRunFormat {
   oldTestName: string,
   newTestName: string,
   oldIndex: number,
@@ -33,11 +50,35 @@ export const testDesignerSlice = createSlice({
   name: 'testDesigner',
   initialState,
   reducers: {
-    addBlocks: (state, action) => {
-
+    addImageBlock: (state, action: PayloadAction<NewImagePayload>) => {
+      if (!state.currBlocks) return;
+      const { imageName, description } = action.payload;
+      state.currBlocks.test_designs.push(imageName);
+      state.currBlocks.docker_images[imageName] = {
+        docker_image_id: Math.floor(Date.now() * Math.random()),
+        docker_image_description: description,
+        tests: []
+      };
     },
-    removeBlocks: (state, action: PayloadAction<string>) => {
-
+    addTestBlock: (state, action: PayloadAction<NewTestPayload>) => {
+      if (!state.currBlocks) return;
+      const { imageName, testName } = action.payload;
+      state.currBlocks.docker_images[imageName].tests.push(testName);
+      state.currBlocks.tests[testName] = {
+        test_id: Math.floor(Date.now() * Math.random()),
+        test_blocks: []
+      };
+    },
+    addRunBlock: (state, action: PayloadAction<NewRunPayload>) => {
+      if (!state.currBlocks) return;
+      const { testName, command, assertion, regex } = action.payload;
+      const runBlock: TestBlock = {
+        block_type: BlockType.RUN,
+        command: command,
+        command_output_assertion: assertion,
+      };
+      if (assertion === CommandOutputAssertionType.VERIFY_REGEX) runBlock.regex = regex;
+      state.currBlocks.tests[testName].test_blocks.push(runBlock);
     },
     reorderImageBlocks: (state, action: PayloadAction<ReorderImageFormat>) => {
       if (!state.currBlocks) return;
@@ -70,8 +111,9 @@ export const testDesignerSlice = createSlice({
 });
 
 export const {
-  addBlocks,
-  removeBlocks,
+  addImageBlock,
+  addTestBlock,
+  addRunBlock,
   reorderImageBlocks,
   reorderTestBlocks,
   reorderRunBlocks,

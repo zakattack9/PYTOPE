@@ -20,9 +20,10 @@ function PackageMapper() {
   const OPTIONS = ['Git'];
 
   const handleCreateCmd = () => {
-    const textCommand = getCommand(pkgMapperState);
+    const command = getCommand(pkgMapperState);
     const location = {
       pathname: '/new/command',
+      state: { command }
     }
     history.push(location);
   }

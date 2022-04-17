@@ -12,6 +12,9 @@
     background-color: $default-bkg-color;
     border-radius: 10px;
     @include fonts.roboto-mono-bold($font-size, vars.$primary-text-color);
+    width: 30em;
+    // max-height: 100%;
+    // overflow: auto;
 }
 
 // .testItem{

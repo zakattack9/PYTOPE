@@ -5,11 +5,13 @@ interface Props {
   placeholder: string,
   className?: string,
   readOnly?: boolean, // makes input readonly; sets value to placeholder
+  hasError?: boolean,
   onChange: (input: string) => void,
 }
 
 function TitleInput (props: Props) {
   const DEFAULT_VALUE = props.readOnly ? props.placeholder : '';
+  const className = `TitleInput${props.hasError ? '--error' : ''} ${props.className || ''}`;
   const [value, setValue] = useState(DEFAULT_VALUE);
 
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
@@ -20,7 +22,7 @@ function TitleInput (props: Props) {
 
   return (
     <input 
-      className={`TitleInput ${props.className || ''}`} 
+      className={className} 
       type="text" 
       placeholder={props.placeholder}
       onChange={handleChange}

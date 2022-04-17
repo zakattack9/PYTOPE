@@ -1,19 +1,29 @@
-.Button {
+.Button, .Button--invert {
   font-family: "Roboto", sans-serif;
-  font-size: 10.5pt;
+  font-size: 0.95em;
   font-style: normal;
   font-weight: 400;
   color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
   font-weight: 500;
   width: max-content;
   height: max-content;
-  padding: 10px 30px;
-  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.25));
-  color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.95));
+  padding: 0.8em 2.3em;
   border-radius: 5px;
   cursor: default;
   transition: 0.2s;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.3));
+  color: hsl(var(--secondary-text-color_h), var(--secondary-text-color_s), calc(var(--secondary-text-color_l) + (100% - var(--secondary-text-color_l)) * 0.95));
 }
-.Button:hover {
-  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.4));
+.Button:hover, .Button--invert:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.5));
+}
+.Button--invert {
+  box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.4));
+}
+.Button--invert:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + var(--primary-color_l) * -0.4));
 }

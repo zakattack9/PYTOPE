@@ -1,5 +1,8 @@
-import { FormEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { FormEvent, useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+import { CommandOutputAssertionType } from '../../utils/test-designer';
+import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { addRunBlock } from '../../slices/testDesignerSlice';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleInput from '../../components/TitleInput/TitleInput';
 import SelectInput from '../../components/SelectInput/SelectInput';
@@ -10,22 +13,52 @@ import './NewCommand.scss';
 interface NewCommandState {
   test: string,
   command: string,
-  assertion: string,
-  regex?: string,
+  regex: string,
+  testError: boolean,
+  commandError: boolean,
+  regexError: boolean,
+}
+
+interface AssertEnumMap {
+  [key: string]: CommandOutputAssertionType,
+  'Ignore Output': CommandOutputAssertionType,
+  'Regex': CommandOutputAssertionType,
+  'Is Empty': CommandOutputAssertionType,
+}
+
+interface LocationState {
+  command: string,
+}
+
+const ASSERT_ENUM_MAP: AssertEnumMap = {
+  'Ignore Output': CommandOutputAssertionType.NO_VERIFY,
+  'Regex': CommandOutputAssertionType.VERIFY_REGEX,
+  'Is Empty': CommandOutputAssertionType.VERIFY_EMPTY,
 }
 
 function NewCommand() {
+  const dispatch = useAppDispatch();
   const history = useHistory();
+  const location = useLocation<LocationState>();
+  const defaultCommand = location.state?.command || '';
+  const { currBlocks } = useAppSelector(state => state.testDesigner);
   const [state, setState] = useState<NewCommandState>({
     test: '',
-    command: '',
-    assertion: '',
+    command: defaultCommand,
+    regex: '',
+    testError: false,
+    commandError: false,
+    regexError: false,
   });
+  const [assertion, setAssertion] = useState(CommandOutputAssertionType.NO_VERIFY);
+  const IS_REGEX = assertion === CommandOutputAssertionType.VERIFY_REGEX;
+  const ASSERT_OPTIONS = Object.keys(ASSERT_ENUM_MAP);
+  const TEST_OPTIONS = currBlocks ? Object.keys(currBlocks.tests) : [];
 
-  const IS_REGEX = state.assertion === 'Regex';
-
-  const TESTS: string[] = [];
-  const OPTIONS = ['Ignore Output', 'Regex', 'Is Empty'];
+  useEffect(() => {
+    // wipe location.state without rerendering
+    if (location.state) window.history.replaceState(null, '');
+  }, []);
 
   const handleTitleChange = (command: string) => {} // never called since title is readonly
 
@@ -41,15 +74,17 @@ function NewCommand() {
   }
 
   const handleCommandChange = (command: string) => {
-    setState({ ...state, command });
+    const commandError = command === '';
+    setState({ ...state, command, commandError });
   }
 
   const handleAssertionSelect = (assertion: string) => {
-    setState({ ...state, assertion });
+    setAssertion(ASSERT_ENUM_MAP[assertion]);
   }
 
   const handleRegexChange = (regex: string) => {
-    setState({ ...state, regex });
+    const regexError = regex === '';
+    setState({ ...state, regex, regexError });
   }
 
   const handlePackageMapper = (e: FormEvent) => {
@@ -60,7 +95,25 @@ function NewCommand() {
   }
 
   const handleSave = (e: FormEvent) => {
+    console.log(state);
+    const ERRORS =  {
+      testError: !state.test,
+      commandError: !state.command,
+      regexError: assertion === CommandOutputAssertionType.VERIFY_REGEX && !state.regex,
+    }
+    const hasError = Object.values(ERRORS).some(err => err);
 
+    if (hasError) setState({ ...state, ...ERRORS });
+    else {
+      const newRunPayload = {
+        testName: state.test,
+        command: state.command,
+        assertion,
+        regex: state.regex,
+      }
+      dispatch(addRunBlock(newRunPayload));
+      history.push({ pathname: '/pytope/designer' });
+    }
   }
 
   const handleDelete = (e: FormEvent) => {
@@ -69,7 +122,7 @@ function NewCommand() {
 
   const Regex = IS_REGEX ? ([
     <div className="NewCommand__regexLabel">Regex</div>,
-    <Input className="NewCommand__regex" onChange={handleRegexChange} />
+    <Input className="NewCommand__regex" onChange={handleRegexChange} hasError={state.regexError} />
   ]) : null;
 
   return (
@@ -79,16 +132,16 @@ function NewCommand() {
       
       <div className="NewCommand__testLabel">Test</div>
       <div className="NewCommand__testWrapper">
-        <SelectInput className="NewCommand__test" options={TESTS} onChange={handleTestSelect} />
+        <SelectInput className="NewCommand__test" options={TEST_OPTIONS} onChange={handleTestSelect} hasError={state.testError} />
         <Button className="NewCommand__newTestBtn" name="New" onClick={handleNewTest} />
       </div>
 
       <div className="NewCommand__commandLabel">Command</div>
-      <Input className="NewCommand__command" defaultValue={state.command} onChange={handleCommandChange} />
+      <Input className="NewCommand__command" defaultValue={state.command} onChange={handleCommandChange} hasError={state.commandError} />
       <Button className="NewCommand__pkgMapperBtn" name="Package Mapper" onClick={handlePackageMapper} />
 
       <div className="NewCommand__assertionLabel">Output Assertion</div>
-      <SelectInput className="NewCommand__assertion" options={OPTIONS} onChange={handleAssertionSelect} />
+      <SelectInput className="NewCommand__assertion" options={ASSERT_OPTIONS} onChange={handleAssertionSelect} />
 
       {Regex}
 

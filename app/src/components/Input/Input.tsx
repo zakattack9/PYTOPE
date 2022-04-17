@@ -5,11 +5,14 @@ interface Props {
   className?: string,
   placeholder?: string,
   defaultValue?: string,
+  hasError?: boolean,
   onChange: (input: string) => void,
 }
 
 function Input(props: Props) {
-  const [value, setValue] = useState(props.defaultValue || '');
+  const { defaultValue, hasError, placeholder } = props
+  const [value, setValue] = useState(defaultValue || '');
+  const className = `Input${hasError ? '--error' : ''} ${props.className || ''}`;
   
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
     const input = e.currentTarget.value;
@@ -19,9 +22,9 @@ function Input(props: Props) {
 
   return (
     <input 
-      className={`Input ${props.className || ''}`}
+      className={className}
       type="text"
-      placeholder={props.placeholder || ''}
+      placeholder={placeholder || ''}
       onChange={handleChange}
       value={value}
     />

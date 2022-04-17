@@ -1,4 +1,5 @@
 @use '../../utils/functions' as f;
+@use '../../utils/variables' as vars;
 @use '../../utils/fonts';
 
 .TitleInput {
@@ -6,13 +7,15 @@
   outline: none;
   border: none;
   width: 100%;
+  
+  &--error {
+    @extend .TitleInput;
+    &::placeholder {
+      color: vars.$error-text-color;
+    }
+  }
 
   &[type="text"] {
     background-color: rgba(0, 0, 0, 0);
-  }
-
-  &::placeholder {
-    // color: f.primary-text-color();
-    // opacity: 1;
   }
 }
