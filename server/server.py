@@ -42,8 +42,9 @@ def test_runner():
         #        functions.add(obj)
 
         test_suite = unittest.TestLoader().loadTestsFromModule(module)
-        result = unittest.TextTestRunner(verbosity=2).run(test_suite)
+        output, result = unittest.TextTestRunner(verbosity=2, stdout=output).run(test_suite)
         logger.debug(result)
+        print(output)
         #emit('test_result')
 
 # request a file from the frontend

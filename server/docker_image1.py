@@ -24,5 +24,5 @@ class docker_image1(TestCase):
 
 	def test2_1(self):
 		exit_code, output = self.container.exec_run('git add .', stdout=True, stderr=True)
-		self.assertFalse(output)
+		self.assertEqual(output.decode(), '')	# checking empty string
 

@@ -24,5 +24,5 @@ class docker_image2(TestCase):
 
 	def test3_2(self):
 		exit_code, output = self.container.exec_run('git push', stdout=True, stderr=True)
-		self.assertRegex(output.decode(), '/some_regex/g')
+		self.assertRegex(output.decode(), '/haydenlhannappel/')
 
