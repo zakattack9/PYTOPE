@@ -1,0 +1,13 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.TestBlock{
+    $default-bkg-color: f.primary-color(30%);
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.8em;
+    padding: 1em 1em;
+    background-color: $default-bkg-color;
+    border-radius: 10px;
+}
