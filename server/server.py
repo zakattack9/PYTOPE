@@ -50,8 +50,26 @@ def socketFrontendUploadFile(filename, data):
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
+	path = "../file_manager/file_manager_module"
 	# <send to front-end>
-	path = Path(filename)
+	if filename[len(filename) - 2:len(filename)] == "py":
+		path += "/hierarchy/tests/python_unittests/"
+	elif filename == "Dockerfile":
+		path += "/hierarchy/Dockerfiles/" 
+	elif filename[0:2] == "fp" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/file_path_config/" 
+	elif filename[len(filename) - 9:len(filename)] == "py_output":
+		path += "/hierarchy/tests/test_results/"
+	elif filename[0:2] == "pm" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/package_mapping_config/"
+	elif filename[0:2] == "td" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/test_designs_config/" 
+	else:
+		print("file does not exist")
+		return
+
+	path += filename
+
 	try:
 		# TODO - load results and send to front-end
 		with path.open('rb') as f:
