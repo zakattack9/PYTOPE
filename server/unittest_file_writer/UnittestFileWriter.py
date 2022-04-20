@@ -1,10 +1,9 @@
 from pathlib import Path, PurePath
 from typing import Any, Dict, MutableSequence, Union
 
-from .schemas.schema_validation import PathOrJSON, SchemaValidator
 from .FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
+from .SchemaValidator import PathOrJSON, SchemaValidator
 from .TestFile import TestFile
-
 
 """
 UnittestFileWriter is the main interface for the module.
