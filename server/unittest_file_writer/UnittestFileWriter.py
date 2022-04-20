@@ -1,7 +1,7 @@
 from pathlib import Path, PurePath
 from typing import Any, Dict, MutableSequence, Union
 
-from schemas.schema_validation.SchemaValidator import PathOrJSON, SchemaValidator
+from .schemas.schema_validation import PathOrJSON, SchemaValidator
 from .FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
 from .TestFile import TestFile
 
