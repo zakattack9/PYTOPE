@@ -2,11 +2,11 @@ from itertools import chain
 from pathlib import Path
 from typing import MutableSequence, Optional, Sequence
 
-from server.unittest_file_writer.LineSequence import LineSequence
-from server.unittest_file_writer.Method import Method
-from server.unittest_file_writer.NonTestMethods import SetUpClassMethod, SetUpMethod, TearDownClassMethod, TearDownMethod
-from server.unittest_file_writer.OutputTestMethod import OutputTestMethod, OutputType
-from server.unittest_file_writer.Util import indent
+from .LineSequence import LineSequence
+from .Method import Method
+from .NonTestMethods import SetUpClassMethod, SetUpMethod, TearDownClassMethod, TearDownMethod
+from .OutputTestMethod import OutputTestMethod, OutputType
+from .Util import indent
 
 _IMPORT_LINES	= ('from docker import from_env', 'from unittest import TestCase')
 _SUPER_CLASSES	= ('TestCase',)
