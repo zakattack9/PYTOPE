@@ -3,35 +3,79 @@
 .TestGroup {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  width: 70vw;
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: f.secondary-color(85%);
+  border-radius: 25px;
 
   &__testBlock {
-    background-color: f.secondary-color(60%);
+    display: flex;
+    flex-direction: column;
+    background-color: f.secondary-color(70%);
+    align-self: center;
+    width: 95%;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 10px;
   }
 
-  &__testOutput {
-    background-color: f.secondary-color(85%);
+  &__testContentHeader {
+    display: flex;
+    background-color: f.secondary-color(20%);
+    align-self: center;
+    width: 95%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  &__testContent {
+    display: flex;
+    background-color: f.secondary-color(50%);
+    align-self: center;
+    width: 95%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px;
   }
 
   &__RedCircle {
+    border: 1px solid black;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     background-color: #f97a72;
+    margin-right: 5px;
   }
   &__YellowCircle {
+    border: 1px solid black;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     background-color: #e0df4a;
+    margin-right: 5px;
   }
   &__GreenCircle {
+    border: 1px solid black;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     background-color: #73e04a;
+    margin-right: 5px;
+  }
+  &__GreyCircle {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: gray;
+    margin-right: 5px;
   }
 
-  &__TestGroupTopBar {
+  &__TestBlockTopBar {
     display: flex;
     flex-direction: row;
   }

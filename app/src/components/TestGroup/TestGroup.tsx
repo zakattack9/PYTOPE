@@ -7,7 +7,7 @@ export interface Props {
   tests: TestInfo[];
 }
 
-//block that will contain all the tests in a group
+//this is a UI component that holds all test blocks in a given group
 const TestGroup = (props: Props) => {
   return (
     <div className="TestGroup">
@@ -16,6 +16,7 @@ const TestGroup = (props: Props) => {
         return TestBlock(
           arrElement.testName,
           arrElement.testStatus,
+          arrElement.testContentHeader,
           arrElement.testContent,
           arrIndex
         );
@@ -24,9 +25,11 @@ const TestGroup = (props: Props) => {
   );
 };
 
+//this is a UI component that holds individual test blocks
 const TestBlock = (
   testName: string,
   testStatus: string,
+  testContentHeader: string,
   testContent: string,
   index: number
 ) => {
@@ -35,31 +38,42 @@ const TestBlock = (
   const StatusLight = () => {
     if (testStatusHook === "error") {
       return <div className="TestGroup__RedCircle" />;
-    } else if (testStatusHook === "running" || testStatusHook === "pending") {
+    } else if (testStatusHook === "running") {
       return <div className="TestGroup__YellowCircle" />;
     } else if (testStatusHook === "success") {
       return <div className="TestGroup__GreenCircle" />;
+    } else {
+      return <div className="TestGroup__GreyCircle" />;
     }
   };
 
   return (
     <div key={testName + index} className="TestGroup__testBlock">
-      <div className="TestGroup__testBlockTopBar">
+      <div className="TestGroup__TestBlockTopBar">
         {StatusLight()}
         {testName}
       </div>
-      <div className="TestGroup__testOutput">{testContent}</div>
+      <div className="TestGroup__testContentHeader">{testContentHeader} </div>
+      <div className="TestGroup__testContent">{testContent}</div>
     </div>
   );
 };
 
+//this class holds relevant information for the test's output
 export class TestInfo {
   testName: string;
   testStatus: string;
+  testContentHeader: string;
   testContent: string;
-  constructor(testName: string, testStatus: string, testContent: string) {
+  constructor(
+    testName: string,
+    testStatus: string,
+    testContentHeader: string,
+    testContent: string
+  ) {
     this.testName = testName;
     this.testStatus = testStatus;
+    this.testContentHeader = testContentHeader;
     this.testContent = testContent;
   }
 

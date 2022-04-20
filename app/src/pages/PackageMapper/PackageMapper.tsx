@@ -2,6 +2,8 @@ import UploadButton from "../../components/UploadButton/UploadButton";
 import Button from "../../components/Button/Button";
 import ChipSelector from "../../components/ChipSelector/ChipSelector";
 import Chip from "../../components/Chip/Chip";
+import SelectInput from "../../components/SelectInput/SelectInput";
+import { useHistory } from "react-router-dom";
 import { ChipSelectorType } from "../../utils/enums";
 import { ChipType } from "../../utils/enums";
 import { useAppSelector } from "../../hooks/react-redux";
@@ -10,13 +12,24 @@ import "./PackageMapper.scss";
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector((state) => state.packageMapper);
+  const history = useHistory();
+
   const { currPackage, command } = pkgMapperState;
   const nestedSubcommandPath = command?.paths.subcommands.slice(-1)[0] || null;
-  // console.log(pkgMapperState);
 
-  const handleCreateTest = () => {
-    const textCommand = getCommand(pkgMapperState);
-    console.log(textCommand);
+  const OPTIONS = ["Git"];
+
+  const handleCreateCmd = () => {
+    const command = getCommand(pkgMapperState);
+    const location = {
+      pathname: "/new/command",
+      state: { command },
+    };
+    history.push(location);
+  };
+
+  const handleMappingSelect = (mapping: string) => {
+    // change currPackage in packageMapperSlice.ts
   };
 
   const BaseChip = command ? (
@@ -120,16 +133,19 @@ function PackageMapper() {
     <div className="PackageMapper">
       <div className="PackageMapper__bar">
         <div className="PackageMapper__barUpperLeft">
-          <div className="PackageMapper__uploadText">
-            Current Package Loaded: <strong>Git</strong>
-          </div>
+          <div className="PackageMapper__uploadText">Package Mapping:</div>
+          <SelectInput
+            className="PackageMapper__pkgMapping"
+            options={OPTIONS}
+            onChange={handleMappingSelect}
+          />
           <UploadButton className="PackageMapper__uploadBtn" />
         </div>
         <div className="PackageMapper__barUpperRight">
           <Button
             className="PackageMapper__createBtn"
-            name="Create Test"
-            onClick={handleCreateTest}
+            name="Create Command"
+            onClick={handleCreateCmd}
           />
         </div>
         <div className="PackageMapper__barLower">

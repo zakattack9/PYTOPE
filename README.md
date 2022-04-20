@@ -117,3 +117,4 @@ $ deactivate
 
 ## Resources
 - https://www.doc.ic.ac.uk/~nuric/coding/how-to-discover-and-run-unit-tests-programmatically-in-python.html
+- https://mherman.org/blog/dockerizing-a-react-app/
