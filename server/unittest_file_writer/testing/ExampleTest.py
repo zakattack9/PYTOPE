@@ -16,7 +16,7 @@ class ExampleTest(TestCase):
 
 	def setUp(self):
 		cls = type(self)
-		self.container = cls.client.containers.create(cls.image, detach=True)
+		self.container = cls.client.containers.run(cls.image, detach=True, tty=True)
 
 	def tearDown(self):
 		self.container.remove(force=True)
@@ -34,4 +34,4 @@ class ExampleTest(TestCase):
 		cmd = ...  					# variable ; line not generated
 		output_regex: str = ...  	# variable ; line not generated
 		exit_code, output = self.container.exec_run(cmd, stdout=True, stderr=True)
-		self.assertRegex(output, output_regex)
+		self.assertRegex(output.decode(), output_regex)

@@ -9,7 +9,7 @@ _IGNORE_OUTPUT		= ', stdout=False, stderr=False)'
 _GET_OUTPUT			= ', stdout=True, stderr=True)'
 
 _ASSERT_NO_OUTPUT	= 'self.assertFalse(output)'
-_ASSERT_REGEX		= 'self.assertRegex(output, '
+_ASSERT_REGEX		= 'self.assertRegex(output.decode(), '
 
 
 class OutputType(Enum):
