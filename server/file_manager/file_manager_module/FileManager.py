@@ -58,6 +58,8 @@ def find_file(filename):
 	elif len(filename_path.parts) > 1:
 		raise ValueError(f"File-Name '{filename}' contains a directory (only names are allowed).")
 	stem = filename_path.stem.lower()
+	if not stem:
+		raise ValueError(f"File-Name '{filename}' only contains a suffix (names without a stem are not allowed).")
 	suffix = filename_path.suffix.lower()
 	path = None
 	if not suffix:
@@ -82,7 +84,8 @@ def find_file(filename):
 
 def clear_dir(dir_path: Path):
 	for path in dir_path.iterdir():
-		path.unlink(missing_ok=True)
+		if path.name != '.gitkeep':
+			path.unlink()
 
 
 def clear_temp_dirs():
