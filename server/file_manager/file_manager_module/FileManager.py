@@ -50,13 +50,13 @@ Directories that contain files that:
 	- are received from the front-end
 	- are generated
 	- contain output from running tests
+	- contain logs
 """
 TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, FILE_PATH_CONFIG_DIR, PACKAGE_MAPPING_CONFIG_DIR, TEST_DESIGNS_CONFIG_DIR, LOGS_DIR)
 
 
 """ Needed for the TestRunner to import unit-tests """
 TEST_FILES_PACKAGE = str(TEST_FILES_DIR.relative_to(SERVER_DIR)).replace(sep, '.')
-
 
 
 def find_file(filename):
@@ -102,11 +102,6 @@ def clear_dir(dir_path: Path):
 def clear_temp_dirs():
 	for dir_path in TEMP_DIRS:
 		clear_dir(dir_path)
-
-
-def cleanup():
-	clear_temp_dirs()
-
 
 
 def zip_folder():
