@@ -73,16 +73,14 @@ def socketFrontendUploadFile(filename, data):
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
-	global state
-	if state is ServerState.IDLE:
-		try:
-			path = FileManager.find_file(filename)
-			with open(path, 'rb') as f:
-				data = f.read()
-		except:
-			flask_socketio.emit('file_dne', filename)
-			return
-		flask_socketio.emit('frontend_download', data)
+	try:
+		path = FileManager.find_file(filename)
+		with open(path, 'rb') as f:
+			data = f.read()
+	except:
+		flask_socketio.emit('file_dne', filename)
+		return
+	flask_socketio.emit('frontend_download', data)
 
 
 @socketio.on('run_tests')
