@@ -2,7 +2,7 @@ from enum import Enum
 from pprint import pp
 
 from flask import Flask
-from flask_socketio import emit, SocketIO
+import flask_socketio
 
 from file_manager.testrunner.testRunner import RunTests
 from file_manager.file_manager_module.FileManager import DOCKERFILES_DIR, find_file, TEST_FILES_DIR, TEST_JSON_DIR, TEST_RESULTS_DIR, \
@@ -32,7 +32,7 @@ class ServerState(Enum):
 
 
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*", binary=True)
+socketio = flask_socketio.SocketIO(app, cors_allowed_origins="*", binary=True)
 
 state = ServerState.IDLE
 
@@ -88,12 +88,12 @@ def socketFrontendDownloadFile(filename):
 			with open(path, 'rb') as f:
 				data = f.read()
 		except:
-			emit('file_dne', filename)
+			flask_socketio.emit('file_dne', filename)
 			return
-		emit('frontend_download', data)
+		flask_socketio.emit('frontend_download', data)
 	else:
 		# TODO - results not ready yet
-		emit(...)
+		flask_socketio.emit(...)
 
 
 @socketio.on('frontend_received_file')
@@ -106,7 +106,7 @@ def handle_frontend_file_acknowledge(file):
 # request a file from the frontend
 def handle_backend_file_request():
 	# TODO - why would back-end request a file?
-	emit('backend_request_file')
+	flask_socketio.emit('backend_request_file')
 
 
 # send a file to the frontend
@@ -116,7 +116,7 @@ def handle_frontend_file_send():
 	# file.close()
 	# with open('test.txt', 'rb') as file:
 	#    file_data = file.read()
-	emit('frontend_receive_file', 'lol')
+	flask_socketio.emit('frontend_receive_file', 'lol')
 
 
 # receive data from frontend

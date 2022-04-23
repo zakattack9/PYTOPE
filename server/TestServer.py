@@ -14,33 +14,18 @@ def test_import():
 def test_export():
 	# export to front-end
 	# TODO
-	FlaskServer.socketFrontendDownloadFile('test1')
+	FlaskServer.socketFrontendDownloadFile('Test1.json')
 
 
-def emit(*args):
-	event = args[0]
+def emit(event, *args):
 	print(f"Event '{event}'")
-	if len(args) > 1:
-		filename = args[1]
-		print(f"\twith File Name '{filename}'")
-		if len(args) > 2:
-			data = args[2]
-			print(f"\tand Data '{data.decode()}'")
+	print(f"\twith args: {args}")
 
 
 def main():
-	print()
-	print(FlaskServer.find_file('Dockerfile'))
-	print(FlaskServer.find_file('Test1.json'))
-	print(FlaskServer.find_file('Test1.py'))
-	print(FlaskServer.find_file('Test1.py_output'))
-	print(FlaskServer.find_file('fp_one.cfg'))
-	print(FlaskServer.find_file('pm_one.cfg'))
-	print(FlaskServer.find_file('td_one.cfg'))
-	return
-	flask_socketio.emit = emit
+	flask_socketio.emit = emit  # re-define emit
 	test_import()
-	sleep(3)
+	sleep(1)
 	test_export()
 
 
