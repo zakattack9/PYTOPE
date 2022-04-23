@@ -3,7 +3,7 @@ from time import sleep
 
 import flask_socketio
 
-import FlaskServer
+import server
 from file_manager.file_manager_module import FileManager
 
 TESTING_DIR = FileManager.SERVER_DIR / 'zz_testing'
@@ -12,7 +12,7 @@ TESTING_DIR = FileManager.SERVER_DIR / 'zz_testing'
 def _import(path: Path):
 	with path.open('rb') as f:
 		data = f.read()
-	FlaskServer.socketFrontendUploadFile(path.name, data)
+	server.socketFrontendUploadFile(path.name, data)
 
 
 def test_import():
@@ -24,7 +24,7 @@ def test_import():
 def test_export():
 	# export to front-end
 	for path in TESTING_DIR.iterdir():
-		FlaskServer.socketFrontendDownloadFile(path.name)
+		server.socketFrontendDownloadFile(path.name)
 
 
 def cleanup():
