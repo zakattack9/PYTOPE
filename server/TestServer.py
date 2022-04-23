@@ -10,7 +10,7 @@ import FlaskServer
 def test_import():
 	# import from front-end
 	# TODO
-	FlaskServer.socketFrontendUploadFile('test1', b'test1')
+	FlaskServer.socketFrontendUploadFile('Test1.json', b'<json data>')
 
 
 def test_export():
@@ -21,14 +21,13 @@ def test_export():
 
 def emit(*args):
 	event = args[0]
-	out = f"Event '{event}'"
+	print(f"Event '{event}'")
 	if len(args) > 1:
 		filename = args[1]
-		out += f" with File Name '{filename}'"
+		print(f"\twith File Name '{filename}'")
 		if len(args) > 2:
 			data = args[2]
-			out += f" and Data '{data.decode()}'"
-	print(out)
+			print(f"\tand Data '{data.decode()}'")
 
 
 def main():

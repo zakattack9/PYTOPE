@@ -5,7 +5,7 @@ from pprint import pp
 from flask import Flask
 from flask_socketio import emit, SocketIO
 
-from server.file_manager.testrunner.testRunner import RunTests
+from file_manager.testrunner.testRunner import RunTests
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 
 """
@@ -49,15 +49,6 @@ def file_transfers():
 	...
 
 
-@socketio.on('send_backend')
-def socketFrontendUploadFile(filename, data):
-	# receive from front-end
-	# TODO - put files where they belong
-	with open(filename, 'wb') as f:
-		f.write(data)
-	# run_backend()
-
-
 def get_root():
 	path = Path.cwd()
 	while path.name and path.name != 'python-test-environment':
@@ -72,6 +63,21 @@ TEST_JSON_DIR		= HIERARCHY_ROOT / 'test_json'
 DOCKERFILE_DIR		= HIERARCHY_ROOT / 'Dockerfiles'
 TESTS_OUT_DIR		= HIERARCHY_ROOT / 'tests' / 'python_unittests'
 TEST_RESULTS_DIR	= HIERARCHY_ROOT / 'tests' / 'test_results'
+
+
+@socketio.on('send_backend')
+def socketFrontendUploadFile(filename, data):
+	# receive from front-end
+	# TODO - put files where they belong
+	try:
+		path = find_file(filename, new_file=True)
+	except Exception as e:
+		# TODO - notify front-end?
+		print(e.args)
+		return
+	with open(path, 'wb') as f:
+		f.write(data)
+	# run_backend()
 
 
 def run_backend():
@@ -106,7 +112,7 @@ def socketFrontendDownloadFile(filename):
 		emit(...)
 
 
-def find_file(filename):
+def find_file(filename, new_file=False):
 	path = "file_manager/file_manager_module"
 	# <send to front-end>
 	if filename[len(filename) - 2:len(filename)] == "py":
@@ -123,7 +129,10 @@ def find_file(filename):
 		path += "/hierarchy/configs/test_designs_config/"
 	else:
 		print("file does not exist")
-		raise ValueError(f"File '{filename}' could not be found.")
+		if new_file:
+			raise ValueError(f"Don't know where to put file '{filename}'.")
+		else:
+			raise ValueError(f"File '{filename}' could not be found.")
 	path += filename
 	return path
 
