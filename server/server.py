@@ -33,7 +33,7 @@ def file_transfers():
 	print('\tClient Connected')
 	# handle_backend_file_request()
 	# handle_frontend_file_send()
-	...
+	#...
 
 
 @socketio.on('send_backend')
@@ -45,11 +45,12 @@ def socketFrontendUploadFile(filename, data):
 	# TODO - call UnittestFileWriter (with info from file manager)
 	# TODO - call TestRunner
 	# TODO - store results
-	...
+	#...
 
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
+	print(filename)
 	path = "../file_manager/file_manager_module"
 	# <send to front-end>
 	if filename[len(filename) - 2:len(filename)] == "py":
@@ -70,9 +71,11 @@ def socketFrontendDownloadFile(filename):
 
 	path += filename
 
+	print(path)
+
 	try:
 		# TODO - load results and send to front-end
-		with path.open('rb') as f:
+		with open(path, 'rb') as f:
 			data = f.read()
 	except:
 		emit('file_dne', filename)
