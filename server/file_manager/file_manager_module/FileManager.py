@@ -2,6 +2,12 @@ import shutil
 from pathlib import Path
 
 
+_FILE_MANAGER_NAME		= 'FileManager.py'
+_INIT_NAME				= '__init__.py'
+_HIERARCHY_NAME			= 'hierarchy'
+_SERVER_DIR_NAME		= 'server'
+
+
 def _get_root():
 	"""
 	:return:  The first parent directory (or cwd) that contains a directory named 'server'.
@@ -10,7 +16,7 @@ def _get_root():
 	found = False
 	while path.name:
 		for p in path.iterdir():
-			if p.name == 'server' and p.is_dir():
+			if p.name == _SERVER_DIR_NAME and p.is_dir():
 				found = True
 				break
 		if found:
@@ -19,13 +25,8 @@ def _get_root():
 	return path
 
 
-FILE_MANAGER_NAME		= 'FileManager.py'
-INIT_NAME				= '__init__.py'
-HIERARCHY_NAME			= 'hierarchy'
-
-
 ROOT					= _get_root()
-SERVER_DIR				= ROOT / 'server'
+SERVER_DIR				= ROOT / _SERVER_DIR_NAME
 MANAGER_DIR				= SERVER_DIR / 'file_manager'
 MODULE_DIR				= MANAGER_DIR / 'file_manager_module'
 HIERARCHY_DIR			= MODULE_DIR / 'hierarchy'
@@ -78,5 +79,5 @@ def zip_folder():
 
 def sort_hierarchy():
 	for file in MODULE_DIR.iterdir():
-		if file.name not in (FILE_MANAGER_NAME, INIT_NAME, HIERARCHY_NAME):
+		if file.name not in (_FILE_MANAGER_NAME, _INIT_NAME, _HIERARCHY_NAME):
 			file.rename(find_file(file))
