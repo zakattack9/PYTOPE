@@ -8,8 +8,13 @@ interface Props {
   text?: string,
   className?: string,
 }
+
 const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
+    console.log('running tests')
     socket.emit("run")
+    socket.once("test_finished", (data:any) => {
+        console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
+    });
 }
 
 function RunButton(props: Props) {
