@@ -7,14 +7,7 @@ import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from
 interface Props {
   text?: string,
   className?: string,
-}
-
-const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
-    console.log('running tests')
-    socket.emit("run")
-    socket.once("test_finished", (data:any) => {
-        console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
-    });
+  onClick: (socket:any, e: FormEvent<HTMLDivElement>) => void
 }
 
 function RunButton(props: Props) {
@@ -22,7 +15,7 @@ function RunButton(props: Props) {
   const socket = useContext(SocketContext);
 
   return (
-    <div className={`RunButton ${props.className || ''}`} onClick={e => handleClick(socket, e)}>
+    <div className={`RunButton ${props.className || ''}`} onClick={e => props.onClick(socket, e)}>
       {RunButtonText}
     </div>
   );

@@ -1,11 +1,19 @@
 import "./TestRunner.scss";
+import { FormEvent } from 'react';
 import TestGroup, { TestInfo } from "../../components/TestGroup/TestGroup";
 import { useAppSelector, useAppDispatch } from "../../hooks/react-redux";
+
+import RunButton from "../../components/RunButton/RunButton";
+import DownloadButton from "../../components/DownloadButton/DownloadButton";
+
+import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from "react";
 
 function TestRunner() {
   const dispatch = useAppDispatch();
   const testDesignerState = useAppSelector((state) => state.testDesigner);
   const { currBlocks } = testDesignerState;
+
+  //Reset variables on redux store change
 
   var blockArray: TestInfo[][] = [];
   var nameArray: string[] = [];
@@ -49,8 +57,23 @@ function TestRunner() {
   // var blockArray: TestInfo[][] = [exampleArray, exampleArray2];
   // var nameArray: string[] = ["testGroup1", "testGroup2"];
 
+    //<Button className="TestRunner__runBtn" name="Run Tests" onClick={handleRunTest} />
+  var received_data = ''
+  const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
+        console.log('running tests')
+        socket.emit("run")
+        socket.once("test_finished", (data:any) => {
+            console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
+            received_data = data
+            console.log(received_data)
+        });
+  }
+
   return (
     <div className="TestRunner">
+        <div className="TestRunner__bar">
+            <RunButton className="TestRunner__runBtn" text="Run" onClick={handleClick} />
+        </div>
       {blockArray.map((arrElement, arrIndex) => {
         return (
           <TestGroup testGroupName={nameArray[arrIndex]} tests={arrElement} />

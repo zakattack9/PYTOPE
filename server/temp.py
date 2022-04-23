@@ -8,9 +8,6 @@ import re
 from pathlib import Path
 from unittest_file_writer import UnittestFileWriter
 
-#Button in test designer, send data from redux to unittest in backend, validate that, generate unittests and run
-#Use app selector hook from redux hooks, select test designer slice, test designer slice
-#logger = logging.getLogger()
 def runner():
     p1 = Path('../schemas')   #test_json
     p2 = Path('../docker')   #dockerfiles
@@ -23,8 +20,8 @@ def runner():
     test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
 
     data = {}
-    test_data = []
-    for test_block, file in enumerate(test.test_files):
+    json_tests = {}
+    for file in test.test_files:
         importlib.invalidate_caches()
         module = importlib.import_module(file.class_name)
         test_suite = unittest.TestLoader().loadTestsFromModule(module)
@@ -34,7 +31,19 @@ def runner():
             test_data = buf.getvalue().split('\n')
         r = re.compile(".*" + file.class_name)
         cleaned_data = list(filter(r.match, test_data))
-        data[test_block] = cleaned_data
+        for i in range(len(test.test_files)):
+            header = []
+            split_test_name = cleaned_data[i].split(' ', 1)
+            if 'ok' in split_test_name[1]:
+                header.append('ok')
+            elif 'FAIL' in split_test_name[1]:
+                header.append('FAIL')
+            else:
+                header.append('Unknown')
+            header.append(split_test_name[1])
+            json_tests[split_test_name[0]] = header    #add name[]
+        data[file.class_name] = json_tests    #build test-block
+
         #test_block:
             #test:
                 #header
