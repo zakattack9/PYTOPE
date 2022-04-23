@@ -9,11 +9,6 @@ interface Props {
   className?: string,
 }
 const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
-    console.log('handleClick\n','socket:', socket)
-    if (socket == null) {
-        return;
-    }
-    console.log(socket)
     socket.emit("run")
 }
 
