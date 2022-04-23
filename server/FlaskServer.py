@@ -56,14 +56,18 @@ def get_root():
 	return path
 
 
-ROOT				= get_root()
-TEST_SCHEMA			= ROOT / 'schemas' / 'TestDesigns.schema.json'
-HIERARCHY_ROOT		= ROOT / 'file_manager' / 'file_manager_module' / 'hierarchy'
-DOCKERFILE_DIR		= HIERARCHY_ROOT / 'Dockerfiles'
-TESTS_DIR			= HIERARCHY_ROOT / 'tests'
-TEST_JSON_DIR		= TESTS_DIR / 'test_json'
-TESTS_OUT_DIR		= TESTS_DIR / 'python_unittests'
-TEST_RESULTS_DIR	= TESTS_DIR / 'test_results'
+ROOT					= get_root()
+TEST_SCHEMA				= ROOT / 'schemas' / 'TestDesigns.schema.json'
+HIERARCHY_ROOT			= ROOT / 'file_manager' / 'file_manager_module' / 'hierarchy'
+CONFIGS_DIR				= HIERARCHY_ROOT / 'configs'
+FILE_PATH_CONFIG		= CONFIGS_DIR / 'file_path_config'
+PACKAGE_MAPPING_CONFIG	= CONFIGS_DIR / 'package_mapping_config'
+TEST_DESIGNS_CONFIG		= CONFIGS_DIR / 'test_designs_config'
+DOCKERFILES_DIR			= HIERARCHY_ROOT / 'Dockerfiles'
+TESTS_DIR				= HIERARCHY_ROOT / 'tests'
+TEST_JSON_DIR			= TESTS_DIR / 'test_json'
+TEST_FILES_DIR			= TESTS_DIR / 'python_unittests'
+TEST_RESULTS_DIR		= TESTS_DIR / 'test_results'
 
 
 @socketio.on('send_backend')
@@ -85,9 +89,9 @@ def run_backend():
 	if state is ServerState.IDLE:
 		# TODO - check if we have all the files
 		state = ServerState.WRITING_TESTS
-		test_writer = parse_and_write_tests(TEST_SCHEMA, TEST_JSON_DIR, DOCKERFILE_DIR, TESTS_OUT_DIR)
+		test_writer = parse_and_write_tests(TEST_SCHEMA, TEST_JSON_DIR, DOCKERFILES_DIR, TEST_FILES_DIR)
 		state = ServerState.RUNNING_TESTS
-		RunTests(TESTS_OUT_DIR, TEST_RESULTS_DIR)
+		RunTests(TEST_FILES_DIR, TEST_RESULTS_DIR)
 		state = ServerState.IDLE
 	else:
 		# TODO - what to do if already running?
@@ -122,25 +126,24 @@ def find_file(filename):
 	stem = filename_path.stem.lower()
 	suffix = filename_path.suffix.lower()
 	name = filename_path.name.lower()
-	base_path = Path('file_manager') / 'file_manager_module' / 'hierarchy'
-	path = ''
+	path = None
 	if name == 'dockerfile':
-		path = 'Dockerfiles'
+		path = DOCKERFILES_DIR
 	elif suffix == '.json':
-		path = 'tests/test_json/'
+		path = TEST_JSON_DIR
 	elif suffix == '.py':
-		path = 'tests/python_unittests/'
+		path = TEST_FILES_DIR
 	elif suffix == '.py_output':
-		path = 'tests/test_results/'
+		path = TEST_RESULTS_DIR
 	elif suffix == '.cfg':
 		if stem.startswith('fp'):
-			path = 'configs/file_path_config/'
+			path = FILE_PATH_CONFIG
 		elif stem.startswith('pm'):
-			path = 'configs/package_mapping_config/'
+			path = PACKAGE_MAPPING_CONFIG
 		elif stem.startswith('td'):
-			path = 'configs/test_designs_config/'
+			path = TEST_DESIGNS_CONFIG
 	if path:
-		return base_path / path / filename
+		return path / filename
 	raise ValueError(f"File '{filename}' could not be found/placed.")
 
 
