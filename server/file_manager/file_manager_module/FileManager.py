@@ -42,7 +42,17 @@ TEST_RESULTS_DIR		= TESTS_DIR / 'test_results'
 TEST_SCHEMA				= ROOT / 'schemas' / 'TestDesigns.schema.json'
 
 
+"""
+Directories that contain files that:
+	- are received from the front-end
+	- are generated
+	- contain output from running tests
+"""
+TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, FILE_PATH_CONFIG, PACKAGE_MAPPING_CONFIG, TEST_DESIGNS_CONFIG)
+
+
 def find_file(filename):
+	# TODO - fix Dockerfile finding
 	filename_path = Path(filename)
 	if len(filename_path.parts) < 1:
 		raise ValueError(f"File-Name '{filename}' has no parts to it (empty).")
@@ -71,6 +81,16 @@ def find_file(filename):
 	if path:
 		return path / filename
 	raise ValueError(f"File '{filename}' could not be found/placed.")
+
+
+def clear_dir(dir_path: Path):
+	for path in dir_path.iterdir():
+		path.unlink(missing_ok=True)
+
+
+def clear_temp_dirs():
+	for dir_path in TEMP_DIRS:
+		clear_dir(dir_path)
 
 
 def zip_folder():
