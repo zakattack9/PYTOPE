@@ -59,6 +59,7 @@ def socketFrontendUploadFile(filename, data):
 		# TODO - notify front-end?
 		print(e.args)
 		return
+	print(f"Writing File '{path}' with data {data}")
 	with open(path, 'wb') as f:
 		f.write(data)
 	# run_backend()
@@ -93,7 +94,8 @@ def socketFrontendDownloadFile(filename):
 		flask_socketio.emit('frontend_download', data)
 	else:
 		# TODO - results not ready yet
-		flask_socketio.emit(...)
+		# flask_socketio.emit(...)
+		print('Results not ready yet.')
 
 
 @socketio.on('frontend_received_file')

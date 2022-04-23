@@ -42,6 +42,7 @@ def main():
 	test_import()
 	sleep(1)
 	test_export()
+	sleep(1)
 	input('Done.  Press enter to cleanup and exit...')
 	cleanup()
 
