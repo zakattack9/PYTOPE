@@ -52,18 +52,15 @@ TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, F
 
 
 def find_file(filename):
-	# TODO - fix Dockerfile finding
 	filename_path = Path(filename)
 	if len(filename_path.parts) < 1:
 		raise ValueError(f"File-Name '{filename}' has no parts to it (empty).")
 	elif len(filename_path.parts) > 1:
 		raise ValueError(f"File-Name '{filename}' contains a directory (only names are allowed).")
-	# break filename into stem, suffix, and (combined) name
 	stem = filename_path.stem.lower()
 	suffix = filename_path.suffix.lower()
-	name = filename_path.name.lower()
 	path = None
-	if name == 'dockerfile':
+	if not suffix:
 		path = DOCKERFILES_DIR
 	elif suffix == '.json':
 		path = TEST_JSON_DIR
@@ -78,9 +75,9 @@ def find_file(filename):
 			path = PACKAGE_MAPPING_CONFIG
 		elif stem.startswith('td'):
 			path = TEST_DESIGNS_CONFIG
-	if path:
-		return path / filename
-	raise ValueError(f"File '{filename}' could not be found/placed.")
+	if not path:
+		raise ValueError(f"File '{filename}' could not be found/placed.")
+	return path / filename
 
 
 def clear_dir(dir_path: Path):
