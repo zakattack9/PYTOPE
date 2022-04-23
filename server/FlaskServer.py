@@ -95,7 +95,8 @@ def run_backend():
 	state = ServerState.WRITING_TESTS
 	test_writer = parse_and_write_tests(FileManager.TEST_SCHEMA, FileManager.TEST_JSON_DIR, FileManager.DOCKERFILES_DIR, FileManager.TEST_FILES_DIR)
 	state = ServerState.RUNNING_TESTS
-	run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RUNNER_LOG)
+	json_data = run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RESULTS_DIR, FileManager.TEST_RUNNER_LOG)
+	print('JSON_Data: ' + json_data)
 	state = ServerState.IDLE
 
 
