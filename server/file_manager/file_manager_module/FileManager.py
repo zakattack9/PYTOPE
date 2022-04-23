@@ -1,6 +1,6 @@
-import shutil
+from os import sep
 from pathlib import Path
-
+from shutil import make_archive, rmtree
 
 _FILE_MANAGER_NAME		= 'FileManager.py'
 _INIT_NAME				= '__init__.py'
@@ -25,21 +25,24 @@ def _get_root():
 	return path
 
 
-ROOT					= _get_root()
-SERVER_DIR				= ROOT / _SERVER_DIR_NAME
-MANAGER_DIR				= SERVER_DIR / 'file_manager'
-MODULE_DIR				= MANAGER_DIR / 'file_manager_module'
-HIERARCHY_DIR			= MODULE_DIR / 'hierarchy'
-CONFIGS_DIR				= HIERARCHY_DIR / 'configs'
-FILE_PATH_CONFIG		= CONFIGS_DIR / 'file_path_config'
-PACKAGE_MAPPING_CONFIG	= CONFIGS_DIR / 'package_mapping_config'
-TEST_DESIGNS_CONFIG		= CONFIGS_DIR / 'test_designs_config'
-DOCKERFILES_DIR			= HIERARCHY_DIR / 'Dockerfiles'
-TESTS_DIR				= HIERARCHY_DIR / 'tests'
-TEST_JSON_DIR			= TESTS_DIR / 'test_json'
-TEST_FILES_DIR			= TESTS_DIR / 'python_unittests'
-TEST_RESULTS_DIR		= TESTS_DIR / 'test_results'
-TEST_SCHEMA				= ROOT / 'schemas' / 'TestDesigns.schema.json'
+ROOT						= _get_root()
+SERVER_DIR					= ROOT / _SERVER_DIR_NAME
+MANAGER_DIR					= SERVER_DIR / 'file_manager'
+MODULE_DIR					= MANAGER_DIR / 'file_manager_module'
+HIERARCHY_DIR				= MODULE_DIR / 'hierarchy'
+CONFIGS_DIR					= HIERARCHY_DIR / 'configs'
+FILE_PATH_CONFIG_DIR		= CONFIGS_DIR / 'file_path_config'
+PACKAGE_MAPPING_CONFIG_DIR	= CONFIGS_DIR / 'package_mapping_config'
+TEST_DESIGNS_CONFIG_DIR		= CONFIGS_DIR / 'test_designs_config'
+DOCKERFILES_DIR				= HIERARCHY_DIR / 'Dockerfiles'
+TESTS_DIR					= HIERARCHY_DIR / 'tests'
+TEST_JSON_DIR				= TESTS_DIR / 'test_json'
+TEST_FILES_DIR				= TESTS_DIR / 'python_unittests'
+TEST_RESULTS_DIR			= TESTS_DIR / 'test_results'
+LOGS_DIR					= SERVER_DIR / 'logs'
+TEST_RUNNER_LOG				= LOGS_DIR / 'debug_test_log'
+SCHEMA_DIR					= ROOT / 'schemas'
+TEST_SCHEMA					= SCHEMA_DIR / 'TestDesigns.schema.json'
 
 
 """
@@ -48,7 +51,12 @@ Directories that contain files that:
 	- are generated
 	- contain output from running tests
 """
-TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, FILE_PATH_CONFIG, PACKAGE_MAPPING_CONFIG, TEST_DESIGNS_CONFIG)
+TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, FILE_PATH_CONFIG_DIR, PACKAGE_MAPPING_CONFIG_DIR, TEST_DESIGNS_CONFIG_DIR, LOGS_DIR)
+
+
+""" Needed for the TestRunner to import unit-tests """
+TEST_FILES_PACKAGE = str(TEST_FILES_DIR.relative_to(SERVER_DIR)).replace(sep, '.')
+
 
 
 def find_file(filename):
@@ -72,11 +80,11 @@ def find_file(filename):
 		path = TEST_RESULTS_DIR
 	elif suffix == '.cfg':
 		if stem.startswith('fp'):
-			path = FILE_PATH_CONFIG
+			path = FILE_PATH_CONFIG_DIR
 		elif stem.startswith('pm'):
-			path = PACKAGE_MAPPING_CONFIG
+			path = PACKAGE_MAPPING_CONFIG_DIR
 		elif stem.startswith('td'):
-			path = TEST_DESIGNS_CONFIG
+			path = TEST_DESIGNS_CONFIG_DIR
 	if not path:
 		raise ValueError(f"File '{filename}' could not be found/placed.")
 	return path / filename
@@ -85,7 +93,10 @@ def find_file(filename):
 def clear_dir(dir_path: Path):
 	for path in dir_path.iterdir():
 		if path.name != '.gitkeep':
-			path.unlink()
+			try:
+				path.unlink()
+			except IsADirectoryError:
+				rmtree(path)
 
 
 def clear_temp_dirs():
@@ -93,8 +104,13 @@ def clear_temp_dirs():
 		clear_dir(dir_path)
 
 
+def cleanup():
+	clear_temp_dirs()
+
+
+
 def zip_folder():
-	shutil.make_archive('output', 'zip', str(HIERARCHY_DIR))
+	make_archive('output', 'zip', str(HIERARCHY_DIR))
 
 
 def sort_hierarchy():

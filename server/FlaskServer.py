@@ -5,8 +5,7 @@ from time import sleep
 import flask_socketio
 from flask import Flask
 
-from file_manager.file_manager_module.FileManager import DOCKERFILES_DIR, find_file, TEST_FILES_DIR, TEST_JSON_DIR, TEST_RESULTS_DIR, \
-	TEST_SCHEMA
+from file_manager.file_manager_module import FileManager
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 from unittest_runner.TestRunner import run_tests
 
@@ -62,7 +61,7 @@ def socketFrontendUploadFile(filename, data):
 		return
 	state = ServerState.RECEIVING_FILE
 	try:
-		path = find_file(filename)
+		path = FileManager.find_file(filename)
 	except Exception as e:
 		# TODO - notify front-end?
 		print(e.args)
@@ -82,7 +81,7 @@ def socketFrontendDownloadFile(filename):
 		run_backend()
 	if state is ServerState.IDLE:
 		try:
-			path = find_file(filename)
+			path = FileManager.find_file(filename)
 			with open(path, 'rb') as f:
 				data = f.read()
 		except:
@@ -94,9 +93,9 @@ def socketFrontendDownloadFile(filename):
 def run_backend():
 	global state
 	state = ServerState.WRITING_TESTS
-	test_writer = parse_and_write_tests(TEST_SCHEMA, TEST_JSON_DIR, DOCKERFILES_DIR, TEST_FILES_DIR)
+	test_writer = parse_and_write_tests(FileManager.TEST_SCHEMA, FileManager.TEST_JSON_DIR, FileManager.DOCKERFILES_DIR, FileManager.TEST_FILES_DIR)
 	state = ServerState.RUNNING_TESTS
-	run_tests(TEST_FILES_DIR)
+	run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RUNNER_LOG)
 	state = ServerState.IDLE
 
 
