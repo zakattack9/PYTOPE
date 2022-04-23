@@ -49,7 +49,7 @@ def file_transfers():
 	print('\tClient Connected')
 	# handle_backend_file_request()
 	# handle_frontend_file_send()
-	...
+	#...
 
 
 @socketio.on('send_backend')
@@ -73,14 +73,21 @@ def socketFrontendUploadFile(filename, data):
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
+	print(filename)
+	
+	path = FileManager.find_file(filename)
+
+	print(path)
+
 	try:
-		path = FileManager.find_file(filename)
+		# TODO - load results and send to front-end
 		with open(path, 'rb') as f:
 			data = f.read()
 	except:
-		flask_socketio.emit('file_dne', filename)
+		emit('file_dne', filename)
 		return
-	flask_socketio.emit('frontend_download', data)
+	emit('frontend_download', data)
+
 
 
 @socketio.on('run_tests')
