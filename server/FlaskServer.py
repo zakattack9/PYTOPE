@@ -93,25 +93,8 @@ def run_backend():
 def socketFrontendDownloadFile(filename):
 	global state
 	if state is ServerState.IDLE:
-		path = "../file_manager/file_manager_module"
-		# <send to front-end>
-		if filename[len(filename) - 2:len(filename)] == "py":
-			path += "/hierarchy/tests/python_unittests/"
-		elif filename == "Dockerfile":
-			path += "/hierarchy/Dockerfiles/"
-		elif filename[0:2] == "fp" and filename[len(filename) - 3:len(filename)] == "cfg":
-			path += "/hierarchy/configs/file_path_config/"
-		elif filename[len(filename) - 9:len(filename)] == "py_output":
-			path += "/hierarchy/tests/test_results/"
-		elif filename[0:2] == "pm" and filename[len(filename) - 3:len(filename)] == "cfg":
-			path += "/hierarchy/configs/package_mapping_config/"
-		elif filename[0:2] == "td" and filename[len(filename) - 3:len(filename)] == "cfg":
-			path += "/hierarchy/configs/test_designs_config/"
-		else:
-			print("file does not exist")
-			return
-		path += filename
 		try:
+			path = find_file(filename)
 			# TODO - load results and send to front-end
 			with open(path, 'rb') as f:
 				data = f.read()
@@ -122,6 +105,28 @@ def socketFrontendDownloadFile(filename):
 	else:
 		# TODO - results not ready yet
 		emit(...)
+
+
+def find_file(filename):
+	path = "../file_manager/file_manager_module"
+	# <send to front-end>
+	if filename[len(filename) - 2:len(filename)] == "py":
+		path += "/hierarchy/tests/python_unittests/"
+	elif filename == "Dockerfile":
+		path += "/hierarchy/Dockerfiles/"
+	elif filename[0:2] == "fp" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/file_path_config/"
+	elif filename[len(filename) - 9:len(filename)] == "py_output":
+		path += "/hierarchy/tests/test_results/"
+	elif filename[0:2] == "pm" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/package_mapping_config/"
+	elif filename[0:2] == "td" and filename[len(filename) - 3:len(filename)] == "cfg":
+		path += "/hierarchy/configs/test_designs_config/"
+	else:
+		print("file does not exist")
+		raise ValueError(f"File '{filename}' could not be found.")
+	path += filename
+	return path
 
 
 @socketio.on('frontend_received_file')
