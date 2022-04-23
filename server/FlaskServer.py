@@ -5,8 +5,7 @@ from pprint import pp
 from flask import Flask
 from flask_socketio import emit, SocketIO
 
-from file_manager.file_manager_module.app import Dockerfiles, python_unittests, test_resuls
-from file_manager.testrunner.testRunner import RunTests
+from server.file_manager.testrunner.testRunner import RunTests
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 
 """
@@ -108,7 +107,7 @@ def socketFrontendDownloadFile(filename):
 
 
 def find_file(filename):
-	path = "../file_manager/file_manager_module"
+	path = "file_manager/file_manager_module"
 	# <send to front-end>
 	if filename[len(filename) - 2:len(filename)] == "py":
 		path += "/hierarchy/tests/python_unittests/"

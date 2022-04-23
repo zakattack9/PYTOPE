@@ -24,7 +24,7 @@ def zip_folder():
     shutil.make_archive("output", 'zip', source + "/hierarchy")
 
 def sort_hierarchy():
-    main_file="app.py"
+    main_file= "app.py"
 
 
     files = os.listdir(source)
