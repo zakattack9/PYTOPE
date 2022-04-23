@@ -1,13 +1,14 @@
 from enum import Enum
 from pprint import pp
+from time import sleep
 
-from flask import Flask
 import flask_socketio
+from flask import Flask
 
-from file_manager.testrunner.testRunner import RunTests
 from file_manager.file_manager_module.FileManager import DOCKERFILES_DIR, find_file, TEST_FILES_DIR, TEST_JSON_DIR, TEST_RESULTS_DIR, \
 	TEST_SCHEMA
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
+from unittest_runner.TestRunner import run_tests
 
 """
 Events:
@@ -27,8 +28,10 @@ ADDRESS = 'http://127.0.0.1:5000/'
 
 class ServerState(Enum):
 	IDLE			= 0
-	WRITING_TESTS	= 1
-	RUNNING_TESTS	= 2
+	RECEIVING_FILE	= 1
+	RECEIVED_FILE	= 2
+	WRITING_TESTS	= 3
+	RUNNING_TESTS	= 4
 
 
 app = Flask(__name__)
@@ -53,49 +56,48 @@ def file_transfers():
 @socketio.on('send_backend')
 def socketFrontendUploadFile(filename, data):
 	# receive from front-end
+	global state
+	if state not in (ServerState.IDLE, ServerState.RECEIVING_FILE, ServerState.RECEIVED_FILE):
+		print(f"Server received file while in state '{state}'...")
+		return
+	state = ServerState.RECEIVING_FILE
 	try:
 		path = find_file(filename)
 	except Exception as e:
 		# TODO - notify front-end?
 		print(e.args)
 		return
-	print(f"Writing File '{path}' with data {data}")
+	print(f"Writing file '{path}' with data {data}")
 	with open(path, 'wb') as f:
 		f.write(data)
-	# run_backend()
-
-
-def run_backend():
-	global state
-	if state is ServerState.IDLE:
-		# TODO - check if we have all the files
-		state = ServerState.WRITING_TESTS
-		test_writer = parse_and_write_tests(TEST_SCHEMA, TEST_JSON_DIR, DOCKERFILES_DIR, TEST_FILES_DIR)
-		state = ServerState.RUNNING_TESTS
-		RunTests(TEST_FILES_DIR, TEST_RESULTS_DIR)
-		state = ServerState.IDLE
-	else:
-		# TODO - what to do if already running?
-		...
+	state = ServerState.RECEIVED_FILE
 
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
 	global state
+	if state is ServerState.RECEIVING_FILE:
+		sleep(0.5)
+	if state is ServerState.RECEIVED_FILE:
+		run_backend()
 	if state is ServerState.IDLE:
 		try:
 			path = find_file(filename)
-			# TODO - load results and send to front-end
 			with open(path, 'rb') as f:
 				data = f.read()
 		except:
 			flask_socketio.emit('file_dne', filename)
 			return
 		flask_socketio.emit('frontend_download', data)
-	else:
-		# TODO - results not ready yet
-		# flask_socketio.emit(...)
-		print('Results not ready yet.')
+
+
+def run_backend():
+	global state
+	state = ServerState.WRITING_TESTS
+	test_writer = parse_and_write_tests(TEST_SCHEMA, TEST_JSON_DIR, DOCKERFILES_DIR, TEST_FILES_DIR)
+	state = ServerState.RUNNING_TESTS
+	run_tests(TEST_FILES_DIR)
+	state = ServerState.IDLE
 
 
 @socketio.on('frontend_received_file')
