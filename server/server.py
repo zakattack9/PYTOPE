@@ -4,10 +4,9 @@ from time import sleep
 
 import flask_socketio
 from flask import Flask
-from flask_socketio import emit, SocketIO
 
 from file_manager.file_manager_module import FileManager
-# from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
+from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 from unittest_runner.TestRunner import run_tests
 
 """
@@ -75,19 +74,15 @@ def socketFrontendUploadFile(filename, data):
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
 	print(filename)
-	
 	path = FileManager.find_file(filename)
-
 	print(path)
-
 	try:
-		# TODO - load results and send to front-end
 		with open(path, 'rb') as f:
 			data = f.read()
 	except:
-		emit('file_dne', filename)
+		flask_socketio.emit('file_dne', filename)
 		return
-	emit('frontend_download', data)
+	flask_socketio.emit('frontend_download', data)
 
 
 
