@@ -4,10 +4,16 @@
 There are various ways to run PYTOPE locally on your machine. The preferred method is to run the entire application, front and back-end, within a Docker container; however, if a less memory intensive method is preferred, the [Manual Method](https://gitlab.com/haydenlhannappel/python-test-environment/-/tree/83-zak#manual-method) section will suffice.
 
 ### Docker Method
-The following steps assume you have Docker Desktop installed on your machine with the Docker daemon already running in the background. Because we are bind mounting local volumes from your machine to the container, **Windows** systems must make sure that their C drive is selected under *Resources > File Sharing* in the Docker Desktop settings; Mac and Linux systems does not require this step.
+The following steps assume you have Docker Desktop installed on your machine with the Docker 
+daemon already running in the background. Because we are bind mounting local volumes from your 
+to the container, **Windows** systems must make sure that their C drive is selected under 
+*Resources > File Sharing* in the Docker Desktop settings; Mac and Linux systems does not require this step.
 
 ##### Docker environment types
-- In the **dev** environment, the entire project from your local machine is bind mounted to the container; simply put, changes made locally on your machine are automatically reflected within the container. Bind mounting is done so that hot reloading is still functional, allowing you to make changes to both the front and back-end code on your local machine while having those changes implemented immediately without any restarting or refreshing needed within the container.
+- In the **dev** environment, 
+- the entire project from your local machine is bind mounted to the container; 
+- simply put, changes made locally on your machine are automatically reflected within the container. B
+- ind mounting is done so that hot reloading is still functional, allowing you to make changes to both the front and back-end code on your local machine while having those changes implemented immediately without any restarting or refreshing needed within the container.
 - In the **test** environment, no bind mounting is performed. Rather the code is pulled directly from the `main` branch of the python-test-environment repository on GitLab using an access token hard coded into `Dockerfile.test`. This environment is helpful for testing the latest code on `main` without needing to manually pull down the code or switch branches.
 
 Both Docker images use tmux to run and display all running PYTOPE processes/servers. After the container starts successfully (wait for the top right tmux pane to show that the React development server has started successfully), head over to `localhost:3000` to interact with the PYTOPE GUI. The Flask server should be running in the left tmux pane. In the dev environment, the bottom right tmux pane is the SASS live compiler that automatically transforms SCSS to CSS when changes are detected. Again, once the Flask and React servers are running, they should automatically update/refresh upon saving code changes.
@@ -49,7 +55,7 @@ $ docker build -t pytope:dev -f Dockerfile.dev .
 ##### Start the development image
 ```bash
 # navigate to root project folder
-$ docker run --rm -it -v "${PWD}:/root/pytope" -p 127.0.0.1:3000:3000 pytope .
+$ docker run --rm -it -v "${PWD}:/root/pytope" -p 127.0.0.1:3000:3000 pytope:dev .
 ```
 
 ##### Build the test image
@@ -111,3 +117,4 @@ $ deactivate
 
 ## Resources
 - https://www.doc.ic.ac.uk/~nuric/coding/how-to-discover-and-run-unit-tests-programmatically-in-python.html
+- https://mherman.org/blog/dockerizing-a-react-app/

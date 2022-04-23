@@ -1,6 +1,6 @@
 .Chip, .Chip__value, .Chip--arg, .Chip--base {
   font-family: "Roboto Mono", monospace;
-  font-size: 10.5pt;
+  font-size: 0.93em;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;
@@ -41,7 +41,7 @@
 }
 .Chip__argument {
   font-family: "Roboto Mono", monospace;
-  font-size: 10.5pt;
+  font-size: 0.93em;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0pt;

@@ -1,0 +1,26 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.BackButton {
+  $cancel: 25px;
+  @include fonts.roboto-medium;
+  position: absolute;
+  top: $cancel;
+  left: $cancel;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: default;
+
+  &__backIcon {
+    width: 18px;
+    stroke: f.primary-text-color(30%);
+    padding: 5px;
+    display: inline-block;
+    transition: 0.15s;
+  }
+
+  &:hover &__backIcon {
+    stroke-width: 1.8px;
+  }
+}

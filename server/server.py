@@ -33,18 +33,22 @@ class ServerState(Enum):
 	RUNNING_TESTS	= 4
 
 
+from temp import runner
+
 app = Flask(__name__)
 socketio = flask_socketio.SocketIO(app, cors_allowed_origins="*", binary=True)
 
 state = ServerState.IDLE
 
 
+logger = logging.getLogger()
+
 @app.route("/")
 def members():
 	return {"members": ["Member1", "Member2"]}
 
 
-@socketio.on('connect')
+#@socketio.on('connect')
 def file_transfers():
 	print('\tClient Connected')
 	# handle_backend_file_request()
@@ -106,6 +110,14 @@ def handle_frontend_file_acknowledge(file):
 	print('Received by backend from frontend:')
 	print(file)
 
+@socketio.on('connect')
+def connect():
+    test_runner()
+
+def test_runner():
+    json = runner()
+    print(json)
+    emit('test_finished', json)
 
 # request a file from the frontend
 def handle_backend_file_request():
@@ -145,5 +157,14 @@ def main(print_updates=True):
 	socketio.run(app)
 
 
+# Package Mapper: Create Test
+#
+@socketio.on('create_test')
+def create_test():
+    pass
+
+@socketio.on('run_tests')
+def run_tests():
+    pass
 if __name__ == "__main__":
 	main()

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.SelectInput, .SelectInput--error, .SelectInput--disabledError, .SelectInput--disabled {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.7));
+  border-radius: 10px;
+  padding: 0.8em;
+  padding: unset !important;
+  position: relative;
+  display: grid;
+  min-width: 6em;
+}
+.SelectInput--disabled, .SelectInput--disabledError {
+  opacity: 0.4;
+}
+.SelectInput select, .SelectInput--error select, .SelectInput--disabledError select, .SelectInput--disabled select {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  background-color: inherit;
+  padding: 0.8em;
+  border-radius: inherit;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.SelectInput::after, .SelectInput--error::after, .SelectInput--disabledError::after, .SelectInput--disabled::after {
+  content: "ᐯ";
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+  position: absolute;
+  right: 1.1em;
+  top: 50%;
+  transform: scale(170%, 70%) translateY(-70%);
+  pointer-events: none;
+}
+.SelectInput--error select, .SelectInput--disabledError select {
+  background-color: #ffaca6;
+}
