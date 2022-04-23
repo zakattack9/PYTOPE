@@ -31,6 +31,11 @@ def emit(*args):
 
 
 def main():
+	print()
+	print(FlaskServer.find_file('Dockerfile'))
+	print(FlaskServer.find_file('Test1.json'))
+	print(FlaskServer.find_file('Test1.py'))
+	return
 	print('cwd: ' + os.getcwd())
 	flask_socketio.emit = emit
 	test_import()

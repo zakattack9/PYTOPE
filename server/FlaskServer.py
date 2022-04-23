@@ -59,18 +59,18 @@ def get_root():
 ROOT				= get_root()
 TEST_SCHEMA			= ROOT / 'schemas' / 'TestDesigns.schema.json'
 HIERARCHY_ROOT		= ROOT / 'file_manager' / 'file_manager_module' / 'hierarchy'
-TEST_JSON_DIR		= HIERARCHY_ROOT / 'test_json'
 DOCKERFILE_DIR		= HIERARCHY_ROOT / 'Dockerfiles'
-TESTS_OUT_DIR		= HIERARCHY_ROOT / 'tests' / 'python_unittests'
-TEST_RESULTS_DIR	= HIERARCHY_ROOT / 'tests' / 'test_results'
+TESTS_DIR			= HIERARCHY_ROOT / 'tests'
+TEST_JSON_DIR		= TESTS_DIR / 'test_json'
+TESTS_OUT_DIR		= TESTS_DIR / 'python_unittests'
+TEST_RESULTS_DIR	= TESTS_DIR / 'test_results'
 
 
 @socketio.on('send_backend')
 def socketFrontendUploadFile(filename, data):
 	# receive from front-end
-	# TODO - put files where they belong
 	try:
-		path = find_file(filename, new_file=True)
+		path = find_file(filename)
 	except Exception as e:
 		# TODO - notify front-end?
 		print(e.args)
@@ -112,29 +112,36 @@ def socketFrontendDownloadFile(filename):
 		emit(...)
 
 
-def find_file(filename, new_file=False):
-	path = "file_manager/file_manager_module"
-	# <send to front-end>
-	if filename[len(filename) - 2:len(filename)] == "py":
-		path += "/hierarchy/tests/python_unittests/"
-	elif filename == "Dockerfile":
-		path += "/hierarchy/Dockerfiles/"
-	elif filename[0:2] == "fp" and filename[len(filename) - 3:len(filename)] == "cfg":
-		path += "/hierarchy/configs/file_path_config/"
-	elif filename[len(filename) - 9:len(filename)] == "py_output":
-		path += "/hierarchy/tests/test_results/"
-	elif filename[0:2] == "pm" and filename[len(filename) - 3:len(filename)] == "cfg":
-		path += "/hierarchy/configs/package_mapping_config/"
-	elif filename[0:2] == "td" and filename[len(filename) - 3:len(filename)] == "cfg":
-		path += "/hierarchy/configs/test_designs_config/"
-	else:
-		print("file does not exist")
-		if new_file:
-			raise ValueError(f"Don't know where to put file '{filename}'.")
-		else:
-			raise ValueError(f"File '{filename}' could not be found.")
-	path += filename
-	return path
+def find_file(filename):
+	filename_path = Path(filename)
+	if len(filename_path.parts) < 1:
+		raise ValueError(f"File-Name '{filename}' has no parts to it (empty).")
+	elif len(filename_path.parts) > 1:
+		raise ValueError(f"File-Name '{filename}' contains a directory (only names are allowed).")
+	# break filename into stem, suffix, and (combined) name
+	stem = filename_path.stem.lower()
+	suffix = filename_path.suffix.lower()
+	name = filename_path.name.lower()
+	base_path = Path('file_manager') / 'file_manager_module' / 'hierarchy'
+	path = ''
+	if name == 'dockerfile':
+		path = 'Dockerfiles'
+	elif suffix == '.json':
+		path = 'tests/test_json/'
+	elif suffix == '.py':
+		path = 'tests/python_unittests/'
+	elif suffix == '.py_output':
+		path = 'tests/test_results/'
+	elif suffix == '.cfg':
+		if stem.startswith('fp'):
+			path = 'configs/file_path_config/'
+		elif stem.startswith('pm'):
+			path = 'configs/package_mapping_config/'
+		elif stem.startswith('td'):
+			path = 'configs/test_designs_config/'
+	if path:
+		return base_path / path / filename
+	raise ValueError(f"File '{filename}' could not be found/placed.")
 
 
 @socketio.on('frontend_received_file')
