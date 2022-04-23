@@ -7,7 +7,9 @@ import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
 import { useAppSelector } from '../../hooks/react-redux';
 import { getObject, getName, getCommand } from '../../utils/package-mapper';
+import SelectInput from '../../components/SelectInput/SelectInput'
 import './PackageMapper.scss';
+import { useHistory } from 'react-router-dom';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector((state) => state.packageMapper);

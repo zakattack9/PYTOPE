@@ -5747,3 +5747,372 @@ DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/59ccd50bf111
 DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/1a58be2704df71a31770632262184e0f7fd18d658d71c19af3022eed75936ad2?v=False&link=False&force=True HTTP/1.1" 204 0
 DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:8e1e5af50e3689adcadc3a9895a80ce3e2ad754220e8d31d0624e345d13d63a9?force=True&noprune=False HTTP/1.1" 200 None
 DEBUG:test_runner:<unittest.runner.TextTestResult run=2 errors=0 failures=1>
+ERROR:engineio.server:message handler error
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 668, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\engineio\server.py", line 622, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 776, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 671, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:07:51] "POST /socket.io/?EIO=4&transport=polling&t=O1OTui3&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:07:51] "GET /socket.io/?EIO=4&transport=polling&t=O1OTuqC HTTP/1.1" 200 -
+ERROR:engineio.server:message handler error
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 668, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\engineio\server.py", line 622, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 776, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 671, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:07:51] "POST /socket.io/?EIO=4&transport=polling&t=O1OTuqJ&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:07] "GET /socket.io/?EIO=4&transport=polling&t=O1OTyoq HTTP/1.1" 200 -
+ERROR:engineio.server:message handler error
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 668, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\engineio\server.py", line 622, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 776, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 671, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:07] "POST /socket.io/?EIO=4&transport=polling&t=O1OTypI&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OTui4&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OT-ok&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OTuqK&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OT-w-&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:32] "GET /socket.io/?EIO=4&transport=polling&t=O1OTypJ&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:32] "POST /socket.io/?EIO=4&transport=polling&t=O1OU2va&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:41] "GET /socket.io/?EIO=4&transport=polling&t=O1OT-ok.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:41] "POST /socket.io/?EIO=4&transport=polling&t=O1OU4vV&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:41] "GET /socket.io/?EIO=4&transport=polling&t=O1OT-w_&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:41] "POST /socket.io/?EIO=4&transport=polling&t=O1OU51m&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:57] "GET /socket.io/?EIO=4&transport=polling&t=O1OU2vb&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:08:57] "POST /socket.io/?EIO=4&transport=polling&t=O1OU90L&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:06] "GET /socket.io/?EIO=4&transport=polling&t=O1OU4vV.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:06] "POST /socket.io/?EIO=4&transport=polling&t=O1OUB0H&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:06] "GET /socket.io/?EIO=4&transport=polling&t=O1OU51n&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:06] "POST /socket.io/?EIO=4&transport=polling&t=O1OUB8b&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:08] "GET /socket.io/?EIO=4&transport=polling&t=O1OUBg_ HTTP/1.1" 200 -
+ERROR:engineio.server:message handler error
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 668, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\engineio\server.py", line 622, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 776, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 671, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:08] "POST /socket.io/?EIO=4&transport=polling&t=O1OUBhT&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:22] "GET /socket.io/?EIO=4&transport=polling&t=O1OU90L.0&sid=mmJrMd0QUbw5rzCOAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:31] "GET /socket.io/?EIO=4&transport=polling&t=O1OUB0H.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:31] "POST /socket.io/?EIO=4&transport=polling&t=O1OUH71&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:31] "GET /socket.io/?EIO=4&transport=polling&t=O1OUB8c&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:31] "POST /socket.io/?EIO=4&transport=polling&t=O1OUHFO&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:33] "GET /socket.io/?EIO=4&transport=polling&t=O1OUBhT.0&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:33] "POST /socket.io/?EIO=4&transport=polling&t=O1OUHnk&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:56] "GET /socket.io/?EIO=4&transport=polling&t=O1OUH71.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:56] "POST /socket.io/?EIO=4&transport=polling&t=O1OUNDo&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:56] "GET /socket.io/?EIO=4&transport=polling&t=O1OUHFQ&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:56] "POST /socket.io/?EIO=4&transport=polling&t=O1OUNM9&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:58] "GET /socket.io/?EIO=4&transport=polling&t=O1OUHnk.0&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:09:58] "POST /socket.io/?EIO=4&transport=polling&t=O1OUNuW&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:21] "GET /socket.io/?EIO=4&transport=polling&t=O1OUNDo.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:21] "POST /socket.io/?EIO=4&transport=polling&t=O1OUTKb&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:21] "GET /socket.io/?EIO=4&transport=polling&t=O1OUNMA&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:21] "POST /socket.io/?EIO=4&transport=polling&t=O1OUTSx&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:23] "GET /socket.io/?EIO=4&transport=polling&t=O1OUNuW.0&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:23] "POST /socket.io/?EIO=4&transport=polling&t=O1OUT_L&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:46] "GET /socket.io/?EIO=4&transport=polling&t=O1OUTKb.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:46] "POST /socket.io/?EIO=4&transport=polling&t=O1OUZRO&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:46] "GET /socket.io/?EIO=4&transport=polling&t=O1OUTSy&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:46] "POST /socket.io/?EIO=4&transport=polling&t=O1OUZZl&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:48] "GET /socket.io/?EIO=4&transport=polling&t=O1OUT_M&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:48] "POST /socket.io/?EIO=4&transport=polling&t=O1OUa68&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:50] "GET /socket.io/?EIO=4&transport=polling&t=O1OUaPl HTTP/1.1" 200 -
+ERROR:engineio.server:message handler error
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 668, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 762, in _handle_event
+    ret = handler(auth)
+TypeError: connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\engineio\server.py", line 622, in _trigger_event
+    return self.handlers[event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 776, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 671, in _handle_connect
+    success = self._trigger_event(
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\socketio\server.py", line 745, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "C:\Users\Dosh\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask_socketio\__init__.py", line 764, in _handle_event
+    ret = handler()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 116, in connect
+    test_runner()
+  File "C:\Users\Dosh\python-test-environment\server\server.py", line 119, in test_runner
+    json = runner()
+  File "C:\Users\Dosh\python-test-environment\server\test_runner.py", line 21, in runner
+    test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
+TypeError: parse_and_write_tests() missing 1 required positional argument: 'test_files_out'
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:10:50] "POST /socket.io/?EIO=4&transport=polling&t=O1OUaSX&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:11] "GET /socket.io/?EIO=4&transport=polling&t=O1OUZRO.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:11] "POST /socket.io/?EIO=4&transport=polling&t=O1OUfcK&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:11] "GET /socket.io/?EIO=4&transport=polling&t=O1OUZZm&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:11] "POST /socket.io/?EIO=4&transport=polling&t=O1OUfgf&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:13] "GET /socket.io/?EIO=4&transport=polling&t=O1OUa69&sid=q71aAJVf4Jjsb3QNAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:15] "GET /socket.io/?EIO=4&transport=polling&t=O1OUaSY&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:15] "POST /socket.io/?EIO=4&transport=polling&t=O1OUgWW&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:36] "GET /socket.io/?EIO=4&transport=polling&t=O1OUfcK.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:36] "POST /socket.io/?EIO=4&transport=polling&t=O1OUljA&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:36] "GET /socket.io/?EIO=4&transport=polling&t=O1OUfgh&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:36] "POST /socket.io/?EIO=4&transport=polling&t=O1OUlnV&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:40] "GET /socket.io/?EIO=4&transport=polling&t=O1OUgWX&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:11:40] "POST /socket.io/?EIO=4&transport=polling&t=O1OUmdK&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:01] "GET /socket.io/?EIO=4&transport=polling&t=O1OUljA.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:01] "POST /socket.io/?EIO=4&transport=polling&t=O1OUrpx&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:01] "GET /socket.io/?EIO=4&transport=polling&t=O1OUlnW&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:01] "POST /socket.io/?EIO=4&transport=polling&t=O1OUruF&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:05] "GET /socket.io/?EIO=4&transport=polling&t=O1OUmdL&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:05] "POST /socket.io/?EIO=4&transport=polling&t=O1OUsk7&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:26] "GET /socket.io/?EIO=4&transport=polling&t=O1OUrpx.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:26] "POST /socket.io/?EIO=4&transport=polling&t=O1OUxwl&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:26] "GET /socket.io/?EIO=4&transport=polling&t=O1OUruG&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:26] "POST /socket.io/?EIO=4&transport=polling&t=O1OUx_4&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:30] "GET /socket.io/?EIO=4&transport=polling&t=O1OUsk9&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:30] "POST /socket.io/?EIO=4&transport=polling&t=O1OUyqx&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:51] "GET /socket.io/?EIO=4&transport=polling&t=O1OUxwl.0&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:51] "POST /socket.io/?EIO=4&transport=polling&t=O1OV21Y&sid=fbRnyFM4gOUxaEzTAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:51] "GET /socket.io/?EIO=4&transport=polling&t=O1OUx_5&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:51] "POST /socket.io/?EIO=4&transport=polling&t=O1OV25u&sid=FFll4n-wmrGAtx6CAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:55] "GET /socket.io/?EIO=4&transport=polling&t=O1OUyqz&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:12:55] "POST /socket.io/?EIO=4&transport=polling&t=O1OV2xm&sid=YeGuLZ4nAbt12XtPAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:15] "POST /socket.io/?EIO=4&transport=polling&t=O1OV7_Q&sid=Ro1_3NgBbGkXNI2OAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OV86X HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OV874&sid=DNUPJMkcC-pH_FbYAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OV874.0&sid=DNUPJMkcC-pH_FbYAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OV8GI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OV8GP&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "GET /socket.io/?EIO=4&transport=polling&t=O1OV8GQ&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OV8Ge&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:16] "POST /socket.io/?EIO=4&transport=polling&t=O1OV8Gt&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:17] "POST /socket.io/?EIO=4&transport=polling&t=O1OV8Mr&sid=DNUPJMkcC-pH_FbYAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:17] "GET /socket.io/?EIO=4&transport=polling&t=O1OV8Vg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:17] "POST /socket.io/?EIO=4&transport=polling&t=O1OV8Vo&sid=BwJdMzvPhTo8sdcOAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:17] "GET /socket.io/?EIO=4&transport=polling&t=O1OV8Vp&sid=BwJdMzvPhTo8sdcOAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:40] "GET /socket.io/?EIO=4&transport=polling&t=O1OV7_R&sid=Ro1_3NgBbGkXNI2OAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:41] "GET /socket.io/?EIO=4&transport=polling&t=O1OV87G&sid=DNUPJMkcC-pH_FbYAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:41] "POST /socket.io/?EIO=4&transport=polling&t=O1OVEEO&sid=DNUPJMkcC-pH_FbYAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:41] "GET /socket.io/?EIO=4&transport=polling&t=O1OV8Gf&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 15:13:41] "POST /socket.io/?EIO=4&transport=polling&t=O1OVEN3&sid=3ySiChSlr0uuzGrtAAAE HTTP/1.1" 200 -

@@ -33,7 +33,8 @@ class ServerState(Enum):
 	RUNNING_TESTS	= 4
 
 
-from temp import runner
+#from temp import runner
+#from test_runner import runner
 
 app = Flask(__name__)
 socketio = flask_socketio.SocketIO(app, cors_allowed_origins="*", binary=True)
@@ -41,7 +42,7 @@ socketio = flask_socketio.SocketIO(app, cors_allowed_origins="*", binary=True)
 state = ServerState.IDLE
 
 
-logger = logging.getLogger()
+#logger = logging.getLogger()
 
 @app.route("/")
 def members():
@@ -90,8 +91,9 @@ def socketFrontendDownloadFile(filename):
 
 
 
-@socketio.on('run_tests')
+@socketio.on('run')
 def run_backend():
+	print("running tests")
 	global state
 	if state is ServerState.RECEIVING_FILE:
 		sleep(0.5)
@@ -110,14 +112,11 @@ def handle_frontend_file_acknowledge(file):
 	print('Received by backend from frontend:')
 	print(file)
 
-@socketio.on('connect')
-def connect():
-    test_runner()
-
-def test_runner():
-    json = runner()
-    print(json)
-    emit('test_finished', json)
+# @socketio.on('run')
+# def test_runner():
+#    json = runner()
+#    print(json)
+#    emit('test_finished', json)
 
 # request a file from the frontend
 def handle_backend_file_request():

@@ -13,7 +13,7 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 	logger = logging.getLogger('TestRunner')
 	data = {}
 	test_data = []
-	for test_block, file in enumerate(test_files_dir.iterdir(), start=1):
+	for file in test_files_dir.iterdir():
 		if file.name != '.gitkeep':
 			importlib.invalidate_caches()
 			# module = importlib.import_module(file.stem)
@@ -28,9 +28,10 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 			r = re.compile(".*" + file.stem)
 			cleaned_data = list(filter(r.match, test_data))
 			data[test_block] = cleaned_data
-	# for i in test_data:
-	#    if re.match(file.class_name, i):
-	#        data[test_block] = i
+	        #test_block:
+				#test:
+					#header
+					#messages
 	json_data = json.dumps(data)
 	logger.debug(result)
 	return json_data
