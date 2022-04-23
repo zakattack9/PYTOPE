@@ -1,11 +1,12 @@
 from enum import Enum
-from pathlib import Path
 from pprint import pp
 
 from flask import Flask
 from flask_socketio import emit, SocketIO
 
 from file_manager.testrunner.testRunner import RunTests
+from file_manager.file_manager_module.FileManager import DOCKERFILES_DIR, find_file, TEST_FILES_DIR, TEST_JSON_DIR, TEST_RESULTS_DIR, \
+	TEST_SCHEMA
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 
 """
@@ -47,27 +48,6 @@ def file_transfers():
 	# handle_backend_file_request()
 	# handle_frontend_file_send()
 	...
-
-
-def get_root():
-	path = Path.cwd()
-	while path.name and path.name != 'python-test-environment':
-		path = path.parent
-	return path
-
-
-ROOT					= get_root()
-TEST_SCHEMA				= ROOT / 'schemas' / 'TestDesigns.schema.json'
-HIERARCHY_ROOT			= ROOT / 'file_manager' / 'file_manager_module' / 'hierarchy'
-CONFIGS_DIR				= HIERARCHY_ROOT / 'configs'
-FILE_PATH_CONFIG		= CONFIGS_DIR / 'file_path_config'
-PACKAGE_MAPPING_CONFIG	= CONFIGS_DIR / 'package_mapping_config'
-TEST_DESIGNS_CONFIG		= CONFIGS_DIR / 'test_designs_config'
-DOCKERFILES_DIR			= HIERARCHY_ROOT / 'Dockerfiles'
-TESTS_DIR				= HIERARCHY_ROOT / 'tests'
-TEST_JSON_DIR			= TESTS_DIR / 'test_json'
-TEST_FILES_DIR			= TESTS_DIR / 'python_unittests'
-TEST_RESULTS_DIR		= TESTS_DIR / 'test_results'
 
 
 @socketio.on('send_backend')
@@ -114,37 +94,6 @@ def socketFrontendDownloadFile(filename):
 	else:
 		# TODO - results not ready yet
 		emit(...)
-
-
-def find_file(filename):
-	filename_path = Path(filename)
-	if len(filename_path.parts) < 1:
-		raise ValueError(f"File-Name '{filename}' has no parts to it (empty).")
-	elif len(filename_path.parts) > 1:
-		raise ValueError(f"File-Name '{filename}' contains a directory (only names are allowed).")
-	# break filename into stem, suffix, and (combined) name
-	stem = filename_path.stem.lower()
-	suffix = filename_path.suffix.lower()
-	name = filename_path.name.lower()
-	path = None
-	if name == 'dockerfile':
-		path = DOCKERFILES_DIR
-	elif suffix == '.json':
-		path = TEST_JSON_DIR
-	elif suffix == '.py':
-		path = TEST_FILES_DIR
-	elif suffix == '.py_output':
-		path = TEST_RESULTS_DIR
-	elif suffix == '.cfg':
-		if stem.startswith('fp'):
-			path = FILE_PATH_CONFIG
-		elif stem.startswith('pm'):
-			path = PACKAGE_MAPPING_CONFIG
-		elif stem.startswith('td'):
-			path = TEST_DESIGNS_CONFIG
-	if path:
-		return path / filename
-	raise ValueError(f"File '{filename}' could not be found/placed.")
 
 
 @socketio.on('frontend_received_file')

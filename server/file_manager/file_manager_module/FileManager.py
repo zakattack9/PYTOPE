@@ -1,51 +1,82 @@
-import os
 import shutil
-import sys
-
-#directories
-source = os.getcwd()
-
-#Configs
-file_path_config = os.getcwd() + "/hierarchy/configs/file_path_config" 
-package_mapping_config = os.getcwd() + "/hierarchy/configs/package_mapping_config" 
-test_designs_config = os.getcwd() + "/hierarchy/configs/test_designs_config" 
-
-#Tests
-python_unittests = os.getcwd() + "/hierarchy/tests/python_unittests" 
-test_resuls = os.getcwd() + "/hierarchy/tests/test_results" 
-
-#Dockerfiles
-Dockerfiles = os.getcwd() + "/hierarchy/Dockerfiles" 
+from pathlib import Path
 
 
+def _get_root():
+	"""
+	:return:  The first parent directory (or cwd) that contains a directory named 'server'.
+	"""
+	path = Path.cwd()
+	found = False
+	while path.name:
+		for p in path.iterdir():
+			if p.name == 'server' and p.is_dir():
+				found = True
+				break
+		if found:
+			break
+		path = path.parent
+	return path
+
+
+FILE_MANAGER_NAME		= 'FileManager.py'
+INIT_NAME				= '__init__.py'
+HIERARCHY_NAME			= 'hierarchy'
+
+
+ROOT					= _get_root()
+SERVER_DIR				= ROOT / 'server'
+MANAGER_DIR				= SERVER_DIR / 'file_manager'
+MODULE_DIR				= MANAGER_DIR / 'file_manager_module'
+HIERARCHY_DIR			= MODULE_DIR / 'hierarchy'
+CONFIGS_DIR				= HIERARCHY_DIR / 'configs'
+FILE_PATH_CONFIG		= CONFIGS_DIR / 'file_path_config'
+PACKAGE_MAPPING_CONFIG	= CONFIGS_DIR / 'package_mapping_config'
+TEST_DESIGNS_CONFIG		= CONFIGS_DIR / 'test_designs_config'
+DOCKERFILES_DIR			= HIERARCHY_DIR / 'Dockerfiles'
+TESTS_DIR				= HIERARCHY_DIR / 'tests'
+TEST_JSON_DIR			= TESTS_DIR / 'test_json'
+TEST_FILES_DIR			= TESTS_DIR / 'python_unittests'
+TEST_RESULTS_DIR		= TESTS_DIR / 'test_results'
+TEST_SCHEMA				= ROOT / 'schemas' / 'TestDesigns.schema.json'
+
+
+def find_file(filename):
+	filename_path = Path(filename)
+	if len(filename_path.parts) < 1:
+		raise ValueError(f"File-Name '{filename}' has no parts to it (empty).")
+	elif len(filename_path.parts) > 1:
+		raise ValueError(f"File-Name '{filename}' contains a directory (only names are allowed).")
+	# break filename into stem, suffix, and (combined) name
+	stem = filename_path.stem.lower()
+	suffix = filename_path.suffix.lower()
+	name = filename_path.name.lower()
+	path = None
+	if name == 'dockerfile':
+		path = DOCKERFILES_DIR
+	elif suffix == '.json':
+		path = TEST_JSON_DIR
+	elif suffix == '.py':
+		path = TEST_FILES_DIR
+	elif suffix == '.py_output':
+		path = TEST_RESULTS_DIR
+	elif suffix == '.cfg':
+		if stem.startswith('fp'):
+			path = FILE_PATH_CONFIG
+		elif stem.startswith('pm'):
+			path = PACKAGE_MAPPING_CONFIG
+		elif stem.startswith('td'):
+			path = TEST_DESIGNS_CONFIG
+	if path:
+		return path / filename
+	raise ValueError(f"File '{filename}' could not be found/placed.")
 
 
 def zip_folder():
-    shutil.make_archive("output", 'zip', source + "/hierarchy")
+	shutil.make_archive('output', 'zip', str(HIERARCHY_DIR))
+
 
 def sort_hierarchy():
-    main_file= "FileManager.py"
-
-
-    files = os.listdir(source)
-
-
-    if main_file in files:
-        get_file_index = files.index(main_file)
-        del files[get_file_index]
-
-    for file in files:
-        if file[len(file) - 2:len(file)] == "py":
-            shutil.move(file,python_unittests)
-        elif file == "Dockerfile":
-            shutil.move(file,Dockerfiles)
-        elif file[0:2] == "fp" and file[len(file) - 3:len(file)] == "cfg":
-            shutil.move(file,file_path_config)
-        elif file[len(file) - 9:len(file)] == "py_output":
-            shutil.move(file,test_resuls)
-        elif file[0:2] == "pm" and file[len(file) - 3:len(file)] == "cfg":
-            shutil.move(file,package_mapping_config)
-        elif file[0:2] == "td" and file[len(file) - 3:len(file)] == "cfg":
-            shutil.move(file,test_designs_config)
-
-
+	for file in MODULE_DIR.iterdir():
+		if file.name not in (FILE_MANAGER_NAME, INIT_NAME, HIERARCHY_NAME):
+			file.rename(find_file(file))

@@ -1,5 +1,3 @@
-import os
-from pathlib import Path
 from time import sleep
 
 import flask_socketio
@@ -35,8 +33,11 @@ def main():
 	print(FlaskServer.find_file('Dockerfile'))
 	print(FlaskServer.find_file('Test1.json'))
 	print(FlaskServer.find_file('Test1.py'))
+	print(FlaskServer.find_file('Test1.py_output'))
+	print(FlaskServer.find_file('fp_one.cfg'))
+	print(FlaskServer.find_file('pm_one.cfg'))
+	print(FlaskServer.find_file('td_one.cfg'))
 	return
-	print('cwd: ' + os.getcwd())
 	flask_socketio.emit = emit
 	test_import()
 	sleep(3)
