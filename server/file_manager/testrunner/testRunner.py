@@ -28,5 +28,5 @@ if __name__ == '__main__':
     #can easily be broken down into accessing individual files depending on implementation of file manager
     RunTests("sample_tests", "sample_output")
     os.system('cp sample_output/* ../file_manager_module') #copies files from output folder to the file manager
-    os.system('cd ..; cd file_manager_module; python app.py') # runs file manager to places files in the hierarchy
+    os.system('cd ..; cd file_manager_module; python FileManager.py') # runs file manager to places files in the hierarchy
 
