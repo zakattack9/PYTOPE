@@ -57,7 +57,7 @@ function TestRunner() {
   // var blockArray: TestInfo[][] = [exampleArray, exampleArray2];
   // var nameArray: string[] = ["testGroup1", "testGroup2"];
 
-    //<Button className="TestRunner__runBtn" name="Run Tests" onClick={handleRunTest} />
+
   var received_data = ''
   const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
         console.log('running tests')

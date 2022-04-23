@@ -17,6 +17,7 @@ def runner():
     logging.basicConfig(filename=logfile, level=logging.DEBUG, datefmt='%H:%M:%S')
     logger = logging.getLogger('test_runner')
 
+    #
     test = UnittestFileWriter.parse_and_write_tests(p1, p2, p3)
 
     data = {}
