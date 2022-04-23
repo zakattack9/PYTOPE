@@ -63,7 +63,6 @@ def socketFrontendUploadFile(filename, data):
 	try:
 		path = FileManager.find_file(filename)
 	except Exception as e:
-		# TODO - notify front-end?
 		print(e.args)
 		return
 	print(f"Writing file '{path}' with data {data}")
@@ -75,10 +74,6 @@ def socketFrontendUploadFile(filename, data):
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
 	global state
-	if state is ServerState.RECEIVING_FILE:
-		sleep(0.5)
-	if state is ServerState.RECEIVED_FILE:
-		run_backend()
 	if state is ServerState.IDLE:
 		try:
 			path = FileManager.find_file(filename)
@@ -90,14 +85,18 @@ def socketFrontendDownloadFile(filename):
 		flask_socketio.emit('frontend_download', data)
 
 
+@socketio.on('run_tests')
 def run_backend():
 	global state
-	state = ServerState.WRITING_TESTS
-	test_writer = parse_and_write_tests(FileManager.TEST_SCHEMA, FileManager.TEST_JSON_DIR, FileManager.DOCKERFILES_DIR, FileManager.TEST_FILES_DIR)
-	state = ServerState.RUNNING_TESTS
-	json_data = run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RESULTS_DIR, FileManager.TEST_RUNNER_LOG)
-	print('JSON_Data: ' + json_data)
-	state = ServerState.IDLE
+	if state is ServerState.RECEIVING_FILE:
+		sleep(0.5)
+	if state is ServerState.RECEIVED_FILE:
+		state = ServerState.WRITING_TESTS
+		test_writer = parse_and_write_tests(FileManager.TEST_SCHEMA, FileManager.TEST_JSON_DIR, FileManager.DOCKERFILES_DIR, FileManager.TEST_FILES_DIR)
+		state = ServerState.RUNNING_TESTS
+		json_data = run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RESULTS_DIR, FileManager.TEST_RUNNER_LOG)
+		print('JSON_Data: ' + json_data)
+		state = ServerState.IDLE
 
 
 @socketio.on('frontend_received_file')
@@ -109,7 +108,6 @@ def handle_frontend_file_acknowledge(file):
 
 # request a file from the frontend
 def handle_backend_file_request():
-	# TODO - why would back-end request a file?
 	flask_socketio.emit('backend_request_file')
 
 

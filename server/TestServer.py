@@ -1,5 +1,4 @@
 from pathlib import Path
-from time import sleep
 
 import flask_socketio
 
@@ -21,6 +20,10 @@ def test_import():
 		_import(path)
 
 
+def test_run():
+	server.run_backend()
+
+
 def test_export():
 	# export to front-end
 	for path in TESTING_DIR.iterdir():
@@ -39,9 +42,8 @@ def emit(event, *args):
 def main():
 	flask_socketio.emit = emit  # re-define emit
 	test_import()
-	sleep(1)
+	test_run()
 	test_export()
-	sleep(1)
 	input('Done.  Press enter to cleanup and exit...')
 	cleanup()
 
