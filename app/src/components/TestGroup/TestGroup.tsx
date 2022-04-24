@@ -33,14 +33,12 @@ const TestBlock = (
   testContent: string,
   index: number
 ) => {
-  const [testStatusHook, setTestStatusHook] = useState(testStatus);
-
   const StatusLight = () => {
-    if (testStatusHook === "error") {
+    if (testStatus === "error") {
       return <div className="TestGroup__RedCircle" />;
-    } else if (testStatusHook === "running") {
+    } else if (testStatus === "running") {
       return <div className="TestGroup__YellowCircle" />;
-    } else if (testStatusHook === "success") {
+    } else if (testStatus === "success") {
       return <div className="TestGroup__GreenCircle" />;
     } else {
       return <div className="TestGroup__GreyCircle" />;
@@ -54,7 +52,7 @@ const TestBlock = (
         {testName}
       </div>
       <div className="TestGroup__testContentHeader">{testContentHeader} </div>
-      <div className="TestGroup__testContent">{testContent}</div>
+      {/* <div className="TestGroup__testContent">{testContent}</div> */}
     </div>
   );
 };
@@ -74,6 +72,38 @@ export class TestInfo {
     this.testName = testName;
     this.testStatus = testStatus;
     this.testContentHeader = testContentHeader;
+    this.testContent = testContent;
+  }
+
+  getTestName() {
+    return this.testName;
+  }
+
+  getTestStatus() {
+    return this.testStatus;
+  }
+
+  getTestContentHeader() {
+    return this.testContentHeader;
+  }
+
+  getTestContent() {
+    return this.testContent;
+  }
+
+  setTestName(testName: string) {
+    this.testName = testName;
+  }
+
+  setTestStatus(testStatus: string) {
+    this.testStatus = testStatus;
+  }
+
+  setTestContentHeader(testContentHeader: string) {
+    this.testContentHeader = testContentHeader;
+  }
+
+  setTestContent(testContent: string) {
     this.testContent = testContent;
   }
 

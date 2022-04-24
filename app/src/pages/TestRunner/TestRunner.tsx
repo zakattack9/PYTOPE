@@ -1,22 +1,36 @@
 import "./TestRunner.scss";
-import { FormEvent } from 'react';
+import { FormEvent } from "react";
 import TestGroup, { TestInfo } from "../../components/TestGroup/TestGroup";
 import { useAppSelector, useAppDispatch } from "../../hooks/react-redux";
 
 import RunButton from "../../components/RunButton/RunButton";
 import DownloadButton from "../../components/DownloadButton/DownloadButton";
 
-import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from "react";
+import React, {
+  useState,
+  useContext,
+  useCallback,
+  useEffect,
+  ChangeEvent,
+} from "react";
+import { socket } from "../../context/socket";
 
 function TestRunner() {
   const dispatch = useAppDispatch();
   const testDesignerState = useAppSelector((state) => state.testDesigner);
   const { currBlocks } = testDesignerState;
+  const currBlocksJSON = JSON.parse(JSON.stringify(currBlocks));
 
+  const [finalToggle, setFinalToggle] = useState(false);
+  const [loading, setLoading] = useState("pending");
+  const [returnArray, setReturnArray] = useState<TestInfo[][]>();
+  const [returnNameArray, setReturnNameArray] = useState<string[]>();
   //Reset variables on redux store change
 
   var blockArray: TestInfo[][] = [];
   var nameArray: string[] = [];
+  var finalArray: TestInfo[][] = [];
+  var finalNameArray: string[] = [];
 
   const imageBlocks = currBlocks?.docker_images;
   const testDesigns = currBlocks?.test_designs;
@@ -27,12 +41,7 @@ function TestRunner() {
           nameArray.push(imageName);
           var testArray: TestInfo[] = [];
           imageBlocks[imageName].tests.forEach((testName) => {
-            var tempTestInfo = new TestInfo(
-              testName,
-              "pending",
-              "Pending Run",
-              ""
-            );
+            var tempTestInfo = new TestInfo(testName, loading, loading, "");
             testArray.push(tempTestInfo);
           });
           blockArray.push(testArray);
@@ -57,32 +66,91 @@ function TestRunner() {
   // var blockArray: TestInfo[][] = [exampleArray, exampleArray2];
   // var nameArray: string[] = ["testGroup1", "testGroup2"];
 
+  var received_data = "";
+  const handleClick = function (socket: any, e: FormEvent<HTMLDivElement>) {
+    console.log("attempting to run tests");
+    socket.emit("run_tests");
+    socket.on("no_tests_found", () => {
+      console.log("no tests found");
+    });
 
-  var received_data = ''
-  const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
-        console.log('attempting to run tests')
-        socket.emit('run_tests')
-        socket.on("no_tests_found", () => {
-            console.log('no tests found')
-        });
+    socket.once("test_finished", (data: any) => {
+      console.log(
+        "Test result from backend:",
+        String.fromCharCode.apply(null, Array.from(new Uint8Array(data)))
+      );
+      received_data = data;
+      console.log(received_data);
+    });
+  };
 
-        socket.once("test_finished", (data:any) => {
-            console.log("Test result from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
-            received_data = data
-            console.log(received_data)
-        });
+  interface JSONData {
+    [image: string]: {
+      [test: string]: string;
+    };
   }
+
+  socket.on("test_finished", (testResults: any) => {
+    let temp = JSON.parse(testResults);
+    let jsonData: JSONData = temp;
+    console.log(jsonData);
+    Object.entries(jsonData).forEach((image) => {
+      const [key, value] = image;
+      finalNameArray.push(key);
+      var testArray: TestInfo[] = [];
+      Object.entries(value).forEach((test) => {
+        const [key, value] = test;
+        if (value == "FAIL") {
+          var tempTestInfo = new TestInfo(`${key}`, "error", "Failed", "");
+        } else {
+          var tempTestInfo = new TestInfo(`${key}`, "success", "OK", "");
+        }
+        testArray.push(tempTestInfo);
+      });
+      finalArray.push(testArray);
+    });
+    setFinalToggle(true);
+    console.log(finalArray);
+    setReturnArray(finalArray);
+    setReturnNameArray(finalNameArray);
+  });
+
+  const sendJSON = async () => {
+    try {
+      setLoading("running");
+      await socket.emit("send_json", "test.json", JSON.stringify(currBlocks));
+      await socket.emit("run_tests");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="TestRunner">
-        <div className="TestRunner__bar">
-            <RunButton className="TestRunner__runBtn" text="Run" onClick={handleClick} />
-        </div>
-      {blockArray.map((arrElement, arrIndex) => {
-        return (
-          <TestGroup testGroupName={nameArray[arrIndex]} tests={arrElement} />
-        );
-      })}{" "}
+      <div className="TestRunner__bar">
+        <RunButton
+          className="TestRunner__runBtn"
+          text="Run"
+          onClick={sendJSON}
+        />
+      </div>
+      {finalToggle
+        ? returnArray?.map((arrElement, arrIndex) => {
+            return (
+              <TestGroup
+                testGroupName={returnNameArray ? returnNameArray[arrIndex] : ""}
+                tests={arrElement}
+              />
+            );
+          })
+        : blockArray?.map((arrElement, arrIndex) => {
+            return (
+              <TestGroup
+                testGroupName={nameArray[arrIndex]}
+                tests={arrElement}
+              />
+            );
+          })}
     </div>
   );
 }

@@ -92,7 +92,7 @@ def find_file(filename):
 
 def clear_dir(dir_path: Path):
 	for path in dir_path.iterdir():
-		if path.name != '.gitkeep':
+		if path.name != '.gitkeep' and path.name != '__pycache__':
 			try:
 				path.unlink()
 			except IsADirectoryError:
