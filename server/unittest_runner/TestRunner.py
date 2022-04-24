@@ -9,7 +9,8 @@ from pathlib import Path
 
 
 def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, log_file: Path):
-	print("HELLO")
+	print("TestRunner.py: Executing run_tests()")
+	importlib.invalidate_caches()  # Redundant?
 	logging.basicConfig(filename=log_file, level=logging.DEBUG, datefmt='%H:%M:%S')
 	logger = logging.getLogger('TestRunner')
 	test_data = []
@@ -17,10 +18,10 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 	for file in test_files_dir.iterdir():
 		json_tests = {}
 		if file.name != '.gitkeep' and file.name != "__pycache__":
-			print("found a file")
-			importlib.invalidate_caches()
+			print("TestRunner.py: Found a unittest file:", file.stem, " in", test_files_dir.name)
 			# module = importlib.import_module(file.stem)
 			module = importlib.import_module('.' + file.stem, test_files_package)
+			importlib.reload(module)
 			test_suite = unittest.TestLoader().loadTestsFromModule(module)
 			output_file = output_dir / file.with_suffix('.py_output').name
 			with io.StringIO() as buf:
@@ -46,7 +47,7 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 				#test:
 					#header
 					#messages
-
+	importlib.invalidate_caches()
 	json_data = json.dumps(data)
 	logger.debug(json_data)
 	return json_data
