@@ -49,7 +49,7 @@ def members():
 	return {"members": ["Member1", "Member2"]}
 
 
-#@socketio.on('connect')
+@socketio.on('connect')
 def file_transfers():
 	print('\tClient Connected')
 	# handle_backend_file_request()
@@ -89,12 +89,15 @@ def socketFrontendDownloadFile(filename):
 		return
 	flask_socketio.emit('frontend_download', data)
 
+# @socketio.on('dosomething')
+# def pleasework():
+# 	print("please")
+# 	run_backend()
 
-
-@socketio.on('run')
+@socketio.on('run_tests')
 def run_backend():
-	print("running tests")
 	global state
+	json_data = ''
 	if state is ServerState.RECEIVING_FILE:
 		sleep(0.5)
 	if state is ServerState.RECEIVED_FILE:
@@ -103,7 +106,12 @@ def run_backend():
 		state = ServerState.RUNNING_TESTS
 		json_data = run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RESULTS_DIR, FileManager.TEST_RUNNER_LOG)
 		print('JSON_Data: ' + json_data)
-		state = ServerState.IDLE
+	state = ServerState.IDLE
+	FileManager.clear_dir(FileManager.TEST_FILES_DIR)
+	if json_data != '':
+		flask_socketio.emit('test_finished', json_data)
+	else:
+		flask_socketio.emit('no_tests_found')
 
 
 @socketio.on('frontend_received_file')
@@ -162,8 +170,5 @@ def main(print_updates=True):
 def create_test():
     pass
 
-@socketio.on('run_tests')
-def run_tests():
-    pass
 if __name__ == "__main__":
 	main()

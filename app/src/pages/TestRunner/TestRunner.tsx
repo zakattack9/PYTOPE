@@ -60,10 +60,14 @@ function TestRunner() {
 
   var received_data = ''
   const handleClick = function (socket:any, e: FormEvent<HTMLDivElement>) {
-        console.log('running tests')
+        console.log('attempting to run tests')
         socket.emit('run_tests')
+        socket.on("no_tests_found", () => {
+            console.log('no tests found')
+        });
+
         socket.once("test_finished", (data:any) => {
-            console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
+            console.log("Test result from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
             received_data = data
             console.log(received_data)
         });

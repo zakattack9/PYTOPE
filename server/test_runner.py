@@ -44,7 +44,7 @@ def runner():
             header.append(split_test_name[1])
             json_tests[split_test_name[0]] = header    #add name[]
         data[file.class_name] = json_tests    #build test-block
-
+#'test3_1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... ok'
         #test_block:
             #test:
                 #header
