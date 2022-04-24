@@ -9,4 +9,12 @@
     flex-flow: row nowrap;
     column-gap: 1em;
     // overflow-x: auto;
+
+    &__newImageBtn {
+        margin: 25px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+    }
 }

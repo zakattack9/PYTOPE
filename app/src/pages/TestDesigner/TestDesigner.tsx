@@ -1,4 +1,7 @@
 import ImageBlock from '../../components/ImageBlock/ImageBlock';
+import Button from '../../components/Button/Button';
+import { FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
 import { reorderImageBlocks, reorderRunBlocks, reorderTestBlocks } from '../../slices/testDesignerSlice';
@@ -6,8 +9,16 @@ import './TestDesigner.scss';
 
 function TestDesigner() {
   const dispatch = useAppDispatch();
+  const history = useHistory();
   const testDesignerState = useAppSelector(state => state.testDesigner);
   const { currBlocks } = testDesignerState;
+
+  const handleNewImage = (e: FormEvent) => {
+    const location = {
+      pathname: '/new/image',
+    }
+    history.push(location);
+  }
 
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
@@ -54,10 +65,11 @@ function TestDesigner() {
   ) : null;
 
   return (
-    <div className='TestDesigner'>
+    <div className="TestDesigner">
       <DragDropContext onDragEnd={onDragEnd}>
         {dockerImageBlock}
       </DragDropContext>
+      <Button className="TestDesigner__newImageBtn" name="New Docker Image" onClick={handleNewImage} />
     </div>
   );
 }
