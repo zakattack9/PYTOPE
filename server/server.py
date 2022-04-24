@@ -108,6 +108,7 @@ def run_backend():
 		print('JSON_Data: ' + json_data)
 	state = ServerState.IDLE
 	FileManager.clear_dir(FileManager.TEST_FILES_DIR)
+	FileManager.clear_dir(FileManager.TEST_JSON_DIR)
 	if json_data != '':
 		flask_socketio.emit('test_finished', json_data)
 	else:

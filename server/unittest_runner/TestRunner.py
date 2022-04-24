@@ -37,13 +37,14 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 					header.append('FAIL')
 				else:
 					header.append('Unknown')
-				header.append(split_test_name[1])
+				#header.append(split_test_name[1])
 				json_tests[split_test_name[0]] = header
 			data[file.stem] = json_tests
 	        #test_block:
 				#test:
 					#header
 					#messages
+
 	json_data = json.dumps(data)
 	logger.debug(json_data)
 	return json_data
