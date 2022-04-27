@@ -4,10 +4,13 @@ from time import sleep
 
 import flask_socketio
 from flask import Flask
+from zipfile import ZipFile
+
 
 from file_manager.file_manager_module import FileManager
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 from unittest_runner.TestRunner import run_tests
+
 
 """
 Events:
@@ -74,6 +77,7 @@ def socketFrontendUploadFile(filename, data):
 	with open(path, 'wb') as f:
 		f.write(data)
 	state = ServerState.RECEIVED_FILE
+	
 
 @socketio.on('send_json')
 def socketFrontEndUploadJSON(filename, data):
@@ -95,16 +99,54 @@ def socketFrontEndUploadJSON(filename, data):
 
 @socketio.on('download_frontend')
 def socketFrontendDownloadFile(filename):
-	print(filename)
+	# print(filename)
+	# path = FileManager.find_file(filename)
+	# print(path)
+	# try:
+	# 	with open(path, 'rb') as f:
+	# 		data = f.read()
+	# except:
+	# 	flask_socketio.emit('file_dne', filename)
+	# 	return
+	# flask_socketio.emit('frontend_download', data)
+	print("goes here")
+	FileManager.zip_folder()
+	filename = "output.zip"
 	path = FileManager.find_file(filename)
 	print(path)
 	try:
 		with open(path, 'rb') as f:
 			data = f.read()
 	except:
-		flask_socketio.emit('file_dne', filename)
+		flask_socketio.emit('file_dne', filename)	
 		return
 	flask_socketio.emit('frontend_download', data)
+
+
+@socketio.on('export_unit_tests')
+def socketFrontendDownloadTests():
+	print("goes here")
+	filename = "output.zip"
+	FileManager.zip_folder()
+	path = "../server/file_manager/file_manager_module/output.zip"
+	zit = ""
+	# with ZipFile(path, 'r') as zip:
+	# 	for info in zip.infolist():
+	# 		zit += info.file
+	# #print(path)
+	try:
+		data = ''
+		with ZipFile(path, 'r') as zip:
+			for file in zip.namelist():
+				print(file.name)
+				with zip.open(file) as f:
+					print('entered file')
+					data += f.read()
+			
+	except:
+		flask_socketio.emit('file_dne', filename)
+		return
+	flask_socketio.emit('export_tests_finished', data.encode())
 
 # @socketio.on('dosomething')
 # def pleasework():
