@@ -10,14 +10,20 @@ interface Command {
   },
 }
 
+interface AllPackages {
+  [name: string]: PackageMapping
+}
+
 export interface PackageMapperState {
   command: Command | null,
   currPackage: PackageMapping | null,
+  allPackages: AllPackages,
 }
 
 const initialState: PackageMapperState = {
   command: null,
   currPackage: null,
+  allPackages: {},
 }
 
 export const packageMapperSlice = createSlice({
@@ -63,7 +69,22 @@ export const packageMapperSlice = createSlice({
           subcommands: [],
           arguments: [],
         },
-      }
+      };
+      state.allPackages[baseKeyword] = pkgMappingClone;
+    },
+    switchPackage: (state, action: PayloadAction<string>) => {
+      const pkgName = action.payload;
+      const pkgData = state.allPackages[pkgName];
+      const { baseKeyword, value } = pkgData;
+      state.currPackage = pkgData;
+      state.command = {
+        baseKeyword,
+        value,
+        paths: {
+          subcommands: [],
+          arguments: [],
+        },
+      };
     }
   },
 });
@@ -73,6 +94,7 @@ export const {
   commandRemove,
   commandReset,
   loadPackage,
+  switchPackage,
 } = packageMapperSlice.actions;
 
 export default packageMapperSlice.reducer;
