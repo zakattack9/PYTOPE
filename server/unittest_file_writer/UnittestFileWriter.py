@@ -1,9 +1,9 @@
-from json import load
-from pathlib import Path
-from typing import Any, Dict, MutableSequence, Optional
+from pathlib import Path, PurePath
+from typing import Any, Dict, MutableSequence, Union
 
-from server.unittest_file_writer.FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
-from server.unittest_file_writer.TestFile import TestFile
+from .FileFinderWrapper import FileFinder, FileFinderWrapper, new_file_finder_wrapper
+from .SchemaValidator import PathOrJSON, SchemaValidator
+from .TestFile import TestFile
 
 """
 UnittestFileWriter is the main interface for the module.
@@ -20,39 +20,32 @@ A FileFinder can be:
 
 
 # Primary Method
-def parse_and_write_tests(test_json_files: Path, dockerfiles: FileFinder, test_files: FileFinder):
+def parse_and_write_tests(test_schema: PathOrJSON, test_json_files: Union[PurePath, str], dockerfiles: FileFinder, test_files_out: FileFinder):
 	"""
 	Parses the given JSON file(s) and writes the generated tests to the test_files_dir.
+	:param test_schema:		The	schema for the test JSON files.  (A path to the schema file (or JSON data that has already been loaded))
 	:param test_json_files:	The JSON file that will be parsed to create tests.  (If a directory is given, it will recursively parse all '.json' files in it)
 	:param dockerfiles:		The directory containing the dockerfiles (or a function that finds a dockerfile (path), given the name of the dockerfile).
-	:param test_files:		The directory to write the generated test files to (or a function that outputs a file path, given the name of the test file).
+	:param test_files_out:	The directory to write the generated test files to (or a function that outputs a file path, given the name of the test file).
 	:return:	The UnittestFileWriter (for information about what tests were written) (this can be ignored).
 	"""
-	test_writer = UnittestFileWriter(dockerfiles, test_files)
-	test_writer.parse_json_files(test_json_files)
+	test_writer = UnittestFileWriter(test_schema, dockerfiles, test_files_out)
+	test_writer.parse_json_files(Path(test_json_files))
 	test_writer.write_all()
 	return test_writer
-
-
-class TestDesigns:
-	# TODO : dummy class, delete after merging test-designs-class branch
-	def __init__(self, test_json_path: Path):
-		with test_json_path.open() as f:
-			self.test_json = load(f)
-
-	def validate(self):
-		pass
 
 
 class UnittestFileWriter:
 	dockerfiles_wrapper:	FileFinderWrapper
 	test_files_wrapper:		FileFinderWrapper
+	test_validator:			SchemaValidator
 	test_files:				MutableSequence[TestFile]
 
-	def __init__(self, dockerfiles_ff: FileFinder, test_files_ff: FileFinder, test_files: Optional[MutableSequence[TestFile]] = None):
-		self.dockerfiles_wrapper = new_file_finder_wrapper(dockerfiles_ff)
-		self.test_files_wrapper = new_file_finder_wrapper(test_files_ff)
-		self.test_files = test_files if test_files is not None else []
+	def __init__(self, test_schema: PathOrJSON, dockerfiles: FileFinder, test_files_out: FileFinder):
+		self.dockerfiles_wrapper = new_file_finder_wrapper(dockerfiles)
+		self.test_files_wrapper = new_file_finder_wrapper(test_files_out)
+		self.test_validator = SchemaValidator(test_schema)
+		self.test_files = []
 
 	def parse_json_files(self, test_design_json_file: Path):
 		# if a directory is given, recurse
@@ -61,9 +54,10 @@ class UnittestFileWriter:
 				if file.suffix.lower() == '.json':
 					self.parse_json_files(file)
 		else:
-			validator = TestDesigns(test_design_json_file)
-			validator.validate()
-			self.parse_json(validator.test_json)
+			try:
+				self.parse_json(self.test_validator.validate(test_design_json_file))
+			except Exception as err:
+				print(err)
 
 	def parse_json(self, test_design_json: Dict[str, Dict[str, Any]]):
 		tests = test_design_json['tests']

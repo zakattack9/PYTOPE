@@ -1,0 +1,31 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.RunButton {
+  @include fonts.roboto-medium(0.95em);
+  width: max-content;
+  height: max-content;
+  padding: 0.8em 2.3em;
+  border-radius: 5px;
+  cursor: default;
+  transition: 0.2s;
+  background-color: f.primary-color(-30%);
+  color: f.secondary-text-color(95%);
+
+  &:hover {
+    background-color: f.primary-color(-50%);
+  }
+
+  &--invert {
+    @extend .RunButton;
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    color: f.primary-text-color(40%);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: f.primary-text-color(10%);
+      box-shadow: inset 0px 0px 0px 2px f.primary-color(-40%);
+    }
+  }
+}
