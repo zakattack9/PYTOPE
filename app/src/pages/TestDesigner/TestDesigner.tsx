@@ -6,7 +6,6 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
 import { reorderImageBlocks, reorderRunBlocks, reorderTestBlocks } from '../../slices/testDesignerSlice';
 import './TestDesigner.scss';
-import DownloadButton from '../../components/DownloadButton/DownloadButton';
 
 function TestDesigner() {
   const dispatch = useAppDispatch();

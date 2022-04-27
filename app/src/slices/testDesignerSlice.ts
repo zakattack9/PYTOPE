@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { BlockType, CommandOutputAssertionType, TestBlock } from "../utils/test-designer";
-import { DockerImages, TestDesigns } from "../utils/test-designer";
+import { TestDesigns } from "../utils/test-designer";
 
 export interface TestDesignerState {
   currBlocks: TestDesigns | null,

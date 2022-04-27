@@ -24,7 +24,11 @@ function DownloadButton(props: Props) {
   const socket = useContext(SocketContext);
   return (
     <div className={`DownloadButton ${props.className || ''}`}>
+<<<<<<< HEAD
       <input type="file" name = "file" onClick={e => FileSelectedHandler(socket, e)} id={props.className} className="DownloadButton__input" hidden/>
+=======
+      <input type="file" name="file" onChange={e => FileSelectedHandler(socket, e)} id={props.className} className="DownloadButton__input" hidden/>
+>>>>>>> 0732344f222b4bfd4d28bee403a7e4d7fc7239ba
       <label htmlFor={props.className} className="DownloadButton__label">Download</label>
     </div>
   );
