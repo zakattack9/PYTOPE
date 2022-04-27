@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Iterable, List, Optional, Union
 
-from server.unittest_file_writer.Method import Method
+from .Method import Method
 
 _SET_VARS			= 'exit_code, output = '
 _RUN				= 'self.container.exec_run('
@@ -9,7 +9,7 @@ _IGNORE_OUTPUT		= ', stdout=False, stderr=False)'
 _GET_OUTPUT			= ', stdout=True, stderr=True)'
 
 _ASSERT_NO_OUTPUT	= 'self.assertFalse(output)'
-_ASSERT_REGEX		= 'self.assertRegex(output, '
+_ASSERT_REGEX		= 'self.assertRegex(output.decode(), '
 
 
 class OutputType(Enum):

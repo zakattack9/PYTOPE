@@ -41,7 +41,7 @@ class ExplainedExampleTest(TestCase):
 
 	def setUp(self):
 		cls = type(self)  # could also have a class_name variable (instead of this line)  ;  Generated Line
-		self.container = cls.client.containers.create(cls.image, detach=True)  # Generated Line
+		self.container = cls.client.containers.run(cls.image, detach=True, tty=True)  # Generated Line
 		# use the line below instead of the line above if a mount point
 		# self.container = cls.client.containers.create(cls.image, detach=True, volumes={'<path_in_main_container>': {'bind': '<path_inside_container>', 'mode': 'rw'}})
 		# self.container.put_archive()  # insert files into the container
@@ -64,4 +64,4 @@ class ExplainedExampleTest(TestCase):
 		cmd = ...  					# variable ; line not generated
 		output_regex: str = ...  	# variable ; line not generated
 		exit_code, output = self.container.exec_run(cmd, stdout=True, stderr=True)  # Generated Line
-		self.assertRegex(output, output_regex)  # Generated Line
+		self.assertRegex(output.decode(), output_regex)  # Generated Line

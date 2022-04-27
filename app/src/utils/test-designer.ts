@@ -31,7 +31,7 @@ export interface TestBlock {
 }
 
 export enum BlockType {
-  RUN = "RUN ",
+  RUN = "RUN",
   ENV = "ENV",
   BKG_S = "BKG_S",
   BKG_T = "BKG_T"
