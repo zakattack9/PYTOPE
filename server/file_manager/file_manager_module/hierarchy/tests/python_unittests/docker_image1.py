@@ -6,7 +6,7 @@ class docker_image1(TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = from_env()
-		cls.image, cls.logs = cls.client.images.build(path='C:\\Users\\Poppycop\\gitprojects\\python-test-environment\\server\\file_manager\\file_manager_module\\hierarchy\\Dockerfiles', dockerfile='docker_image1', rm=True, forcerm=True)
+		cls.image, cls.logs = cls.client.images.build(path='..\\docker', dockerfile='docker_image1', rm=True, forcerm=True)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -14,8 +14,15 @@ class docker_image1(TestCase):
 
 	def setUp(self):
 		cls = type(self)
-		self.container = cls.client.containers.run(cls.image, detach=True, tty=True)
+		self.container = cls.client.containers.create(cls.image, detach=True)
 
 	def tearDown(self):
 		self.container.remove(force=True)
+
+	def test1_1(self):
+		self.container.exec_run("git commit -m 'initial commit'", stdout=False, stderr=False)
+
+	def test2_1(self):
+		exit_code, output = self.container.exec_run('git add .', stdout=True, stderr=True)
+		self.assertFalse(output)
 

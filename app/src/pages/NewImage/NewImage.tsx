@@ -46,6 +46,10 @@ function NewImage() {
     setState({ ...state, filename });
   }
 
+  const handleFileUpload = (file: File) => {
+    
+  }
+
   const handleDescChange = (description: string) => {
     setState({ ...state, description });
   }
@@ -108,7 +112,7 @@ function NewImage() {
       <div className="NewImage__fileLabel">Dockerfile</div>
       <div className="NewImage__fileWrapper">
         <SelectInput className="NewImage__file" options={OPTIONS} onChange={handleFileSelect} hasError={state.filenameError} />
-        <UploadButton className="NewImage__uploadBtn" />
+        <UploadButton className="NewImage__uploadBtn" onChange={handleFileUpload} />
       </div>
 
       <div className="NewImage__descLabel">Description</div>

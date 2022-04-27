@@ -5,20 +5,22 @@ import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from
 
 interface Props {
   className?: string,
-
+  onChange: (file: File) => void,
 }
 //var websocket = require("../../websocket/websocket.js")
-const FileSelectedHandler = function (socket:any, e:ChangeEvent<HTMLInputElement>) {
+function UploadButton(props: Props) {
+  const FileSelectedHandler = (socket:any, e:ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
     if (e.target.files == null) {
-    return;
+      return;
     }
     console.log("File uploaded", e.target.files[0].name)
     console.log("File data", e.target.files[0]);
-    var selectedFile = e.target.files[0]
-    socket.emit("send_backend", selectedFile.name, selectedFile)
-};
+    let uploadedFile = e.target.files[0]
+    socket.emit("send_backend", uploadedFile.name, uploadedFile)
+    props.onChange(uploadedFile);
+  };
 
-function UploadButton(props: Props) {
   const socket = useContext(SocketContext);
   return (
     <div className={`UploadButton ${props.className || ''}`}>

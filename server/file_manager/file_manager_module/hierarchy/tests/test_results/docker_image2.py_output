@@ -1,5 +1,15 @@
+test3_1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... ok
+test3_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... FAIL
+
+======================================================================
+FAIL: test3_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image2.py", line 27, in test3_2
+    self.assertRegex(output.decode(), '/some_regex/g')
+AssertionError: Regex didn't match: '/some_regex/g' not found in "remote: You are not allowed to upload code.\nfatal: unable to access 'https://gitlab.com/haydenlhannappel/python-test-environment.git/': The requested URL returned error: 403\n"
 
 ----------------------------------------------------------------------
-Ran 0 tests in 0.000s
+Ran 2 tests in 13.845s
 
-OK
+FAILED (failures=1)

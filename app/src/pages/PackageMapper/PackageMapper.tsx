@@ -9,6 +9,7 @@ import { ChipType } from '../../utils/enums';
 import { useAppSelector } from '../../hooks/react-redux';
 import { getObject, getName, getCommand } from '../../utils/package-mapper';
 import './PackageMapper.scss';
+import DownloadButton from '../../components/DownloadButton/DownloadButton';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
@@ -30,6 +31,15 @@ function PackageMapper() {
 
   const handleMappingSelect = (mapping: string) => {
     // change currPackage in packageMapperSlice.ts
+  }
+
+  const handleMappingUpload = (file: File) => {
+    const fileReader = new FileReader();
+    fileReader.onloadend = (e) => {
+      const content = fileReader.result;
+      console.log(content);
+    }
+    fileReader.readAsText(file);
   }
 
   const BaseChip = command ? (
@@ -111,7 +121,8 @@ function PackageMapper() {
         <div className="PackageMapper__barUpperLeft">
           <div className="PackageMapper__uploadText">Package Mapping:</div>
           <SelectInput className="PackageMapper__pkgMapping" options={OPTIONS} onChange={handleMappingSelect} />
-          <UploadButton className="PackageMapper__uploadBtn" />
+          <UploadButton className="PackageMapper__uploadBtn" onChange={handleMappingUpload} />
+          <DownloadButton />
         </div>
         <div className="PackageMapper__barUpperRight">
           <Button className="PackageMapper__createBtn" name="Create Command" onClick={handleCreateCmd} />
