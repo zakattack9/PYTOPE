@@ -15,17 +15,4 @@
   &:hover {
     background-color: f.primary-color(-50%);
   }
-
-  &--invert {
-    @extend .RunButton;
-    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    color: f.primary-text-color(40%);
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0);
-      color: f.primary-text-color(10%);
-      box-shadow: inset 0px 0px 0px 2px f.primary-color(-40%);
-    }
-  }
 }

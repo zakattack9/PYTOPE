@@ -1,20 +1,16 @@
 .TestDesigner {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
-    // grid-gap: 20px;
-    max-width: 100%;
-    height: 100%;
-    padding: 6px;
-    display: flex;
-    flex-flow: row nowrap;
-    column-gap: 1em;
-    // overflow-x: auto;
+  max-width: 100%;
+  height: 100%;
+  padding: 6px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 1em;
 
-    &__newImageBtn {
-        margin: 25px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 10;
-    }
+  &__newImageBtn {
+    margin: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
 }

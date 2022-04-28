@@ -3,33 +3,13 @@
 @use '../../utils/fonts';
 
 .ImageBlock{
-    $default-bkg-color: f.primary-color(70%);
-    $font-size: 10.5pt;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 0.9em;
     padding: 0.8em;
-    background-color: $default-bkg-color;
+    background-color: f.primary-color(70%);
     border-radius: 10px;
-    @include fonts.roboto-mono-bold($font-size, vars.$primary-text-color);
+    @include fonts.roboto-medium;
     width: 30em;
-    // max-height: 100%;
-    // overflow: auto;
+    border: solid 1px f.primary-color(58%);
 }
-
-// .testItem{
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     padding: 2em
-//     //grid-template-columns: repeat(2, 1fr);
-//     // grid-gap: 20px;
-// }
-
-// h1 {
-//     background-color: white;
-//     color: #222222;
-//     font-size: 16px;
-//     font-weight: 800;
-//     padding: 10px;
-//     cursor: move;
-//   }

@@ -10093,3 +10093,777 @@ INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:49:28] "GET /socket.io/?EIO=4&transp
 INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:49:28] "POST /socket.io/?EIO=4&transport=polling&t=O1kxeh-&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:49:53] "GET /socket.io/?EIO=4&transport=polling&t=O1kxeh-.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:49:53] "POST /socket.io/?EIO=4&transport=polling&t=O1kxkou&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:50:18] "GET /socket.io/?EIO=4&transport=polling&t=O1kxkou.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:50:18] "POST /socket.io/?EIO=4&transport=polling&t=O1kxqvi&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:50:43] "GET /socket.io/?EIO=4&transport=polling&t=O1kxqvi.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:50:43] "POST /socket.io/?EIO=4&transport=polling&t=O1kxx0e&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:08] "GET /socket.io/?EIO=4&transport=polling&t=O1kxx0e.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:08] "POST /socket.io/?EIO=4&transport=polling&t=O1ky17S&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:33] "GET /socket.io/?EIO=4&transport=polling&t=O1ky17S.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:33] "POST /socket.io/?EIO=4&transport=polling&t=O1ky7EJ&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:58] "GET /socket.io/?EIO=4&transport=polling&t=O1ky7EK&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:51:58] "POST /socket.io/?EIO=4&transport=polling&t=O1kyDLF&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:52:23] "GET /socket.io/?EIO=4&transport=polling&t=O1kyDLF.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:52:23] "POST /socket.io/?EIO=4&transport=polling&t=O1kyJS4&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:52:48] "GET /socket.io/?EIO=4&transport=polling&t=O1kyJS4.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:52:48] "POST /socket.io/?EIO=4&transport=polling&t=O1kyPYz&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:13] "GET /socket.io/?EIO=4&transport=polling&t=O1kyPYz.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:13] "POST /socket.io/?EIO=4&transport=polling&t=O1kyVfo&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:21] "POST /socket.io/?EIO=4&transport=polling&t=O1kyXZC&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:21] "POST /socket.io/?EIO=4&transport=polling&t=O1kyXZi&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:38] "GET /socket.io/?EIO=4&transport=polling&t=O1kyVfp&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:53:38] "POST /socket.io/?EIO=4&transport=polling&t=O1kybmk&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:03] "GET /socket.io/?EIO=4&transport=polling&t=O1kybml&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:03] "POST /socket.io/?EIO=4&transport=polling&t=O1kyhtb&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:28] "GET /socket.io/?EIO=4&transport=polling&t=O1kyhtb.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:28] "POST /socket.io/?EIO=4&transport=polling&t=O1kyn-R&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:53] "GET /socket.io/?EIO=4&transport=polling&t=O1kyn-R.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:54:53] "POST /socket.io/?EIO=4&transport=polling&t=O1kyu5G&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:55:18] "GET /socket.io/?EIO=4&transport=polling&t=O1kyu5G.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:55:18] "POST /socket.io/?EIO=4&transport=polling&t=O1ky-CA&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:55:43] "GET /socket.io/?EIO=4&transport=polling&t=O1ky-CA.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 23:55:43] "POST /socket.io/?EIO=4&transport=polling&t=O1kz4J0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 00:33:16] "GET /socket.io/?EIO=4&transport=polling&t=O1kz4J1&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 00:33:16] "POST /socket.io/?EIO=4&transport=polling&t=O1l5gEb&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 00:33:41] "GET /socket.io/?EIO=4&transport=polling&t=O1l5gEb.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 00:33:41] "POST /socket.io/?EIO=4&transport=polling&t=O1l5mLj&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:45] "GET /socket.io/?EIO=4&transport=polling&t=O1l5mLj.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:45] "POST /socket.io/?EIO=4&transport=polling&t=O1lDnz6&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:54] "POST /socket.io/?EIO=4&transport=polling&t=O1lDqMX&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:54] "GET /socket.io/?EIO=4&transport=polling&t=O1lDnz6.0&sid=6cR03DFtkiU6foRnAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:55] "GET /socket.io/?EIO=4&transport=polling&t=O1lDqcG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:56] "POST /socket.io/?EIO=4&transport=polling&t=O1lDqcw&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:08:56] "GET /socket.io/?EIO=4&transport=polling&t=O1lDqcy&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:09:21] "GET /socket.io/?EIO=4&transport=polling&t=O1lDqe1&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 01:09:21] "POST /socket.io/?EIO=4&transport=polling&t=O1lDwk3&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:22:38] "POST /socket.io/?EIO=4&transport=polling&t=O1lUiPZ&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:22:38] "GET /socket.io/?EIO=4&transport=polling&t=O1lDwk5&sid=hvKFkA4WTsRfvjKPAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:22:39] "GET /socket.io/?EIO=4&transport=polling&t=O1lUifD HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:22:39] "POST /socket.io/?EIO=4&transport=polling&t=O1lUify&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:22:39] "GET /socket.io/?EIO=4&transport=polling&t=O1lUifz&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:23:04] "GET /socket.io/?EIO=4&transport=polling&t=O1lUigy&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:23:04] "POST /socket.io/?EIO=4&transport=polling&t=O1lUomR&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:58:42] "POST /socket.io/?EIO=4&transport=polling&t=O1lcykl&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:58:42] "GET /socket.io/?EIO=4&transport=polling&t=O1lUomS&sid=_wbfZSYDMOz249Q-AAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:58:43] "GET /socket.io/?EIO=4&transport=polling&t=O1lcy-W HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:58:43] "POST /socket.io/?EIO=4&transport=polling&t=O1lcy-m&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:58:43] "GET /socket.io/?EIO=4&transport=polling&t=O1lcy-m.0&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:59:08] "GET /socket.io/?EIO=4&transport=polling&t=O1lcy_0&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 02:59:08] "POST /socket.io/?EIO=4&transport=polling&t=O1ld35q&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:46] "GET /socket.io/?EIO=4&transport=polling&t=O1ld35q.0&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:46] "POST /socket.io/?EIO=4&transport=polling&t=O1llRiT&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:53] "POST /socket.io/?EIO=4&transport=polling&t=O1llTB9&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:53] "GET /socket.io/?EIO=4&transport=polling&t=O1llRiT.0&sid=pm5AMIlAnu3zy3xCAAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:55] "GET /socket.io/?EIO=4&transport=polling&t=O1llTgX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:55] "POST /socket.io/?EIO=4&transport=polling&t=O1llTjF&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:35:55] "GET /socket.io/?EIO=4&transport=polling&t=O1llTjH&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:36:20] "GET /socket.io/?EIO=4&transport=polling&t=O1llTli&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 03:36:20] "POST /socket.io/?EIO=4&transport=polling&t=O1llZpp&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:08] "POST /socket.io/?EIO=4&transport=polling&t=O1lt-rY&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:08] "GET /socket.io/?EIO=4&transport=polling&t=O1llZpq&sid=6wMFGC7nKyv270l5AAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:09] "GET /socket.io/?EIO=4&transport=polling&t=O1lt_5G HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:09] "POST /socket.io/?EIO=4&transport=polling&t=O1lt_8X&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:09] "GET /socket.io/?EIO=4&transport=polling&t=O1lt_8Y&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:34] "GET /socket.io/?EIO=4&transport=polling&t=O1lt_9d&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 04:13:34] "POST /socket.io/?EIO=4&transport=polling&t=O1lu5F6&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:05:40] "GET /socket.io/?EIO=4&transport=polling&t=O1lu5F8&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:05:40] "POST /socket.io/?EIO=4&transport=polling&t=O1m40S8&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:06:05] "GET /socket.io/?EIO=4&transport=polling&t=O1m40S9&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:06:05] "POST /socket.io/?EIO=4&transport=polling&t=O1m46Zd&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:06:30] "GET /socket.io/?EIO=4&transport=polling&t=O1m46Ze&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 05:06:30] "POST /socket.io/?EIO=4&transport=polling&t=O1m4ChE&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:32] "POST /socket.io/?EIO=4&transport=polling&t=O1mrQk8&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:32] "GET /socket.io/?EIO=4&transport=polling&t=O1m4ChF&sid=q6yTa-KGv3V-Wx-AAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:34] "GET /socket.io/?EIO=4&transport=polling&t=O1mrR24 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:34] "POST /socket.io/?EIO=4&transport=polling&t=O1mrR2E&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:34] "GET /socket.io/?EIO=4&transport=polling&t=O1mrR2E.0&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:59] "GET /socket.io/?EIO=4&transport=polling&t=O1mrR2b&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:41:59] "POST /socket.io/?EIO=4&transport=polling&t=O1mrXAb&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:42:24] "GET /socket.io/?EIO=4&transport=polling&t=O1mrXAb.0&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:42:24] "POST /socket.io/?EIO=4&transport=polling&t=O1mrdHf&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:42:49] "GET /socket.io/?EIO=4&transport=polling&t=O1mrdHf.0&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:42:49] "POST /socket.io/?EIO=4&transport=polling&t=O1mrjOl&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:43:14] "GET /socket.io/?EIO=4&transport=polling&t=O1mrjOn&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:43:14] "POST /socket.io/?EIO=4&transport=polling&t=O1mrpVb&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:48:50] "POST /socket.io/?EIO=4&transport=polling&t=O1mt5X7&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:48:50] "GET /socket.io/?EIO=4&transport=polling&t=O1mrpVb.0&sid=K4UdSiqBrcrliHTPAAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:48:52] "GET /socket.io/?EIO=4&transport=polling&t=O1mt60W HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:48:52] "POST /socket.io/?EIO=4&transport=polling&t=O1mt60p&sid=7zZEUf8BQmNhH65ZAAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 08:48:52] "GET /socket.io/?EIO=4&transport=polling&t=O1mt60p.0&sid=7zZEUf8BQmNhH65ZAAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:46:44] "POST /socket.io/?EIO=4&transport=polling&t=O1o90C5&sid=7zZEUf8BQmNhH65ZAAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:46:44] "GET /socket.io/?EIO=4&transport=polling&t=O1mt618&sid=7zZEUf8BQmNhH65ZAAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:46:46] "GET /socket.io/?EIO=4&transport=polling&t=O1o90bj HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:46:47] "POST /socket.io/?EIO=4&transport=polling&t=O1o90vz&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:46:47] "GET /socket.io/?EIO=4&transport=polling&t=O1o90vz.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:47:12] "GET /socket.io/?EIO=4&transport=polling&t=O1o90xu&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:47:12] "POST /socket.io/?EIO=4&transport=polling&t=O1o96-p&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:47:37] "GET /socket.io/?EIO=4&transport=polling&t=O1o96-p.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:47:37] "POST /socket.io/?EIO=4&transport=polling&t=O1o9D5l&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:02] "GET /socket.io/?EIO=4&transport=polling&t=O1o9D5l.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:02] "POST /socket.io/?EIO=4&transport=polling&t=O1o9JCd&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:27] "GET /socket.io/?EIO=4&transport=polling&t=O1o9JCd.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:27] "POST /socket.io/?EIO=4&transport=polling&t=O1o9PJU&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:52] "GET /socket.io/?EIO=4&transport=polling&t=O1o9PJU.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:48:52] "POST /socket.io/?EIO=4&transport=polling&t=O1o9VQM&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:49:17] "GET /socket.io/?EIO=4&transport=polling&t=O1o9VQM.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:49:17] "POST /socket.io/?EIO=4&transport=polling&t=O1o9bXC&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:49:42] "GET /socket.io/?EIO=4&transport=polling&t=O1o9bXC.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:49:42] "POST /socket.io/?EIO=4&transport=polling&t=O1o9he5&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:07] "GET /socket.io/?EIO=4&transport=polling&t=O1o9he5.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:07] "POST /socket.io/?EIO=4&transport=polling&t=O1o9nl9&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:32] "GET /socket.io/?EIO=4&transport=polling&t=O1o9nl9.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:32] "POST /socket.io/?EIO=4&transport=polling&t=O1o9trz&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:57] "GET /socket.io/?EIO=4&transport=polling&t=O1o9tr-&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:50:57] "POST /socket.io/?EIO=4&transport=polling&t=O1o9zyp&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:51:22] "GET /socket.io/?EIO=4&transport=polling&t=O1o9zyp.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:51:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oA43i&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:51:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oA43i.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:51:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oAAAd&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:52:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oAAAd.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:52:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oAGHX&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:52:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oAGHX.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:52:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oAMOQ&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oAMOQ.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oASVF&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oASVF.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oAYcA&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oAYcB&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:53:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oAej2&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:54:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oAej2.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:54:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oAkpz&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:54:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oAkpz.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:54:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oAqwx&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oAqwy&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oAx1o&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oAx1p&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oB18k&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oB18l&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:55:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oB7Ff&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:56:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oB7Ff.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:56:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oBDMY&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:56:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oBDMZ&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:56:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oBJTQ&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:57:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oBJTR&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:57:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oBPaK&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:57:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oBPaK.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:57:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oBVhE&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oBVhF&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oBbo8&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oBbo8.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oBhv1&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oBhv1.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:58:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oBn_t&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:59:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oBn_t.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:59:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oBu6j&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:59:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oBu6k&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 14:59:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oB-Dg&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oB-Dg.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oC4KY&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oC4KY.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oCARS&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oCART&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:00:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oCGYO&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:01:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oCGYO.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:01:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oCMfH&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:01:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oCMfI&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:01:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oCSmA&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:02:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oCSmA.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:02:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oCYs_&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:02:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oCYt0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:02:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oCezu&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oCezv&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oCl4n&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oCl4o&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oCrBf&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oCrBf.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:03:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oCxIZ&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oCxIZ.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oD1PN&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oD1PN.0&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oD7W9&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oD9pH HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oD9rA&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:04:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oD9rA.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:05:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oD7WA&sid=u6LsdlGnnDpYNMOnAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:05:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oD9rk&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:05:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oDFw9&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:05:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oDFw9.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:05:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oDM0_&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oDM10&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oDS7w&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oDS7x&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oDYEq&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oDYEq.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:06:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oDeLi&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:07:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oDeLj&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:07:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oDkSY&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:07:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oDkSZ&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:07:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oDqZT&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:08:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oDqZU&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:08:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oDwgP&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:08:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oDwgQ&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:08:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oE0nI&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oE0nJ&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oE6u9&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oE6u9.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oEC_5&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oEC_5.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:09:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oEJ5y&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:10:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oEJ5z&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:10:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oEPCn&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:10:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oEPCo&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:10:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oEVJk&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oEVJk.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oEbQb&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oEbQb.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oEhXS&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oEhXS.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:11:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oEneI&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:12:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oEneI.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:12:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oEtl9&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:12:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oEtlA&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:12:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oEzs0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oF2Vk HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oF2XN&sid=z3i0uyfY1DmQp6OLAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oF2XO&sid=z3i0uyfY1DmQp6OLAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oEzs0.0&sid=Wf5rPPT45ZuHdbowAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oF2Y0&sid=z3i0uyfY1DmQp6OLAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oF8cf&sid=z3i0uyfY1DmQp6OLAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oFDS- HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:51] "POST /socket.io/?EIO=4&transport=polling&t=O1oFDUa&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oFDUb&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:13:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oF8cf.0&sid=z3i0uyfY1DmQp6OLAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:14:16] "GET /socket.io/?EIO=4&transport=polling&t=O1oFDV7&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:14:16] "POST /socket.io/?EIO=4&transport=polling&t=O1oFJZz&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:14:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oFJZz.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:14:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oFPgw&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oFPgw.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oFVnm&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oFVnm.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oFbud&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oFbue&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:15:56] "POST /socket.io/?EIO=4&transport=polling&t=O1oFh_T&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:16:21] "GET /socket.io/?EIO=4&transport=polling&t=O1oFh_T.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:16:21] "POST /socket.io/?EIO=4&transport=polling&t=O1oFo6I&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:16:46] "GET /socket.io/?EIO=4&transport=polling&t=O1oFo6I.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:16:46] "POST /socket.io/?EIO=4&transport=polling&t=O1oFuDF&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:17:11] "GET /socket.io/?EIO=4&transport=polling&t=O1oFuDF.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:17:11] "POST /socket.io/?EIO=4&transport=polling&t=O1oF-K2&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:17:36] "GET /socket.io/?EIO=4&transport=polling&t=O1oF-K2.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:17:36] "POST /socket.io/?EIO=4&transport=polling&t=O1oG4Qt&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:01] "GET /socket.io/?EIO=4&transport=polling&t=O1oG4Qt.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:01] "POST /socket.io/?EIO=4&transport=polling&t=O1oGAXi&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:26] "GET /socket.io/?EIO=4&transport=polling&t=O1oGAXi.0&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:26] "POST /socket.io/?EIO=4&transport=polling&t=O1oGGeZ&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:28] "GET /socket.io/?EIO=4&transport=polling&t=O1oGHAb HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:29] "POST /socket.io/?EIO=4&transport=polling&t=O1oGHCI&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:29] "GET /socket.io/?EIO=4&transport=polling&t=O1oGHCI.0&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oGGea&sid=sE_qz2cT8bCH-sT4AAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:53] "GET /socket.io/?EIO=4&transport=polling&t=O1oGHCn&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:18:53] "POST /socket.io/?EIO=4&transport=polling&t=O1oGNHT&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:18] "GET /socket.io/?EIO=4&transport=polling&t=O1oGNHU&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:18] "POST /socket.io/?EIO=4&transport=polling&t=O1oGTOO&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:43] "GET /socket.io/?EIO=4&transport=polling&t=O1oGTOO.0&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:43] "POST /socket.io/?EIO=4&transport=polling&t=O1oGZVS&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:44] "GET /socket.io/?EIO=4&transport=polling&t=O1oGZig HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:44] "POST /socket.io/?EIO=4&transport=polling&t=O1oGZkD&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:19:44] "GET /socket.io/?EIO=4&transport=polling&t=O1oGZkD.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:08] "GET /socket.io/?EIO=4&transport=polling&t=O1oGZVS.0&sid=-hLw294Zd01O8ECLAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:09] "GET /socket.io/?EIO=4&transport=polling&t=O1oGZkv&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:09] "POST /socket.io/?EIO=4&transport=polling&t=O1oGfpZ&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:34] "GET /socket.io/?EIO=4&transport=polling&t=O1oGfpa&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:34] "POST /socket.io/?EIO=4&transport=polling&t=O1oGlwQ&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:59] "GET /socket.io/?EIO=4&transport=polling&t=O1oGlwQ.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:20:59] "POST /socket.io/?EIO=4&transport=polling&t=O1oGs1K&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:21:24] "GET /socket.io/?EIO=4&transport=polling&t=O1oGs1L&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:21:24] "POST /socket.io/?EIO=4&transport=polling&t=O1oGy8F&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:21:49] "GET /socket.io/?EIO=4&transport=polling&t=O1oGy8G&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:21:49] "POST /socket.io/?EIO=4&transport=polling&t=O1oH2FA&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:22:14] "GET /socket.io/?EIO=4&transport=polling&t=O1oH2FB&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:22:14] "POST /socket.io/?EIO=4&transport=polling&t=O1oH8M5&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:22:39] "GET /socket.io/?EIO=4&transport=polling&t=O1oH8M7&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:22:39] "POST /socket.io/?EIO=4&transport=polling&t=O1oHET4&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:04] "GET /socket.io/?EIO=4&transport=polling&t=O1oHET4.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:04] "POST /socket.io/?EIO=4&transport=polling&t=O1oHKa0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:29] "GET /socket.io/?EIO=4&transport=polling&t=O1oHKa1&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:29] "POST /socket.io/?EIO=4&transport=polling&t=O1oHQh0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:54] "GET /socket.io/?EIO=4&transport=polling&t=O1oHQh0.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:23:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oHWnx&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:24:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oHWnx.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:24:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oHcun&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:24:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oHcuo&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:24:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oHi_e&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:25:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oHi_e.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:25:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oHp6T&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:25:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oHp6U&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:25:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oHvDL&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oHvDM&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oH_KI&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oH_KI.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oI5R6&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oI5R7&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:26:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oIBX-&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:27:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oIBX-.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:27:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oIHet&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:27:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oIHeu&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:27:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oINlp&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oINlp.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oITsh&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oITsi&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oIZzb&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oIZzc&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:28:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oIg4U&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:29:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oIg4U.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:29:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oImBL&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:29:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oImBL.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:29:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oIsIB&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:30:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oIsIC&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:30:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oIyP5&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:30:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oIyP5.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:30:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oJ2Y7&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oJ2Y7.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oJ8f9&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oJ8f9.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oJEnu&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oJEnu.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:31:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oJKuj&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:32:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oJKuj.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:32:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oJQ_c&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:32:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oJQ_d&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:32:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oJX6U&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oJX6U.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oJdDM&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oJdDM.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oJjKG&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oJjKG.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:33:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oJpR9&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:34:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oJpRA&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:34:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oJvX-&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:34:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oJvX-.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:34:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oJ_es&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:35:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oJ_es.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:35:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oK5ln&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:35:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oK5ln.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:35:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oKBsd&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oKBsd.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oKHzR&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oKHzR.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oKO4L&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oKO4L.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:36:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oKUBE&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:37:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oKUBE.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:37:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oKaI3&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:37:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oKaI3.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:37:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oKgOz&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oKgOz.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oKmVt&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oKmVt.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oKscs&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oKscs.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:38:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oKyji&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:39:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oKyji.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:39:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oL2qb&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:39:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oL2qb.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:39:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oL8xV&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:40:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oL8xV.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:40:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oLF2O&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:40:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oLF2P&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:40:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oLL9I&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oLL9I.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oLRG9&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oLRG9.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oLXN3&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oLXN4&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:41:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oLdT_&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:42:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oLdU0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:42:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oLjaq&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:42:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oLjar&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:42:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oLphm&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oLphm.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oLvoY&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oLvoY.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oL_vN&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oL_vN.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:43:56] "POST /socket.io/?EIO=4&transport=polling&t=O1oM60I&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:44:21] "GET /socket.io/?EIO=4&transport=polling&t=O1oM60J&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:44:21] "POST /socket.io/?EIO=4&transport=polling&t=O1oMC7B&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:44:46] "GET /socket.io/?EIO=4&transport=polling&t=O1oMC7B.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:44:46] "POST /socket.io/?EIO=4&transport=polling&t=O1oMIE4&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:45:11] "GET /socket.io/?EIO=4&transport=polling&t=O1oMIE5&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:45:11] "POST /socket.io/?EIO=4&transport=polling&t=O1oMOL4&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:45:36] "GET /socket.io/?EIO=4&transport=polling&t=O1oMOL4.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:45:36] "POST /socket.io/?EIO=4&transport=polling&t=O1oMUS0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:01] "GET /socket.io/?EIO=4&transport=polling&t=O1oMUS0.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:01] "POST /socket.io/?EIO=4&transport=polling&t=O1oMaYs&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:26] "GET /socket.io/?EIO=4&transport=polling&t=O1oMaYt&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:26] "POST /socket.io/?EIO=4&transport=polling&t=O1oMgfo&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oMgfo.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:46:51] "POST /socket.io/?EIO=4&transport=polling&t=O1oMmmd&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:47:16] "GET /socket.io/?EIO=4&transport=polling&t=O1oMmmd.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:47:16] "POST /socket.io/?EIO=4&transport=polling&t=O1oMstW&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:47:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oMstW.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:47:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oMy-O&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oMy-O.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oN35G&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oN35H&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oN9CD&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oN9CE&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:48:56] "POST /socket.io/?EIO=4&transport=polling&t=O1oNFJ8&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:49:21] "GET /socket.io/?EIO=4&transport=polling&t=O1oNFJ8.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:49:21] "POST /socket.io/?EIO=4&transport=polling&t=O1oNLQ0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:49:46] "GET /socket.io/?EIO=4&transport=polling&t=O1oNLQ1&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:49:46] "POST /socket.io/?EIO=4&transport=polling&t=O1oNRWw&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:50:11] "GET /socket.io/?EIO=4&transport=polling&t=O1oNRWw.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:50:11] "POST /socket.io/?EIO=4&transport=polling&t=O1oNXdq&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:50:36] "GET /socket.io/?EIO=4&transport=polling&t=O1oNXdr&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:50:36] "POST /socket.io/?EIO=4&transport=polling&t=O1oNdkj&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:01] "GET /socket.io/?EIO=4&transport=polling&t=O1oNdkj.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:01] "POST /socket.io/?EIO=4&transport=polling&t=O1oNjrX&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:26] "GET /socket.io/?EIO=4&transport=polling&t=O1oNjrY&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:26] "POST /socket.io/?EIO=4&transport=polling&t=O1oNpzI&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oNpzI.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:51:51] "POST /socket.io/?EIO=4&transport=polling&t=O1oNw6h&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:52:16] "GET /socket.io/?EIO=4&transport=polling&t=O1oNw6h.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:52:16] "POST /socket.io/?EIO=4&transport=polling&t=O1oO0Dd&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:52:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oO0Dd.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:52:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oO6KV&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oO6KV.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oOCRS&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oOCRS.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oOIYO&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oOIYO.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:53:56] "POST /socket.io/?EIO=4&transport=polling&t=O1oOOfM&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:54:21] "GET /socket.io/?EIO=4&transport=polling&t=O1oOOfM.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:54:21] "POST /socket.io/?EIO=4&transport=polling&t=O1oOUmQ&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:54:46] "GET /socket.io/?EIO=4&transport=polling&t=O1oOUmS&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:54:46] "POST /socket.io/?EIO=4&transport=polling&t=O1oOatK&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:55:11] "GET /socket.io/?EIO=4&transport=polling&t=O1oOatK.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:55:11] "POST /socket.io/?EIO=4&transport=polling&t=O1oOg-E&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:55:36] "GET /socket.io/?EIO=4&transport=polling&t=O1oOg-E.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:55:36] "POST /socket.io/?EIO=4&transport=polling&t=O1oOn56&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:01] "GET /socket.io/?EIO=4&transport=polling&t=O1oOn56.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:01] "POST /socket.io/?EIO=4&transport=polling&t=O1oOtC1&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:26] "GET /socket.io/?EIO=4&transport=polling&t=O1oOtC1.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:26] "POST /socket.io/?EIO=4&transport=polling&t=O1oOzIu&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:51] "GET /socket.io/?EIO=4&transport=polling&t=O1oOzIu.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:56:51] "POST /socket.io/?EIO=4&transport=polling&t=O1oP3Pn&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:57:16] "GET /socket.io/?EIO=4&transport=polling&t=O1oP3Pn.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:57:16] "POST /socket.io/?EIO=4&transport=polling&t=O1oP9Wc&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:57:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oP9Wd&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:57:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oPFdd&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oPFde&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oPLkU&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oPLkU.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:31] "POST /socket.io/?EIO=4&transport=polling&t=O1oPRrO&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:56] "GET /socket.io/?EIO=4&transport=polling&t=O1oPRrO.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:58:56] "POST /socket.io/?EIO=4&transport=polling&t=O1oPXyH&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:59:21] "GET /socket.io/?EIO=4&transport=polling&t=O1oPXyH.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:59:21] "POST /socket.io/?EIO=4&transport=polling&t=O1oPe3E&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:59:46] "GET /socket.io/?EIO=4&transport=polling&t=O1oPe3E.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 15:59:46] "POST /socket.io/?EIO=4&transport=polling&t=O1oPkA4&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:00:11] "GET /socket.io/?EIO=4&transport=polling&t=O1oPkA4.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:00:11] "POST /socket.io/?EIO=4&transport=polling&t=O1oPqGv&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:00:36] "GET /socket.io/?EIO=4&transport=polling&t=O1oPqGv.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:00:36] "POST /socket.io/?EIO=4&transport=polling&t=O1oPwNo&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:01] "GET /socket.io/?EIO=4&transport=polling&t=O1oPwNo.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oQ0Ui&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oQ0Ui.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oQ6bf&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oQ6bf.0&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:01:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oQCiX&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:02:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oQCiY&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:02:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oQIpR&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:02:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oQIpS&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:02:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oQOwA&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oQOwC&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oQV11&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oQV13&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oQb7z&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oQb7-&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:03:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oQhEv&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:04:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oQhEx&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:04:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oQnLv&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:04:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oQnLx&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:04:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oQtSn&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:05:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oQtSo&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:05:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oQzZh&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:05:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oQzZi&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:05:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oR3gb&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oR3gc&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oR9nV&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:13] "GET /socket.io/?EIO=4&transport=polling&t=O1oRCTY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:13] "POST /socket.io/?EIO=4&transport=polling&t=O1oRCVA&sid=tMuka4eX5yKLwtWSAAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:13] "GET /socket.io/?EIO=4&transport=polling&t=O1oRCVC&sid=tMuka4eX5yKLwtWSAAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oR9nW&sid=dcqFfXsslgg78r_zAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:38] "GET /socket.io/?EIO=4&transport=polling&t=O1oRCXK&sid=tMuka4eX5yKLwtWSAAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:38] "POST /socket.io/?EIO=4&transport=polling&t=O1oRIaX&sid=tMuka4eX5yKLwtWSAAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oRND3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oRNFP&sid=ZQ_6D2bWGJbMeALVAAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:06:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oRNFQ&sid=ZQ_6D2bWGJbMeALVAAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:03] "GET /socket.io/?EIO=4&transport=polling&t=O1oRIaY&sid=tMuka4eX5yKLwtWSAAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oRNGq&sid=ZQ_6D2bWGJbMeALVAAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oRTK4&sid=ZQ_6D2bWGJbMeALVAAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:23] "GET /socket.io/?EIO=4&transport=polling&t=O1oRThr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:23] "POST /socket.io/?EIO=4&transport=polling&t=O1oRTjM&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:23] "GET /socket.io/?EIO=4&transport=polling&t=O1oRTjM.0&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oRTK6&sid=ZQ_6D2bWGJbMeALVAAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:48] "GET /socket.io/?EIO=4&transport=polling&t=O1oRTlA&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:07:48] "POST /socket.io/?EIO=4&transport=polling&t=O1oRZov&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:08:13] "GET /socket.io/?EIO=4&transport=polling&t=O1oRZox&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:08:13] "POST /socket.io/?EIO=4&transport=polling&t=O1oRfvq&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:08:38] "GET /socket.io/?EIO=4&transport=polling&t=O1oRfvs&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:08:38] "POST /socket.io/?EIO=4&transport=polling&t=O1oRm0i&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:03] "GET /socket.io/?EIO=4&transport=polling&t=O1oRm0j&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:03] "POST /socket.io/?EIO=4&transport=polling&t=O1oRs7c&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:28] "GET /socket.io/?EIO=4&transport=polling&t=O1oRs7d&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:28] "POST /socket.io/?EIO=4&transport=polling&t=O1oRyEX&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:53] "GET /socket.io/?EIO=4&transport=polling&t=O1oRyEY&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:09:53] "POST /socket.io/?EIO=4&transport=polling&t=O1oS2LO&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:10:18] "GET /socket.io/?EIO=4&transport=polling&t=O1oS2LQ&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:10:18] "POST /socket.io/?EIO=4&transport=polling&t=O1oS8SJ&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:10:43] "GET /socket.io/?EIO=4&transport=polling&t=O1oS8SK&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:10:43] "POST /socket.io/?EIO=4&transport=polling&t=O1oSEZB&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:08] "GET /socket.io/?EIO=4&transport=polling&t=O1oSEZC&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:08] "POST /socket.io/?EIO=4&transport=polling&t=O1oSKg8&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:33] "GET /socket.io/?EIO=4&transport=polling&t=O1oSKg9&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:33] "POST /socket.io/?EIO=4&transport=polling&t=O1oSQn0&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:58] "GET /socket.io/?EIO=4&transport=polling&t=O1oSQn1&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:11:58] "POST /socket.io/?EIO=4&transport=polling&t=O1oSWtu&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:12:23] "GET /socket.io/?EIO=4&transport=polling&t=O1oSWtv&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:12:23] "POST /socket.io/?EIO=4&transport=polling&t=O1oSc-p&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:12:49] "GET /socket.io/?EIO=4&transport=polling&t=O1oSc-q&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:12:49] "POST /socket.io/?EIO=4&transport=polling&t=O1oSj6A&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:13:14] "GET /socket.io/?EIO=4&transport=polling&t=O1oSj6B&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:13:14] "POST /socket.io/?EIO=4&transport=polling&t=O1oSpDI&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:13:39] "GET /socket.io/?EIO=4&transport=polling&t=O1oSpDJ&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:13:39] "POST /socket.io/?EIO=4&transport=polling&t=O1oSvKE&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:04] "GET /socket.io/?EIO=4&transport=polling&t=O1oSvKF&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:04] "POST /socket.io/?EIO=4&transport=polling&t=O1oS_R9&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:29] "GET /socket.io/?EIO=4&transport=polling&t=O1oS_RA&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:29] "POST /socket.io/?EIO=4&transport=polling&t=O1oT5Y2&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:54] "GET /socket.io/?EIO=4&transport=polling&t=O1oT5Y3&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:14:54] "POST /socket.io/?EIO=4&transport=polling&t=O1oTBex&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:15:19] "GET /socket.io/?EIO=4&transport=polling&t=O1oTBey&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:15:19] "POST /socket.io/?EIO=4&transport=polling&t=O1oTHlm&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:15:44] "GET /socket.io/?EIO=4&transport=polling&t=O1oTHlo&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:15:44] "POST /socket.io/?EIO=4&transport=polling&t=O1oTNsh&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:09] "GET /socket.io/?EIO=4&transport=polling&t=O1oTNsh.0&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:09] "POST /socket.io/?EIO=4&transport=polling&t=O1oTTzc&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:34] "GET /socket.io/?EIO=4&transport=polling&t=O1oTTze&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:34] "POST /socket.io/?EIO=4&transport=polling&t=O1oTa4Y&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:59] "GET /socket.io/?EIO=4&transport=polling&t=O1oTa4a&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:16:59] "POST /socket.io/?EIO=4&transport=polling&t=O1oTgBU&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:17:24] "GET /socket.io/?EIO=4&transport=polling&t=O1oTgBV&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:17:24] "POST /socket.io/?EIO=4&transport=polling&t=O1oTmIQ&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:17:49] "GET /socket.io/?EIO=4&transport=polling&t=O1oTmIS&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:17:49] "POST /socket.io/?EIO=4&transport=polling&t=O1oTsPM&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:18:14] "GET /socket.io/?EIO=4&transport=polling&t=O1oTsPO&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:18:14] "POST /socket.io/?EIO=4&transport=polling&t=O1oTyWK&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:18:39] "GET /socket.io/?EIO=4&transport=polling&t=O1oTyWM&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:18:39] "POST /socket.io/?EIO=4&transport=polling&t=O1oU2dG&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:19:04] "GET /socket.io/?EIO=4&transport=polling&t=O1oU2dG.0&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:19:04] "POST /socket.io/?EIO=4&transport=polling&t=O1oU8kA&sid=0jT8zX7lf-yY98MSAAAi HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/35e25e144903/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/0328eea6cfcc16ff2f9cf3c2bbf296e1636635252c1a36547ec47a4fe9b28355/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/0328eea6cfcc16ff2f9cf3c2bbf296e1636635252c1a36547ec47a4fe9b28355/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/0328eea6cfcc16ff2f9cf3c2bbf296e1636635252c1a36547ec47a4fe9b28355/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/c810f3bc594d4e6b70821f9129d6930f54437f0b5a2b29aa5ed4e18192bcf376/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/c810f3bc594d4e6b70821f9129d6930f54437f0b5a2b29aa5ed4e18192bcf376/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/0328eea6cfcc16ff2f9cf3c2bbf296e1636635252c1a36547ec47a4fe9b28355?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/5d735769ada1d9aef46559b1e0bb402e4789c5c4546c64a980bea89709a43385/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/5d735769ada1d9aef46559b1e0bb402e4789c5c4546c64a980bea89709a43385/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/5d735769ada1d9aef46559b1e0bb402e4789c5c4546c64a980bea89709a43385/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/473a85a6862b959bf6ed708196de8570b4b48a270506ee2737437624c2608f6f/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/473a85a6862b959bf6ed708196de8570b4b48a270506ee2737437624c2608f6f/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/5d735769ada1d9aef46559b1e0bb402e4789c5c4546c64a980bea89709a43385?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:35e25e1449035144416b3da44ac1cb381c614afe23c46687ee13a02d94989862?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/1f26ccb65785/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/dce98e98e56ea814689029b6ce6cfeca4ce7be8f27016ac7e982fc57f38e05ba/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/dce98e98e56ea814689029b6ce6cfeca4ce7be8f27016ac7e982fc57f38e05ba/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/dce98e98e56ea814689029b6ce6cfeca4ce7be8f27016ac7e982fc57f38e05ba/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/4e07ca119697ba13a29a63bd3275d1ac8bec9c30cdeceb7407dcb9926cc7e2e6/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/4e07ca119697ba13a29a63bd3275d1ac8bec9c30cdeceb7407dcb9926cc7e2e6/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/dce98e98e56ea814689029b6ce6cfeca4ce7be8f27016ac7e982fc57f38e05ba?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/12268208fa78cd12e45c924a641abb17964e19147b5285a08092f01cf7efa079/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/12268208fa78cd12e45c924a641abb17964e19147b5285a08092f01cf7efa079/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/12268208fa78cd12e45c924a641abb17964e19147b5285a08092f01cf7efa079/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/705a1f84604da5c93dd3e88bdc10277c0184bb91bb99f2066c746bdfddf32fdb/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/705a1f84604da5c93dd3e88bdc10277c0184bb91bb99f2066c746bdfddf32fdb/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/12268208fa78cd12e45c924a641abb17964e19147b5285a08092f01cf7efa079?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/a2ff93d9f90e660bf1c3b8ae7b5d66619da4a1d66352024a20800f4b1c43cacd/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/a2ff93d9f90e660bf1c3b8ae7b5d66619da4a1d66352024a20800f4b1c43cacd/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/a2ff93d9f90e660bf1c3b8ae7b5d66619da4a1d66352024a20800f4b1c43cacd/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/6808b4db491a4bd298b9cecb2b297958f25b66821ea2e6113cbc1d68a80f682c/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/6808b4db491a4bd298b9cecb2b297958f25b66821ea2e6113cbc1d68a80f682c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/a2ff93d9f90e660bf1c3b8ae7b5d66619da4a1d66352024a20800f4b1c43cacd?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/19b4b205e65547da2e5e0eca9c1748ec512cbdc32cc5afb06f71e8209daa2df1/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/19b4b205e65547da2e5e0eca9c1748ec512cbdc32cc5afb06f71e8209daa2df1/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/19b4b205e65547da2e5e0eca9c1748ec512cbdc32cc5afb06f71e8209daa2df1/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/5114b89a84dadf4dce649948846a2aa542d8399146ff1589fe34034be1f8425b/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/5114b89a84dadf4dce649948846a2aa542d8399146ff1589fe34034be1f8425b/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/19b4b205e65547da2e5e0eca9c1748ec512cbdc32cc5afb06f71e8209daa2df1?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/d853f56e9850e9bf6224c82b36e9262b5cca1f69e4966e3a49ace9f6e411bccc/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/d853f56e9850e9bf6224c82b36e9262b5cca1f69e4966e3a49ace9f6e411bccc/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/d853f56e9850e9bf6224c82b36e9262b5cca1f69e4966e3a49ace9f6e411bccc/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/2c438964bb8f22c1e36b1de980d7a2a45f859cd7cb1a90d1e40fd04e4ab7c8d0/start HTTP/1.1" 101 0
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:23:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oV3YI.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:23:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oV9f9&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/2c438964bb8f22c1e36b1de980d7a2a45f859cd7cb1a90d1e40fd04e4ab7c8d0/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/d853f56e9850e9bf6224c82b36e9262b5cca1f69e4966e3a49ace9f6e411bccc?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:1f26ccb65785f2404289fb19ce9897f3a8e7d31f5186afa4788c840f751425f8?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3_1": "ok", "test3_2": "FAIL"}, "Testing": {}, "docker_image1": {"test1_1": "ok", "test1_2": "ok", "test2_1": "ok", "test2_2": "FAIL", "test2_3": "FAIL"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:23:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oV9fA&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:23:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oV9pe&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:23:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oVFm4&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:24:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oVFm5&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:24:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oVLt0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:24:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oVLt1&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:24:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oVRzx&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:25:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oVRzy&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:25:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oVY4r&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:25:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oVY4r.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:25:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oVeBm&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oVeBm.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oVkIb&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oVkIc&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oVqPW&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oVqPW.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:26:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oVwWR&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:27:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oVwWS&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:27:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oW0dM&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:27:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oW0dM.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:27:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oW6kD&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oW6kE&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oWCr5&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oWCr5.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oWIy0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oWIy1&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:28:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oWP2v&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:29:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oWP2v.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:29:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oWV9n&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:29:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oWV9o&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:29:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oWbGi&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:30:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oWbGj&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:30:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oWhNb&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:30:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oWhNb.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:30:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oWnUV&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oWnUV.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oWtbN&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oWtbN.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oWziI&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oWziI.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:31:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oX3pC&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oX3pC.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oX9w6&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oX9w6.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oXG0_&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oXJjN HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oXJkV&sid=A61cw1vxnfrpFWE5AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:32:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oXJkV.0&sid=A61cw1vxnfrpFWE5AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oXG0_.0&sid=8qzXdHCAAW-0n2evAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oXJl3&sid=A61cw1vxnfrpFWE5AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oXPqH&sid=A61cw1vxnfrpFWE5AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:34] "GET /socket.io/?EIO=4&transport=polling&t=O1oXT9t HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:34] "POST /socket.io/?EIO=4&transport=polling&t=O1oXTBd&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:34] "GET /socket.io/?EIO=4&transport=polling&t=O1oXTBd.0&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oXPqH.0&sid=A61cw1vxnfrpFWE5AAAC HTTP/1.1" 200 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 313, in execute
+    self.wfile.write(b"0\r\n\r\n")
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:59] "GET /socket.io/?EIO=4&transport=polling&t=O1oXTBz&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:33:59] "POST /socket.io/?EIO=4&transport=polling&t=O1oXZGl&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:24] "GET /socket.io/?EIO=4&transport=polling&t=O1oXZGm&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:24] "POST /socket.io/?EIO=4&transport=polling&t=O1oXfNb&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oXgl0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oXgmS&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oXgmT&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:49] "GET /socket.io/?EIO=4&transport=polling&t=O1oXfNc&sid=oO9J66ia_ZHSHCgJAAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oXgmx&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:34:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oXmrz&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:35:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oXmrz.0&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:35:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oXsyt&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:35:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oXsyt.0&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:35:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oXz3j&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oXz3k&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oY3AZ&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oY8WA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oY8XC&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oY8XC.0&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oY3AZ.0&sid=u8s4dzYLF_4NiefTAAAG HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oY8YG&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:36:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oYEdO&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:37:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oYEdP&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:37:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oYKkF&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:37:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oYKkG&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:37:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oYQrB&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:38:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oYQrB.0&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:38:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oYWy9&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:38:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oYWyA&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:38:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oYd32&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oYd32.0&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oYjAQ&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:24] "GET /socket.io/?EIO=4&transport=polling&t=O1oYoZL HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:24] "POST /socket.io/?EIO=4&transport=polling&t=O1oYoaX&sid=jBIyU4C02YTKpKkpAAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:24] "GET /socket.io/?EIO=4&transport=polling&t=O1oYoaY&sid=jBIyU4C02YTKpKkpAAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oYjAS&sid=vVCjsi6FAk9d_ks1AAAI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:49] "GET /socket.io/?EIO=4&transport=polling&t=O1oYobD&sid=jBIyU4C02YTKpKkpAAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:49] "POST /socket.io/?EIO=4&transport=polling&t=O1oYugO&sid=jBIyU4C02YTKpKkpAAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oYuvP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:50] "POST /socket.io/?EIO=4&transport=polling&t=O1oYuwy&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:39:50] "GET /socket.io/?EIO=4&transport=polling&t=O1oYuwy.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:40:14] "GET /socket.io/?EIO=4&transport=polling&t=O1oYugO.0&sid=jBIyU4C02YTKpKkpAAAK HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:40:15] "GET /socket.io/?EIO=4&transport=polling&t=O1oYuxY&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:40:15] "POST /socket.io/?EIO=4&transport=polling&t=O1oY_0H&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:40:40] "GET /socket.io/?EIO=4&transport=polling&t=O1oY_0H.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:40:40] "POST /socket.io/?EIO=4&transport=polling&t=O1oZ57A&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oZ57A.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oZBE7&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:30] "GET /socket.io/?EIO=4&transport=polling&t=O1oZBE7.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:30] "POST /socket.io/?EIO=4&transport=polling&t=O1oZHL1&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:55] "GET /socket.io/?EIO=4&transport=polling&t=O1oZHL2&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:41:55] "POST /socket.io/?EIO=4&transport=polling&t=O1oZNRv&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:42:20] "GET /socket.io/?EIO=4&transport=polling&t=O1oZNRv.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:42:20] "POST /socket.io/?EIO=4&transport=polling&t=O1oZTYd&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:42:45] "GET /socket.io/?EIO=4&transport=polling&t=O1oZTYe&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:42:45] "POST /socket.io/?EIO=4&transport=polling&t=O1oZZfR&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:43:10] "GET /socket.io/?EIO=4&transport=polling&t=O1oZZfR.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:43:10] "POST /socket.io/?EIO=4&transport=polling&t=O1oZfmJ&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:43:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oZfmK&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:43:35] "POST /socket.io/?EIO=4&transport=polling&t=O1oZlt9&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:44:00] "GET /socket.io/?EIO=4&transport=polling&t=O1oZlt9.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:44:00] "POST /socket.io/?EIO=4&transport=polling&t=O1oZr-4&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:44:25] "GET /socket.io/?EIO=4&transport=polling&t=O1oZr-4.0&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 16:44:25] "POST /socket.io/?EIO=4&transport=polling&t=O1oZy4_&sid=GCC5zmb06WPrB3oDAAAM HTTP/1.1" 200 -

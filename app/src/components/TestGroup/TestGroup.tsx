@@ -49,7 +49,7 @@ const TestBlock = (
         {StatusLight()}
         {testName}
       </div>
-      <div className="TestGroup__testContentHeader">{testContentHeader} </div>
+      <div className="TestGroup__testContentHeader">{testContentHeader}</div>
       {/* <div className="TestGroup__testContent">{testContent}</div> */}
     </div>
   );

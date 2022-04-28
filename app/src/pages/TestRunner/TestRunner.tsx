@@ -10,7 +10,7 @@ function TestRunner() {
   const { currBlocks } = testDesignerState;
 
   const [finalToggle, setFinalToggle] = useState(false);
-  const [loading, setLoading] = useState("pending");
+  const [loading, setLoading] = useState("Pending");
   const [returnArray, setReturnArray] = useState<TestInfo[][]>();
   const [returnNameArray, setReturnNameArray] = useState<string[]>();
   //Reset variables on redux store change
