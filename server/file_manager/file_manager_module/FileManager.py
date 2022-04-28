@@ -1,6 +1,7 @@
 from os import sep
 from pathlib import Path
 from shutil import make_archive, rmtree
+import shutil
 
 _FILE_MANAGER_NAME		= 'FileManager.py'
 _INIT_NAME				= '__init__.py'
@@ -59,6 +60,7 @@ TEMP_DIRS = (DOCKERFILES_DIR, TEST_JSON_DIR, TEST_FILES_DIR, TEST_RESULTS_DIR, F
 TEST_FILES_PACKAGE = str(TEST_FILES_DIR.relative_to(SERVER_DIR)).replace(sep, '.')
 
 
+
 def find_file(filename):
 	filename_path = Path(filename)
 	if len(filename_path.parts) < 1:
@@ -104,8 +106,9 @@ def clear_temp_dirs():
 		clear_dir(dir_path)
 
 
-def zip_folder():
-	make_archive('output', 'zip', str(HIERARCHY_DIR))
+def zip_folder(dir_path: Path, zip_name):
+	shutil.make_archive(zip_name, 'zip', str(dir_path))
+
 
 
 def sort_hierarchy():
