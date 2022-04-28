@@ -1,7 +1,7 @@
 import ToolBarItem from './ToolBarItem';
 import ToolBarTheme from '../ToolBarTheme/ToolBarTheme';
-import './ToolBar.scss';
 import ToolBarExport from '../ToolBarExport/ToolBarExport';
+import './ToolBar.scss';
 
 interface ToolBarItems {
   [name: string]: Array<string>
@@ -31,12 +31,10 @@ function ToolBar() {
   const toolBarItems = Object.entries(TOOL_BAR_ITEMS).map(([name, options]) => {
     if (name === 'Theme')
       return <ToolBarTheme key={name} />;
-    else if(name === 'Export') {
+    else if(name === 'Export')
       return <ToolBarExport key={name} />;
-    }
     else 
       return <ToolBarItem name={name} options={options} onClick={handleClick} key={name} />;
-  
   });
 
   return (
