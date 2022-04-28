@@ -4,7 +4,6 @@ import THEMES, { HSL } from '../../data/themes';
 import { setCookie, getCookie } from '../../utils/cookie';
 import { SocketContext } from "../../context/socket";
 
-#test
 interface Props {
   className?: string,
 }

@@ -1,7 +1,9 @@
 from enum import Enum
 from pprint import pp
 from time import sleep
+from pathlib import Path
 
+import re
 import flask_socketio
 from flask import Flask
 from zipfile import ZipFile
@@ -121,31 +123,32 @@ def socketFrontendDownloadFile(filename):
 		flask_socketio.emit('file_dne', filename)	
 		return
 	flask_socketio.emit('frontend_download', data)
-#testfsf
+
 @socketio.on('export_unit_tests')
 def socketFrontendDownloadTests():
 	print("goes here")
 	filename = "output.zip"
-	FileManager.zip_folder()
-	path = "../server/file_manager/file_manager_module/output.zip"
+
+	FileManager.zip_folder(FileManager.TEST_FILES_DIR)
 	zit = ""
 	# with ZipFile(path, 'r') as zip:
 	# 	for info in zip.infolist():
 	# 		zit += info.file
 	# #print(path)
 	try:
-		data = ''
-		with ZipFile(path, 'r') as zip:
-			for file in zip.namelist():
-				print(file.name)
-				with zip.open(file) as f:
+		data = b''
+		with ZipFile("../server/output.zip", 'r') as zip:
+			for file in zip.filelist:
+				print(file)
+				match = re.search("\.py$", zip.open(file).name)
+				if match:
 					print('entered file')
-					data += f.read()
-			
+					data += zip.open(file).read()
+					print('data:', data.decode('utf-8'))
 	except:
 		flask_socketio.emit('file_dne', filename)
 		return
-	flask_socketio.emit('export_tests_finished', data.encode())
+	flask_socketio.emit('export_tests_finished', data)
 
 # @socketio.on('dosomething')
 # def pleasework():

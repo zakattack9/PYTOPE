@@ -22,7 +22,6 @@ const TOOL_BAR_ITEMS: ToolBarItems = {
   'Theme': [],
   'Help': [],
 }
-#test
 
 function ToolBar() {
   const handleClick = (option: string) => {

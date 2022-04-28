@@ -106,8 +106,8 @@ def clear_temp_dirs():
 		clear_dir(dir_path)
 
 
-def zip_folder():
-	shutil.make_archive('output', 'zip', str(HIERARCHY_DIR))
+def zip_folder(dir_path: Path):
+	shutil.make_archive('output', 'zip', str(dir_path))
 
 
 
@@ -115,5 +115,3 @@ def sort_hierarchy():
 	for file in MODULE_DIR.iterdir():
 		if file.name not in (_FILE_MANAGER_NAME, _INIT_NAME, _HIERARCHY_NAME):
 			file.rename(find_file(file))
-
-zip_folder()
