@@ -26,10 +26,18 @@ function RunBlock(props: Props) {
     <Draggable key={`${parentTest}/${runBlockIndex}`} draggableId={`draggable_${parentTest}/${runBlockIndex}`} index={runBlockIndex}>
       {({draggableProps, dragHandleProps, innerRef}) => (
         <div className="RunBlock" ref={innerRef} {...draggableProps} {...dragHandleProps}>
-          {/* {blockType} */}
           {command}
+          {/* {blockType} */}
           {/* {commandOutputAssertion} */}
           {/* {regex} */}
+          {/* <div className="RunBlock__run">
+            Run
+            <div className="RunBlock__command">{command}</div>
+          </div>
+          <div className="RunBlock__assert">
+            Assert output is
+            <div className="RunBlock__outputAssertion"></div>
+          </div> */}
         </div>
       )}
     </Draggable>

@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { useAppDispatch } from '../../hooks/react-redux';
 import { addImageBlock } from '../../slices/testDesignerSlice';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleInput from '../../components/TitleInput/TitleInput';
@@ -47,7 +47,7 @@ function NewImage() {
   }
 
   const handleFileUpload = (file: File) => {
-    
+
   }
 
   const handleDescChange = (description: string) => {

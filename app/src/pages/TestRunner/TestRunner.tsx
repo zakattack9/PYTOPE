@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import TestGroup, { TestInfo } from "../../components/TestGroup/TestGroup";
 import RunButton from "../../components/RunButton/RunButton";
-import { useAppSelector, useAppDispatch } from "../../hooks/react-redux";
+import { useAppSelector } from "../../hooks/react-redux";
 import { socket } from "../../context/socket";
 import "./TestRunner.scss";
 
@@ -67,13 +67,14 @@ function TestRunner() {
     Object.entries(jsonData).forEach((image) => {
       const [key, value] = image;
       finalNameArray.push(key);
-      var testArray: TestInfo[] = [];
+      let testArray: TestInfo[] = [];
       Object.entries(value).forEach((test) => {
         const [key, value] = test;
-        if (value == "FAIL") {
-          var tempTestInfo = new TestInfo(`${key}`, "error", "Failed", "");
+        let tempTestInfo;
+        if (value === "FAIL") {
+          tempTestInfo = new TestInfo(`${key}`, "error", "Failed", "");
         } else {
-          var tempTestInfo = new TestInfo(`${key}`, "success", "OK", "");
+          tempTestInfo = new TestInfo(`${key}`, "success", "OK", "");
         }
         testArray.push(tempTestInfo);
       });

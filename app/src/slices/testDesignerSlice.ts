@@ -101,7 +101,6 @@ export const testDesignerSlice = createSlice({
 
       const [runBlockIndex] = state.currBlocks.tests[sourceTestName].test_blocks.splice(oldIndex, 1);
       state.currBlocks.tests[newTestName].test_blocks.splice(newIndex, 0, runBlockIndex);
-      console.log(oldTestName, newTestName);
     },
     loadDesigns: (state, action: PayloadAction<TestDesigns>) => {
       const testDesignsClone = JSON.parse(JSON.stringify(action.payload));

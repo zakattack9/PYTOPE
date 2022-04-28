@@ -24,9 +24,10 @@ function SelectInput(props: Props) {
     setValue(option); 
     props.onChange(option);
   }
-
+  
   useEffect(() => {
-    props.onChange(value); // sends parent component initial value on mount
+    // sends parent component initial value on mount
+    props.onChange(value); 
   }, []);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { FormEvent, useState, useEffect } from 'react';
+import { FormEvent, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { CommandOutputAssertionType } from '../../utils/test-designer';
 import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
@@ -55,12 +55,11 @@ function NewCommand() {
   const ASSERT_OPTIONS = Object.keys(ASSERT_ENUM_MAP);
   const TEST_OPTIONS = currBlocks ? Object.keys(currBlocks.tests) : [];
 
-  useEffect(() => {
-    // wipe location.state without rerendering
-    if (location.state) window.history.replaceState(null, '');
-  }, []);
+  // wipe location.state without rerendering
+  if (location.state) window.history.replaceState(null, '');
 
-  const handleTitleChange = (command: string) => {} // never called since title is readonly
+  // never called since title is readonly
+  const handleTitleChange = (command: string) => {} 
 
   const handleTestSelect = (test: string) => {
     setState({ ...state, test });

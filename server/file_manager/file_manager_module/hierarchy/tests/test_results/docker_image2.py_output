@@ -10,6 +10,6 @@ Traceback (most recent call last):
 AssertionError: Regex didn't match: '/some_regex/g' not found in "remote: You are not allowed to upload code.\nfatal: unable to access 'https://gitlab.com/haydenlhannappel/python-test-environment.git/': The requested URL returned error: 403\n"
 
 ----------------------------------------------------------------------
-Ran 2 tests in 11.161s
+Ran 2 tests in 13.139s
 
 FAILED (failures=1)

@@ -15,9 +15,10 @@ def run_tests(test_files_dir: Path, test_files_package: str, output_dir: Path, l
 	logger = logging.getLogger('TestRunner')
 	test_data = []
 	data = {}
+	fileignore = ['.gitkeep', '__pycache__', '.DS_Store']
 	for file in test_files_dir.iterdir():
 		json_tests = {}
-		if file.name != '.gitkeep' and file.name != "__pycache__":
+		if file.name not in fileignore:
 			print("TestRunner.py: Found a unittest file:", file.stem, " in", test_files_dir.name)
 			# module = importlib.import_module(file.stem)
 			module = importlib.import_module('.' + file.stem, test_files_package)

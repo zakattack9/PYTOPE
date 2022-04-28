@@ -1,8 +1,7 @@
 import { FormEvent } from 'react';
-import { MouseEvent } from 'react';
 import './RunButton.scss';
 import { SocketContext } from "../../context/socket";
-import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from "react";
+import { useContext } from "react";
 
 interface Props {
   text?: string,

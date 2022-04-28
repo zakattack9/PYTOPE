@@ -4,8 +4,9 @@
 
 
 .RunBlock{
-    $default-bkg-color: f.primary-color(-10%);
+    $default-bkg-color: f.primary-color(50%);
     padding: 1em 1em;
     background-color: $default-bkg-color;
     border-radius: 10px;
+    border: 1px solid f.primary-color(20%);
 }

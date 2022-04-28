@@ -1,6 +1,4 @@
 import "./TestGroup.scss";
-import { useState } from "react";
-import TestDesigner from "../../pages/TestDesigner/TestDesigner";
 
 export interface Props {
   testGroupName: string;

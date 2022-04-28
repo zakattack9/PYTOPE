@@ -21,6 +21,6 @@ Traceback (most recent call last):
 AssertionError: b'Already up to date.\n' is not false
 
 ----------------------------------------------------------------------
-Ran 5 tests in 12.808s
+Ran 5 tests in 22.178s
 
 FAILED (failures=2)
