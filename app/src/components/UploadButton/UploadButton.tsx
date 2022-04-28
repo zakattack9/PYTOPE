@@ -1,13 +1,13 @@
 import './UploadButton.scss';
 import '../../websocket/websocket.js';
 import { SocketContext } from "../../context/socket";
-import React, { useState, useContext, useCallback, useEffect, ChangeEvent } from "react";
+import { useContext, ChangeEvent } from "react";
 
 interface Props {
   className?: string,
   onChange: (file: File) => void,
 }
-//var websocket = require("../../websocket/websocket.js")
+
 function UploadButton(props: Props) {
   const FileSelectedHandler = (socket:any, e:ChangeEvent<HTMLInputElement>) => {
     console.log(e);

@@ -15,10 +15,10 @@ function RunBlock(props: Props) {
   const { 
     parentTest, 
     runBlockIndex, 
-    blockType, 
+    // blockType, 
     command, 
-    commandOutputAssertion, 
-    regex, 
+    // commandOutputAssertion, 
+    // regex, 
     isDefault,
   } = props;
   

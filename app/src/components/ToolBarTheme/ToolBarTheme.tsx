@@ -14,7 +14,7 @@ function ToolBarTheme(props: Props) {
   const COOKIE_KEY = 'theme';
   const currTheme = getCookie(COOKIE_KEY) || DEFAULT_THEME;
   const [theme, setTheme] = useState(currTheme);
-  const themes = Object.keys(THEMES);
+  const THEME_OPTIONS = Object.keys(THEMES);
 
   const setThemeVar = (name: string, hsl: HSL) => {
     const rootStyles = document.documentElement.style;
@@ -38,7 +38,7 @@ function ToolBarTheme(props: Props) {
   }
 
   return (
-    <ToolBarItem name="Theme" options={themes} onClick={handleClick} />
+    <ToolBarItem name="Theme" options={THEME_OPTIONS} onClick={handleClick} />
   );
 }
 

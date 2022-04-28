@@ -1,39 +1,22 @@
-import { useState, useEffect, useContext } from 'react';
 import ToolBarItem from '../ToolBar/ToolBarItem';
-import THEMES, { HSL } from '../../data/themes';
-import { setCookie, getCookie } from '../../utils/cookie';
-import { SocketContext } from "../../context/socket";
-// const cors = require('cors');
-
-
-// app.use(cors());
 
 interface Props {
   className?: string,
 }
 
-// uses cookies to maintain/persist the current theme
-
 function ToolBarExport(props: Props) {
-    const socket = useContext(SocketContext);
-    let export_options = ['Test Environment Config', 'Tests to Python unittests']
-    const handleClick = (option: string) => {
-        if(option === 'Tests to Python unittests') {
-            var link = document.createElement("a");
-            link.download = "unittests"
-            link.href = "http://127.0.0.1:5000/get-export/unittests"
-            link.click();
-        }
-
-        socket.once("export_tests_finished", (data:any) => { //socket.on() will emit more than once
-            console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
-            console.log(data)
-        });
-
+  const EXPORT_OPTIONS = ['Test Environment Config', 'Tests to Python unittests']
+  const handleClick = (option: string) => {
+    if (option === 'Tests to Python unittests') {
+      const link = document.createElement("a");
+      link.download = "unittests";
+      link.href = "http://127.0.0.1:5000/get-export/unittests";
+      link.click();
     }
+  }
 
   return (
-    <ToolBarItem name="Export" options={export_options} onClick={handleClick} />
+    <ToolBarItem name="Export" options={EXPORT_OPTIONS} onClick={handleClick} />
   );
 }
 

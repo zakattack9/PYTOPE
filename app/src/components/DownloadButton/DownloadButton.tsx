@@ -1,7 +1,7 @@
 import './DownloadButton.scss';
 import '../../websocket/websocket.js';
 import { SocketContext } from "../../context/socket";
-import React, { useState, useContext, useCallback, useEffect, ChangeEvent, FormEvent } from "react";
+import { useContext, FormEvent } from "react";
 
 interface Props {
   className?: string,

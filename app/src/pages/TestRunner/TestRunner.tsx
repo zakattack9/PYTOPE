@@ -1,25 +1,13 @@
-import "./TestRunner.scss";
-import { FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import TestGroup, { TestInfo } from "../../components/TestGroup/TestGroup";
-import { useAppSelector, useAppDispatch } from "../../hooks/react-redux";
-
 import RunButton from "../../components/RunButton/RunButton";
-import DownloadButton from "../../components/DownloadButton/DownloadButton";
-
-import React, {
-  useState,
-  useContext,
-  useCallback,
-  useEffect,
-  ChangeEvent,
-} from "react";
+import { useAppSelector, useAppDispatch } from "../../hooks/react-redux";
 import { socket } from "../../context/socket";
+import "./TestRunner.scss";
 
 function TestRunner() {
-  const dispatch = useAppDispatch();
   const testDesignerState = useAppSelector((state) => state.testDesigner);
   const { currBlocks } = testDesignerState;
-  const currBlocksJSON = JSON.parse(JSON.stringify(currBlocks));
 
   const [finalToggle, setFinalToggle] = useState(false);
   const [loading, setLoading] = useState("pending");
@@ -47,24 +35,6 @@ function TestRunner() {
           blockArray.push(testArray);
         })
       : null;
-
-  // var temp = new TestInfo(
-  //   "Test git submodule",
-  //   "error",
-  //   "Standard Error (stderr)",
-  //   "> ERROR"
-  // );
-  // var temp2 = new TestInfo(
-  //   "Test git submodule2",
-  //   "running",
-  //   "Currently Running",
-  //   "> RUNNING"
-  // );
-
-  // var exampleArray: TestInfo[] = [temp, temp2];
-  // var exampleArray2: TestInfo[] = [temp2, temp];
-  // var blockArray: TestInfo[][] = [exampleArray, exampleArray2];
-  // var nameArray: string[] = ["testGroup1", "testGroup2"];
 
   var received_data = "";
   const handleClick = function (socket: any, e: FormEvent<HTMLDivElement>) {
