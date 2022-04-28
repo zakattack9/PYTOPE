@@ -19,6 +19,7 @@ function ToolBarTheme(props: Props) {
 
         socket.once("export_tests_finished", (data:any) => { //socket.on() will emit more than once
             console.log("Received from backend:", String.fromCharCode.apply(null, Array.from(new Uint8Array(data))))
+            console.log(data)
         });
 
   }

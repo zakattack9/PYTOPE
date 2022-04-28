@@ -5,7 +5,7 @@ from pathlib import Path
 
 import re
 import flask_socketio
-from flask import Flask
+from flask import Flask, send_file
 from zipfile import ZipFile
 
 
@@ -53,14 +53,32 @@ state = ServerState.IDLE
 def members():
 	return {"members": ["Member1", "Member2"]}
 
+@app.route("/get-export/<zip_type>", methods=['GET'])
+def export(zip_type):
+	print(zip_type)
+	if zip_type == 'unittests':
+		contents = export_zip(0)
+	elif zip_type == 'configs':
+		contents = export_zip(1)
+	else:
+		return "NO SUCH FILE: " + zip_type
+	return contents
+
+def export_zip(zip_type):
+	print("BACKEND: export_zip()")
+	path = "../server/"
+	if zip_type == 0:
+		zip_name = 'unittests'
+		FileManager.zip_folder(FileManager.TEST_FILES_DIR, zip_name)
+	elif zip_type == 1:
+		zip_name = 'configs'
+		FileManager.zip_folder(FileManager.CONFIGS_DIR, zip_name)
+	path += zip_name + '.zip'
+	return send_file(path)
 
 @socketio.on('connect')
 def file_transfers():
 	print('\tClient Connected')
-	# handle_backend_file_request()
-	# handle_frontend_file_send()
-	#...
-
 
 @socketio.on('send_backend')
 def socketFrontendUploadFile(filename, data):
@@ -99,62 +117,6 @@ def socketFrontEndUploadJSON(filename, data):
 		f.write(data)
 	state = ServerState.RECEIVED_FILE
 
-@socketio.on('download_frontend')
-def socketFrontendDownloadFile(filename):
-	# print(filename)
-	# path = FileManager.find_file(filename)
-	# print(path)
-	# try:
-	# 	with open(path, 'rb') as f:
-	# 		data = f.read()
-	# except:
-	# 	flask_socketio.emit('file_dne', filename)
-	# 	return
-	# flask_socketio.emit('frontend_download', data)
-	print("goes here")
-	FileManager.zip_folder()
-	filename = "output.zip"
-	path = FileManager.find_file(filename)
-	print(path)
-	try:
-		with open(path, 'rb') as f:
-			data = f.read()
-	except:
-		flask_socketio.emit('file_dne', filename)	
-		return
-	flask_socketio.emit('frontend_download', data)
-
-@socketio.on('export_unit_tests')
-def socketFrontendDownloadTests():
-	print("goes here")
-	filename = "output.zip"
-
-	FileManager.zip_folder(FileManager.TEST_FILES_DIR)
-	zit = ""
-	# with ZipFile(path, 'r') as zip:
-	# 	for info in zip.infolist():
-	# 		zit += info.file
-	# #print(path)
-	try:
-		data = b''
-		with ZipFile("../server/output.zip", 'r') as zip:
-			for file in zip.filelist:
-				print(file)
-				match = re.search("\.py$", zip.open(file).name)
-				if match:
-					print('entered file')
-					data += zip.open(file).read()
-					print('data:', data.decode('utf-8'))
-	except:
-		flask_socketio.emit('file_dne', filename)
-		return
-	flask_socketio.emit('export_tests_finished', data)
-
-# @socketio.on('dosomething')
-# def pleasework():
-# 	print("please")
-# 	run_backend()
-
 @socketio.on('run_tests')
 def run_backend():
 	global state
@@ -183,27 +145,6 @@ def handle_frontend_file_acknowledge(file):
 	# print the data that was received from the frontend
 	print('Received by backend from frontend:')
 	print(file)
-
-# @socketio.on('run')
-# def test_runner():
-#    json = runner()
-#    print(json)
-#    emit('test_finished', json)
-
-# request a file from the frontend
-def handle_backend_file_request():
-	flask_socketio.emit('backend_request_file')
-
-
-# send a file to the frontend
-def handle_frontend_file_send():
-	# file = open('test.txt', 'w+')
-	# file.write('member_3member_4member_5')
-	# file.close()
-	# with open('test.txt', 'rb') as file:
-	#    file_data = file.read()
-	flask_socketio.emit('frontend_receive_file', 'lol')
-
 
 # receive data from frontend
 @socketio.on('backend_receive_file')

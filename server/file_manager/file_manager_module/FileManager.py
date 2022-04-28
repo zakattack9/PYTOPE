@@ -106,8 +106,8 @@ def clear_temp_dirs():
 		clear_dir(dir_path)
 
 
-def zip_folder(dir_path: Path):
-	shutil.make_archive('output', 'zip', str(dir_path))
+def zip_folder(dir_path: Path, zip_name):
+	shutil.make_archive(zip_name, 'zip', str(dir_path))
 
 
 
