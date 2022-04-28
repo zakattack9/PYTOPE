@@ -13,7 +13,8 @@ interface Props {
 }
 
 // uses cookies to maintain/persist the current theme
-function ToolBarTheme(props: Props) {
+
+function ToolBarExport(props: Props) {
     const socket = useContext(SocketContext);
     let export_options = ['Test Environment Config', 'Tests to Python unittests']
     const handleClick = (option: string) => {
@@ -22,11 +23,6 @@ function ToolBarTheme(props: Props) {
             link.download = "unittests"
             link.href = "http://127.0.0.1:5000/get-export/unittests"
             link.click();
-        }else{
-            var link = document.createElement("a");
-            link.download = "configs"
-            link.href = "http://127.0.0.1:5000/get-export/configs"
-            link.click();
         }
 
         socket.once("export_tests_finished", (data:any) => { //socket.on() will emit more than once
@@ -34,11 +30,11 @@ function ToolBarTheme(props: Props) {
             console.log(data)
         });
 
-  }
+    }
 
   return (
-    <ToolBarItem name="Theme" options={export_options} onClick={handleClick} />
+    <ToolBarItem name="Export" options={export_options} onClick={handleClick} />
   );
 }
 
-export default ToolBarTheme;
+export default ToolBarExport;

@@ -6,12 +6,14 @@ from pathlib import Path
 import re
 import flask_socketio
 from flask import Flask, send_file
+from flask_cors import CORS
 from zipfile import ZipFile
 
 
 from file_manager.file_manager_module import FileManager
 from unittest_file_writer.UnittestFileWriter import parse_and_write_tests
 from unittest_runner.TestRunner import run_tests
+
 
 
 """
@@ -44,6 +46,9 @@ class ServerState(Enum):
 app = Flask(__name__)
 socketio = flask_socketio.SocketIO(app, cors_allowed_origins="*", binary=True)
 
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 state = ServerState.IDLE
 
 
@@ -73,6 +78,7 @@ def export_zip(zip_type):
 	elif zip_type == 1:
 		zip_name = 'configs'
 		FileManager.zip_folder(FileManager.CONFIGS_DIR, zip_name)
+	print(path)
 	path += zip_name + '.zip'
 	return send_file(path)
 
