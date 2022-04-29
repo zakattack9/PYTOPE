@@ -43,9 +43,9 @@ def main():
 	flask_socketio.emit = emit  # re-define emit
 	test_import()
 	test_run()
-	test_export()
-	input('Done.  Press enter to cleanup and exit...')
-	cleanup()
+	# test_export()
+	# input('Done.  Press enter to cleanup and exit...')
+	# cleanup()
 
 
 if __name__ == '__main__':

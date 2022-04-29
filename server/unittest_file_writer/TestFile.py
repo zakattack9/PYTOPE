@@ -4,6 +4,7 @@ from typing import MutableSequence, Optional, Sequence
 
 from .LineSequence import LineSequence
 from .Method import Method
+from .MultiMethod import MultiMethod
 from .NonTestMethods import SetUpClassMethod, SetUpMethod, TearDownClassMethod, TearDownMethod
 from .OutputTestMethod import OutputTestMethod, OutputType
 from .Util import indent
@@ -37,16 +38,17 @@ class TestFile(LineSequence):
 			self.add_non_test_methods()
 
 	def add_test(self, test_name: str, test_json: dict):
-		test_number = 1
+		name = self.format_test_name(test_name)
+		new_methods = []
 		block: dict
-		for block in test_json['test_blocks']:
+		for index, block in enumerate(test_json['test_blocks']):
 			if block['block_type'] == 'RUN':
-				name = self.format_test_method_name(test_name, test_number)
+				sub_name = self._format_sub_test_name(test_name, index)
 				cmd = block['command']
 				output_type = OutputType[block['command_output_assertion']]
 				output_regex = block['regex'] if output_type == OutputType.VERIFY_REGEX else None
-				self.methods.append(OutputTestMethod(name=name, cmd=cmd, output_type=output_type, output_regex=output_regex))
-				test_number += 1
+				new_methods.append(OutputTestMethod(name=sub_name, cmd=cmd, output_type=output_type, output_regex=output_regex, test_index=index))
+		self.methods.append(MultiMethod(name=name, parameters='self', methods=new_methods))
 
 	def add_non_test_methods(self):
 		# This should usually be automatically called by the constructor.
@@ -55,8 +57,9 @@ class TestFile(LineSequence):
 		self._add_setup_method()
 		self._add_tear_down_method()
 
-	def format_test_method_name(self, test_name: str, test_number: int):
-		return f'{test_name}_{test_number}'
+	def format_test_name(self, test_name: str):
+		# this method allows the test name format to easily be changed
+		return f'{test_name}'
 
 	def find_method(self, name: str):
 		index = 0
@@ -66,22 +69,22 @@ class TestFile(LineSequence):
 			index += 1
 		raise KeyError(f"Method with name {repr(name)} not found.")
 
-	def find_test(self, test_name: str, test_number: int):
-		return self.find_method(self.format_test_method_name(test_name, test_number))
+	def find_test(self, test_name: str):
+		return self.find_method(self.format_test_name(test_name))
 
 	def get_method(self, name: str):
 		return self.find_method(name)[0]
 
-	def get_test(self, test_name: str, test_number: int):
-		return self.get_method(self.format_test_method_name(test_name, test_number))
+	def get_test(self, test_name: str):
+		return self.get_method(self.format_test_name(test_name))
 
 	def remove_method(self, name: str):
 		method, index = self.find_method(name)
 		del self.methods[index]
 		return method
 
-	def remove_test(self, test_name: str, test_number: int):
-		return self.remove_method(self.format_test_method_name(test_name, test_number))
+	def remove_test(self, test_name: str):
+		return self.remove_method(self.format_test_name(test_name))
 
 	def get_header(self):
 		return f"class {self.class_name}({', '.join(self.super_classes)}):"
@@ -95,6 +98,9 @@ class TestFile(LineSequence):
 	def write_to_file(self):
 		with self.test_file_path.open('wt') as f:
 			self.write_lines(f)
+
+	def _format_sub_test_name(self, test_name: str, test_number: int):
+		return f'{test_name}_{test_number}'
 
 	def _add_setup_class_method(self):
 		self.methods.append(SetUpClassMethod(self.dockerfile_path))
