@@ -3,6 +3,7 @@ from pathlib import Path
 import flask_socketio
 
 import server
+# path for file_manager_module needs to be reconfigured; TestServer.py was originally located in the server folder but was moved to this testing folder
 from file_manager.file_manager_module import FileManager
 
 TESTING_DIR = FileManager.SERVER_DIR / 'zz_testing'
