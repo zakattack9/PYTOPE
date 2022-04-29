@@ -7,3 +7,5 @@ venv
 unittests.zip
 output.zip
 configs.zip
+
+debug_test_log
