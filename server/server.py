@@ -130,15 +130,15 @@ def run_backend():
 	if state is ServerState.RECEIVING_FILE:
 		sleep(0.5)
 	if state is ServerState.RECEIVED_FILE:
-		# FileManager.clear_dir(FileManager.TEST_RESULTS_DIR)
+		FileManager.clear_dir(FileManager.TEST_RESULTS_DIR)
 		state = ServerState.WRITING_TESTS
 		test_writer = parse_and_write_tests(FileManager.TEST_SCHEMA, FileManager.TEST_JSON_DIR, FileManager.DOCKERFILES_DIR, FileManager.TEST_FILES_DIR)
 		state = ServerState.RUNNING_TESTS
 		json_data = run_tests(FileManager.TEST_FILES_DIR, FileManager.TEST_FILES_PACKAGE, FileManager.TEST_RESULTS_DIR, FileManager.TEST_RUNNER_LOG)
 		print('JSON_Data: ' + json_data)
 	state = ServerState.IDLE
-	# FileManager.clear_dir(FileManager.TEST_FILES_DIR)
-	# FileManager.clear_dir(FileManager.TEST_JSON_DIR)
+	FileManager.clear_dir(FileManager.TEST_FILES_DIR)
+	FileManager.clear_dir(FileManager.TEST_JSON_DIR)
 
 	if json_data != '':
 		flask_socketio.emit('test_finished', json_data)

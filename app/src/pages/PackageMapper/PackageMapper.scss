@@ -16,6 +16,7 @@
   &__bar {
     grid-area: bar;
     background-color: f.secondary-color(85%);
+    border: 1px solid f.secondary-color(75%);
     border-radius: $border-radius;
     min-width: 0; // allows horizontal scrolling
     

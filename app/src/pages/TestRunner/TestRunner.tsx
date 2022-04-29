@@ -74,7 +74,7 @@ function TestRunner() {
         if (value === "FAIL") {
           tempTestInfo = new TestInfo(`${key}`, "error", "Failed", "");
         } else {
-          tempTestInfo = new TestInfo(`${key}`, "success", "OK", "");
+          tempTestInfo = new TestInfo(`${key}`, "success", "Succeeded", "");
         }
         testArray.push(tempTestInfo);
       });
@@ -88,7 +88,7 @@ function TestRunner() {
 
   const sendJSON = async () => {
     try {
-      setLoading("running");
+      setLoading("Running");
       await socket.emit("send_json", "test.json", JSON.stringify(currBlocks));
       await socket.emit("run_tests");
     } catch (error) {
