@@ -19,6 +19,11 @@ class docker_image1(TestCase):
 	def tearDown(self):
 		self.container.remove(force=True)
 
+	def test3(self):
+		self.container.exec_run("git commit -am 'new commit' ", stdout=False, stderr=False)
+		exit_code_1, output_1 = self.container.exec_run('git push ', stdout=True, stderr=True)
+		self.assertRegex(output_1.decode(), '/some_regex/g')
+
 	def test1(self):
 		self.container.exec_run("git commit -m 'initial commit' ", stdout=False, stderr=False)
 		self.container.exec_run('git pull origin main ', stdout=False, stderr=False)
