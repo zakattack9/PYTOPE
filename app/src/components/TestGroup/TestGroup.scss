@@ -1,0 +1,76 @@
+@use "../../utils/functions" as f;
+@use "../../utils/fonts";
+
+%block {
+  width: 100%;
+  padding: 0.8em;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.TestGroup {
+  display: flex;
+  flex-direction: column;
+  @include fonts.roboto-medium();
+  background-color: f.primary-color(70%);
+  border: solid 1px f.primary-color(58%);
+  margin-bottom: 0.9em;
+  @extend %block;
+
+  &__testBlock {
+    background-color: f.primary-color(47%);
+    border: solid 1px f.primary-color(35%);
+    margin-top: 0.9em;
+    @extend %block;
+  }
+
+  &__TestBlockTopBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__testContentHeader {
+    background-color: f.secondary-color(20%);
+    border: solid 1px f.primary-color(0%);
+    @extend %block;
+    margin-top: 0.9em;
+    @include fonts.roboto-mono(0.97em);
+  }
+
+  &__testContent {
+    display: flex;
+    background-color: f.secondary-color(50%);
+    align-self: center;
+    width: 95%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px;
+  }
+
+  %circle {
+    $size: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+  }
+
+  &__RedCircle {
+    @extend %circle;
+    background-color: #f97a72;
+  }
+  &__YellowCircle {
+    @extend %circle;
+    background-color: #e0df4a;
+  }
+  &__GreenCircle {
+    @extend %circle;
+    background-color: #73e04a;
+  }
+  &__GreyCircle {
+    @extend %circle;
+    background-color: gray;
+  }
+}

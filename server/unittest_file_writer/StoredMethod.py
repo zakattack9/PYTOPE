@@ -1,6 +1,6 @@
 from typing import Iterable, Sequence
 
-from server.unittest_file_writer.Method import Method
+from .Method import Method
 
 
 class StoredMethod(Method):

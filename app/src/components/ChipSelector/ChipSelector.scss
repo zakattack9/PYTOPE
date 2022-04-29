@@ -11,11 +11,11 @@
   max-width: max-content;
   
   &__title {
-    @include fonts.roboto-mono(14pt);
+    @include fonts.roboto-mono(1.25em);
   }
   
   &__type {
-    @include fonts.roboto-bold(14pt);
+    @include fonts.roboto-bold(1.25em);
   }
   
   &__filterInput {

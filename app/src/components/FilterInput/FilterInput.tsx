@@ -12,19 +12,20 @@ function FilterInput(props: Props) {
   const [isEmpty, setIsEmpty] = useState(true);
 
   const handleChange = (e: FormEvent<HTMLInputElement>) => {
-    setValue(e.currentTarget.value);
+    const filter = e.currentTarget.value;
+    setValue(filter);
+    props.onChange(filter);
   }
 
   const handleCancel = (e: MouseEvent<HTMLSpanElement>) => {
     setValue('');
-    setIsEmpty(true);
+    props.onChange('');
   }
 
   useEffect(() => {
     if (value === '') setIsEmpty(true);
     else setIsEmpty(false);
-    props.onChange(value);
-  }, [value, props]);
+  }, [value]);
 
   const hideCancelIcon = isEmpty ? '--hide' : '';
 

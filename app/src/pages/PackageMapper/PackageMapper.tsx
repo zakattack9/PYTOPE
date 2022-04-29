@@ -2,21 +2,51 @@ import UploadButton from '../../components/UploadButton/UploadButton';
 import Button from '../../components/Button/Button';
 import ChipSelector from '../../components/ChipSelector/ChipSelector';
 import Chip from '../../components/Chip/Chip';
+import SelectInput from '../../components/SelectInput/SelectInput';
+import { useHistory } from 'react-router-dom';
 import { ChipSelectorType } from '../../utils/enums';
 import { ChipType } from '../../utils/enums';
-import { useAppSelector } from '../../hooks/react-redux';
-import { getObject, getName, getCommand } from '../../utils/package-mapper';
+import { useAppSelector, useAppDispatch } from '../../hooks/react-redux';
+import { loadPackage, switchPackage } from '../../slices/packageMapperSlice';
+import { getObject, getName, getCommand, PackageMapping } from '../../utils/package-mapper';
 import './PackageMapper.scss';
 
 function PackageMapper() {
   const pkgMapperState = useAppSelector(state => state.packageMapper);
+  const dispatch = useAppDispatch();
+  const history = useHistory();
+
   const { currPackage, command } = pkgMapperState;
   const nestedSubcommandPath = command?.paths.subcommands.slice(-1)[0] || null;
-  // console.log(pkgMapperState);
 
-  const handleCreateTest = () => {
-    const textCommand = getCommand(pkgMapperState);
-    console.log(textCommand);
+  const selectMappingState = {
+    options: Object.keys(pkgMapperState.allPackages),
+    value: pkgMapperState.currPackage?.baseKeyword,
+  }
+
+  const handleCreateCmd = () => {
+    const command = getCommand(pkgMapperState);
+    const location = {
+      pathname: '/new/command',
+      state: { command }
+    }
+    history.push(location);
+  }
+
+  const handleMappingSelect = (mapping: string) => {
+    dispatch(switchPackage(mapping));
+  }
+
+  const handleMappingUpload = (file: File) => {
+    const fileReader = new FileReader();
+    fileReader.onloadend = (e) => {
+      const content = fileReader.result;
+      if (content && typeof content === 'string') {
+        const fileJson: PackageMapping = JSON.parse(content);
+        dispatch(loadPackage(fileJson));
+      }
+    }
+    fileReader.readAsText(file);
   }
 
   const BaseChip = command ? (
@@ -46,7 +76,7 @@ function PackageMapper() {
       ValueChip = <Chip name="value" placeholder={subcommand.value} path={command.baseKeyword} type={ChipType.VALUE} />;
   }
 
-  const BaseSubcommands = currPackage?.subcommands ? (
+  const BaseSubcommands = currPackage?.subcommands && Object.keys(currPackage.subcommands).length > 0 ? (
     <ChipSelector 
       title={currPackage.baseKeyword} 
       type={ChipSelectorType.SUBCOMMANDS} 
@@ -93,14 +123,15 @@ function PackageMapper() {
   }
 
   return (
-    <div className='PackageMapper'>
+    <div className="PackageMapper">
       <div className="PackageMapper__bar">
         <div className="PackageMapper__barUpperLeft">
-          <div className="PackageMapper__uploadText">Current Package Loaded: <strong>Git</strong></div>
-          <UploadButton className="PackageMapper__uploadBtn" />
+          <div className="PackageMapper__uploadText">Package Mapping:</div>
+          <SelectInput className="PackageMapper__pkgMapping" options={selectMappingState.options} value={selectMappingState.value} onChange={handleMappingSelect} />
+          <UploadButton className="PackageMapper__uploadBtn" onChange={handleMappingUpload} />
         </div>
         <div className="PackageMapper__barUpperRight">
-          <Button className="PackageMapper__createBtn" name="Create Test" onClick={handleCreateTest} />
+          <Button className="PackageMapper__createBtn" name="Create Command" onClick={handleCreateCmd} />
         </div>
         <div className="PackageMapper__barLower">
           <div className="PackageMapper__chipWrapper">

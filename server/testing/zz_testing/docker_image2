@@ -1,0 +1,11 @@
+FROM alpine:latest
+RUN apk add git
+RUN apk add py3-pip
+
+ARG DIR=/root/pytope
+
+RUN git config --global user.email "lzerbe@asu.edu"
+
+RUN git clone https://docker_img_env:UnpyVDQNqzktj2qUFB6i@gitlab.com/haydenlhannappel/python-test-environment.git $DIR
+
+WORKDIR $DIR

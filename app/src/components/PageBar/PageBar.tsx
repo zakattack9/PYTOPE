@@ -6,9 +6,9 @@ interface PageBarItems {
 }
 
 const PAGE_BAR_ITEMS: PageBarItems = {
-  'Package Mapper': '/package-mapper',
-  'Test Designer': '/test-designer',
-  'Test Runner': '/test-runner',
+  'Package Mapper': '/pytope/mapper',
+  'Test Designer': '/pytope/designer',
+  'Test Runner': '/pytope/runner',
 }
 
 function PageBar() {

@@ -1,6 +1,6 @@
 @use '../utils/variables' as vars;
 
-$default-size: 11pt;
+$default-size: 1rem;
 
 // ROBOTO //
 @mixin roboto(
@@ -11,7 +11,7 @@ $default-size: 11pt;
   font-size: $size;
   font-style: $style;
   font-weight: 400;
-  letter-spacing: 0.05pt;
+  // letter-spacing: 0.05pt;
   color: vars.$primary-text-color;
 }
 

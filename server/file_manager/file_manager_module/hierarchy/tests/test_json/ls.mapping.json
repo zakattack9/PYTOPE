@@ -1,0 +1,34 @@
+{
+  "baseKeyword": "ls",
+  "subcommands": {},
+  "arguments": {
+    "-a": {
+      "value": ""
+    },
+    "--color": {
+      "value": ""
+    },
+    "-d": {
+      "value": ""
+    },
+    "-F": {
+      "value": ""
+    },
+    "-i": {
+      "value": ""
+    },
+    "-l": {
+      "value": ""
+    },
+    "-la": {
+      "value": ""
+    },
+    "-S": {
+      "value": ""
+    },
+    "-X": {
+      "value": ""
+    }
+  },
+  "value": "<file|dir>"
+}
