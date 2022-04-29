@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import Iterable
 
-from server.unittest_file_writer.Method import Method
-from server.unittest_file_writer.StoredMethod import StoredMethod
+from .Method import Method
+from .StoredMethod import StoredMethod
 
 
 _CLASS_METHOD_DECORATION_LINES = ('@classmethod',)
@@ -32,7 +32,7 @@ class TearDownClassMethod(StoredMethod):
 
 
 class SetUpMethod(StoredMethod):
-	BODY_LINES = ('cls = type(self)', 'self.container = cls.client.containers.create(cls.image, detach=True)')
+	BODY_LINES = ('cls = type(self)', 'self.container = cls.client.containers.run(cls.image, detach=True, tty=True)')
 
 	def __init__(self, name='setUp', parameters='self'):
 		super().__init__(name=name, parameters=parameters, body_lines=SetUpMethod.BODY_LINES)

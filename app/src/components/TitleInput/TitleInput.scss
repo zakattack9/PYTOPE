@@ -1,0 +1,21 @@
+@use '../../utils/functions' as f;
+@use '../../utils/variables' as vars;
+@use '../../utils/fonts';
+
+.TitleInput {
+  @include fonts.roboto-bold(1.4em);
+  outline: none;
+  border: none;
+  width: 100%;
+  
+  &--error {
+    @extend .TitleInput;
+    &::placeholder {
+      color: vars.$error-text-color;
+    }
+  }
+
+  &[type="text"] {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}

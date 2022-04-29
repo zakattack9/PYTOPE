@@ -21,13 +21,22 @@ args = parser.parse_args()
 # print(args)
 
 # check if Docker is installed
+'''
+try:
+  subprocess.run(['command', '-v', 'docker'])
+  print('[PYTOPE] Docker is installed')
+except FileNotFoundError:
+  print('[PYTOPE] Docker is not installed; please install before rerunning')
+  sys.exit(0)
+'''
+"""
 hasDocker = not subprocess.run(['command', '-v', 'docker'], capture_output=True).returncode
 if (hasDocker):
   print('[PYTOPE] Docker is installed')
 else:
   print('[PYTOPE] Docker is not installed; please install before rerunning')
   sys.exit(0)
-
+"""
 # get current directory
 pwd = subprocess.run(['pwd'], capture_output=True).stdout.decode().strip()
 # print(pwd)

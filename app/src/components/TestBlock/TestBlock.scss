@@ -1,0 +1,14 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.TestBlock{
+    @include fonts.roboto-medium;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.8em;
+    padding: 1em 1em;
+    background-color: f.primary-color(47%);
+    border-radius: 10px;
+    border: solid 1px f.primary-color(35%);
+}

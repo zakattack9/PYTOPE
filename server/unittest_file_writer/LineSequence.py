@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, Iterator, Sequence
 
-from server.unittest_file_writer.Util import it_get
+from .Util import it_get
 
 
 class LineSequence(Sequence, ABC):

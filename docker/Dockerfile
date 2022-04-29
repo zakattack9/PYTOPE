@@ -1,5 +1,5 @@
 # this is an all purpose docker image that can be used to build both dev and prod environments
-# to slim down the docker image, separate Dockerfiles were made for each environment
+# to slim down the docker image, separate Dockerfiles were made for each environment: Dockerfile.dev and Dockerfile.test
 
 # global args with defaults; must redeclare for each build stage
 ARG PYTOPE_ENV=dev
