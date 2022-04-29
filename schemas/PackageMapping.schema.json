@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CLI Package Mapping",
+    "description": "JSON schema to define how a CLI package's command paths, arguments, and argument types will be mapped out",
+    "type": "object",
+    "properties": {
+        "sub_command": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "$ref": "#/$def/sub_commands"
+                }
+            }
+
+        },
+        "arguments": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "$ref": "#/$def/arguments"
+                }
+            }
+        },
+        "value": {
+            "type":"string"
+        }
+        },
+    "$def":{
+        "sub_commands":{
+            "type":"object",
+            "properties":{
+                "sub_command":{
+                    "type":"object",
+                    "arguments": {
+                        "patternProperties": {
+                            "^.*$": {
+                                "$ref": "#/$def/arguments"
+                            }
+                        }
+                    },
+                    "value":{
+                        "type":"string"
+                    }
+                }
+            }
+        },
+        "arguments":{
+            "type":"object",
+            "properties":{
+                "sub_command":{
+                    "value":{
+                        "type":"string"
+                    }
+                }
+                
+            }
+        }
+    }
+}
