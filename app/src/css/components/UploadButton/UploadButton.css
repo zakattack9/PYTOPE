@@ -1,0 +1,23 @@
+.UploadButton {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  width: max-content;
+  height: max-content;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.9));
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.05));
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+.UploadButton:hover {
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.8));
+  box-shadow: inset 0px 0px 0px 2px hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.1));
+}
+.UploadButton__label {
+  display: inline-block;
+  padding: 0.8em 2.3em;
+}

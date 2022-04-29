@@ -1,0 +1,40 @@
+@use 'utils/fonts';
+@use 'utils/functions' as f;
+@use 'utils/mixins' as m;
+
+:root {
+  // b&w (default)
+  @include m.hsl-var(primary, 0, 0%, 73%);
+  @include m.hsl-var(secondary, 0, 0%, 73%);
+  @include m.hsl-var(primary-text, 0, 0%, 21%);
+  @include m.hsl-var(secondary-text, 0, 0%, 21%);
+  // changing this will affect the global font size of everything
+  font-size: 11pt;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  @include fonts.roboto;
+  background-color: f.primary-color(96%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  @include fonts.roboto-mono;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  outline-style: none;
+}
+
+#root{
+  height: 100%;
+}

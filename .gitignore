@@ -1,0 +1,9 @@
+# misc
+.DS_Store
+__pycache__
+venv
+.idea
+
+unittests.zip
+output.zip
+configs.zip

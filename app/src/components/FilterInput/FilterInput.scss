@@ -1,0 +1,62 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.FilterInput {
+  $pad: 5px;
+
+  background-color: f.secondary-color(70%);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: f.secondary-color(60%);
+  }
+
+  %stroke-width-hover {
+    stroke-width: 1.4px;
+  }
+
+  &:hover &__searchIcon {
+    @extend %stroke-width-hover;
+  }
+
+  &__cancelIconWrapper {
+    display: inline-flex;
+  }
+
+  %icon {
+    width: 18px;
+    stroke: f.primary-text-color(30%);
+    padding: $pad;
+    display: inline-block;
+    transition: 0.15s;
+  }
+
+  &__searchIcon, &__cancelIcon {
+    @extend %icon;
+
+    &:hover {
+      @extend %stroke-width-hover;
+    }
+
+    &--hide {
+      @extend %icon;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &__textInput {
+    @include fonts.roboto;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: $pad 3px $pad;
+    flex-grow: 2;
+    width: 0;
+  }
+}

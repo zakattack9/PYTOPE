@@ -1,0 +1,18 @@
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.RunButton {
+  @include fonts.roboto-medium(0.95em);
+  width: max-content;
+  height: max-content;
+  padding: 0.8em 2.3em;
+  border-radius: 5px;
+  cursor: default;
+  transition: 0.2s;
+  background-color: f.primary-color(-30%);
+  color: f.secondary-text-color(95%);
+
+  &:hover {
+    background-color: f.primary-color(-50%);
+  }
+}

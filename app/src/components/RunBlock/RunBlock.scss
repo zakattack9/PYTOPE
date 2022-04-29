@@ -1,0 +1,54 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.RunBlock{
+  @include fonts.roboto(0.95em);
+  border-radius: 10px;
+
+  %blockStyles {
+    $gap: 0.35em;
+    display: flex;
+    flex-flow: row column;
+    align-items: center;
+    column-gap: 0.5em;
+    padding: $gap $gap $gap 0.85em;
+  }
+
+  %textStyles {
+    @include fonts.roboto-mono(0.97em);
+    background-color: f.primary-color(70%);
+    border-radius: 2em;
+    padding: 0.3em 0.8em;
+  }
+  
+  &__run {
+    @extend %blockStyles;
+    background-color: f.primary-color(20%);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border: solid 1px f.primary-color(0%);
+
+    &--noAssertion {
+      @extend .RunBlock__run;
+      border-radius: 2em;
+    }
+  }
+
+  &__command {
+    @extend %textStyles;
+    width: 100%;
+  }
+
+  &__assert {
+    @extend %blockStyles;
+    background-color: f.primary-color(5%);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: solid 1px f.primary-color(2%);
+  }
+
+  &__outputAssertion {
+    @extend %textStyles;
+  }
+}

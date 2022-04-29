@@ -1,0 +1,36 @@
+@use './functions' as f;
+@use './fonts';
+
+@mixin hsl-var(
+  $name,  
+  $hue,
+  $saturation,
+  $lightness
+) {
+  --#{$name}-color_h: #{$hue};
+  --#{$name}-color_s: #{$saturation};
+  --#{$name}-color_l: #{$lightness};
+}
+
+@mixin outlinedButton {
+  box-shadow: inset 0px 0px 0px 2px f.primary-color(5%);
+  color: f.primary-text-color();
+  background-color: f.primary-color(90%);
+
+  &:hover {
+    background-color: f.primary-color(80%);
+    box-shadow: inset 0px 0px 0px 2px f.primary-text-color(10%);
+  }
+}
+
+@mixin label {
+  @include fonts.roboto-medium(1.05em);
+  justify-self: right;
+  margin: 0.8em 1.4em;
+}
+
+@mixin input {
+  background-color: f.primary-color(70%);
+  border-radius: 10px;
+  padding: 0.8em;
+}

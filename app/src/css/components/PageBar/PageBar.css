@@ -1,0 +1,11 @@
+.PageBar {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}

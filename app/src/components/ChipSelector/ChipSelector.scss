@@ -1,0 +1,38 @@
+@use '../../utils/fonts';
+
+.ChipSelector {
+  $scrollbar-width: 15px;
+
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  min-width: 150px;
+  max-width: max-content;
+  
+  &__title {
+    @include fonts.roboto-mono(1.25em);
+  }
+  
+  &__type {
+    @include fonts.roboto-bold(1.25em);
+  }
+  
+  &__filterInput {
+    margin: 5px 0;
+  }
+
+  &__chips {
+    flex: 2 0 1px;
+    overflow-y: auto; 
+    padding-right: $scrollbar-width;
+  }
+  
+  &__chipWrapper {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7px;
+    padding: 10px 10px 20px 0;
+  }
+}

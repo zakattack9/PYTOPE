@@ -1,0 +1,39 @@
+.Overlay, .Overlay--hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(var(--primary-color_h), var(--primary-color_s), calc(var(--primary-color_l) + (100% - var(--primary-color_l)) * 0.96));
+  transition: 0.1s;
+}
+.Overlay--hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+.Overlay__cancel {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 500;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: default;
+}
+.Overlay__cancelIcon {
+  width: 18px;
+  stroke: hsl(var(--primary-text-color_h), var(--primary-text-color_s), calc(var(--primary-text-color_l) + (100% - var(--primary-text-color_l)) * 0.3));
+  padding: 5px;
+  display: inline-block;
+  transition: 0.15s;
+}
+.Overlay__cancel:hover .Overlay__cancelIcon {
+  stroke-width: 1.8px;
+}

@@ -1,0 +1,39 @@
+.ChipSelector {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  min-width: 150px;
+  max-width: max-content;
+}
+.ChipSelector__title {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0pt;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+}
+.ChipSelector__type {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  color: hsl(var(--primary-text-color_h), var(--primary-text-color_s), var(--primary-text-color_l));
+  font-weight: 700;
+}
+.ChipSelector__filterInput {
+  margin: 5px 0;
+}
+.ChipSelector__chips {
+  flex: 2 0 1px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+.ChipSelector__chipWrapper {
+  max-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 7px;
+  padding: 10px 10px 20px 0;
+}

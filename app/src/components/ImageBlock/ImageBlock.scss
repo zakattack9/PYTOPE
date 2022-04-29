@@ -1,0 +1,15 @@
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as f;
+@use '../../utils/fonts';
+
+.ImageBlock{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.9em;
+    padding: 0.8em;
+    background-color: f.primary-color(70%);
+    border-radius: 10px;
+    @include fonts.roboto-medium;
+    width: 30em;
+    border: solid 1px f.primary-color(58%);
+}

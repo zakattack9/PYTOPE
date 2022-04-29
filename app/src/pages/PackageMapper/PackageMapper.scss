@@ -1,0 +1,81 @@
+@use '../../utils/functions' as f;
+
+.PackageMapper {
+  $border-radius: 8px;
+  $pad: 7px; // for .PackageMapper
+  $side-pad: 17px; // for .barUpperLeft and .barUpperRight
+
+  height: 100%;
+  padding: $pad $pad 0;
+  display: grid;
+  grid-template-rows: 135px auto; // modify first px value to change bar height
+  grid-template-areas: 
+    "bar"
+    "chipSelectorWrapper";
+
+  &__bar {
+    grid-area: bar;
+    background-color: f.secondary-color(85%);
+    border: 1px solid f.secondary-color(75%);
+    border-radius: $border-radius;
+    min-width: 0; // allows horizontal scrolling
+    
+    display: grid;
+    grid-template-rows: 45% 55%;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+      "upperLeft upperRight"
+      "bottom bottom";
+  }
+
+  &__barUpperLeft, &__barUpperRight, &__barLower {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  &__barUpperLeft {
+    grid-area: upperLeft;
+    column-gap: 10px;
+    padding-left: $side-pad;
+  }
+  
+  &__barUpperRight {
+    grid-area: upperRight;
+    justify-content: end;
+    padding-right: $side-pad;
+  }
+
+  &__barLower {
+    grid-area: bottom;
+    background-color: f.secondary-color(60%);
+    border-radius: $border-radius;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+  
+  &__chipWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 5px;
+    margin: 0 auto;
+  }
+
+  &__chipSelectors {
+    grid-area: chipSelectorWrapper;
+    overflow-x: auto;
+    padding: 10px 10px 0;
+  }
+  
+  &__chipSelectorWrapper {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 25px;
+  }
+
+  &__DownloadText {
+    margin-right: 5px;
+  }
+}
