@@ -19,21 +19,15 @@ class docker_image1(TestCase):
 	def tearDown(self):
 		self.container.remove(force=True)
 
-	def test1_1(self):
+	def test1(self):
 		self.container.exec_run("git commit -m 'initial commit' ", stdout=False, stderr=False)
-
-	def test1_2(self):
 		self.container.exec_run('git pull origin main ', stdout=False, stderr=False)
 
-	def test2_1(self):
-		exit_code, output = self.container.exec_run('git add . ', stdout=True, stderr=True)
-		self.assertFalse(output)
-
-	def test2_2(self):
-		exit_code, output = self.container.exec_run("git commit -m 'finished styling' ", stdout=True, stderr=True)
-		self.assertFalse(output)
-
-	def test2_3(self):
-		exit_code, output = self.container.exec_run('git pull ', stdout=True, stderr=True)
-		self.assertFalse(output)
+	def test2(self):
+		exit_code_0, output_0 = self.container.exec_run('git add . ', stdout=True, stderr=True)
+		self.assertFalse(output_0)
+		exit_code_1, output_1 = self.container.exec_run("git commit -m 'finished styling' ", stdout=True, stderr=True)
+		self.assertFalse(output_1)
+		exit_code_2, output_2 = self.container.exec_run('git pull ', stdout=True, stderr=True)
+		self.assertFalse(output_2)
 

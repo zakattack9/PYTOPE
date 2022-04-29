@@ -19,10 +19,8 @@ class docker_image2(TestCase):
 	def tearDown(self):
 		self.container.remove(force=True)
 
-	def test3_1(self):
+	def test3(self):
 		self.container.exec_run("git commit -am 'new commit' ", stdout=False, stderr=False)
-
-	def test3_2(self):
-		exit_code, output = self.container.exec_run('git push ', stdout=True, stderr=True)
-		self.assertRegex(output.decode(), '/some_regex/g')
+		exit_code_1, output_1 = self.container.exec_run('git push ', stdout=True, stderr=True)
+		self.assertRegex(output_1.decode(), '/some_regex/g')
 

@@ -1,26 +1,15 @@
-test1_1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... ok
-test1_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... ok
-test2_1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... ok
-test2_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... FAIL
-test2_3 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... FAIL
+test1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... ok
+test2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1) ... FAIL
 
 ======================================================================
-FAIL: test2_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1)
+FAIL: test2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image1.py", line 34, in test2_2
-    self.assertFalse(output)
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image1.py", line 30, in test2
+    self.assertFalse(output_1)
 AssertionError: b"On branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n" is not false
 
-======================================================================
-FAIL: test2_3 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image1.docker_image1)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image1.py", line 38, in test2_3
-    self.assertFalse(output)
-AssertionError: b'Already up to date.\n' is not false
+Ran 2 tests in 11.451s
 
-----------------------------------------------------------------------
-Ran 5 tests in 15.510s
-
-FAILED (failures=2)
+FAILED (failures=1)

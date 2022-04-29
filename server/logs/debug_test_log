@@ -11157,3 +11157,540 @@ INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:02:52] "GET /socket.io/?EIO=4&transp
 INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:02:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oeAIn&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oeAIn.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oeGPd&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oeGPe&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oeMWV&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:48] "POST /socket.io/?EIO=4&transport=polling&t=O1oeNxI&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:03:48] "POST /socket.io/?EIO=4&transport=polling&t=O1oeNxW&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oeMWV.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oeSdJ&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oeSdK&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oeYkF&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oeYkF.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:04:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oeerF&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:05:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oeerG&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:05:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oekyA&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:05:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oekyA.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:05:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oer30&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:06:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oer30.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:06:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oex9y&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:06:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oex9y.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:06:37] "POST /socket.io/?EIO=4&transport=polling&t=O1of1Gq&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:02] "GET /socket.io/?EIO=4&transport=polling&t=O1of1Gq.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:02] "POST /socket.io/?EIO=4&transport=polling&t=O1of7Ng&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:18] "GET /socket.io/?EIO=4&transport=polling&t=O1ofBIX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:18] "POST /socket.io/?EIO=4&transport=polling&t=O1ofBJ_&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:18] "GET /socket.io/?EIO=4&transport=polling&t=O1ofBJ_.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:27] "GET /socket.io/?EIO=4&transport=polling&t=O1of7Ng.0&sid=rfi_530x76ffKUN6AAAO HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:43] "GET /socket.io/?EIO=4&transport=polling&t=O1ofBKW&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:07:43] "POST /socket.io/?EIO=4&transport=polling&t=O1ofHPW&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:08] "GET /socket.io/?EIO=4&transport=polling&t=O1ofHPW.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:08] "POST /socket.io/?EIO=4&transport=polling&t=O1ofNWR&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:33] "GET /socket.io/?EIO=4&transport=polling&t=O1ofNWR.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:33] "POST /socket.io/?EIO=4&transport=polling&t=O1ofTdL&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:58] "GET /socket.io/?EIO=4&transport=polling&t=O1ofTdL.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:08:58] "POST /socket.io/?EIO=4&transport=polling&t=O1ofZkB&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:09:23] "GET /socket.io/?EIO=4&transport=polling&t=O1ofZkB.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:09:23] "POST /socket.io/?EIO=4&transport=polling&t=O1offr6&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:09:48] "GET /socket.io/?EIO=4&transport=polling&t=O1offr6.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:09:48] "POST /socket.io/?EIO=4&transport=polling&t=O1oflxy&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:10:13] "GET /socket.io/?EIO=4&transport=polling&t=O1oflxy.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:10:13] "POST /socket.io/?EIO=4&transport=polling&t=O1ofs2u&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:10:38] "GET /socket.io/?EIO=4&transport=polling&t=O1ofs2v&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:10:38] "POST /socket.io/?EIO=4&transport=polling&t=O1ofy9v&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:03] "GET /socket.io/?EIO=4&transport=polling&t=O1ofy9v.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:03] "POST /socket.io/?EIO=4&transport=polling&t=O1og2HI&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:28] "GET /socket.io/?EIO=4&transport=polling&t=O1og2HJ&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:28] "POST /socket.io/?EIO=4&transport=polling&t=O1og8OG&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:53] "GET /socket.io/?EIO=4&transport=polling&t=O1og8OH&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:11:53] "POST /socket.io/?EIO=4&transport=polling&t=O1ogEVC&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:12:18] "GET /socket.io/?EIO=4&transport=polling&t=O1ogEVC.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:12:18] "POST /socket.io/?EIO=4&transport=polling&t=O1ogKc3&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:12:43] "GET /socket.io/?EIO=4&transport=polling&t=O1ogKc4&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:12:43] "POST /socket.io/?EIO=4&transport=polling&t=O1ogQiz&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:08] "GET /socket.io/?EIO=4&transport=polling&t=O1ogQiz.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:08] "POST /socket.io/?EIO=4&transport=polling&t=O1ogWps&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:33] "GET /socket.io/?EIO=4&transport=polling&t=O1ogWps.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:33] "POST /socket.io/?EIO=4&transport=polling&t=O1ogcwj&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:58] "GET /socket.io/?EIO=4&transport=polling&t=O1ogcwk&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:13:58] "POST /socket.io/?EIO=4&transport=polling&t=O1ogj1Y&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:14:23] "GET /socket.io/?EIO=4&transport=polling&t=O1ogj1Y.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:14:23] "POST /socket.io/?EIO=4&transport=polling&t=O1ogp8O&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:14:48] "GET /socket.io/?EIO=4&transport=polling&t=O1ogp8P&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:14:48] "POST /socket.io/?EIO=4&transport=polling&t=O1ogvFH&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:15:13] "GET /socket.io/?EIO=4&transport=polling&t=O1ogvFH.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:15:13] "POST /socket.io/?EIO=4&transport=polling&t=O1og_M9&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:15:38] "GET /socket.io/?EIO=4&transport=polling&t=O1og_M9.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:15:38] "POST /socket.io/?EIO=4&transport=polling&t=O1oh5Sl&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:05] "POST /socket.io/?EIO=4&transport=polling&t=O1oo3Xr&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:05] "GET /socket.io/?EIO=4&transport=polling&t=O1oh5Sl.0&sid=HH9guv6GH5G7mdK3AAAQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oo41G HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oo41V&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oo41V.0&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oo41m&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 17:46:32] "POST /socket.io/?EIO=4&transport=polling&t=O1ooA8G&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:23:59] "GET /socket.io/?EIO=4&transport=polling&t=O1ooA8G.0&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:23:59] "POST /socket.io/?EIO=4&transport=polling&t=O1owkfj&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:09] "POST /socket.io/?EIO=4&transport=polling&t=O1own29&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:09] "GET /socket.io/?EIO=4&transport=polling&t=O1owkfj.0&sid=M3OFz3smq6UMYTTmAAAS HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:11] "GET /socket.io/?EIO=4&transport=polling&t=O1ownXf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:11] "POST /socket.io/?EIO=4&transport=polling&t=O1ownYD&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:11] "GET /socket.io/?EIO=4&transport=polling&t=O1ownYE&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:36] "GET /socket.io/?EIO=4&transport=polling&t=O1ownZX&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:24:36] "POST /socket.io/?EIO=4&transport=polling&t=O1owtfH&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:01] "GET /socket.io/?EIO=4&transport=polling&t=O1owtfI&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:01] "POST /socket.io/?EIO=4&transport=polling&t=O1owzmq&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:26] "GET /socket.io/?EIO=4&transport=polling&t=O1owzmr&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:26] "POST /socket.io/?EIO=4&transport=polling&t=O1ox3uO&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:51] "GET /socket.io/?EIO=4&transport=polling&t=O1ox3uP&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:25:51] "POST /socket.io/?EIO=4&transport=polling&t=O1ox9_y&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:26:16] "GET /socket.io/?EIO=4&transport=polling&t=O1ox9_z&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:26:16] "POST /socket.io/?EIO=4&transport=polling&t=O1oxG7S&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:26:41] "GET /socket.io/?EIO=4&transport=polling&t=O1oxG7T&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:26:41] "POST /socket.io/?EIO=4&transport=polling&t=O1oxMEy&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:06] "GET /socket.io/?EIO=4&transport=polling&t=O1oxME-&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:06] "POST /socket.io/?EIO=4&transport=polling&t=O1oxSMP&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:31] "GET /socket.io/?EIO=4&transport=polling&t=O1oxSMP.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oxYTs&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oxYTs.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:27:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oxebz&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:28:22] "GET /socket.io/?EIO=4&transport=polling&t=O1oxeb-&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:28:22] "POST /socket.io/?EIO=4&transport=polling&t=O1oxkjM&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:28:47] "GET /socket.io/?EIO=4&transport=polling&t=O1oxkjM.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:28:47] "POST /socket.io/?EIO=4&transport=polling&t=O1oxqr3&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:29:12] "GET /socket.io/?EIO=4&transport=polling&t=O1oxqr4&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:29:12] "POST /socket.io/?EIO=4&transport=polling&t=O1oxwyT&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:29:37] "GET /socket.io/?EIO=4&transport=polling&t=O1oxwyT.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:29:37] "POST /socket.io/?EIO=4&transport=polling&t=O1oy144&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:02] "GET /socket.io/?EIO=4&transport=polling&t=O1oy144.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:02] "POST /socket.io/?EIO=4&transport=polling&t=O1oy7Bx&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:27] "GET /socket.io/?EIO=4&transport=polling&t=O1oy7Bx.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:27] "POST /socket.io/?EIO=4&transport=polling&t=O1oyDJJ&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:52] "GET /socket.io/?EIO=4&transport=polling&t=O1oyDJK&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:30:52] "POST /socket.io/?EIO=4&transport=polling&t=O1oyJQj&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:31:17] "GET /socket.io/?EIO=4&transport=polling&t=O1oyJQk&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:31:17] "POST /socket.io/?EIO=4&transport=polling&t=O1oyPY7&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:31:42] "GET /socket.io/?EIO=4&transport=polling&t=O1oyPY8&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:31:42] "POST /socket.io/?EIO=4&transport=polling&t=O1oyVfV&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:07] "GET /socket.io/?EIO=4&transport=polling&t=O1oyVfV.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:07] "POST /socket.io/?EIO=4&transport=polling&t=O1oybmu&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:32] "GET /socket.io/?EIO=4&transport=polling&t=O1oybmv&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:32] "POST /socket.io/?EIO=4&transport=polling&t=O1oyhuI&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:57] "GET /socket.io/?EIO=4&transport=polling&t=O1oyhuI.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:32:57] "POST /socket.io/?EIO=4&transport=polling&t=O1oyn_k&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:07:35] "POST /socket.io/?EIO=4&transport=polling&t=O1p4jJx&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:07:35] "GET /socket.io/?EIO=4&transport=polling&t=O1oyn_k.0&sid=uQy32M0SzZPzC8HGAAAU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:07:36] "GET /socket.io/?EIO=4&transport=polling&t=O1p4jZh HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:07:36] "POST /socket.io/?EIO=4&transport=polling&t=O1p4jZt&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:07:36] "GET /socket.io/?EIO=4&transport=polling&t=O1p4jZt.0&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:01] "GET /socket.io/?EIO=4&transport=polling&t=O1p4ja6&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:01] "POST /socket.io/?EIO=4&transport=polling&t=O1p4ph0&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:26] "GET /socket.io/?EIO=4&transport=polling&t=O1p4ph1&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:26] "POST /socket.io/?EIO=4&transport=polling&t=O1p4voe&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:51] "GET /socket.io/?EIO=4&transport=polling&t=O1p4vof&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:08:51] "POST /socket.io/?EIO=4&transport=polling&t=O1p4_wM&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:16] "GET /socket.io/?EIO=4&transport=polling&t=O1p4_wM.0&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:16] "POST /socket.io/?EIO=4&transport=polling&t=O1p561n&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:41] "GET /socket.io/?EIO=4&transport=polling&t=O1p561o&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:41] "POST /socket.io/?EIO=4&transport=polling&t=O1p5C9A&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:55] "POST /socket.io/?EIO=4&transport=polling&t=O1p5FNK&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:55] "GET /socket.io/?EIO=4&transport=polling&t=O1p5C9A.0&sid=v4ogGUvuo14nSYxmAAAW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:57] "GET /socket.io/?EIO=4&transport=polling&t=O1p5Fsc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:57] "POST /socket.io/?EIO=4&transport=polling&t=O1p5Fsn&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:09:57] "GET /socket.io/?EIO=4&transport=polling&t=O1p5Fso&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:10:22] "GET /socket.io/?EIO=4&transport=polling&t=O1p5Ft1&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:10:22] "POST /socket.io/?EIO=4&transport=polling&t=O1p5LzR&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:10:47] "GET /socket.io/?EIO=4&transport=polling&t=O1p5LzR.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:10:47] "POST /socket.io/?EIO=4&transport=polling&t=O1p5S4L&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:11:12] "GET /socket.io/?EIO=4&transport=polling&t=O1p5S4L.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:11:12] "POST /socket.io/?EIO=4&transport=polling&t=O1p5YBJ&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:11:37] "GET /socket.io/?EIO=4&transport=polling&t=O1p5YBJ.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:11:37] "POST /socket.io/?EIO=4&transport=polling&t=O1p5eIE&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:02] "GET /socket.io/?EIO=4&transport=polling&t=O1p5eIE.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:02] "POST /socket.io/?EIO=4&transport=polling&t=O1p5kP9&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:27] "GET /socket.io/?EIO=4&transport=polling&t=O1p5kPA&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:27] "POST /socket.io/?EIO=4&transport=polling&t=O1p5qW2&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:52] "GET /socket.io/?EIO=4&transport=polling&t=O1p5qW2.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:12:52] "POST /socket.io/?EIO=4&transport=polling&t=O1p5wct&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:13:17] "GET /socket.io/?EIO=4&transport=polling&t=O1p5wcu&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:13:17] "POST /socket.io/?EIO=4&transport=polling&t=O1p60ji&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:13:42] "GET /socket.io/?EIO=4&transport=polling&t=O1p60jj&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:13:42] "POST /socket.io/?EIO=4&transport=polling&t=O1p66qc&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:07] "GET /socket.io/?EIO=4&transport=polling&t=O1p66qc.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:07] "POST /socket.io/?EIO=4&transport=polling&t=O1p6CxS&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:32] "GET /socket.io/?EIO=4&transport=polling&t=O1p6CxS.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:32] "POST /socket.io/?EIO=4&transport=polling&t=O1p6J2J&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:57] "GET /socket.io/?EIO=4&transport=polling&t=O1p6J2K&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:14:57] "POST /socket.io/?EIO=4&transport=polling&t=O1p6P9A&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:05] "POST /socket.io/?EIO=4&transport=polling&t=O1pEv9h&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:05] "GET /socket.io/?EIO=4&transport=polling&t=O1p6P9A.0&sid=NLk7402Ztx276aWXAAAY HTTP/1.1" 200 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 313, in execute
+    self.wfile.write(b"0\r\n\r\n")
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:07] "GET /socket.io/?EIO=4&transport=polling&t=O1pEvf9 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:07] "POST /socket.io/?EIO=4&transport=polling&t=O1pEvfK&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:07] "GET /socket.io/?EIO=4&transport=polling&t=O1pEvfK.0&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:32] "GET /socket.io/?EIO=4&transport=polling&t=O1pEvfY&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 19:52:32] "POST /socket.io/?EIO=4&transport=polling&t=O1pE_mh&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:16] "GET /socket.io/?EIO=4&transport=polling&t=O1pE_mi&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:16] "POST /socket.io/?EIO=4&transport=polling&t=O1pMjvX&sid=YbaU_vdVAnoh2cniAAAa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:18] "GET /socket.io/?EIO=4&transport=polling&t=O1pMkOz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:18] "POST /socket.io/?EIO=4&transport=polling&t=O1pMkPF&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:18] "GET /socket.io/?EIO=4&transport=polling&t=O1pMkPF.0&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:43] "GET /socket.io/?EIO=4&transport=polling&t=O1pMkPX&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:26:43] "POST /socket.io/?EIO=4&transport=polling&t=O1pMqWH&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:50] "GET /socket.io/?EIO=4&transport=polling&t=O1pMqWI&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:50] "POST /socket.io/?EIO=4&transport=polling&t=O1pP8jp&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:56] "POST /socket.io/?EIO=4&transport=polling&t=O1pP9WC&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:56] "GET /socket.io/?EIO=4&transport=polling&t=O1pP8jp.0&sid=TEvoT4jHk2PT5jmYAAAc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:56] "GET /socket.io/?EIO=4&transport=polling&t=O1pP9oZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:56] "POST /socket.io/?EIO=4&transport=polling&t=O1pPA4Z&sid=aFckpHfjtb-Y-4-5AAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:36:56] "GET /socket.io/?EIO=4&transport=polling&t=O1pPA4Z.0&sid=aFckpHfjtb-Y-4-5AAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:02] "POST /socket.io/?EIO=4&transport=polling&t=O1pPBVU&sid=aFckpHfjtb-Y-4-5AAAe HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:02] "GET /socket.io/?EIO=4&transport=polling&t=O1pPA5w&sid=aFckpHfjtb-Y-4-5AAAe HTTP/1.1" 200 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/werkzeug/serving.py", line 313, in execute
+    self.wfile.write(b"0\r\n\r\n")
+  File "/usr/local/Cellar/python@3.9/3.9.5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+OSError: [Errno 41] Protocol wrong type for socket
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:03] "GET /socket.io/?EIO=4&transport=polling&t=O1pPBr7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:03] "POST /socket.io/?EIO=4&transport=polling&t=O1pPBrF&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:03] "GET /socket.io/?EIO=4&transport=polling&t=O1pPBrG&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:28] "GET /socket.io/?EIO=4&transport=polling&t=O1pPBrR&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:28] "POST /socket.io/?EIO=4&transport=polling&t=O1pPHx_&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:53] "GET /socket.io/?EIO=4&transport=polling&t=O1pPHx_.0&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:37:53] "POST /socket.io/?EIO=4&transport=polling&t=O1pPO2s&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:38:18] "GET /socket.io/?EIO=4&transport=polling&t=O1pPO2t&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:38:18] "POST /socket.io/?EIO=4&transport=polling&t=O1pPU9o&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:38:43] "GET /socket.io/?EIO=4&transport=polling&t=O1pPU9o.0&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:38:43] "POST /socket.io/?EIO=4&transport=polling&t=O1pPaGj&sid=hzN0wziOXS9k2Nf-AAAg HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/dbbaacc54744/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/67fd4e016ff6ffe5f8fa3d529d95d19b5fd44ec45c3c76936481e9bce020f27f/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/67fd4e016ff6ffe5f8fa3d529d95d19b5fd44ec45c3c76936481e9bce020f27f/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/67fd4e016ff6ffe5f8fa3d529d95d19b5fd44ec45c3c76936481e9bce020f27f/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/e108254ee86ba113d2ece0cd7352710ccc32f598c85949ab65c649e7e450ecfc/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/e108254ee86ba113d2ece0cd7352710ccc32f598c85949ab65c649e7e450ecfc/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/67fd4e016ff6ffe5f8fa3d529d95d19b5fd44ec45c3c76936481e9bce020f27f/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/e9851af1dd71f5589ae1e0d0505eda88660c9dfd66e2db99f19fc5ef7888ee6e/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/e9851af1dd71f5589ae1e0d0505eda88660c9dfd66e2db99f19fc5ef7888ee6e/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/67fd4e016ff6ffe5f8fa3d529d95d19b5fd44ec45c3c76936481e9bce020f27f?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:dbbaacc5474490bd23eae0f9d69fbaa2738a62860e9f17fa0826fb29d8630676?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:39:56] "GET /socket.io/?EIO=4&transport=polling&t=O1pPm1g.0&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:39:56] "POST /socket.io/?EIO=4&transport=polling&t=O1pPs8V&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/80b1532e3147/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/4fec321a576fb38e67b705cbc2808020f0f0eb31fddc8f14b9eed252d537d3e5/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4fec321a576fb38e67b705cbc2808020f0f0eb31fddc8f14b9eed252d537d3e5/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4fec321a576fb38e67b705cbc2808020f0f0eb31fddc8f14b9eed252d537d3e5/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/89cd3b342103e51047134ed3448d08c93834e81870ba0f39596d38389667a931/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/89cd3b342103e51047134ed3448d08c93834e81870ba0f39596d38389667a931/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4fec321a576fb38e67b705cbc2808020f0f0eb31fddc8f14b9eed252d537d3e5/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/b1b3b63b4af15038d8948b425425621686d4dead04c4f4c5b2886c98861abec3/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/b1b3b63b4af15038d8948b425425621686d4dead04c4f4c5b2886c98861abec3/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/4fec321a576fb38e67b705cbc2808020f0f0eb31fddc8f14b9eed252d537d3e5?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/db1b2f3b4bfb7bdf3fda3d015de6d69d04c4c04eaa833df1836ec430030b6d1d/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db1b2f3b4bfb7bdf3fda3d015de6d69d04c4c04eaa833df1836ec430030b6d1d/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db1b2f3b4bfb7bdf3fda3d015de6d69d04c4c04eaa833df1836ec430030b6d1d/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/c1544e808050b93a270acbe5ce4bfa8ca7cbec490d29870d5655515558a38453/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/c1544e808050b93a270acbe5ce4bfa8ca7cbec490d29870d5655515558a38453/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db1b2f3b4bfb7bdf3fda3d015de6d69d04c4c04eaa833df1836ec430030b6d1d/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/16c6fbad5ed9d4d88451fabcefd73dbc7d321e44539c5f079f906f4768bf4ad6/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/16c6fbad5ed9d4d88451fabcefd73dbc7d321e44539c5f079f906f4768bf4ad6/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/db1b2f3b4bfb7bdf3fda3d015de6d69d04c4c04eaa833df1836ec430030b6d1d?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:80b1532e31479efc9c3006485b5b5dc17b1aa6fd8cdb5957bd0c24561c2e5fe6?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3": "FAIL"}, "docker_image1": {"test1": "ok", "test2": "FAIL"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:40:06] "GET /socket.io/?EIO=4&transport=polling&t=O1pPs8W&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:40:21] "GET /socket.io/?EIO=4&transport=polling&t=O1pPuYu&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:40:21] "POST /socket.io/?EIO=4&transport=polling&t=O1pPyFL&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:40:27] "GET /get-export/unittests HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:40:46] "GET /socket.io/?EIO=4&transport=polling&t=O1pPyFM&sid=V94_mi4IAoJtDkWjAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:41:08] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ7YL HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:41:08] "POST /socket.io/?EIO=4&transport=polling&t=O1pQ7Yc&sid=4i9sXl9gZqOqsY89AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:41:08] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ7Yc.0&sid=4i9sXl9gZqOqsY89AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:41:33] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ7Yt&sid=4i9sXl9gZqOqsY89AAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:41:33] "POST /socket.io/?EIO=4&transport=polling&t=O1pQDfL&sid=4i9sXl9gZqOqsY89AAAC HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/0f46827680fb/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/4ae8f6469989ae45c47b19e7fab23752395483f79fae2f7a19b45e7b584d54a6/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4ae8f6469989ae45c47b19e7fab23752395483f79fae2f7a19b45e7b584d54a6/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4ae8f6469989ae45c47b19e7fab23752395483f79fae2f7a19b45e7b584d54a6/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/4b4ec869115948e47f5dd3cba5f43ef21e15c3536a9383c9c165e707146930aa/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/4b4ec869115948e47f5dd3cba5f43ef21e15c3536a9383c9c165e707146930aa/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4ae8f6469989ae45c47b19e7fab23752395483f79fae2f7a19b45e7b584d54a6/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/7b8151b8e3526202f2da0b2c969086cae0c9b348ef0c06b4e93cdc7da02b5150/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/7b8151b8e3526202f2da0b2c969086cae0c9b348ef0c06b4e93cdc7da02b5150/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/4ae8f6469989ae45c47b19e7fab23752395483f79fae2f7a19b45e7b584d54a6?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:0f46827680fbdd9e9eecb2dd8dbddaac593b1430d4fa804463942090a230b467?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:42:21] "GET /socket.io/?EIO=4&transport=polling&t=O1pQJJX&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:42:21] "POST /socket.io/?EIO=4&transport=polling&t=O1pQPP-&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/f81967c2c8d9/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/4a891a3a9e47ea678d311fd993b92b30781f213fdc1c069106235b58d8b9881c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4a891a3a9e47ea678d311fd993b92b30781f213fdc1c069106235b58d8b9881c/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4a891a3a9e47ea678d311fd993b92b30781f213fdc1c069106235b58d8b9881c/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/b54baa41ad61c001a1e33df7ed44dcc009522047338cf93d0a0971dea60cc7eb/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/b54baa41ad61c001a1e33df7ed44dcc009522047338cf93d0a0971dea60cc7eb/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/4a891a3a9e47ea678d311fd993b92b30781f213fdc1c069106235b58d8b9881c/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/f3b1df3d0a49b3a5912ef9c1f4f7ae5bfd9b1aec6eef966edcb9ce0388570b37/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/f3b1df3d0a49b3a5912ef9c1f4f7ae5bfd9b1aec6eef966edcb9ce0388570b37/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/4a891a3a9e47ea678d311fd993b92b30781f213fdc1c069106235b58d8b9881c?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/ab24add708f8b89195a50d1d9a53ed90d43f9f55f7ea2cc6f063a500f0f97bc1/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/ab24add708f8b89195a50d1d9a53ed90d43f9f55f7ea2cc6f063a500f0f97bc1/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/ab24add708f8b89195a50d1d9a53ed90d43f9f55f7ea2cc6f063a500f0f97bc1/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/e2bba412823e8d1f6de53c5b0a197635a5887933aadcd42443afd4947ff25ef8/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/e2bba412823e8d1f6de53c5b0a197635a5887933aadcd42443afd4947ff25ef8/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/ab24add708f8b89195a50d1d9a53ed90d43f9f55f7ea2cc6f063a500f0f97bc1/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/ada7ca7c0bcc618a374ebbb5640f084fcd3e8547a29b7bb18f7ff3365f47da7c/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/ada7ca7c0bcc618a374ebbb5640f084fcd3e8547a29b7bb18f7ff3365f47da7c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/ab24add708f8b89195a50d1d9a53ed90d43f9f55f7ea2cc6f063a500f0f97bc1?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:f81967c2c8d9ed9f6148f9d625e07137a71f1ba3ba60564d443572c171c261b9?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3": "FAIL"}, "docker_image1": {"test1": "ok", "test2": "FAIL"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:42:28] "GET /socket.io/?EIO=4&transport=polling&t=O1pQPP-.0&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:42:46] "GET /socket.io/?EIO=4&transport=polling&t=O1pQRGC&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:42:46] "POST /socket.io/?EIO=4&transport=polling&t=O1pQVWt&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:09] "POST /socket.io/?EIO=4&transport=polling&t=O1pQbDB&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:09] "POST /socket.io/?EIO=4&transport=polling&t=O1pQbDN&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:11] "GET /socket.io/?EIO=4&transport=polling&t=O1pQVWt.0&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:11] "POST /socket.io/?EIO=4&transport=polling&t=O1pQbdi&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/2e129c2b5dcb/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/e9cf1d03aa6186b0277f588cacde9e972f37c4163a8da485fd91ebeb8bfa91c0/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/e9cf1d03aa6186b0277f588cacde9e972f37c4163a8da485fd91ebeb8bfa91c0/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/e9cf1d03aa6186b0277f588cacde9e972f37c4163a8da485fd91ebeb8bfa91c0/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/0dfe1e11e4f1ec0bc51557e89118548864dbfea74eea16ab80dc675ceff02572/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/0dfe1e11e4f1ec0bc51557e89118548864dbfea74eea16ab80dc675ceff02572/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/e9cf1d03aa6186b0277f588cacde9e972f37c4163a8da485fd91ebeb8bfa91c0/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/54bd92da9b55613d6375f241238ce5a21ba4d32316b57cb35dce0e611fd775b5/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/54bd92da9b55613d6375f241238ce5a21ba4d32316b57cb35dce0e611fd775b5/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/e9cf1d03aa6186b0277f588cacde9e972f37c4163a8da485fd91ebeb8bfa91c0?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:2e129c2b5dcbb88416c1d8b8b78baad4309e6256354bc488a9b8a51b1f492065?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/0ed6e37cff32/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/dd77c4872d00aa6773465edab744e9a91bce5349b93168491eaaaf7350035ae9/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/dd77c4872d00aa6773465edab744e9a91bce5349b93168491eaaaf7350035ae9/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/dd77c4872d00aa6773465edab744e9a91bce5349b93168491eaaaf7350035ae9/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/06ca06c4bc80ece8a6b225fbdb47077fb690a6e69488daf03a2220c234894f8a/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/06ca06c4bc80ece8a6b225fbdb47077fb690a6e69488daf03a2220c234894f8a/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/dd77c4872d00aa6773465edab744e9a91bce5349b93168491eaaaf7350035ae9/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/b7556ca297897394c016f41849a71e3b96b4b3844c4362b1b401baa4215a906d/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/b7556ca297897394c016f41849a71e3b96b4b3844c4362b1b401baa4215a906d/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/dd77c4872d00aa6773465edab744e9a91bce5349b93168491eaaaf7350035ae9?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/753b11cf66dd203d6b97dec37ad137a28481fce51a7c84080524ab6df864e65c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/753b11cf66dd203d6b97dec37ad137a28481fce51a7c84080524ab6df864e65c/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/753b11cf66dd203d6b97dec37ad137a28481fce51a7c84080524ab6df864e65c/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/0d868ba219c474c750ee8a7e1d613b71ebe2d8828e9f480d09ea85a434efac39/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/0d868ba219c474c750ee8a7e1d613b71ebe2d8828e9f480d09ea85a434efac39/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/753b11cf66dd203d6b97dec37ad137a28481fce51a7c84080524ab6df864e65c/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/fcfbd02ccd846dc3269394e136102b3e66b171ff6871c54b8a2fb2186bf3d4c3/start HTTP/1.1" 101 0
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:33] "POST /socket.io/?EIO=4&transport=polling&t=O1pQgwA&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:33] "POST /socket.io/?EIO=4&transport=polling&t=O1pQgwL&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:33] "GET /socket.io/?EIO=4&transport=polling&t=O1pQbdi.0&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/fcfbd02ccd846dc3269394e136102b3e66b171ff6871c54b8a2fb2186bf3d4c3/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/753b11cf66dd203d6b97dec37ad137a28481fce51a7c84080524ab6df864e65c?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:0ed6e37cff32634b22fe8b6cd935993f219685445b6f2550697a2352d7e8be3e?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3": "FAIL"}, "docker_image1": {"test1": "ok", "test2": "Unknown"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:33] "GET /socket.io/?EIO=4&transport=polling&t=O1pQgwY&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:36] "GET /socket.io/?EIO=4&transport=polling&t=O1pQg_T&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:43:36] "POST /socket.io/?EIO=4&transport=polling&t=O1pQhkY&sid=-tv9SGQW8wIwnxikAAAA HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/e43ecb688cae/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/5ca4a7b1d811f9ea26ecffd120c7d208c5d18af5419715bea1f81e5f82fa9e94/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/5ca4a7b1d811f9ea26ecffd120c7d208c5d18af5419715bea1f81e5f82fa9e94/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/5ca4a7b1d811f9ea26ecffd120c7d208c5d18af5419715bea1f81e5f82fa9e94/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/5a7f4aba2d18149236f5bc9542234b288c97920a51b4560bd0256544f934a6bd/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/5a7f4aba2d18149236f5bc9542234b288c97920a51b4560bd0256544f934a6bd/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/5ca4a7b1d811f9ea26ecffd120c7d208c5d18af5419715bea1f81e5f82fa9e94/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/09c8232fb618dadd24b6131d073e625378172adebd9937fc45fe91fc71c52fcc/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/09c8232fb618dadd24b6131d073e625378172adebd9937fc45fe91fc71c52fcc/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/5ca4a7b1d811f9ea26ecffd120c7d208c5d18af5419715bea1f81e5f82fa9e94?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:e43ecb688cae45fb67c5db6473c6631709298831d99e58d2100743156c39b1ea?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:12] "GET /socket.io/?EIO=4&transport=polling&t=O1pQkWF&sid=lqpHSOmvQz16dZVFAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:12] "POST /socket.io/?EIO=4&transport=polling&t=O1pQqck&sid=lqpHSOmvQz16dZVFAAAA HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/2615604482fa/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/add015e251757ca938a909e7345f47e82cee97630d98bcd718d5eb33bc193520/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/add015e251757ca938a909e7345f47e82cee97630d98bcd718d5eb33bc193520/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/add015e251757ca938a909e7345f47e82cee97630d98bcd718d5eb33bc193520/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/ff3be050cec456bdb73ccf27ac606ab7f26ba0e49921d0a0a9d0f8b421499e3c/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/ff3be050cec456bdb73ccf27ac606ab7f26ba0e49921d0a0a9d0f8b421499e3c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/add015e251757ca938a909e7345f47e82cee97630d98bcd718d5eb33bc193520/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/0f6b18ff9ea0f64d788267889e17e3ca8387155f704b6ed80bf1df94a44c87cc/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/0f6b18ff9ea0f64d788267889e17e3ca8387155f704b6ed80bf1df94a44c87cc/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/add015e251757ca938a909e7345f47e82cee97630d98bcd718d5eb33bc193520?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/012ef863e1ed51472b87d08cf5fe36674776aa731cace6e5e735d004ab3b38a7/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/012ef863e1ed51472b87d08cf5fe36674776aa731cace6e5e735d004ab3b38a7/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/012ef863e1ed51472b87d08cf5fe36674776aa731cace6e5e735d004ab3b38a7/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/549834bc0ab65149a618e5fb3ffe0f20121c227661992b41b3618591c0226610/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/549834bc0ab65149a618e5fb3ffe0f20121c227661992b41b3618591c0226610/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/012ef863e1ed51472b87d08cf5fe36674776aa731cace6e5e735d004ab3b38a7/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/c58016c2e56b65ad169dad9a3ed61a6a0c761b545656695a3ee3050eaeb185c4/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/c58016c2e56b65ad169dad9a3ed61a6a0c761b545656695a3ee3050eaeb185c4/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/012ef863e1ed51472b87d08cf5fe36674776aa731cace6e5e735d004ab3b38a7?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:2615604482fab9c5336f605544c721cc11fc4dec92106f08b4f668866ee94e47?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3": "FAIL"}, "Testing": {}, "docker_image1": {"test1": "ok", "test2": "FAIL"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:19] "GET /socket.io/?EIO=4&transport=polling&t=O1pQqck.0&sid=lqpHSOmvQz16dZVFAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:32] "GET /get-export/unittests HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:37] "GET /socket.io/?EIO=4&transport=polling&t=O1pQsMn&sid=lqpHSOmvQz16dZVFAAAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:58] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ_ph HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:58] "POST /socket.io/?EIO=4&transport=polling&t=O1pQ_ps&sid=NVAr34bAbf0DlffQAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:44:58] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ_ps.0&sid=NVAr34bAbf0DlffQAAAC HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:08] "GET /socket.io/?EIO=4&transport=polling&t=O1pR2B3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:08] "POST /socket.io/?EIO=4&transport=polling&t=O1pR2Cb&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:08] "GET /socket.io/?EIO=4&transport=polling&t=O1pR2Cc&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:11] "POST /socket.io/?EIO=4&transport=polling&t=O1pR2ym&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:11] "POST /socket.io/?EIO=4&transport=polling&t=O1pR2zC&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image2 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/888ac6b8bb0c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/db37374d8327a0bc97b7a7edf5790e063b0498b727b23133841b5b6e37d58125/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db37374d8327a0bc97b7a7edf5790e063b0498b727b23133841b5b6e37d58125/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db37374d8327a0bc97b7a7edf5790e063b0498b727b23133841b5b6e37d58125/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/acf446260d49f873a285ec864a5191d0bcacb9f32e45655b4d5bae0dbf89c58d/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/acf446260d49f873a285ec864a5191d0bcacb9f32e45655b4d5bae0dbf89c58d/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/db37374d8327a0bc97b7a7edf5790e063b0498b727b23133841b5b6e37d58125/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/02fcbb1036f5597d035cd1424638e2aa2f6c1da650e9ed0e93901396eb51da9e/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/02fcbb1036f5597d035cd1424638e2aa2f6c1da650e9ed0e93901396eb51da9e/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/db37374d8327a0bc97b7a7edf5790e063b0498b727b23133841b5b6e37d58125?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:888ac6b8bb0c12b2ddc03aa46c280f6296549b2f4538fd780edf23d31a3a4119?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:docker.utils.config:Trying paths: ['/Users/zaksakata/.docker/config.json', '/Users/zaksakata/.dockercfg']
+DEBUG:docker.utils.config:Found file at path: /Users/zaksakata/.docker/config.json
+DEBUG:docker.auth:Found 'auths' section
+DEBUG:docker.auth:Auth data for https://index.docker.io/v1/ is absent. Client might be using a credentials store instead.
+DEBUG:docker.auth:Found 'credsStore' section
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /version HTTP/1.1" 200 None
+DEBUG:docker.api.build:Looking for auth config
+DEBUG:docker.auth:Looking for auth entry for 'https://index.docker.io/v1/'
+DEBUG:docker.api.build:Sending auth config ('https://index.docker.io/v1/', 'index.docker.io')
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/build?q=False&nocache=False&rm=True&forcerm=True&pull=False&dockerfile=docker_image1 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:23] "GET /socket.io/?EIO=4&transport=polling&t=O1pQ_q2&sid=NVAr34bAbf0DlffQAAAC HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/images/d01e43f5efc3/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/b58059932fdaa0afede5d7b13721c7214be063afa7faa66a81535981125f2bb8/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/b58059932fdaa0afede5d7b13721c7214be063afa7faa66a81535981125f2bb8/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/b58059932fdaa0afede5d7b13721c7214be063afa7faa66a81535981125f2bb8/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/c6510181cfef13743e7a6d532f40a27664aebe14e12eac60818a6c35c57d93fe/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/c6510181cfef13743e7a6d532f40a27664aebe14e12eac60818a6c35c57d93fe/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/b58059932fdaa0afede5d7b13721c7214be063afa7faa66a81535981125f2bb8/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/0231f7ad8b004713d78c4d22f923b3bfa0b8de81b78160b8db5f96cdf4a0bccf/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/0231f7ad8b004713d78c4d22f923b3bfa0b8de81b78160b8db5f96cdf4a0bccf/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/b58059932fdaa0afede5d7b13721c7214be063afa7faa66a81535981125f2bb8?v=False&link=False&force=True HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/create HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/containers/0446957341b4a61d2284e102ca99974e23bb1bccf9c4cac3f20c02b184959df3/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/0446957341b4a61d2284e102ca99974e23bb1bccf9c4cac3f20c02b184959df3/start HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/0446957341b4a61d2284e102ca99974e23bb1bccf9c4cac3f20c02b184959df3/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/bdc6edb22e4a8d5b755a710c33114efa5aec2282d5a1d73617e425ef08952527/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/bdc6edb22e4a8d5b755a710c33114efa5aec2282d5a1d73617e425ef08952527/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/containers/0446957341b4a61d2284e102ca99974e23bb1bccf9c4cac3f20c02b184959df3/exec HTTP/1.1" 201 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.41/exec/fc4911ce36fe4ab0ccb7523235295216e6a597fcdb666befef765748f4586abb/start HTTP/1.1" 101 0
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.41/exec/fc4911ce36fe4ab0ccb7523235295216e6a597fcdb666befef765748f4586abb/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/containers/0446957341b4a61d2284e102ca99974e23bb1bccf9c4cac3f20c02b184959df3?v=False&link=False&force=True HTTP/1.1" 204 0
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:33] "GET /socket.io/?EIO=4&transport=polling&t=O1pR2DG&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:33] "POST /socket.io/?EIO=4&transport=polling&t=O1pR8I2&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.41/images/sha256:d01e43f5efc3bdf0aba84f9313d8c23b2bd62f4f0dd207efa0b8ac5cba8ae23c?force=True&noprune=False HTTP/1.1" 200 None
+DEBUG:TestRunner:{"docker_image2": {"test3": "FAIL"}, "docker_image1": {"test1": "ok", "test2": "FAIL"}}
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:33] "GET /socket.io/?EIO=4&transport=polling&t=O1pR8I2.0&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:39] "GET /get-export/unittests HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 20:45:58] "GET /socket.io/?EIO=4&transport=polling&t=O1pR8K9&sid=qrDQb26VND8AZwo3AAAE HTTP/1.1" 200 -

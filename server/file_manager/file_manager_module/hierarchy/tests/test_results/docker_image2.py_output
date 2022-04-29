@@ -1,45 +1,14 @@
-test3_1 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... ok
-test3_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... FAIL
-ERROR
+test3 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2) ... FAIL
 
 ======================================================================
-ERROR: tearDownClass (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2)
+FAIL: test3 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
-    response.raise_for_status()
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http+docker://localhost/v1.41/images/sha256:cb6b70850e21be83478a81d942d2860adba75d46af42af9f322669e4d202ccef?force=True&noprune=False
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image2.py", line 13, in tearDownClass
-    cls.client.images.remove(image=cls.image.id, force=True)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/models/images.py", line 463, in remove
-    self.client.api.remove_image(*args, **kwargs)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
-    return f(self, resource_id, *args, **kwargs)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/api/image.py", line 508, in remove_image
-    return self._result(res, True)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
-    self._raise_for_status(response)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
-    raise create_api_error_from_http_exception(e)
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/venv/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
-    raise cls(e, response=response, explanation=explanation)
-docker.errors.APIError: 409 Client Error for http+docker://localhost/v1.41/images/sha256:cb6b70850e21be83478a81d942d2860adba75d46af42af9f322669e4d202ccef?force=True&noprune=False: Conflict ("conflict: unable to delete cb6b70850e21 (cannot be forced) - image is being used by running container fe279bf98b0c")
-
-======================================================================
-FAIL: test3_2 (file_manager.file_manager_module.hierarchy.tests.python_unittests.docker_image2.docker_image2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image2.py", line 27, in test3_2
-    self.assertRegex(output.decode(), '/some_regex/g')
+  File "/Users/zaksakata/Desktop/Stuff/Coding Projects/python-test-environment/server/file_manager/file_manager_module/hierarchy/tests/python_unittests/docker_image2.py", line 25, in test3
+    self.assertRegex(output_1.decode(), '/some_regex/g')
 AssertionError: Regex didn't match: '/some_regex/g' not found in "remote: You are not allowed to upload code.\nfatal: unable to access 'https://gitlab.com/haydenlhannappel/python-test-environment.git/': The requested URL returned error: 403\n"
 
 ----------------------------------------------------------------------
-Ran 2 tests in 35.419s
+Ran 1 test in 10.462s
 
-FAILED (failures=1, errors=1)
+FAILED (failures=1)
